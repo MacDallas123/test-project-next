@@ -1,0 +1,15 @@
+services:
+  frontend:
+    build:
+      context: .
+      args:
+        VITE_API_URL: https://api.livrernourriture-fibem.com/api/v1
+    container_name: livrer-nourriture-frontend
+    ports:
+      - "3070:3070"
+    networks:
+      - frontend-network
+
+networks:
+  frontend-network:
+    driver: bridge

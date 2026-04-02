@@ -117,6 +117,19 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #1a2b4a;
+    background-color: #fafbfd;
+  }
+  a:hover {
+    color: #4169e1;
+  }
+  button {
+    background-color: #f5f7fa;
+  }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -126,5 +139,8 @@
   }
   html {
     @apply font-sans;
+  }
+  button {
+    @apply cursor-pointer;
   }
 }

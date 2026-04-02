@@ -1,0 +1,521 @@
+{
+  "common": {
+    "logoAlt": "Logo FIBEM",
+    "showPassword": "Afficher le mot de passe",
+    "hidePassword": "Cacher le mot de passe",
+    "emailOrPhone": "Email ou numéro de téléphone"
+  },
+  "login": {
+    "title": "Connexion",
+    "description": "Utilisez votre email ou numéro de téléphone",
+    "identifier": {
+      "required": "L'email ou le numéro de téléphone est requis",
+      "incorrect": "Veuillez entrer un email valide ou un numéro de téléphone (format international)",
+      "placeholder": "Email ou numéro de téléphone",
+      "tooLong": "Le mot de passe est trop long"
+    },
+    "password": {
+      "tooShort": "Le mot de passe doit contenir au moins 6 caractères"
+    },
+    "forgotPassword": "Mot de passe oublié ?",
+    "rememberMe": "Se souvenir de moi",
+    "secureConnection": "Connexion sécurisée",
+    "loginButton": "Se connecter",
+    "loggingIn": "Connexion en cours...",
+    "noAccount": "Pas encore de compte ?",
+    "signUp": "S'inscrire gratuitement",
+    "termsAndPrivacy": "En vous connectant, vous acceptez nos conditions d'utilisation et notre politique de confidentialité",
+    "terms": "conditions d'utilisation",
+    "privacy": "politique de confidentialité"
+  },
+  "register": {
+    "title": "Créer un compte",
+    "subtitle": "Rejoignez notre plateforme de livraison des repas",
+    "description": "Remplissez les informations pour créer votre compte",
+    "redirectMessage": "Merci de nous contacter, Veuillez terminer la création de votre compte pour pouvoir nous envoyer un message",
+    "createButton": "Créer mon compte",
+    "creatingAccount": "Création du compte...",
+    "alreadyHaveAccount": "Vous avez déjà un compte ?",
+    "loginLink": "Se connecter",
+    "firstName": {
+      "label": "Prénom",
+      "placeholder": "Votre prénom",
+      "tooShort": "Le prénom doit contenir au moins 2 caractères",
+      "tooLong": "Le prénom est trop long",
+      "invalid": "Caractères spéciaux non autorisés (sauf espace)"
+    },
+    "lastName": {
+      "label": "Nom",
+      "placeholder": "Votre nom",
+      "tooShort": "Le nom doit contenir au moins 2 caractères",
+      "tooLong": "Le nom est trop long",
+      "invalid": "Caractères spéciaux non autorisés (sauf espace)"
+    },
+    "phone": {
+      "label": "Téléphone (format international)",
+      "placeholder": "+33 1 23 45 67 89",
+      "tooShort": "Le numéro de téléphone est trop court",
+      "tooLong": "Le numéro de téléphone est trop long",
+      "invalid": "Format invalide (ex: +012 34 56 78)"
+    },
+    "email": {
+      "label": "Adresse email",
+      "placeholder": "votre@email.com",
+      "required": "L'email est requis",
+      "invalid": "Format d'email invalide"
+    },
+    "accountType": {
+      "label": "Type de compte",
+      "required": "Le type de compte est requis"
+    },
+    "accountTypes": {
+      "individual": {
+        "label": "Particulier",
+        "description": "Pour les utilisateurs individuels, les employeurs,..."
+      },
+      "candidate": {
+        "label": "Candidat",
+        "description": "Recherche d'emploi ou de missions (candidats, stagiaires, apprenti)"
+      },
+      "professional": {
+        "label": "Professionnel",
+        "description": "Entreprise, Freelances,..."
+      },
+      "partner": {
+        "label": "Partenaire",
+        "description": "Grand Compte et interim"
+      },
+      "admin": {
+        "label": "Administrateur",
+        "description": "Accès plus approfondi à la plateforme (Commerciaux,...)"
+      }
+    },
+    "language": {
+      "label": "Langue préférée",
+      "placeholder": "Sélectionnez une langue",
+      "required": "La langue préférée est requise"
+    },
+    "password": {
+      "label": "Mot de passe",
+      "placeholder": "Votre mot de passe",
+      "tooShort": "Le mot de passe doit contenir au moins 8 caractères",
+      "tooLong": "Le mot de passe est trop long",
+      "uppercase": "Au moins une majuscule",
+      "lowercase": "Au moins une minuscule",
+      "number": "Au moins un chiffre",
+      "special": "Au moins un caractère spécial"
+    },
+    "passwordStrength": {
+      "label": "Force du mot de passe:",
+      "empty": "Vide",
+      "veryWeak": "Très faible",
+      "weak": "Faible",
+      "medium": "Moyen",
+      "good": "Bon",
+      "veryGood": "Très bon",
+      "excellent": "Excellent"
+    },
+    "passwordCriteria": {
+      "minChars": "8 caractères min",
+      "uppercase": "1 majuscule",
+      "lowercase": "1 minuscule",
+      "number": "1 chiffre",
+      "specialChar": "1 caractère spécial"
+    },
+    "confirmPassword": {
+      "label": "Confirmer le mot de passe",
+      "placeholder": "Confirmez votre mot de passe",
+      "required": "La confirmation du mot de passe est requise"
+    },
+    "passwords": {
+      "mismatch": "Les mots de passe ne correspondent pas",
+      "match": "Les mots de passe correspondent"
+    }
+  },
+  "verification": {
+    "title": "Vérifier votre email",
+    "description": "Un code de vérification a été envoyé à",
+    "instruction": "Entrez le code à 6 chiffres envoyé à votre adresse email pour confirmer votre inscription.",
+    "codeLabel": "Code de vérification",
+    "codeError": "Veuillez entrer les 6 chiffres du code.",
+    "codeIncorrect": "Code incorrect ou expiré.",
+    "verifyButton": "Valider et créer mon compte",
+    "verifying": "Vérification...",
+    "codeNotReceived": "Vous n'avez pas reçu de code ?",
+    "resendIn": "Renvoyer dans",
+    "resend": "Renvoyer le code",
+    "backToForm": "Modifier mes informations",
+    "errorOccurred": "Une erreur est survenue. Veuillez réessayer."
+  },
+  "errors": {
+    "loginFailed": "Erreur de connexion"
+  },
+  "hero": {
+    "slide1": {
+      "badge": "Bienvenue",
+      "title": {
+        "part1": "Bienvenu sur",
+        "part2": "ivrer",
+        "part3": "ourriture"
+      },
+      "subtitle": "Vos plats préférés, livrés en un clin d'œil",
+      "tagline": "Commandez en 3 clics. Recevez en 30 min.",
+      "cta": "Commander maintenant",
+      "stats": {
+        "restaurants": "Restaurants",
+        "deliveryTime": "Livraison moy.",
+        "satisfiedClients": "Clients satisfaits",
+        "deliveryRadius": "Rayon de livraison"
+      },
+      "visual": {
+        "label": "Commande en cours…",
+        "sub": "Livraison dans 18 min"
+      }
+    },
+    "slide2": {
+      "badge": "Express",
+      "title": "Rapide. Simple. Sans prise de tête.",
+      "subtitle": "En quelques clics, votre repas est en route.",
+      "tagline": "Interface intuitive • Paiement 100 % sécurisé • Suivi GPS",
+      "cta": "Accéder à l'app",
+      "stats": {
+        "securePayment": "Paiement sécurisé",
+        "liveTracking": "Suivi en direct",
+        "clicks": "Pour commander",
+        "availability": "Disponibilité"
+      },
+      "visual": {
+        "label": "Suivi GPS actif",
+        "sub": "Livreur à 2 km de chez vous"
+      }
+    },
+    "slide3": {
+      "badge": "Populaire",
+      "title": "Un choix pour toutes vos envies",
+      "subtitle": "Burgers, pizzas, plats locaux, options healthy…",
+      "tagline": "100+ restaurants • Cuisines variées • Options végétariennes",
+      "cta": "Explorer les restaurants",
+      "stats": {
+        "cuisineTypes": "Types de cuisine",
+        "dishes": "Plats au menu",
+        "rating": "Note moyenne",
+        "new": "Nouveau",
+        "perWeek": "Chaque semaine"
+      },
+      "visual": {
+        "label": "Suggestion du jour",
+        "sub": "Bowl healthy • 1 200 FCFA"
+      }
+    },
+    "slide4": {
+      "badge": "Local",
+      "title": "Des restaurants d'ici, livrés avec soin",
+      "subtitle": "Partenaires locaux • Produits frais • Engagement qualité",
+      "tagline": "Nous soutenons les restaurateurs de votre ville.",
+      "cta": "Devenir partenaire",
+      "stats": {
+        "fresh": "Frais",
+        "localProducts": "Produits locaux",
+        "certified": "Certifié",
+        "quality": "Qualité garantie",
+        "partners": "Partenaires",
+        "sales": "Ventes restaurateurs"
+      },
+      "visual": {
+        "label": "Partenaire certifié",
+        "sub": "Restaurant du quartier"
+      }
+    }
+  },
+  "characteristics": {
+    "title": "Pourquoi nous choisir ?",
+    "subtitle": "Des garanties concrètes pour votre entreprise",
+    "security": {
+      "title": "Sécurité Garantie",
+      "description": "Des systèmes fiables pour protéger vos données et vos transactions."
+    },
+    "transparent_prices": {
+      "title": "Prix Transparents",
+      "description": "Pas de frais cachés, un devis clair dès le départ pour chaque prestation."
+    },
+    "fast_delivery": {
+      "title": "Rapidité",
+      "description": "Des délais respectés et des interventions rapides selon vos besoins."
+    }
+  },
+  "services": {
+    "discoverBadge": "Découvrez nos services",
+    "title": "Qu'est-ce qui vous ferait plaisir ?",
+    "subtitle": "Des plats délicieux et des opportunités professionnelles pour une expérience culinaire complète",
+    "popularMeals": "Plats populaires",
+    "popularMealsDesc": "Découvrez les préférés de notre communauté",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "addToCart": "Ajouter au panier",
+    "seeMoreMeals": "Voir plus de plats",
+    "seeMoreMealsDesc": "Découvrez tous nos restaurants et leurs menus",
+    "explore": "Explorer",
+    "jobOffers": "Offres d'emploi en restauration",
+    "jobOffersDesc": "Rejoignez les meilleurs restaurants près de chez vous",
+    "viewOffer": "Voir l'offre",
+    "moreJobs": "Plus d'offres d'emploi",
+    "moreJobsDesc": "Découvrez toutes les opportunités dans la restauration",
+    "exploreJobs": "Explorer les offres",
+    "forProfessionals": "Pour les professionnels",
+    "toolsTitle": "Des outils professionnels pour les restaurateurs",
+    "toolsDesc": "Gérez votre établissement efficacement avec notre suite d'outils professionnels gratuits",
+    "contract": "Contrat",
+    "salary": "Salaire",
+    "experience": "Expérience",
+    "posted": "Posté",
+    "tags": {
+      "popular": "Populaire",
+      "spicy": "Épicé",
+      "new": "Nouveau",
+      "vegetarian": "Végétarien",
+      "healthy": "Healthy",
+      "premium": "Premium",
+      "family": "Familial",
+      "experienced": "Expérimenté",
+      "fullTime": "Temps plein",
+      "beginner": "Débutant",
+      "training": "Formation",
+      "management": "Management",
+      "specialized": "Spécialisé",
+      "seasonal": "Saisonnier",
+      "creative": "Créatif",
+      "evening": "Soirée",
+      "flexible": "Flexible",
+      "senior": "Confirmé"
+    },
+    "badges": {
+      "favorite": "Coup de cœur",
+      "new": "Nouveau",
+      "topChef": "Top Chef",
+      "light": "Light",
+      "chefSpecial": "Chef's special",
+      "authentic": "Authentique",
+      "mustHave": "Incontournable",
+      "familyMeal": "Plat familial",
+      "premium": "Premium",
+      "urgent": "Urgent",
+      "training": "Formation",
+      "topSalary": "Top salaire",
+      "seasonal": "Saisonnier",
+      "creative": "Créatif",
+      "housingPossible": "Logement possible",
+      "executive": "Cadre",
+      "artisan": "Artisan"
+    },
+    "contracts": {
+      "permanent": "CDI",
+      "fixedTerm": "CDD",
+      "seasonal": "Saisonnier"
+    },
+    "jobTypes": {
+      "kitchen": "Cuisine",
+      "dining": "Salle",
+      "bar": "Bar",
+      "cleaning": "Nettoyage",
+      "management": "Management",
+      "pastry": "Pâtisserie"
+    },
+    "experience": {
+      "years": "{years} ans",
+      "beginner": "Débutant accepté"
+    },
+    "posted": {
+      "daysAgo": "Il y a {days} jours"
+    },
+    "meals": {
+      "yassa": {
+        "title": "Poulet Yassa",
+        "restaurant": "Le Dakarois",
+        "category": "Africain",
+        "description": "Poulet mariné au citron avec oignons caramélisés, accompagné de riz blanc"
+      },
+      "burger": {
+        "title": "Burger Gourmet",
+        "restaurant": "Burger House",
+        "category": "Fast-food",
+        "description": "Steak haché 180g, cheddar fondu, bacon croustillant et sauce maison"
+      },
+      "pizza": {
+        "title": "Pizza Margherita",
+        "restaurant": "Pizzeria Roma",
+        "category": "Italien",
+        "description": "Base tomate, mozzarella fraîche, basilic et huile d'olive"
+      },
+      "salad": {
+        "title": "Salade César",
+        "restaurant": "Green Life",
+        "category": "Healthy",
+        "description": "Poulet grillé, parmesan, croûtons et sauce césar maison"
+      },
+      "padthai": {
+        "title": "Pad Thaï",
+        "restaurant": "Thai Orchidée",
+        "category": "Asiatique",
+        "description": "Nouilles de riz sautées aux crevettes, cacahuètes et germes de soja"
+      },
+      "poke": {
+        "title": "Bowl Poké",
+        "restaurant": "Hawaii Bowl",
+        "category": "Healthy",
+        "description": "Saumon frais, riz vinaigré, avocat, algues et sauce soja"
+      },
+      "tacos": {
+        "title": "Tacos Al Pastor",
+        "restaurant": "El Camino",
+        "category": "Mexicain",
+        "description": "Tortillas de maïs, porc mariné, ananas, oignons et coriandre"
+      },
+      "ramen": {
+        "title": "Ramen Tonkotsu",
+        "restaurant": "Izakaya San",
+        "category": "Japonais",
+        "description": "Bouillon de porc, nouilles, œuf mariné, nori et poitrine de porc"
+      },
+      "couscous": {
+        "title": "Couscous Royal",
+        "restaurant": "Le Marocain",
+        "category": "Africain",
+        "description": "Semoule fine, légumes, merguez, poulet et mouton"
+      },
+      "sushi": {
+        "title": "Sushi Deluxe",
+        "restaurant": "Sushi Master",
+        "category": "Japonais",
+        "description": "Assortiment de 20 pièces : saumon, thon, daurade, makis et californiens"
+      }
+    },
+    "jobs": {
+      "chef": {
+        "title": "Chef de partie",
+        "restaurant": "Le Grand Restaurant",
+        "location": "Paris 8ème",
+        "description": "Nous recherchons un chef de partie passionné pour rejoindre notre brigade."
+      },
+      "waiter": {
+        "title": "Serveur / Serveuse",
+        "restaurant": "Brasserie Moderne",
+        "location": "Lyon 2ème",
+        "description": "Service en salle dynamique, travail en équipe, anglais souhaité."
+      },
+      "sousChef": {
+        "title": "Second de cuisine",
+        "restaurant": "Auberge du Soleil",
+        "location": "Nice",
+        "description": "Gestion de la brigade, création de menus, respect des normes HACCP."
+      },
+      "pizzaiolo": {
+        "title": "Pizzaiolo",
+        "restaurant": "Pizza Di Napoli",
+        "location": "Marseille",
+        "description": "Maîtrise de la pâte à pizza, cuisson au feu de bois, créativité."
+      },
+      "bartender": {
+        "title": "Barman / Barmaid",
+        "restaurant": "Skybar Lounge",
+        "location": "Bordeaux",
+        "description": "Création de cocktails, service au bar, gestion des stocks."
+      },
+      "dishwasher": {
+        "title": "Plongeur",
+        "restaurant": "Hôtel Palace",
+        "location": "Cannes",
+        "description": "Nettoyage de la vaisselle et des locaux, aide en cuisine."
+      },
+      "manager": {
+        "title": "Gérant restaurant",
+        "restaurant": "Fast Food Chain",
+        "location": "Toulouse",
+        "description": "Gestion complète du restaurant, management d'équipe, objectifs commerciaux."
+      },
+      "pastryChef": {
+        "title": "Pâtissier",
+        "restaurant": "Boulangerie Fine",
+        "location": "Strasbourg",
+        "description": "Création de pâtisseries, entremets, viennoiseries. Créativité exigée."
+      }
+    },
+    "tools": {
+      "cv": {
+        "title": "Générateur de CV",
+        "description": "Créez un CV professionnel pour la restauration en quelques minutes",
+        "button": "Créer mon CV",
+        "bottom": "Modèles exclusifs pour la restauration"
+      },
+      "quote": {
+        "title": "Générateur de devis",
+        "description": "Devis professionnels pour vos prestations et événements",
+        "button": "Créer un devis",
+        "bottom": "Personnalisable, conversion en facture"
+      },
+      "invoice": {
+        "title": "Générateur de factures",
+        "description": "Factures personnalisées et conformes à la législation",
+        "button": "Créer une facture",
+        "bottom": "TVA incluse, numérotation automatique"
+      },
+      "creditNote": {
+        "title": "Générateur d'avoirs",
+        "description": "Créez des avoirs et notes de crédit en quelques clics",
+        "button": "Créer un avoir",
+        "bottom": "Remboursements, annulations, corrections"
+      },
+      "employeeManagement": {
+        "title": "Gestion des employés",
+        "description": "Planning, paie, contrats de travail"
+      },
+      "inventoryManagement": {
+        "title": "Gestion des stocks",
+        "description": "Inventaire, alertes, commandes fournisseurs"
+      },
+      "dashboard": {
+        "title": "Tableaux de bord",
+        "description": "Analyses, chiffre d'affaires, performances"
+      }
+    },
+    "stats": {
+      "documents": "Documents générés par mois",
+      "satisfaction": "Satisfaction utilisateurs",
+      "free": "Outils gratuits"
+    }
+  },
+  "footer": {
+    "logoAlt": "LOGO FIBEM",
+    "contacts": "Contacts",
+    "newsletter": "Newsletter",
+    "emailPlaceholder": "Votre email",
+    "subscribed": "Merci pour votre inscription !",
+    "newsletterDesc": "Recevez nos actualités et offres spéciales",
+    "rights": "Tous droits réservés.",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "cookies": "Cookies",
+    "sitemap": "Plan du site",
+    "contact": "Contact",
+    "viewGoogleMap": "Voir Google Map",
+    "whatsapp": "Whatsapp",
+    "france": {
+      "name": "FIBEM France",
+      "address": "51 Rue du Grévarin – 27200 Vernon",
+      "phone": "Tel: +33 6 05 51 14 32",
+      "siret": "SIRET 445 374 937 00032"
+    },
+    "senegal": {
+      "name": "FIBEM Sénégal",
+      "address": "Rue 7 Corniche x 6, Médina, Dakar",
+      "phone": "Tel: +221 78 370 06 02",
+      "ninea": "N.I.N.E.A.: 30 84 31 62 U2 — NAF: 7112B Engineering"
+    },
+    "social": {
+      "followUs": "Suivez-nous :",
+      "facebook": "Facebook",
+      "twitter": "Twitter",
+      "instagram": "Instagram",
+      "youtube": "YouTube"
+    }
+  }
+}

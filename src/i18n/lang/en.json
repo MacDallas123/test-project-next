@@ -1,0 +1,152 @@
+{
+  "common": {
+    "logoAlt": "FIBEM Logo",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password"
+  },
+  "login": {
+    "title": "Login",
+    "description": "Use your email or phone number",
+    "identifier": {
+      "required": "Email or phone number is required",
+      "incorrect": "Please enter a valid email or phone number (international format)",
+      "placeholder": "Email or phone number",
+      "tooLong": "Password is too long"
+    },
+    "password": {
+      "tooShort": "Password must contain at least 6 characters"
+    },
+    "forgotPassword": "Forgot password?",
+    "rememberMe": "Remember me",
+    "secureConnection": "Secure connection",
+    "loginButton": "Login",
+    "loggingIn": "Logging in...",
+    "noAccount": "Don't have an account yet?",
+    "signUp": "Sign up for free",
+    "termsAndPrivacy": "By logging in, you accept our terms of use and privacy policy",
+    "terms": "terms of use",
+    "privacy": "privacy policy"
+  },
+  "register": {
+    "title": "Create an account",
+    "subtitle": "Join our meal delivery platform",
+    "description": "Fill in the information to create your account",
+    "redirectMessage": "Thank you for contacting us. Please finish creating your account to be able to send us a message",
+    "createButton": "Create my account",
+    "creatingAccount": "Creating account...",
+    "alreadyHaveAccount": "Already have an account?",
+    "loginLink": "Login",
+    "firstName": {
+      "label": "First name",
+      "placeholder": "Your first name",
+      "tooShort": "First name must contain at least 2 characters",
+      "tooLong": "First name is too long",
+      "invalid": "Special characters not allowed (except space)"
+    },
+    "lastName": {
+      "label": "Last name",
+      "placeholder": "Your last name",
+      "tooShort": "Last name must contain at least 2 characters",
+      "tooLong": "Last name is too long",
+      "invalid": "Special characters not allowed (except space)"
+    },
+    "phone": {
+      "label": "Phone (international format)",
+      "placeholder": "+33 1 23 45 67 89",
+      "tooShort": "Phone number is too short",
+      "tooLong": "Phone number is too long",
+      "invalid": "Invalid format (e.g.: +012 34 56 78)"
+    },
+    "email": {
+      "label": "Email address",
+      "placeholder": "your@email.com",
+      "required": "Email is required",
+      "invalid": "Invalid email format"
+    },
+    "accountType": {
+      "label": "Account type",
+      "required": "Account type is required"
+    },
+    "accountTypes": {
+      "individual": {
+        "label": "Individual",
+        "description": "For individual users, employers, ..."
+      },
+      "candidate": {
+        "label": "Candidate",
+        "description": "Job or assignment seekers (candidates, interns, apprentices)"
+      },
+      "professional": {
+        "label": "Professional",
+        "description": "Company, Freelancers, ..."
+      },
+      "partner": {
+        "label": "Partner",
+        "description": "Large account and temp agencies"
+      },
+      "admin": {
+        "label": "Administrator",
+        "description": "Deeper access to the platform (Sales, ...)"
+      }
+    },
+    "language": {
+      "label": "Preferred language",
+      "placeholder": "Select a language",
+      "required": "Preferred language is required"
+    },
+    "password": {
+      "label": "Password",
+      "placeholder": "Your password",
+      "tooShort": "Password must contain at least 8 characters",
+      "tooLong": "Password is too long",
+      "uppercase": "At least one uppercase letter",
+      "lowercase": "At least one lowercase letter",
+      "number": "At least one number",
+      "special": "At least one special character"
+    },
+    "passwordStrength": {
+      "label": "Password strength:",
+      "empty": "Empty",
+      "veryWeak": "Very weak",
+      "weak": "Weak",
+      "medium": "Medium",
+      "good": "Good",
+      "veryGood": "Very good",
+      "excellent": "Excellent"
+    },
+    "passwordCriteria": {
+      "minChars": "8 min characters",
+      "uppercase": "1 uppercase",
+      "lowercase": "1 lowercase",
+      "number": "1 number",
+      "specialChar": "1 special character"
+    },
+    "confirmPassword": {
+      "label": "Confirm password",
+      "placeholder": "Confirm your password",
+      "required": "Password confirmation is required"
+    },
+    "passwords": {
+      "mismatch": "Passwords do not match",
+      "match": "Passwords match"
+    }
+  },
+  "verification": {
+    "title": "Verify your email",
+    "description": "A verification code has been sent to",
+    "instruction": "Enter the 6-digit code sent to your email address to confirm your registration.",
+    "codeLabel": "Verification code",
+    "codeError": "Please enter the 6 digits of the code.",
+    "codeIncorrect": "Incorrect or expired code.",
+    "verifyButton": "Validate and create my account",
+    "verifying": "Verifying...",
+    "codeNotReceived": "Didn't receive a code?",
+    "resendIn": "Resend in",
+    "resend": "Resend code",
+    "backToForm": "Edit my information",
+    "errorOccurred": "An error has occurred. Please try again."
+  },
+  "errors": {
+    "loginFailed": "Login error"
+  }
+}
