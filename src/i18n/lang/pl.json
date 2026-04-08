@@ -1,0 +1,1699 @@
+{
+    "common": {
+      "logoAlt": "Logo FIBEM",
+      "showPassword": "Pokaż hasło",
+      "hidePassword": "Ukryj hasło",
+      "emailOrPhone": "E-mail lub numer telefonu"
+    },
+    "login": {
+      "title": "Logowanie",
+      "subtitle": "Uzyskaj dostęp do swojej przestrzeni zawodowej",
+      "description": "Użyj swojego e-maila lub numeru telefonu",
+      "identifier": {
+        "required": "E-mail lub numer telefonu jest wymagany",
+        "incorrect": "Wprowadź poprawny e-mail lub numer telefonu (format międzynarodowy)",
+        "placeholder": "E-mail lub numer telefonu",
+        "tooLong": "Hasło jest zbyt długie"
+      },
+      "password": {
+        "tooShort": "Hasło musi zawierać co najmniej 6 znaków",
+        "placeholder": "Twoje hasło"
+      },
+      "forgotPassword": "Zapomniałeś hasła?",
+      "rememberMe": "Zapamiętaj mnie",
+      "secureConnection": "Bezpieczne połączenie",
+      "loginButton": "Zaloguj się",
+      "loggingIn": "Logowanie...",
+      "noAccount": "Nie masz jeszcze konta?",
+      "signUp": "Zarejestruj się za darmo",
+      "termsAndPrivacy": "Logując się, akceptujesz nasze warunki użytkowania i politykę prywatności",
+      "terms": "warunki użytkowania",
+      "privacy": "politykę prywatności"
+    },
+    "register": {
+      "title": "Utwórz konto",
+      "subtitle": "Dołącz do naszej platformy dostawy posiłków",
+      "description": "Wypełnij informacje, aby utworzyć konto",
+      "redirectMessage": "Prosimy o kontakt, aby dokończyć tworzenie konta i móc wysłać do nas wiadomość",
+      "createButton": "Utwórz moje konto",
+      "creatingAccount": "Tworzenie konta...",
+      "alreadyHaveAccount": "Masz już konto?",
+      "loginLink": "Zaloguj się",
+      "firstName": {
+        "label": "Imię",
+        "placeholder": "Twoje imię",
+        "tooShort": "Imię musi zawierać co najmniej 2 znaki",
+        "tooLong": "Imię jest zbyt długie",
+        "invalid": "Znaki specjalne niedozwolone (z wyjątkiem spacji)"
+      },
+      "lastName": {
+        "label": "Nazwisko",
+        "placeholder": "Twoje nazwisko",
+        "tooShort": "Nazwisko musi zawierać co najmniej 2 znaki",
+        "tooLong": "Nazwisko jest zbyt długie",
+        "invalid": "Znaki specjalne niedozwolone (z wyjątkiem spacji)"
+      },
+      "phone": {
+        "label": "Telefon (format międzynarodowy)",
+        "placeholder": "+48 XXX XXX XXX",
+        "tooShort": "Numer telefonu jest zbyt krótki",
+        "tooLong": "Numer telefonu jest zbyt długi",
+        "invalid": "Nieprawidłowy format (np. +48 XXX XXX XXX)"
+      },
+      "email": {
+        "label": "Adres e-mail",
+        "placeholder": "twoj@email.com",
+        "required": "E-mail jest wymagany",
+        "invalid": "Nieprawidłowy format e-maila"
+      },
+      "accountType": {
+        "label": "Typ konta",
+        "required": "Typ konta jest wymagany"
+      },
+      "accountTypes": {
+        "individual": {
+          "label": "Osoba prywatna",
+          "description": "Dla użytkowników indywidualnych, pracodawców..."
+        },
+        "candidate": {
+          "label": "Kandydat",
+          "description": "Poszukiwanie pracy lub zleceń (kandydaci, stażyści, praktykanci)"
+        },
+        "professional": {
+          "label": "Profesjonalista",
+          "description": "Firma, Freelancerzy..."
+        },
+        "partner": {
+          "label": "Partner",
+          "description": "Duże konto i tymczasowe"
+        },
+        "admin": {
+          "label": "Administrator",
+          "description": "Głębszy dostęp do platformy (Przedstawiciele handlowi,...)"
+        }
+      },
+      "language": {
+        "label": "Preferowany język",
+        "placeholder": "Wybierz język",
+        "required": "Preferowany język jest wymagany"
+      },
+      "password": {
+        "label": "Hasło",
+        "placeholder": "Twoje hasło",
+        "tooShort": "Hasło musi zawierać co najmniej 8 znaków",
+        "tooLong": "Hasło jest zbyt długie",
+        "uppercase": "Co najmniej jedna wielka litera",
+        "lowercase": "Co najmniej jedna mała litera",
+        "number": "Co najmniej jedna cyfra",
+        "special": "Co najmniej jeden znak specjalny"
+      },
+      "passwordStrength": {
+        "label": "Siła hasła:",
+        "empty": "Puste",
+        "veryWeak": "Bardzo słabe",
+        "weak": "Słabe",
+        "medium": "Średnie",
+        "good": "Dobre",
+        "veryGood": "Bardzo dobre",
+        "excellent": "Doskonałe"
+      },
+      "passwordCriteria": {
+        "minChars": "min. 8 znaków",
+        "uppercase": "1 wielka litera",
+        "lowercase": "1 mała litera",
+        "number": "1 cyfra",
+        "specialChar": "1 znak specjalny"
+      },
+      "confirmPassword": {
+        "label": "Potwierdź hasło",
+        "placeholder": "Potwierdź swoje hasło",
+        "required": "Potwierdzenie hasła jest wymagane"
+      },
+      "passwords": {
+        "mismatch": "Hasła nie są zgodne",
+        "match": "Hasła są zgodne"
+      }
+    },
+    "verification": {
+      "title": "Zweryfikuj swój e-mail",
+      "description": "Kod weryfikacyjny został wysłany na adres",
+      "instruction": "Wprowadź 6-cyfrowy kod wysłany na Twój adres e-mail, aby potwierdzić rejestrację.",
+      "codeLabel": "Kod weryfikacyjny",
+      "codeError": "Wprowadź 6 cyfr kodu.",
+      "codeIncorrect": "Kod nieprawidłowy lub wygasł.",
+      "verifyButton": "Zatwierdź i utwórz konto",
+      "verifying": "Weryfikacja...",
+      "codeNotReceived": "Nie otrzymałeś kodu?",
+      "resendIn": "Wyślij ponownie za",
+      "resend": "Wyślij kod ponownie",
+      "backToForm": "Edytuj moje informacje",
+      "errorOccurred": "Wystąpił błąd. Spróbuj ponownie."
+    },
+    "errors": {
+      "loginFailed": "Błąd logowania"
+    },
+    "hero": {
+      "slide1": {
+        "badge": "Witamy",
+        "title": {
+          "part1": "Witamy w",
+          "part2": "Dostawa",
+          "part3": "Jedzenia"
+        },
+        "subtitle": "Twoje ulubione dania, dostarczone w mgnieniu oka",
+        "tagline": "Zamów w 3 kliknięcia. Odbierz w 30 min.",
+        "cta": "Zamów teraz",
+        "stats": {
+          "restaurants": "Restauracji",
+          "deliveryTime": "Śr. dostawy",
+          "satisfiedClients": "Zadowolonych klientów",
+          "deliveryRadius": "Zasięg dostawy"
+        },
+        "visual": {
+          "label": "Zamawianie...",
+          "sub": "Dostawa za 18 min"
+        }
+      },
+      "slide2": {
+        "badge": "Ekspresowy",
+        "title": "Szybkie. Proste. Bez zbędnych ceregieli.",
+        "subtitle": "W kilku kliknięciach Twój posiłek jest w drodze.",
+        "tagline": "Intuicyjny interfejs • Płatność 100% bezpieczna • Śledzenie GPS",
+        "cta": "Uzyskaj dostęp do aplikacji",
+        "stats": {
+          "securePayment": "Bezpieczna płatność",
+          "liveTracking": "Śledzenie na żywo",
+          "clicks": "Do zamówienia",
+          "availability": "Dostępność"
+        },
+        "visual": {
+          "label": "Aktywne śledzenie GPS",
+          "sub": "Kurier 2 km od Ciebie"
+        }
+      },
+      "slide3": {
+        "badge": "Popularne",
+        "title": "Wybór dla wszystkich Twoich pragnień",
+        "subtitle": "Burger, pizza, dania lokalne, opcje zdrowe...",
+        "tagline": "100+ restauracji • Różnorodne kuchnie • Opcje wegetariańskie",
+        "cta": "Przeglądaj restauracje",
+        "stats": {
+          "cuisineTypes": "Rodzajów kuchni",
+          "dishes": "Dań w menu",
+          "rating": "Średnia ocena",
+          "new": "Nowe",
+          "perWeek": "Co tydzień"
+        },
+        "visual": {
+          "label": "Propozycja dnia",
+          "sub": "Zdrowa miska • 1200 FCFA"
+        }
+      },
+      "slide4": {
+        "badge": "Lokalny",
+        "title": "Lokalne restauracje, dostarczane z troską",
+        "subtitle": "Lokalni partnerzy • Świeże produkty • Zaangażowanie w jakość",
+        "tagline": "Wspieramy restauratorów w Twoim mieście.",
+        "cta": "Zostań partnerem",
+        "stats": {
+          "fresh": "Świeże",
+          "localProducts": "Produkty lokalne",
+          "certified": "Certyfikowane",
+          "quality": "Gwarancja jakości",
+          "partners": "Partnerów",
+          "sales": "Sprzedaży restauratorów"
+        },
+        "visual": {
+          "label": "Certyfikowany partner",
+          "sub": "Lokalna restauracja"
+        }
+      }
+    },
+    "characteristics": {
+      "title": "Dlaczego warto nas wybrać?",
+      "subtitle": "Konkretne gwarancje dla Twojej firmy",
+      "security": {
+        "title": "Gwarantowane bezpieczeństwo",
+        "description": "Niezawodne systemy chroniące Twoje dane i transakcje."
+      },
+      "transparent_prices": {
+        "title": "Przejrzyste ceny",
+        "description": "Brak ukrytych opłat, jasna wycena od samego początku każdej usługi."
+      },
+      "fast_delivery": {
+        "title": "Szybkość",
+        "description": "Dotrzymywane terminy i szybkie interwencje zgodnie z Twoimi potrzebami."
+      }
+    },
+    "services": {
+      "discoverBadge": "Odkryj nasze usługi",
+      "title": "Co sprawi Ci przyjemność?",
+      "subtitle": "Pyszne dania i możliwości zawodowe dla pełnego doświadczenia kulinarnego",
+      "popularMeals": "Popularne dania",
+      "popularMealsDesc": "Odkryj ulubione dania naszej społeczności",
+      "previous": "Poprzedni",
+      "next": "Następny",
+      "addToCart": "Dodaj do koszyka",
+      "seeMoreMeals": "Zobacz więcej dań",
+      "seeMoreMealsDesc": "Odkryj wszystkie nasze restauracje i ich menu",
+      "explore": "Odkryj",
+      "jobOffers": "Oferty pracy w gastronomii",
+      "jobOffersDesc": "Dołącz do najlepszych restauracji w swojej okolicy",
+      "viewOffer": "Zobacz ofertę",
+      "moreJobs": "Więcej ofert pracy",
+      "moreJobsDesc": "Odkryj wszystkie możliwości w gastronomii",
+      "exploreJobs": "Przeglądaj oferty",
+      "forProfessionals": "Dla profesjonalistów",
+      "toolsTitle": "Profesjonalne narzędzia dla restauratorów",
+      "toolsDesc": "Zarządzaj swoim lokalem efektywnie dzięki naszemu darmowemu zestawowi narzędzi profesjonalnych",
+      "contract": "Umowa",
+      "salary": "Wynagrodzenie",
+      "experience": {
+        "years": "{years} lat",
+        "beginner": "Początkujący akceptowany"
+      },
+      "posted": {
+        "daysAgo": "{days} dni temu"
+      },
+      "tags": {
+        "popular": "Popularne",
+        "spicy": "Ostre",
+        "new": "Nowe",
+        "vegetarian": "Wegetariańskie",
+        "healthy": "Zdrowe",
+        "premium": "Premium",
+        "family": "Rodzinne",
+        "experienced": "Doświadczony",
+        "fullTime": "Pełny etat",
+        "beginner": "Początkujący",
+        "training": "Szkolenie",
+        "management": "Zarządzanie",
+        "specialized": "Specjalistyczne",
+        "seasonal": "Sezonowe",
+        "creative": "Kreatywne",
+        "evening": "Wieczorne",
+        "flexible": "Elastyczne",
+        "senior": "Starszy"
+      },
+      "badges": {
+        "favorite": "Ulubione",
+        "new": "Nowe",
+        "topChef": "Najlepszy szef kuchni",
+        "light": "Lekkie",
+        "chefSpecial": "Specjał szefa kuchni",
+        "authentic": "Autentyczne",
+        "mustHave": "Must-have",
+        "familyMeal": "Danie rodzinne",
+        "premium": "Premium",
+        "urgent": "Pilne",
+        "training": "Szkolenie",
+        "topSalary": "Najwyższe wynagrodzenie",
+        "seasonal": "Sezonowe",
+        "creative": "Kreatywne",
+        "housingPossible": "Możliwe zakwaterowanie",
+        "executive": "Kierownicze",
+        "artisan": "Rzemieślnicze"
+      },
+      "contracts": {
+        "permanent": "Umowa o pracę na czas nieokreślony",
+        "fixedTerm": "Umowa o pracę na czas określony",
+        "seasonal": "Sezonowa"
+      },
+      "jobTypes": {
+        "kitchen": "Kuchnia",
+        "dining": "Sala",
+        "bar": "Bar",
+        "cleaning": "Sprzątanie",
+        "management": "Zarządzanie",
+        "pastry": "Cukiernia"
+      },
+      "meals": {
+        "yassa": {
+          "title": "Kurczak Yassa",
+          "restaurant": "Le Dakarois",
+          "category": "Afrykańskie",
+          "description": "Kurczak marynowany w cytrynie z karmelizowaną cebulą, podawany z białym ryżem"
+        },
+        "burger": {
+          "title": "Burger Gourmet",
+          "restaurant": "Burger House",
+          "category": "Fast-food",
+          "description": "180g polędwicy wołowej, roztopiony cheddar, chrupiący bekon i domowy sos"
+        },
+        "pizza": {
+          "title": "Pizza Margherita",
+          "restaurant": "Pizzeria Roma",
+          "category": "Włoskie",
+          "description": "Sos pomidorowy, świeża mozzarella, bazylia i oliwa z oliwek"
+        },
+        "salad": {
+          "title": "Sałatka Cezar",
+          "restaurant": "Green Life",
+          "category": "Zdrowe",
+          "description": "Grillowany kurczak, parmezan, grzanki i domowy sos Cezar"
+        },
+        "padthai": {
+          "title": "Pad Thai",
+          "restaurant": "Thai Orchidée",
+          "category": "Azjatyckie",
+          "description": "Smażony makaron ryżowy z krewetkami, orzeszkami ziemnymi i kiełkami soi"
+        },
+        "poke": {
+          "title": "Miska Poke",
+          "restaurant": "Hawaii Bowl",
+          "category": "Zdrowe",
+          "description": "Świeży łosoś, ryż z octem, awokado, wodorosty i sos sojowy"
+        },
+        "tacos": {
+          "title": "Tacos Al Pastor",
+          "restaurant": "El Camino",
+          "category": "Meksykańskie",
+          "description": "Tortille kukurydziane, marynowana wieprzowina, ananas, cebula i kolendra"
+        },
+        "ramen": {
+          "title": "Ramen Tonkotsu",
+          "restaurant": "Izakaya San",
+          "category": "Japońskie",
+          "description": "Bulion wieprzowy, makaron, marynowane jajko, nori i boczek wieprzowy"
+        },
+        "couscous": {
+          "title": "Kuskus Królewski",
+          "restaurant": "Le Marocain",
+          "category": "Afrykańskie",
+          "description": "Drobna kasza, warzywa, mergues, kurczak i jagnięcina"
+        },
+        "sushi": {
+          "title": "Sushi Deluxe",
+          "restaurant": "Sushi Master",
+          "category": "Japońskie",
+          "description": "Zestaw 20 sztuk: łosoś, tuńczyk, dorada, maki i kalifornijskie rolki"
+        }
+      },
+      "jobs": {
+        "chef": {
+          "title": "Szef kuchni",
+          "restaurant": "Le Grand Restaurant",
+          "location": "Paryż 8. dzielnica",
+          "description": "Szukamy pasjonata szefa kuchni do naszego zespołu."
+        },
+        "waiter": {
+          "title": "Kelner/ka",
+          "restaurant": "Brasserie Moderne",
+          "location": "Lyon 2. dzielnica",
+          "description": "Dynamiczna obsługa sali, praca zespołowa, znajomość angielskiego mile widziana."
+        },
+        "sousChef": {
+          "title": "Zastępca szefa kuchni",
+          "restaurant": "Auberge du Soleil",
+          "location": "Nicea",
+          "description": "Zarządzanie zespołem, tworzenie menu, przestrzeganie norm HACCP."
+        },
+        "pizzaiolo": {
+          "title": "Pizzaiolo",
+          "restaurant": "Pizza Di Napoli",
+          "location": "Marsylia",
+          "description": "Opanowanie ciasta do pizzy, pieczenie w piecu opalanym drewnem, kreatywność."
+        },
+        "bartender": {
+          "title": "Barman/ka",
+          "restaurant": "Skybar Lounge",
+          "location": "Bordeaux",
+          "description": "Tworzenie koktajli, obsługa baru, zarządzanie zapasami."
+        },
+        "dishwasher": {
+          "title": "Pomoc kuchenna (zmywak)",
+          "restaurant": "Hotel Palace",
+          "location": "Cannes",
+          "description": "Mycie naczyń i pomieszczeń, pomoc w kuchni."
+        },
+        "manager": {
+          "title": "Kierownik restauracji",
+          "restaurant": "Sieć Fast Food",
+          "location": "Tuluza",
+          "description": "Pełne zarządzanie restauracją, zarządzanie zespołem, cele handlowe."
+        },
+        "pastryChef": {
+          "title": "Cukiernik",
+          "restaurant": "Boulangerie Fine",
+          "location": "Strasburg",
+          "description": "Tworzenie wypieków, deserów, ciast. Kreatywność wymagana."
+        }
+      },
+      "tools": {
+        "cv": {
+          "title": "Kreator CV",
+          "description": "Stwórz profesjonalne CV dla branży restauracyjnej w kilka minut",
+          "button": "Utwórz moje CV",
+          "bottom": "Ekskluzywne szablony dla gastronomii"
+        },
+        "quote": {
+          "title": "Kreator wyceny",
+          "description": "Profesjonalne wyceny dla Twoich usług i wydarzeń",
+          "button": "Utwórz wycenę",
+          "bottom": "Możliwość dostosowania, konwersja na fakturę"
+        },
+        "invoice": {
+          "title": "Kreator faktur",
+          "description": "Spersonalizowane faktury zgodne z przepisami",
+          "button": "Utwórz fakturę",
+          "bottom": "VAT wliczony, automatyczna numeracja"
+        },
+        "creditNote": {
+          "title": "Kreator not kredytowych",
+          "description": "Twórz noty kredytowe w kilku kliknięciach",
+          "button": "Utwórz notę kredytową",
+          "bottom": "Zwroty, anulowania, korekty"
+        },
+        "employeeManagement": {
+          "title": "Zarządzanie pracownikami",
+          "description": "Harmonogram, płace, umowy o pracę"
+        },
+        "inventoryManagement": {
+          "title": "Zarządzanie zapasami",
+          "description": "Inwentaryzacja, alerty, zamówienia do dostawców"
+        },
+        "dashboard": {
+          "title": "Pulpity nawigacyjne",
+          "description": "Analizy, obroty, wydajność"
+        }
+      },
+      "stats": {
+        "documents": "Dokumentów wygenerowanych miesięcznie",
+        "satisfaction": "Satysfakcji użytkowników",
+        "free": "Darmowych narzędzi"
+      }
+    },
+    "footer": {
+      "logoAlt": "LOGO FIBEM",
+      "contacts": "Nasze biura",
+      "newsletter": "Newsletter",
+      "emailPlaceholder": "Twój adres e-mail",
+      "subscribed": "Dziękujemy za subskrypcję!",
+      "newsletterDesc": "Otrzymuj nasze aktualności i specjalne oferty bezpośrednio na swoją skrzynkę pocztową.",
+      "rights": "Wszelkie prawa zastrzeżone.",
+      "privacy": "Prywatność",
+      "terms": "Warunki użytkowania",
+      "cookies": "Pliki cookie",
+      "sitemap": "Mapa strony",
+      "contact": "Kontakt",
+      "viewGoogleMap": "Zobacz Mapę Google",
+      "whatsapp": "Whatsapp",
+      "france": {
+        "name": "FIBEM Francja",
+        "address": "51 Rue du Grévarin – 27200 Vernon",
+        "phone": "Tel: +33 6 05 51 14 32",
+        "siret": "SIRET 445 374 937 00032"
+      },
+      "senegal": {
+        "name": "FIBEM Senegal",
+        "address": "Rue 7 Corniche x 6, Médina, Dakar",
+        "phone": "Tel: +221 78 370 06 02",
+        "ninea": "N.I.N.E.A.: 30 84 31 62 U2 — NAF: 7112B Inżynieria"
+      },
+      "social": {
+        "followUs": "Obserwuj nas",
+        "facebook": "Facebook",
+        "twitter": "Twitter",
+        "instagram": "Instagram",
+        "youtube": "YouTube"
+      },
+      "tagline": "Twój partner HR, restauracja i usługi profesjonalne we Francji, Senegalu i Kamerunie.",
+      "send": "Wyślij",
+      "gdpr": "Dane chronione — zgodne z RODO",
+      "unsubscribe": "Rezygnacja jednym kliknięciem"
+    },
+    "cv": {
+      "title": "Kreator CV",
+      "subtitle": "Utwórz swoje profesjonalne CV w kilku krokach",
+      "newCv": "Nowe CV",
+      "help": {
+        "title": "Wskazówki"
+      },
+      "steps": {
+        "start": "Rozpoczęcie",
+        "personal": "Dane osobowe",
+        "experience": "Doświadczenie",
+        "education": "Edukacja",
+        "skills": "Umiejętności",
+        "languages": "Języki",
+        "certifications": "Certyfikaty",
+        "projects": "Projekty",
+        "interests": "Zainteresowania",
+        "appearance": "Wygląd",
+        "export": "Eksport"
+      },
+      "personal": {
+        "title": "Tytuł zawodowy",
+        "firstName": "Imię",
+        "lastName": "Nazwisko",
+        "age": "Wiek",
+        "email": "E-mail",
+        "phone": "Telefon",
+        "address": "Adres",
+        "city": "Miasto",
+        "country": "Kraj",
+        "driverLicense": "Prawo jazdy",
+        "maritalStatus": "Stan cywilny",
+        "mobility": "Mobilność",
+        "linkedin": "LinkedIn",
+        "github": "GitHub",
+        "portfolio": "Portfolio / Strona internetowa",
+        "photo": "Zdjęcie profilowe",
+        "includePhoto": "Dołącz do CV",
+        "summary": "Profil zawodowy",
+        "placeholders": {
+          "firstName": "Anna",
+          "lastName": "Kowalska",
+          "age": "30",
+          "title": "Starszy programista Full Stack",
+          "email": "kontakt@email.com",
+          "phone": "+48 XXX XXX XXX",
+          "address": "ul. Marszałkowska 10",
+          "city": "Warszawa",
+          "country": "Polska",
+          "linkedin": "linkedin.com/in/anna-kowalska",
+          "github": "github.com/anna-kowalska",
+          "portfolio": "https://anna-kowalska.dev",
+          "summary": "2-3 zdania podsumowujące Twoje doświadczenie i cele..."
+        },
+        "tips": [
+          "Imię, nazwisko i e-mail są wymagane.",
+          "Twój tytuł zawodowy pojawi się bezpośrednio pod nazwiskiem.",
+          "Wypełnij LinkedIn/GitHub tylko jeśli Twoje profile są aktualne.",
+          "Wiek, prawo jazdy i mobilność to ważne informacje dla rekruterów."
+        ]
+      },
+      "driverLicense": {
+        "label": "Prawo jazdy",
+        "options": {
+          "B": "Prawo jazdy kategorii B (Samochód)",
+          "A": "Prawo jazdy kategorii A (Motocykl)",
+          "C": "Prawo jazdy kategorii C (Ciężarówka)",
+          "D": "Prawo jazdy kategorii D (Transport publiczny)",
+          "BE": "Prawo jazdy kategorii BE (Samochód z przyczepą)",
+          "none": "Brak prawa jazdy"
+        }
+      },
+      "maritalStatus": {
+        "label": "Stan cywilny",
+        "options": {
+          "single": "Wolny",
+          "married": "Żonaty/Zamężna",
+          "divorced": "Rozwiedziony/Rozwiedziona",
+          "widowed": "Wdowiec/Wdowa",
+          "pacsed": "W związku partnerskim"
+        }
+      },
+      "mobility": {
+        "label": "Mobilność",
+        "options": {
+          "negrepelisse_30": "NEGREPELISSE (82) + 30 km",
+          "montauban_100": "MONTAUBAN (82) + 100 km",
+          "caussade_40": "CAUSSADE (82) + 40 km",
+          "custom": "Inne (określ)"
+        },
+        "placeholder": "Określ swoją mobilność (np. Kraków + 50 km, Krajowa...)"
+      },
+      "experience": {
+        "title": "Doświadczenie zawodowe",
+        "position": "Stanowisko",
+        "company": "Firma",
+        "location": "Lokalizacja",
+        "currentlyWorking": "Nadal tu pracuję",
+        "startDate": "Data rozpoczęcia",
+        "endDate": "Data zakończenia",
+        "description": "Opis",
+        "addButton": "Dodaj doświadczenie",
+        "tips": [
+          "Od najnowszego do najstarszego.",
+          "Czasowniki akcji: opracowałem, zarządzałem, zoptymalizowałem...",
+          "Policz swoje osiągnięcia.",
+          "Zaznacz 'Nadal tu pracuję' jeśli nadal jesteś w firmie."
+        ]
+      },
+      "education": {
+        "title": "Edukacja",
+        "degree": "Dyplom",
+        "school": "Uczelnia/Instytucja",
+        "location": "Lokalizacja",
+        "currentlyStudying": "Nadal się uczę",
+        "startDate": "Data rozpoczęcia",
+        "endDate": "Data zakończenia",
+        "description": "Opis",
+        "addButton": "Dodaj wykształcenie",
+        "tips": [
+          "Od najnowszego do najstarszego.",
+          "Wskaż wyróżnienie, jeśli było.",
+          "Dla młodych absolwentów wykształcenie może poprzedzać doświadczenie."
+        ]
+      },
+      "skills": {
+        "title": "Umiejętności",
+        "name": "Nazwa",
+        "level": "Poziom",
+        "levels": {
+          "beginner": "Początkujący",
+          "intermediate": "Średniozaawansowany",
+          "advanced": "Zaawansowany",
+          "expert": "Ekspert"
+        },
+        "addButton": "Dodaj umiejętność",
+        "tips": [
+          "8 do 12 dobrze dobranych umiejętności.",
+          "Mieszaj umiejętności twarde i miękkie.",
+          "Sortuj według biegłości/istotności.",
+          "Bądź uczciwy co do poziomów."
+        ]
+      },
+      "languages": {
+        "title": "Języki",
+        "name": "Język",
+        "level": "Poziom",
+        "levels": {
+          "native": "Język ojczysty",
+          "fluent": "Biegły (C1/C2)",
+          "advanced": "Zaawansowany (B2)",
+          "intermediate": "Średniozaawansowany (B1)",
+          "beginner": "Początkujący (A1/A2)",
+          "notions": "Podstawy"
+        },
+        "addButton": "Dodaj język"
+      },
+      "certifications": {
+        "title": "Certyfikaty",
+        "name": "Nazwa",
+        "issuer": "Wydawca",
+        "year": "Rok",
+        "addButton": "Dodaj certyfikat"
+      },
+      "projects": {
+        "title": "Projekty",
+        "name": "Nazwa",
+        "description": "Opis",
+        "technologies": "Technologie (przecinek)",
+        "link": "Link",
+        "addButton": "Dodaj projekt"
+      },
+      "interests": {
+        "title": "Zainteresowania",
+        "name": "Zainteresowanie",
+        "description": "Opcjonalne uściślenie",
+        "addButton": "Dodaj",
+        "suggestions": "Szybkie propozycje",
+        "tips": [
+          "Bądź precyzyjny: 'Bieganie w górach' zamiast 'Sport'.",
+          "Oryginalne zainteresowanie może rozpocząć rozmowę podczas rozmowy kwalifikacyjnej.",
+          "Ogranicz się do 3-5 zainteresowań."
+        ]
+      },
+      "appearance": {
+        "title": "Wygląd CV",
+        "primaryColor": "Kolor główny",
+        "font": "Czcionka",
+        "fonts": {
+          "inter": "Inter (Nowoczesna)",
+          "roboto": "Roboto (Neutralna)",
+          "openSans": "Open Sans (Czytelna)",
+          "merriweather": "Merriweather (Klasyczna)",
+          "montserrat": "Montserrat (Elegancka)"
+        }
+      },
+      "export": {
+        "title": "Eksport",
+        "ready": "CV {type} gotowe do wygenerowania",
+        "generate": "Generuj PDF",
+        "share": "Udostępnij",
+        "history": "Historia",
+        "restart": "Zacznij od nowa"
+      },
+      "buttons": {
+        "previous": "Poprzedni",
+        "next": "Następny",
+        "locked": "Zablokowane",
+        "import": "Importuj",
+        "generate": "Generuj"
+      },
+      "mode": {
+        "howToProceed": "Jak chcesz postępować?",
+        "chooseOption": "Wybierz opcję, aby rozpocząć",
+        "create": {
+          "title": "Utwórz CV",
+          "description": "Wypełnij sekcje krok po kroku"
+        },
+        "import": {
+          "title": "Importuj CV",
+          "description": "Użyj istniejącego pliku (PDF, DOCX)",
+          "dragOrClick": "Przeciągnij lub kliknij, aby zaimportować",
+          "maxSize": "PDF, DOC, DOCX — maks. 10 MB",
+          "ready": "Gotowe do importu — ręczne kroki są wyłączone",
+          "lockedMessage": "Następne kroki są zablokowane. Kliknij Importuj bezpośrednio."
+        },
+        "format": {
+          "title": "Format CV",
+          "classic": "Klasyczny",
+          "classicDesc": "Standardowy, wszystkie branże",
+          "fibem": "FIBEM",
+          "fibemDesc": "Natywny dla platformy",
+          "selectRequired": "Wybierz format, aby kontynuować."
+        }
+      },
+      "navigation": {
+        "history": "Historia"
+      },
+      "generalTips": [
+        "Bądź zwięzły — maks. 2 strony",
+        "Dostosuj do każdej aplikacji",
+        "Używaj słów kluczowych branżowych",
+        "Sprawdź pisownię",
+        "Policz swoje osiągnięcia",
+        "Zachowaj przejrzysty układ"
+      ],
+      "alerts": {
+        "importSuccess": "CV zaimportowane pomyślnie",
+        "importError": "Nie udało się zaimportować",
+        "generationError": "Błąd: {message}",
+        "defaultError": "Wystąpił błąd",
+        "noLink": "CV wygenerowane, ale link niedostępny."
+      },
+      "history": {
+        "title": "Historia CV",
+        "importedCv": "Zaimportowane CV",
+        "cv": "CV",
+        "main": "Główne",
+        "modified": "zmodyfikowane",
+        "searchPlaceholder": "Szukaj CV...",
+        "noCvFound": "Nie znaleziono CV",
+        "resetFilters": "Resetuj filtry",
+        "close": "Zamknij",
+        "page": "strona",
+        "cvCount": "CV{count, plural, =0 {} one {} other {}}",
+        "resultCount": "{count} wynik{count, plural, =0 {} =1 {} other {ów}}",
+        "types": {
+          "fibem": "FIBEM",
+          "classic": "Klasyczny",
+          "imported": "Zaimportowany"
+        },
+        "actions": {
+          "preview": "Podgląd",
+          "download": "Pobierz",
+          "downloadFile": "Pobierz plik",
+          "duplicate": "Duplikuj",
+          "delete": "Usuń"
+        },
+        "filters": {
+          "all": "Wszystkie"
+        },
+        "pagination": {
+          "previous": "Poprzednia strona",
+          "next": "Następna strona"
+        },
+        "deleteDialog": {
+          "title": "Usuń CV",
+          "message": "Ta operacja jest nieodwracalna. Czy na pewno chcesz usunąć to CV?",
+          "confirm": "Usuń",
+          "cancel": "Anuluj"
+        }
+      }
+    },
+    "contact": {
+      "hero": {
+        "title": "Skontaktuj się z nami",
+        "subtitle": "Odkryj możliwości zawodowe oferowane przez nasze firmy partnerskie"
+      },
+      "form": {
+        "title": "Wyślij nam wiadomość",
+        "subtitle": "Odpowiemy w ciągu 48 godzin",
+        "firstName": "Nazwisko",
+        "firstNamePlaceholder": "Twoje nazwisko",
+        "lastName": "Imię",
+        "lastNamePlaceholder": "Twoje imię",
+        "email": "E-mail",
+        "emailPlaceholder": "twoj@email.com",
+        "address": "Adres",
+        "addressPlaceholder": "Np. Warszawa",
+        "phone": "Telefon",
+        "phonePlaceholder": "+48 XXX XXX XXX",
+        "subject": "Temat",
+        "subjectPlaceholder": "Temat wiadomości",
+        "message": "Wiadomość",
+        "messagePlaceholder": "Opisz swoje zapytanie lub zadaj pytania...",
+        "locationNote": "Twoja bieżąca lokalizacja zostanie automatycznie dołączona do wiadomości dla lepszej obsługi.",
+        "sending": "Wysyłanie...",
+        "submit": "Wyślij wiadomość",
+        "success": {
+          "title": "Wiadomość wysłana!",
+          "message": "Dziękujemy za wiadomość. Nasz zespół skontaktuje się z Tobą bardzo szybko.",
+          "button": "Wyślij kolejną wiadomość"
+        }
+      },
+      "info": {
+        "title1": "Porozmawiajmy o Twoim",
+        "title2": "Projekcie",
+        "subtitle": "Nasz zespół ekspertów jest do Twojej dyspozycji, aby Ci pomóc.",
+        "email": {
+          "title": "E-mail",
+          "details": "Odpowiedź w ciągu 24h"
+        },
+        "phone": {
+          "title": "Telefon",
+          "details": "Pon.-Pt.: 9:00-18:00"
+        },
+        "address": {
+          "title": "Adres",
+          "details": "75 001"
+        },
+        "hours": {
+          "title": "Godziny pracy",
+          "days": "Poniedziałek - Piątek",
+          "time": "9:00 - 18:00"
+        }
+      },
+      "offices": {
+        "title": "Nasze biura",
+        "france": {
+          "name": "FIBEM Francja",
+          "address": "51 Rue du Grévarin – 27200 Vernon"
+        },
+        "senegal": {
+          "name": "FIBEM Senegal",
+          "address": "Rue 7 Corniche x 6, Médina, Dakar"
+        }
+      },
+      "location": {
+        "title": "Twoja lokalizacja",
+        "description": "Dla spersonalizowanej obsługi, Twoja lokalizacja zostanie automatycznie dołączona do wiadomości.",
+        "detected": "Bieżąca lokalizacja wykryta",
+        "included": "(Dołączona do Twojej wiadomości)",
+        "consent": "Lokalizacja udostępniana tylko za Twoją zgodą"
+      }
+    },
+    "invoice": {
+      "title": "Kreator faktur",
+      "subtitle": "Utwórz profesjonalną fakturę w kilku krokach",
+      "fileName": "Faktura",
+      "emailMessage": "W załączniku faktura nr {number}",
+      "steps": {
+        "invoice": "Faktura",
+        "company": "Wystawca",
+        "client": "Klient",
+        "items": "Pozycje",
+        "payment": "Płatność",
+        "notes": "Notatki",
+        "preview": "Podgląd"
+      },
+      "progress": {
+        "step": "Krok"
+      },
+      "help": {
+        "title": "Wskazówki"
+      },
+      "status": {
+        "draft": "Szkic",
+        "sent": "Wysłana",
+        "paid": "Opłacona",
+        "overdue": "Zaległa",
+        "genere": "Wygenerowana",
+        "envoye": "Wysłana",
+        "paye": "Opłacona",
+        "en_retard": "Zaległa",
+        "brouillon": "Szkic"
+      },
+      "paymentMethods": {
+        "bankTransfer": "Przelew bankowy",
+        "creditCard": "Karta kredytowa",
+        "cash": "Gotówka",
+        "paypal": "PayPal",
+        "check": "Czek",
+        "stripe": "Stripe",
+        "directDebit": "Polecenie zapłaty",
+        "bitcoin": "Bitcoin",
+        "applePay": "Apple Pay",
+        "googlePay": "Google Pay",
+        "wireTransfer": "Przelew międzynarodowy",
+        "other": "Inne"
+      },
+      "paymentTerms": {
+        "immediate": "Natychmiast",
+        "days7": "7 dni",
+        "days15": "15 dni",
+        "days30": "30 dni",
+        "days45": "45 dni",
+        "days60": "60 dni",
+        "days90": "90 dni"
+      },
+      "invoice": {
+        "title": "Informacje o fakturze",
+        "subtitle": "Wprowadź podstawowe informacje o fakturze.",
+        "quoteSelection": "Wybór wyceny",
+        "selectQuote": "Wybierz wycenę",
+        "quoteNumber": "Wycena",
+        "client": "Klient",
+        "amount": "Kwota",
+        "purchaseOrder": "Zamówienie zakupu",
+        "purchaseOrderPlaceholder": "PO-2026-001",
+        "invoiceDate": "Data faktury",
+        "dueDate": "Termin płatności",
+        "paymentTerms": "Warunki płatności",
+        "paymentMethod": "Metoda płatności",
+        "selectPaymentMethod": "Wybierz",
+        "tips": [
+          "Numer faktury jest generowany automatycznie, możesz go zmienić.",
+          "Termin płatności jest obliczany automatycznie zgodnie z warunkami płatności.",
+          "Zamówienie zakupu (PO) jest opcjonalne, ale zalecane dla firm."
+        ]
+      },
+      "company": {
+        "title": "Twoja firma",
+        "subtitle": "Te informacje pojawią się jako wystawca na fakturze.",
+        "name": "Nazwa firmy",
+        "namePlaceholder": "Twoja Firma Sp. z o.o.",
+        "address": "Adres",
+        "addressPlaceholder": "ul. Główna 123",
+        "city": "Miasto",
+        "cityPlaceholder": "Warszawa",
+        "postalCode": "Kod pocztowy",
+        "postalCodePlaceholder": "00-001",
+        "phone": "Telefon",
+        "phonePlaceholder": "+48 XX XXX XX XX",
+        "email": "E-mail",
+        "emailPlaceholder": "kontakt@twojafirma.pl",
+        "taxId": "NIP",
+        "taxIdPlaceholder": "1234567890",
+        "logo": "Logo firmy",
+        "logoAlt": "Logo firmy",
+        "tips": [
+          "Nazwa firmy jest wymagana.",
+          "Dodaj swój NIP, jeśli jesteś podatnikiem VAT."
+        ]
+      },
+      "client": {
+        "title": "Informacje o kliencie",
+        "subtitle": "Te informacje pojawią się jako odbiorca na fakturze.",
+        "name": "Nazwa klienta",
+        "namePlaceholder": "Jan Kowalski",
+        "company": "Firma klienta",
+        "companyPlaceholder": "Firma Klienta S.A.",
+        "email": "E-mail",
+        "emailPlaceholder": "klient@email.com",
+        "phone": "Telefon",
+        "phonePlaceholder": "+48 XXX XXX XXX",
+        "address": "Adres",
+        "addressPlaceholder": "ul. Kwiatowa 456",
+        "city": "Miasto",
+        "cityPlaceholder": "Kraków",
+        "postalCode": "Kod pocztowy",
+        "postalCodePlaceholder": "30-001",
+        "taxId": "NIP",
+        "taxIdPlaceholder": "9876543210",
+        "tips": [
+          "Nazwa klienta jest wymagana.",
+          "Wprowadź adres e-mail, aby móc wysłać fakturę bezpośrednio z aplikacji."
+        ]
+      },
+      "items": {
+        "title": "Pozycje faktury",
+        "subtitle": "Dodaj produkty lub usługi do fakturowania.",
+        "count": "pozycji",
+        "line": "Pozycja",
+        "description": "Opis",
+        "descriptionPlaceholder": "Np. Rozwój aplikacji webowej",
+        "quantity": "Ilość",
+        "unitPrice": "Cena jedn.",
+        "discount": "Rabat %",
+        "taxRate": "VAT %",
+        "total": "Razem",
+        "addButton": "Dodaj pozycję",
+        "summary": "Podsumowanie",
+        "subtotal": "Razem netto",
+        "totalDiscount": "Rabat ogółem",
+        "totalTax": "VAT",
+        "grandTotal": "Razem brutto",
+        "duplicate": "Duplikuj",
+        "delete": "Usuń",
+        "tips": [
+          "Każda pozycja musi mieć opis i cenę jednostkową większą od 0.",
+          "Rabat jest wyrażony w procentach (np. 10 dla 10%).",
+          "Razem dla każdej pozycji jest obliczane automatycznie."
+        ]
+      },
+      "payment": {
+        "title": "Dane bankowe",
+        "subtitle": "Te informacje ułatwią Twojemu klientowi dokonanie płatności.",
+        "bankName": "Nazwa banku",
+        "bankNamePlaceholder": "Nazwa banku",
+        "bankAccount": "Numer konta / IBAN",
+        "bankAccountPlaceholder": "PL00 0000 0000 0000 0000 0000 0000",
+        "tips": [
+          "Dane bankowe są opcjonalne, ale zalecane przy przelewach.",
+          "Podaj swój numer konta lub IBAN."
+        ]
+      },
+      "notes": {
+        "title": "Notatki i warunki",
+        "subtitle": "Dodaj spersonalizowaną wiadomość lub ogólne warunki sprzedaży.",
+        "message": "Wiadomość / Notatki",
+        "messagePlaceholder": "Dziękujemy za zaufanie. W razie pytań prosimy o kontakt.",
+        "terms": "Warunki ogólne",
+        "termsPlaceholder": "Płatność po otrzymaniu faktury. Wszelkie nieopłacone faktury po terminie płatności będą podlegać odsetkom za zwłokę w wysokości 1,5% miesięcznie."
+      },
+      "preview": {
+        "title": "Podgląd faktury",
+        "subtitle": "Sprawdź fakturę przed wygenerowaniem.",
+        "downloadPdf": "Pobierz PDF",
+        "downloadExcel": "Pobierz Excel",
+        "newInvoice": "Nowa faktura"
+      },
+      "navigation": {
+        "previous": "Poprzedni",
+        "next": "Następny",
+        "history": "Historia",
+        "generate": "Generuj",
+        "generating": "Generowanie..."
+      },
+      "tips": {
+        "title": "Wskazówki dotyczące skutecznej faktury",
+        "list": [
+          "Sprawdź numer faktury, aby uniknąć duplikatów",
+          "Wyraźnie określ terminy płatności",
+          "Dołącz swoje dane bankowe, aby ułatwić płatność",
+          "Dodaj wiadomość z podziękowaniami w notatkach",
+          "Sprawdź kwoty przed wygenerowaniem PDF",
+          "Zachowaj kopię każdej wysłanej faktury"
+        ]
+      },
+      "quoteDialog": {
+        "title": "Wybierz wycenę do fakturowania",
+        "description": "Wybierz wersję wyceny, którą chcesz przekształcić w fakturę"
+      },
+      "errors": {
+        "idNotFound": "Nie znaleziono ID faktury",
+        "generationError": "Błąd podczas generowania faktury",
+        "generateFirst": "Najpierw wygeneruj fakturę",
+        "clientEmailRequired": "Wprowadź e-mail klienta"
+      },
+      "alerts": {
+        "sendSuccess": "Faktura wysłana pomyślnie",
+        "sendError": "Błąd podczas wysyłania faktury"
+      },
+      "history": {
+        "title": "Historia faktur",
+        "ref_quote": "ref.",
+        "modified": "zmodyfikowano",
+        "due_date": "termin",
+        "preview": "Podgląd / Użyj ponownie",
+        "download_pdf": "Pobierz PDF",
+        "download_excel": "Pobierz plik Excel",
+        "duplicate": "Duplikuj",
+        "delete": "Usuń",
+        "delete_confirm_title": "Usuń fakturę",
+        "delete_confirm_message": "Ta operacja jest nieodwracalna. Czy na pewno chcesz usunąć tę fakturę?",
+        "delete_confirm_button": "Usuń",
+        "cancel": "Anuluj",
+        "search_placeholder": "Nr faktury, klient...",
+        "no_invoices": "Nie znaleziono faktur",
+        "reset_filters": "Resetuj filtry",
+        "invoices": "faktura",
+        "page": "strona",
+        "result": "wynik",
+        "close": "Zamknij",
+        "filters": {
+          "all": "Wszystkie",
+          "generated": "Wygenerowane",
+          "sent": "Wysłane",
+          "paid": "Opłacone",
+          "overdue": "Zaległe",
+          "draft": "Szkice"
+        },
+        "stats": {
+          "paid": "opłacona",
+          "sent": "wysłana",
+          "overdue": "zaległa"
+        }
+      }
+    },
+    "quote": {
+      "title": "Kreator wyceny",
+      "subtitle": "Utwórz profesjonalną wycenę w kilku krokach",
+      "steps": {
+        "client": "Klient",
+        "emetteur": "Wystawca",
+        "project": "Projekt",
+        "items": "Pozycje",
+        "payment": "Płatność",
+        "notes": "Notatki",
+        "preview": "Podgląd"
+      },
+      "help_notice": {
+        "tips_title": "Wskazówki",
+        "info_title": "Warto wiedzieć"
+      },
+      "progress": {
+        "step_label": "Krok",
+        "of": "z"
+      },
+      "client_step": {
+        "title": "Informacje o kliencie",
+        "subtitle": "Wprowadź dane kontaktowe klienta, odbiorcy wyceny.",
+        "tips": [
+          "Imię, nazwisko, e-mail i telefon są wymagane.",
+          "Firma jest opcjonalna, ale zalecana dla wycen B2B.",
+          "Typ wyceny pozwala skategoryzować charakter prac."
+        ],
+        "first_name": "Imię",
+        "last_name": "Nazwisko",
+        "email": "E-mail",
+        "phone": "Telefon",
+        "company": "Firma klienta",
+        "quote_type": "Typ wyceny",
+        "address": "Adres",
+        "city": "Miasto",
+        "postal_code": "Kod pocztowy",
+        "first_name_placeholder": "Jan",
+        "last_name_placeholder": "Kowalski",
+        "email_placeholder": "kontakt@email.com",
+        "phone_placeholder": "+48 XXX XXX XXX",
+        "company_placeholder": "Nazwa firmy klienta",
+        "address_placeholder": "ul. Długa 123",
+        "city_placeholder": "Poznań",
+        "postal_code_placeholder": "60-001",
+        "select_quote_type": "Wybierz typ"
+      },
+      "emitter_step": {
+        "title": "Twoja firma (wystawca)",
+        "subtitle": "Te informacje pojawią się w bloku usługodawcy na wycenie.",
+        "tips": [
+          "Nazwa firmy jest wymagana.",
+          "Logo zostanie wyświetlone w lewym górnym rogu wyceny PDF.",
+          "NIP, REGON i numer VAT pojawią się w bloku usługodawcy."
+        ],
+        "company_name": "Nazwa firmy",
+        "company_contact": "Kontakt",
+        "company_address": "Adres",
+        "company_city": "Miasto (z kodem pocztowym)",
+        "company_phone": "Telefon stacjonarny",
+        "company_port": "Telefon komórkowy",
+        "company_email": "E-mail",
+        "company_siret": "REGON",
+        "company_ape": "Kod PKD",
+        "company_tva": "Numer VAT",
+        "contact_be": "Referencje biura studiów (wewnętrzne)",
+        "company_logo": "Logo firmy",
+        "company_name_placeholder": "Twoja Firma Sp. z o.o.",
+        "company_contact_placeholder": "Pan Kowalski",
+        "company_address_placeholder": "ul. Główna 51",
+        "company_city_placeholder": "00-001 Warszawa",
+        "company_phone_placeholder": "+48 XX XXX XX XX",
+        "company_port_placeholder": "+48 XXX XXX XXX",
+        "company_email_placeholder": "info@twojafirma.pl",
+        "company_siret_placeholder": "123456789",
+        "company_ape_placeholder": "6201B",
+        "company_tva_placeholder": "PL1234567890",
+        "contact_be_placeholder": "Ref. biura studiów",
+        "logo_preview": "Podgląd logo"
+      },
+      "project_step": {
+        "title": "Szczegóły projektu",
+        "subtitle": "Opisz projekt do realizacji dla tej wyceny.",
+        "tips": [
+          "Nazwa projektu jest wymagana.",
+          "Jasny opis uspokaja klienta, że zrozumiałeś jego potrzeby.",
+          "Data ważności jest automatycznie ustawiana na 30 dni, ale można ją zmienić."
+        ],
+        "project_name": "Nazwa projektu",
+        "category": "Kategoria",
+        "project_description": "Opis projektu",
+        "start_date": "Planowana data rozpoczęcia",
+        "deadline": "Termin realizacji projektu",
+        "budget": "Szacowany budżet",
+        "valid_until": "Wycena ważna do",
+        "project_name_placeholder": "Np. Rozwój strony internetowej",
+        "project_description_placeholder": "Opisz projekt szczegółowo...",
+        "select_category": "Wybierz kategorię",
+        "categories": {
+          "development": "Rozwój stron internetowych",
+          "design": "Projektowanie graficzne",
+          "marketing": "Marketing cyfrowy",
+          "consulting": "Doradztwo i szkolenia",
+          "delivery": "Dostawa usług",
+          "construction": "Budownictwo",
+          "renovation": "Renowacja",
+          "other": "Inne"
+        }
+      },
+      "items_step": {
+        "title": "Pozycje wyceny",
+        "subtitle": "Wymień usługi lub dostawy do wycenienia.",
+        "items_count": "pozycji",
+        "tips": [
+          "Każda pozycja musi mieć opis i cenę jednostkową.",
+          "Czas pracy: czas pracy (np. 1,0 godz.). Jednostka: Zestaw, godz., m² itp.",
+          "Rabat na pozycję jest wyrażony w procentach.",
+          "Użyj strzałek ↑↓, aby zmienić kolejność pozycji."
+        ],
+        "article": "Pozycja",
+        "description": "Opis",
+        "description_placeholder": "Np. Dostawa i układanie płytek",
+        "time_mo": "Czas pracy",
+        "time_mo_placeholder": "1,0 godz.",
+        "unit": "Jednostka",
+        "quantity": "Ilość",
+        "unit_price": "Cena jedn.",
+        "discount": "Rabat %",
+        "tax": "VAT %",
+        "total_ht": "Razem netto",
+        "add_item": "Dodaj pozycję",
+        "summary": "Podsumowanie pozycji",
+        "subtotal_ht": "Razem netto",
+        "total_before_discount": "Razem przed rabatem ogólnym",
+        "duplicate": "Duplikuj",
+        "delete": "Usuń",
+        "units": {
+          "ens": "Zestaw",
+          "h": "godz.",
+          "j": "dzień",
+          "m2": "m²",
+          "m3": "m³",
+          "ml": "ml",
+          "u": "szt.",
+          "kg": "kg",
+          "t": "t",
+          "forfait": "ryczałt"
+        }
+      },
+      "payment_step": {
+        "title": "Ustawienia płatności",
+        "subtitle": "Konfiguracja ogólnego VAT, rabatu i zaliczki.",
+        "tips": [
+          "Stawka VAT w Polsce wynosi 23%.",
+          "Rabat ogólny jest stosowany do sumy netto wszystkich pozycji.",
+          "Zaliczka może być stałą kwotą lub procentem ceny brutto."
+        ],
+        "global_tax": "Ogólny VAT (%)",
+        "global_discount": "Rabat ogólny (%)",
+        "deposit": "Zaliczka",
+        "percentage": "%",
+        "fixed": "Stała kwota",
+        "financial_summary": "Podsumowanie finansowe",
+        "subtotal_ht": "Razem netto",
+        "discount": "Rabat",
+        "total_ht": "Razem netto",
+        "tax_amount": "VAT",
+        "total_ttc": "Razem brutto",
+        "deposit_amount": "Zaliczka",
+        "remaining": "Pozostało do zapłaty"
+      },
+      "notes_step": {
+        "title": "Notatki i warunki",
+        "subtitle": "Teksty te pojawią się w sekcji „Warunki płatności” wyceny.",
+        "tips": [
+          "Dodatkowe notatki są wyświetlane w sekcji „Warunki płatności”.",
+          "Określ warunki zaliczki (np. 30% przy starcie, 70% na zakończenie)."
+        ],
+        "payment_conditions": "Warunki płatności / Notatki",
+        "payment_conditions_placeholder": "- 30% do zapłaty tydzień po rozpoczęciu\n- 70% na koniec pierwszego miesiąca",
+        "general_conditions": "Warunki ogólne",
+        "general_conditions_placeholder": "Warunki płatności, ważność, odsetki za zwłokę..."
+      },
+      "preview_step": {
+        "title": "Podgląd wyceny",
+        "subtitle": "Sprawdź wycenę przed jej wygenerowaniem.",
+        "modify": "Edytuj",
+        "print": "Drukuj",
+        "send": "Wyślij",
+        "download_excel": "Pobierz Excel",
+        "download_pdf": "Pobierz PDF",
+        "quote_preview": "Podgląd wyceny",
+        "provider": "Usługodawca",
+        "client": "Klient",
+        "project": "Projekt",
+        "valid_until": "Ważne do",
+        "start_date": "Rozpoczęcie",
+        "table": {
+          "time_mo": "Czas pracy",
+          "description": "Opis",
+          "unit": "Jedn.",
+          "unit_price_ht": "Cena jedn. netto",
+          "quantity": "Ilość",
+          "amount_ht": "Kwota netto"
+        },
+        "total_ht": "Kwota całkowita netto",
+        "total_ttc": "Kwota całkowita brutto",
+        "payment_conditions_title": "Warunki płatności"
+      },
+      "buttons": {
+        "previous": "Poprzedni",
+        "next": "Następny",
+        "generate_quote": "Generuj wycenę",
+        "generating": "Generowanie...",
+        "new_quote": "Nowa wycena",
+        "history": "Historia wycen"
+      },
+      "tips_section": {
+        "title": "Wskazówki dotyczące skutecznej wyceny",
+        "tips": [
+          "Dokładnie opisz każdą pozycję, aby uniknąć sporów",
+          "Wyraźnie określ ważność wyceny (zalecane 30 dni)",
+          "Określ terminy realizacji i warunki dostawy",
+          "Poproś o zaliczkę przy podpisaniu, aby zabezpieczyć projekt",
+          "Sprawdź kwoty przed wysłaniem do klienta",
+          "Zachowaj podpisaną kopię każdej zaakceptowanej wyceny"
+        ]
+      },
+      "status": {
+        "draft": "Szkic",
+        "sent": "Wysłana",
+        "accepted": "Zaakceptowana",
+        "rejected": "Odrzucona",
+        "expired": "Wygasła"
+      },
+      "alerts": {
+        "error_generating": "Błąd podczas generowania wyceny",
+        "generate_first": "Najpierw wygeneruj wycenę",
+        "email_required": "Wprowadź e-mail klienta",
+        "email_sent": "Wycena wysłana pomyślnie",
+        "email_error": "Błąd podczas wysyłania wyceny"
+      },
+      "quote_types": {
+        "0": "Tylko prace instalacyjne",
+        "1": "Dostawa i montaż",
+        "2": "Renowacja",
+        "3": "Budowa",
+        "4": "Zagospodarowanie",
+        "5": "Montażysta",
+        "6": "Studia i przygotowanie planów",
+        "7": "Obliczenia wymiarowania",
+        "8": "Obliczenia weryfikacyjne",
+        "9": "Pomoc techniczna",
+        "10": "Inne"
+      },
+      "history": {
+        "title": "Historia wycen",
+        "modified": "zmodyfikowano",
+        "preview": "Podgląd / Użyj ponownie",
+        "download_pdf": "Pobierz PDF",
+        "download_excel": "Pobierz plik Excel",
+        "duplicate": "Duplikuj",
+        "delete": "Usuń",
+        "delete_confirm_title": "Usuń wycenę",
+        "delete_confirm_message": "Ta operacja jest nieodwracalna. Czy na pewno chcesz usunąć tę wycenę?",
+        "delete_confirm_button": "Usuń",
+        "cancel": "Anuluj",
+        "search_placeholder": "Nr wyceny, klient, projekt...",
+        "no_quotes": "Nie znaleziono wycen",
+        "reset_filters": "Resetuj filtry",
+        "quotes": "wycena",
+        "page": "strona",
+        "result": "wynik",
+        "close": "Zamknij",
+        "filters": {
+          "all": "Wszystkie",
+          "draft": "Szkice",
+          "sent": "Wysłane",
+          "accepted": "Zaakceptowane",
+          "rejected": "Odrzucone",
+          "expired": "Wygasłe"
+        },
+        "stats": {
+          "accepted": "zaakceptowana",
+          "sent": "wysłana",
+          "rejected": "odrzucona",
+          "expired": "wygasła",
+          "acceptance_rate": "akceptacja"
+        }
+      },
+      "selection": {
+        "title": "Wybierz wycenę",
+        "search_placeholder": "Numer, klient...",
+        "no_results": "Brak wyników",
+        "no_quotes": "Brak dostępnych wycen",
+        "reset": "Resetuj",
+        "quotes": "wycena",
+        "page": "strona",
+        "cancel": "Anuluj",
+        "select": "Wybierz"
+      }
+    },
+    "credit_note": {
+      "title": "Kreator not kredytowych",
+      "subtitle": "Utwórz profesjonalną notę kredytową powiązaną z istniejącą fakturą",
+      "steps": {
+        "identification": "Nota kredytowa",
+        "emetteur": "Wystawca",
+        "client": "Klient",
+        "items": "Pozycje",
+        "notes": "Notatki",
+        "preview": "Podgląd"
+      },
+      "progress": {
+        "step": "Krok"
+      },
+      "help_notice": {
+        "tips_title": "Wskazówki",
+        "info_title": "Warto wiedzieć"
+      },
+      "identification_step": {
+        "title": "Identyfikacja noty kredytowej",
+        "subtitle": "Numer, data, faktura źródłowa, przyczyna i metoda zwrotu.",
+        "tips": [
+          "Numer noty kredytowej jest wymagany i musi być unikalny.",
+          "Zawsze podawaj fakturę źródłową, której dotyczy nota kredytowa.",
+          "Przyczyna i metoda zwrotu pojawią się w dokumencie PDF."
+        ],
+        "credit_note_date": "Data noty kredytowej",
+        "original_invoice_number": "Nr faktury źródłowej",
+        "original_invoice_placeholder": "FA-202601-0042",
+        "original_invoice_date": "Data faktury źródłowej",
+        "credit_reason": "Przyczyna noty kredytowej",
+        "refund_method": "Metoda zwrotu"
+      },
+      "emitter_step": {
+        "title": "Twoja firma (wystawca)",
+        "subtitle": "Te informacje pojawią się w bloku usługodawcy na nocie kredytowej.",
+        "tips": [
+          "Nazwa firmy jest wymagana.",
+          "Logo zostanie wyświetlone w lewym górnym rogu dokumentu PDF.",
+          "NIP, REGON i numer VAT pojawią się w bloku wystawcy."
+        ],
+        "company_name": "Nazwa firmy",
+        "company_name_placeholder": "Twoja Firma Sp. z o.o.",
+        "company_address": "Adres",
+        "company_address_placeholder": "ul. Główna 51",
+        "company_city": "Miasto (z kodem pocztowym)",
+        "company_city_placeholder": "00-001 Warszawa",
+        "company_phone": "Telefon stacjonarny",
+        "company_phone_placeholder": "+48 XX XXX XX XX",
+        "company_port": "Telefon komórkowy",
+        "company_port_placeholder": "+48 XXX XXX XXX",
+        "company_email": "E-mail",
+        "company_email_placeholder": "info@twojafirma.pl",
+        "company_siret": "REGON",
+        "company_siret_placeholder": "123456789",
+        "company_ape": "Kod PKD",
+        "company_ape_placeholder": "6201B",
+        "company_tva": "Numer VAT",
+        "company_tva_placeholder": "PL1234567890",
+        "company_logo": "Logo firmy",
+        "logo_preview": "Podgląd logo"
+      },
+      "client_step": {
+        "title": "Informacje o kliencie",
+        "subtitle": "Odbiorca noty kredytowej.",
+        "tips": [
+          "Wprowadź adres e-mail, aby móc wysłać notę kredytową bezpośrednio z aplikacji.",
+          "Numer VAT klienta pojawi się w kolumnie EOG w tabeli podsumowania."
+        ],
+        "client_name": "Nazwa klienta",
+        "client_name_placeholder": "Jan Kowalski",
+        "client_company": "Firma klienta",
+        "client_company_placeholder": "Firma Klienta S.A.",
+        "client_email": "E-mail",
+        "client_email_placeholder": "klient@email.com",
+        "client_phone": "Telefon",
+        "client_phone_placeholder": "+48 XXX XXX XXX",
+        "client_address": "Adres",
+        "client_address_placeholder": "ul. Kwiatowa 456",
+        "client_city": "Miasto",
+        "client_city_placeholder": "Kraków",
+        "client_postal_code": "Kod pocztowy",
+        "client_postal_code_placeholder": "30-001",
+        "client_tax_id": "Numer VAT / NIP",
+        "client_tax_id_placeholder": "PL9876543210"
+      },
+      "items_step": {
+        "title": "Pozycje noty kredytowej",
+        "subtitle": "Dodaj przedmioty lub usługi do uznania.",
+        "lines_count": "pozycji",
+        "line": "Pozycja",
+        "tips": [
+          "Każda pozycja musi mieć opis i cenę jednostkową > 0.",
+          "Kwoty reprezentują uznania — pojawią się na pomarańczowo w PDF.",
+          "Rabat jest wyrażony w procentach (np. 10 dla 10%)."
+        ],
+        "description": "Opis",
+        "description_placeholder": "Np. Zwrot towaru / Korekta",
+        "quantity": "Ilość",
+        "unit_price": "Cena jedn.",
+        "discount": "Rabat %",
+        "tax": "VAT %",
+        "total_ht": "Razem netto",
+        "add_item": "Dodaj pozycję",
+        "summary": "Podsumowanie",
+        "estimated_tax": "Szacowany VAT",
+        "net_refund": "Kwota netto do zwrotu (brutto)",
+        "duplicate": "Duplikuj",
+        "delete": "Usuń"
+      },
+      "notes_step": {
+        "title": "Notatki i referencje",
+        "subtitle": "Dodatkowe informacje, które pojawią się na nocie kredytowej.",
+        "notes": "Referencje / Notatki",
+        "notes_placeholder": "Referencja pliku, szczegółowy powód, numer zwrotu...",
+        "terms_and_conditions": "Warunki ogólne",
+        "terms_placeholder": "Warunki zwrotu, terminy przetwarzania..."
+      },
+      "preview_step": {
+        "title": "Podgląd noty kredytowej",
+        "subtitle": "Sprawdź przed wygenerowaniem PDF.",
+        "download_excel": "Pobierz Excel",
+        "download_pdf": "Pobierz PDF",
+        "credit_note_title": "NOTA KREDYTOWA",
+        "number": "Nr",
+        "invoice_ref": "Ref. faktury",
+        "reason": "Przyczyna",
+        "refund": "Zwrot",
+        "emitter": "Wystawca",
+        "client": "Klient",
+        "portable": "Tel. kom.",
+        "total_ht": "Razem netto",
+        "estimated_tax": "Szacowany VAT",
+        "net_refund": "Kwota netto do zwrotu (brutto)",
+        "references": "Referencje",
+        "table": {
+          "description": "Opis",
+          "quantity": "Ilość",
+          "unit_price_ht": "Cena jedn. netto",
+          "discount": "Rabat",
+          "tax": "VAT %",
+          "amount_ht": "Kwota netto"
+        }
+      },
+      "status": {
+        "draft": "Szkic",
+        "issued": "Wystawiona",
+        "processed": "Przetworzona",
+        "cancelled": "Anulowana"
+      },
+      "credit_reasons": {
+        "product_return": "Zwrot towaru",
+        "defective_product": "Produkt wadliwy",
+        "billing_error": "Błąd fakturowania",
+        "discount": "Rabat handlowy",
+        "price_adjustment": "Korekta ceny",
+        "cancelled_order": "Anulowanie zamówienia",
+        "goodwill": "Gest handlowy",
+        "other": "Inne"
+      },
+      "refund_methods": {
+        "bank_transfer": "Przelew bankowy",
+        "original_payment": "Oryginalna metoda płatności",
+        "store_credit": "Kredyt sklepowy",
+        "cash": "Gotówka",
+        "check": "Czek"
+      },
+      "buttons": {
+        "history": "Historia",
+        "previous": "Poprzedni",
+        "next": "Następny",
+        "generate": "Generuj",
+        "generating": "Generowanie...",
+        "new_credit_note": "Nowa nota kredytowa"
+      },
+      "tips_section": {
+        "title": "Dobre praktyki dla not kredytowych",
+        "tips": [
+          "Zawsze odwołuj się do faktury źródłowej, aby zapewnić możliwość śledzenia",
+          "Nota kredytowa powinna być wystawiona natychmiast po potwierdzeniu zwrotu",
+          "Zachowaj podpisaną kopię w swoim pliku klienta",
+          "Sprawdź, czy kwota noty kredytowej odpowiada fakturze źródłowej"
+        ]
+      },
+      "alerts": {
+        "error_generating": "Błąd podczas generowania noty kredytowej",
+        "generate_first": "Najpierw wygeneruj notę kredytową",
+        "email_required": "Wprowadź e-mail klienta",
+        "email_sent": "Nota kredytowa wysłana pomyślnie",
+        "email_error": "Błąd podczas wysyłania noty kredytowej"
+      },
+      "history": {
+        "title": "Historia not kredytowych",
+        "ref_invoice": "Ref.",
+        "modified": "zmodyfikowano",
+        "preview": "Podgląd / Użyj ponownie",
+        "download_pdf": "Pobierz PDF",
+        "download_excel": "Pobierz plik Excel",
+        "duplicate": "Duplikuj",
+        "delete": "Usuń",
+        "delete_confirm_title": "Usuń notę kredytową",
+        "delete_confirm_message": "Ta operacja jest nieodwracalna. Czy na pewno chcesz usunąć tę notę kredytową?",
+        "delete_confirm_button": "Usuń",
+        "cancel": "Anuluj",
+        "search_placeholder": "Nr noty kredytowej, klient, faktura...",
+        "no_credit_notes": "Nie znaleziono not kredytowych",
+        "reset_filters": "Resetuj filtry",
+        "credit_notes": "nota kredytowa",
+        "page": "strona",
+        "result": "wynik",
+        "close": "Zamknij",
+        "all_reasons": "Wszystkie przyczyny",
+        "filters": {
+          "all": "Wszystkie",
+          "draft": "Szkice",
+          "issued": "Wystawione",
+          "processed": "Przetworzone",
+          "cancelled": "Anulowane"
+        },
+        "stats": {
+          "issued": "wystawiona",
+          "processed": "przetworzona",
+          "cancelled": "anulowana"
+        }
+      }
+    },
+    "mainMenu": {
+      "home": {
+        "label": "Strona główna",
+        "about": "O nas",
+        "us": "Kim jesteśmy?",
+        "blog": "Blog"
+      },
+      "service": {
+        "label": "Usługi",
+        "prestation": "Szukaj posiłku",
+        "formulaireCV": "Formularz CV FIBEM",
+        "formulaireDevis": "Wycena",
+        "formulaireFacture": "Faktura",
+        "formulaireAvoirs": "Noty kredytowe"
+      },
+      "emploi": {
+        "label": "Zatrudnienie",
+        "espaceCandidat": "Przestrzeń kandydata",
+        "espaceRecruteur": "Przestrzeń rekrutera",
+        "espaceAbonnement": "Przestrzeń subskrypcji"
+      },
+      "foods": "Szukaj posiłku",
+      "job": "Szukaj pracy",
+      "cv": "CV",
+      "contact": "Kontakt",
+      "facture": "Faktura"
+    },
+    "authMenu": {
+      "login": "Logowanie",
+      "register": "Rejestracja"
+    },
+    "userMenu": {
+      "shoppingCart": "Koszyk",
+      "dashboard": "Panel sterowania",
+      "profile": "Profil"
+    },
+    "search_placeholder": "Szukaj"
+  }
