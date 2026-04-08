@@ -1,1 +1,1697 @@
-{}
+{
+    "common": {
+      "logoAlt": "Logo FIBEM",
+      "showPassword": "Passwort anzeigen",
+      "hidePassword": "Passwort verbergen",
+      "emailOrPhone": "E-Mail oder Telefonnummer"
+    },
+    "login": {
+      "title": "Anmelden",
+      "subtitle": "Greifen Sie auf Ihren beruflichen Bereich zu",
+      "description": "Verwenden Sie Ihre E-Mail oder Telefonnummer",
+      "identifier": {
+        "required": "E-Mail oder Telefonnummer ist erforderlich",
+        "incorrect": "Bitte geben Sie eine gültige E-Mail-Adresse oder Telefonnummer ein (internationales Format)",
+        "placeholder": "E-Mail oder Telefonnummer",
+        "tooLong": "Die Kennung ist zu lang"
+      },
+      "password": {
+        "tooShort": "Das Passwort muss mindestens 6 Zeichen enthalten",
+        "placeholder": "Ihr Passwort"
+      },
+      "forgotPassword": "Passwort vergessen?",
+      "rememberMe": "Angemeldet bleiben",
+      "secureConnection": "Sichere Verbindung",
+      "loginButton": "Anmelden",
+      "loggingIn": "Anmeldung läuft...",
+      "noAccount": "Noch kein Konto?",
+      "signUp": "Kostenlos registrieren",
+      "termsAndPrivacy": "Durch die Anmeldung stimmen Sie unseren Nutzungsbedingungen und unserer Datenschutzrichtlinie zu",
+      "terms": "Nutzungsbedingungen",
+      "privacy": "Datenschutzrichtlinie"
+    },
+    "register": {
+      "title": "Konto erstellen",
+      "subtitle": "Treten Sie unserer Essenslieferplattform bei",
+      "description": "Füllen Sie die Informationen aus, um Ihr Konto zu erstellen",
+      "redirectMessage": "Danke, dass Sie uns kontaktiert haben. Bitte schließen Sie die Kontoerstellung ab, um uns eine Nachricht senden zu können",
+      "createButton": "Mein Konto erstellen",
+      "creatingAccount": "Konto wird erstellt...",
+      "alreadyHaveAccount": "Haben Sie bereits ein Konto?",
+      "loginLink": "Anmelden",
+      "firstName": {
+        "label": "Vorname",
+        "placeholder": "Ihr Vorname",
+        "tooShort": "Der Vorname muss mindestens 2 Zeichen enthalten",
+        "tooLong": "Der Vorname ist zu lang",
+        "invalid": "Sonderzeichen nicht erlaubt (außer Leerzeichen)"
+      },
+      "lastName": {
+        "label": "Nachname",
+        "placeholder": "Ihr Nachname",
+        "tooShort": "Der Nachname muss mindestens 2 Zeichen enthalten",
+        "tooLong": "Der Nachname ist zu lang",
+        "invalid": "Sonderzeichen nicht erlaubt (außer Leerzeichen)"
+      },
+      "phone": {
+        "label": "Telefon (internationales Format)",
+        "placeholder": "+33 1 23 45 67 89",
+        "tooShort": "Die Telefonnummer ist zu kurz",
+        "tooLong": "Die Telefonnummer ist zu lang",
+        "invalid": "Ungültiges Format (z.B.: +012 34 56 78)"
+      },
+      "email": {
+        "label": "E-Mail-Adresse",
+        "placeholder": "ihre@email.com",
+        "required": "E-Mail ist erforderlich",
+        "invalid": "Ungültiges E-Mail-Format"
+      },
+      "accountType": {
+        "label": "Kontotyp",
+        "required": "Der Kontotyp ist erforderlich"
+      },
+      "accountTypes": {
+        "individual": {
+          "label": "Privatperson",
+          "description": "Für Einzelnutzer, Arbeitgeber,..."
+        },
+        "candidate": {
+          "label": "Bewerber",
+          "description": "Jobsuche oder Aufträge (Bewerber, Praktikanten, Auszubildende)"
+        },
+        "professional": {
+          "label": "Fachkraft",
+          "description": "Unternehmen, Freiberufler,..."
+        },
+        "partner": {
+          "label": "Partner",
+          "description": "Großkunde und Zeitarbeit"
+        },
+        "admin": {
+          "label": "Administrator",
+          "description": "Erweiterter Plattformzugang (Vertrieb,...)"
+        }
+      },
+      "language": {
+        "label": "Bevorzugte Sprache",
+        "placeholder": "Sprache auswählen",
+        "required": "Die bevorzugte Sprache ist erforderlich"
+      },
+      "password": {
+        "label": "Passwort",
+        "placeholder": "Ihr Passwort",
+        "tooShort": "Das Passwort muss mindestens 8 Zeichen enthalten",
+        "tooLong": "Das Passwort ist zu lang",
+        "uppercase": "Mindestens ein Großbuchstabe",
+        "lowercase": "Mindestens ein Kleinbuchstabe",
+        "number": "Mindestens eine Ziffer",
+        "special": "Mindestens ein Sonderzeichen"
+      },
+      "passwordStrength": {
+        "label": "Passwortstärke:",
+        "empty": "Leer",
+        "veryWeak": "Sehr schwach",
+        "weak": "Schwach",
+        "medium": "Mittel",
+        "good": "Gut",
+        "veryGood": "Sehr gut",
+        "excellent": "Ausgezeichnet"
+      },
+      "passwordCriteria": {
+        "minChars": "Min. 8 Zeichen",
+        "uppercase": "1 Großbuchstabe",
+        "lowercase": "1 Kleinbuchstabe",
+        "number": "1 Ziffer",
+        "specialChar": "1 Sonderzeichen"
+      },
+      "confirmPassword": {
+        "label": "Passwort bestätigen",
+        "placeholder": "Bestätigen Sie Ihr Passwort",
+        "required": "Die Passwortbestätigung ist erforderlich"
+      },
+      "passwords": {
+        "mismatch": "Die Passwörter stimmen nicht überein",
+        "match": "Die Passwörter stimmen überein"
+      }
+    },
+    "verification": {
+      "title": "Ihre E-Mail bestätigen",
+      "description": "Ein Bestätigungscode wurde gesendet an",
+      "instruction": "Geben Sie den 6-stelligen Code ein, der an Ihre E-Mail-Adresse gesendet wurde, um Ihre Registrierung zu bestätigen.",
+      "codeLabel": "Bestätigungscode",
+      "codeError": "Bitte geben Sie alle 6 Ziffern des Codes ein.",
+      "codeIncorrect": "Falscher oder abgelaufener Code.",
+      "verifyButton": "Bestätigen und Konto erstellen",
+      "verifying": "Wird überprüft...",
+      "codeNotReceived": "Keinen Code erhalten?",
+      "resendIn": "Erneut senden in",
+      "resend": "Code erneut senden",
+      "backToForm": "Meine Daten bearbeiten",
+      "errorOccurred": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+    },
+    "errors": {
+      "loginFailed": "Anmeldefehler"
+    },
+    "hero": {
+      "slide1": {
+        "badge": "Willkommen",
+        "title": {
+          "part1": "Willkommen bei",
+          "part2": "liefern",
+          "part3": "Essen"
+        },
+        "subtitle": "Ihre Lieblingsgerichte, im Handumdrehen geliefert",
+        "tagline": "In 3 Klicks bestellen. In 30 Min. erhalten.",
+        "cta": "Jetzt bestellen",
+        "stats": {
+          "restaurants": "Restaurants",
+          "deliveryTime": "Ø Lieferzeit",
+          "satisfiedClients": "Zufriedene Kunden",
+          "deliveryRadius": "Lieferradius"
+        },
+        "visual": {
+          "label": "Bestellung läuft…",
+          "sub": "Lieferung in 18 Min."
+        }
+      },
+      "slide2": {
+        "badge": "Express",
+        "title": "Schnell. Einfach. Unkompliziert.",
+        "subtitle": "Mit wenigen Klicks ist Ihr Essen unterwegs.",
+        "tagline": "Intuitive Benutzeroberfläche • 100% sichere Zahlung • GPS-Verfolgung",
+        "cta": "Zur App",
+        "stats": {
+          "securePayment": "Sichere Zahlung",
+          "liveTracking": "Live-Tracking",
+          "clicks": "Zum Bestellen",
+          "availability": "Verfügbarkeit"
+        },
+        "visual": {
+          "label": "GPS-Tracking aktiv",
+          "sub": "Fahrer 2 km von Ihnen entfernt"
+        }
+      },
+      "slide3": {
+        "badge": "Beliebt",
+        "title": "Eine Wahl für jeden Geschmack",
+        "subtitle": "Burger, Pizzen, lokale Gerichte, gesunde Optionen…",
+        "tagline": "100+ Restaurants • Vielfältige Küchen • Vegetarische Optionen",
+        "cta": "Restaurants entdecken",
+        "stats": {
+          "cuisineTypes": "Küchenarten",
+          "dishes": "Gerichte auf der Karte",
+          "rating": "Durchschnittliche Bewertung",
+          "new": "Neu",
+          "perWeek": "Jede Woche"
+        },
+        "visual": {
+          "label": "Tagesempfehlung",
+          "sub": "Gesunde Bowl • 1 200 FCFA"
+        }
+      },
+      "slide4": {
+        "badge": "Lokal",
+        "title": "Lokale Restaurants, sorgfältig geliefert",
+        "subtitle": "Lokale Partner • Frische Produkte • Qualitätsverpflichtung",
+        "tagline": "Wir unterstützen die Gastronomen in Ihrer Stadt.",
+        "cta": "Partner werden",
+        "stats": {
+          "fresh": "Frisch",
+          "localProducts": "Lokale Produkte",
+          "certified": "Zertifiziert",
+          "quality": "Garantierte Qualität",
+          "partners": "Partner",
+          "sales": "Gastronomenverkäufe"
+        },
+        "visual": {
+          "label": "Zertifizierter Partner",
+          "sub": "Restaurant aus der Nachbarschaft"
+        }
+      }
+    },
+    "characteristics": {
+      "title": "Warum uns wählen?",
+      "subtitle": "Konkrete Garantien für Ihr Unternehmen",
+      "security": {
+        "title": "Garantierte Sicherheit",
+        "description": "Zuverlässige Systeme zum Schutz Ihrer Daten und Transaktionen."
+      },
+      "transparent_prices": {
+        "title": "Transparente Preise",
+        "description": "Keine versteckten Gebühren, ein klares Angebot von Anfang an für jede Leistung."
+      },
+      "fast_delivery": {
+        "title": "Schnelligkeit",
+        "description": "Eingehaltene Fristen und schnelle Einsätze nach Ihren Bedürfnissen."
+      }
+    },
+    "services": {
+      "discoverBadge": "Entdecken Sie unsere Dienstleistungen",
+      "title": "Was darf es sein?",
+      "subtitle": "Köstliche Gerichte und berufliche Möglichkeiten für ein vollständiges kulinarisches Erlebnis",
+      "popularMeals": "Beliebte Gerichte",
+      "popularMealsDesc": "Entdecken Sie die Favoriten unserer Community",
+      "previous": "Zurück",
+      "next": "Weiter",
+      "addToCart": "In den Warenkorb",
+      "seeMoreMeals": "Mehr Gerichte anzeigen",
+      "seeMoreMealsDesc": "Entdecken Sie alle unsere Restaurants und ihre Menüs",
+      "explore": "Entdecken",
+      "jobOffers": "Stellenangebote in der Gastronomie",
+      "jobOffersDesc": "Treten Sie den besten Restaurants in Ihrer Nähe bei",
+      "viewOffer": "Angebot ansehen",
+      "moreJobs": "Mehr Stellenangebote",
+      "moreJobsDesc": "Entdecken Sie alle Möglichkeiten in der Gastronomie",
+      "exploreJobs": "Angebote entdecken",
+      "forProfessionals": "Für Fachleute",
+      "toolsTitle": "Professionelle Werkzeuge für Gastronomen",
+      "toolsDesc": "Verwalten Sie Ihren Betrieb effizient mit unserer Suite kostenloser professioneller Tools",
+      "contract": "Vertrag",
+      "salary": "Gehalt",
+      "experience": {
+        "years": "{years} Jahre",
+        "beginner": "Berufseinsteiger willkommen"
+      },
+      "posted": {
+        "daysAgo": "Vor {days} Tagen"
+      },
+      "tags": {
+        "popular": "Beliebt",
+        "spicy": "Scharf",
+        "new": "Neu",
+        "vegetarian": "Vegetarisch",
+        "healthy": "Gesund",
+        "premium": "Premium",
+        "family": "Familienfreundlich",
+        "experienced": "Erfahren",
+        "fullTime": "Vollzeit",
+        "beginner": "Anfänger",
+        "training": "Ausbildung",
+        "management": "Management",
+        "specialized": "Spezialisiert",
+        "seasonal": "Saisonal",
+        "creative": "Kreativ",
+        "evening": "Abend",
+        "flexible": "Flexibel",
+        "senior": "Senior"
+      },
+      "badges": {
+        "favorite": "Favorit",
+        "new": "Neu",
+        "topChef": "Top Chef",
+        "light": "Leicht",
+        "chefSpecial": "Chefempfehlung",
+        "authentic": "Authentisch",
+        "mustHave": "Unverzichtbar",
+        "familyMeal": "Familiengericht",
+        "premium": "Premium",
+        "urgent": "Dringend",
+        "training": "Ausbildung",
+        "topSalary": "Spitzengehalt",
+        "seasonal": "Saisonal",
+        "creative": "Kreativ",
+        "housingPossible": "Unterkunft möglich",
+        "executive": "Führungskraft",
+        "artisan": "Handwerker"
+      },
+      "contracts": {
+        "permanent": "Unbefristet",
+        "fixedTerm": "Befristet",
+        "seasonal": "Saisonal"
+      },
+      "jobTypes": {
+        "kitchen": "Küche",
+        "dining": "Service",
+        "bar": "Bar",
+        "cleaning": "Reinigung",
+        "management": "Management",
+        "pastry": "Konditorei"
+      },
+      "meals": {
+        "yassa": {
+          "title": "Hähnchen Yassa",
+          "restaurant": "Le Dakarois",
+          "category": "Afrikanisch",
+          "description": "In Zitrone mariniertes Hähnchen mit karamellisierten Zwiebeln, begleitet von weißem Reis"
+        },
+        "burger": {
+          "title": "Gourmet-Burger",
+          "restaurant": "Burger House",
+          "category": "Fast Food",
+          "description": "Hackfleisch 180g, geschmolzener Cheddar, knuspriger Speck und Haussoße"
+        },
+        "pizza": {
+          "title": "Pizza Margherita",
+          "restaurant": "Pizzeria Roma",
+          "category": "Italienisch",
+          "description": "Tomatenboden, frische Mozzarella, Basilikum und Olivenöl"
+        },
+        "salad": {
+          "title": "Caesar-Salat",
+          "restaurant": "Green Life",
+          "category": "Gesund",
+          "description": "Gegrilltes Hähnchen, Parmesan, Croutons und hausgemachte Caesar-Soße"
+        },
+        "padthai": {
+          "title": "Pad Thai",
+          "restaurant": "Thai Orchidée",
+          "category": "Asiatisch",
+          "description": "Gebratene Reisnudeln mit Garnelen, Erdnüssen und Sojasprossen"
+        },
+        "poke": {
+          "title": "Poké Bowl",
+          "restaurant": "Hawaii Bowl",
+          "category": "Gesund",
+          "description": "Frischer Lachs, Essig-Reis, Avocado, Algen und Sojasoße"
+        },
+        "tacos": {
+          "title": "Tacos Al Pastor",
+          "restaurant": "El Camino",
+          "category": "Mexikanisch",
+          "description": "Maistortillas, mariniertes Schweinefleisch, Ananas, Zwiebeln und Koriander"
+        },
+        "ramen": {
+          "title": "Ramen Tonkotsu",
+          "restaurant": "Izakaya San",
+          "category": "Japanisch",
+          "description": "Schweinebrühe, Nudeln, mariniertes Ei, Nori und Schweinebauch"
+        },
+        "couscous": {
+          "title": "Königlicher Couscous",
+          "restaurant": "Le Marocain",
+          "category": "Afrikanisch",
+          "description": "Feiner Grieß, Gemüse, Merguez, Hähnchen und Lammfleisch"
+        },
+        "sushi": {
+          "title": "Sushi Deluxe",
+          "restaurant": "Sushi Master",
+          "category": "Japanisch",
+          "description": "Sortiment von 20 Stück: Lachs, Thunfisch, Dorade, Maki und California Rolls"
+        }
+      },
+      "jobs": {
+        "chef": {
+          "title": "Postenchef",
+          "restaurant": "Le Grand Restaurant",
+          "location": "Paris 8.",
+          "description": "Wir suchen einen leidenschaftlichen Postenchef für unsere Brigade."
+        },
+        "waiter": {
+          "title": "Kellner / Kellnerin",
+          "restaurant": "Brasserie Moderne",
+          "location": "Lyon 2.",
+          "description": "Dynamischer Saaldienst, Teamarbeit, Englischkenntnisse erwünscht."
+        },
+        "sousChef": {
+          "title": "Sous Chef",
+          "restaurant": "Auberge du Soleil",
+          "location": "Nizza",
+          "description": "Brigadeführung, Menüentwicklung, Einhaltung der HACCP-Normen."
+        },
+        "pizzaiolo": {
+          "title": "Pizzabäcker",
+          "restaurant": "Pizza Di Napoli",
+          "location": "Marseille",
+          "description": "Beherrschung des Pizzateigs, Holzofenbacken, Kreativität."
+        },
+        "bartender": {
+          "title": "Barkeeper / Barmaid",
+          "restaurant": "Skybar Lounge",
+          "location": "Bordeaux",
+          "description": "Cocktailzubereitung, Bardienst, Bestandsmanagement."
+        },
+        "dishwasher": {
+          "title": "Spüler",
+          "restaurant": "Hôtel Palace",
+          "location": "Cannes",
+          "description": "Geschirrspülen und Reinigung der Räumlichkeiten, Küchenassistenz."
+        },
+        "manager": {
+          "title": "Restaurantleiter",
+          "restaurant": "Fast Food Chain",
+          "location": "Toulouse",
+          "description": "Vollständige Restaurantführung, Teammanagement, kommerzielle Ziele."
+        },
+        "pastryChef": {
+          "title": "Konditor",
+          "restaurant": "Boulangerie Fine",
+          "location": "Straßburg",
+          "description": "Herstellung von Gebäck, Torten, Viennoiseries. Kreativität erforderlich."
+        }
+      },
+      "tools": {
+        "cv": {
+          "title": "Lebenslauf-Generator",
+          "description": "Erstellen Sie in wenigen Minuten einen professionellen Lebenslauf für die Gastronomie",
+          "button": "Meinen Lebenslauf erstellen",
+          "bottom": "Exklusive Vorlagen für die Gastronomie"
+        },
+        "quote": {
+          "title": "Angebots-Generator",
+          "description": "Professionelle Angebote für Ihre Leistungen und Veranstaltungen",
+          "button": "Ein Angebot erstellen",
+          "bottom": "Anpassbar, Umwandlung in Rechnung"
+        },
+        "invoice": {
+          "title": "Rechnungs-Generator",
+          "description": "Personalisierte und gesetzeskonforme Rechnungen",
+          "button": "Eine Rechnung erstellen",
+          "bottom": "MwSt. inklusive, automatische Nummerierung"
+        },
+        "creditNote": {
+          "title": "Gutschriften-Generator",
+          "description": "Erstellen Sie Gutschriften mit wenigen Klicks",
+          "button": "Eine Gutschrift erstellen",
+          "bottom": "Rückerstattungen, Stornierungen, Korrekturen"
+        },
+        "employeeManagement": {
+          "title": "Mitarbeiterverwaltung",
+          "description": "Dienstplanung, Gehaltsabrechnung, Arbeitsverträge"
+        },
+        "inventoryManagement": {
+          "title": "Lagerverwaltung",
+          "description": "Inventar, Benachrichtigungen, Lieferantenbestellungen"
+        },
+        "dashboard": {
+          "title": "Dashboards",
+          "description": "Analysen, Umsatz, Leistung"
+        }
+      },
+      "stats": {
+        "documents": "Generierte Dokumente pro Monat",
+        "satisfaction": "Nutzerzufriedenheit",
+        "free": "Kostenlose Tools"
+      }
+    },
+    "footer": {
+      "logoAlt": "LOGO FIBEM",
+      "contacts": "Unsere Büros",
+      "newsletter": "Newsletter",
+      "emailPlaceholder": "Ihre E-Mail-Adresse",
+      "subscribed": "Danke für Ihre Anmeldung!",
+      "newsletterDesc": "Erhalten Sie unsere Neuigkeiten und Sonderangebote direkt in Ihr Postfach.",
+      "rights": "Alle Rechte vorbehalten.",
+      "privacy": "Datenschutz",
+      "terms": "AGB",
+      "cookies": "Cookies",
+      "sitemap": "Sitemap",
+      "contact": "Kontakt",
+      "viewGoogleMap": "Google Map anzeigen",
+      "whatsapp": "Whatsapp",
+      "france": {
+        "name": "FIBEM Frankreich",
+        "address": "51 Rue du Grévarin – 27200 Vernon",
+        "phone": "Tel: +33 6 05 51 14 32",
+        "siret": "SIRET 445 374 937 00032"
+      },
+      "senegal": {
+        "name": "FIBEM Senegal",
+        "address": "Rue 7 Corniche x 6, Médina, Dakar",
+        "phone": "Tel: +221 78 370 06 02",
+        "ninea": "N.I.N.E.A.: 30 84 31 62 U2 — NAF: 7112B Engineering"
+      },
+      "social": {
+        "followUs": "Folgen Sie uns",
+        "facebook": "Facebook",
+        "twitter": "Twitter",
+        "instagram": "Instagram",
+        "youtube": "YouTube"
+      },
+      "tagline": "Ihr HR-, Gastronomie- und professioneller Dienstleistungspartner in Frankreich, Senegal und Kamerun.",
+      "send": "Senden",
+      "gdpr": "Daten geschützt — DSGVO-konform",
+      "unsubscribe": "Mit einem Klick abmelden"
+    },
+    "cv": {
+      "title": "Lebenslauf-Generator",
+      "subtitle": "Erstellen Sie Ihren professionellen Lebenslauf in wenigen geführten Schritten",
+      "newCv": "Neuer Lebenslauf",
+      "help": {
+        "title": "Tipps"
+      },
+      "steps": {
+        "start": "Start",
+        "personal": "Persönliche Daten",
+        "experience": "Erfahrung",
+        "education": "Ausbildung",
+        "skills": "Fähigkeiten",
+        "languages": "Sprachen",
+        "certifications": "Zertifizierungen",
+        "projects": "Projekte",
+        "interests": "Interessen",
+        "appearance": "Erscheinungsbild",
+        "export": "Exportieren"
+      },
+      "personal": {
+        "title": "Berufsbezeichnung",
+        "firstName": "Vorname",
+        "lastName": "Nachname",
+        "age": "Alter",
+        "email": "E-Mail",
+        "phone": "Telefon",
+        "address": "Adresse",
+        "city": "Stadt",
+        "country": "Land",
+        "driverLicense": "Führerschein",
+        "maritalStatus": "Familienstand",
+        "mobility": "Mobilität",
+        "linkedin": "LinkedIn",
+        "github": "GitHub",
+        "portfolio": "Portfolio / Website",
+        "photo": "Profilfoto",
+        "includePhoto": "Im Lebenslauf einfügen",
+        "summary": "Berufsprofil",
+        "placeholders": {
+          "firstName": "Maria",
+          "lastName": "Müller",
+          "age": "30",
+          "title": "Senior Full Stack Entwickler",
+          "email": "kontakt@email.com",
+          "phone": "+33 6 12 34 56 78",
+          "address": "12 Hauptstraße",
+          "city": "Berlin",
+          "country": "Deutschland",
+          "linkedin": "linkedin.com/in/maria-mueller",
+          "github": "github.com/maria-mueller",
+          "portfolio": "https://maria-mueller.dev",
+          "summary": "2-3 Sätze, die Ihre Erfahrung und Ziele zusammenfassen…"
+        },
+        "tips": [
+          "Vorname, Nachname und E-Mail sind Pflichtfelder.",
+          "Ihre Berufsbezeichnung erscheint direkt unter Ihrem Namen.",
+          "Geben Sie LinkedIn / GitHub nur an, wenn Ihre Profile aktuell sind.",
+          "Alter, Führerschein und Mobilität sind wichtige Informationen für Recruiter."
+        ]
+      },
+      "driverLicense": {
+        "label": "Führerschein",
+        "options": {
+          "B": "Klasse B (PKW)",
+          "A": "Klasse A (Motorrad)",
+          "C": "Klasse C (LKW)",
+          "D": "Klasse D (Öffentliche Verkehrsmittel)",
+          "BE": "Klasse BE (PKW mit Anhänger)",
+          "none": "Kein Führerschein"
+        }
+      },
+      "maritalStatus": {
+        "label": "Familienstand",
+        "options": {
+          "single": "Ledig",
+          "married": "Verheiratet",
+          "divorced": "Geschieden",
+          "widowed": "Verwitwet",
+          "pacsed": "Eingetragene Partnerschaft"
+        }
+      },
+      "mobility": {
+        "label": "Mobilität",
+        "options": {
+          "negrepelisse_30": "NEGREPELISSE (82) + 30 km",
+          "montauban_100": "MONTAUBAN (82) + 100 km",
+          "caussade_40": "CAUSSADE (82) + 40 km",
+          "custom": "Sonstige (bitte angeben)"
+        },
+        "placeholder": "Geben Sie Ihre Mobilität an (z.B.: Toulouse + 50 km, Landesweit...)"
+      },
+      "experience": {
+        "title": "Berufserfahrung",
+        "position": "Position",
+        "company": "Unternehmen",
+        "location": "Ort",
+        "currentlyWorking": "Ich arbeite noch hier",
+        "startDate": "Startdatum",
+        "endDate": "Enddatum",
+        "description": "Beschreibung",
+        "addButton": "Erfahrung hinzufügen",
+        "tips": [
+          "Von der neuesten zur ältesten.",
+          "Aktionsverben: entwickelt, verwaltet, optimiert…",
+          "Quantifizieren Sie Ihre Leistungen.",
+          "Markieren Sie «Aktuell tätig», wenn Sie noch im Unternehmen sind."
+        ]
+      },
+      "education": {
+        "title": "Ausbildung",
+        "degree": "Abschluss",
+        "school": "Bildungseinrichtung",
+        "location": "Ort",
+        "currentlyStudying": "Noch in Ausbildung",
+        "startDate": "Startdatum",
+        "endDate": "Enddatum",
+        "description": "Beschreibung",
+        "addButton": "Ausbildung hinzufügen",
+        "tips": [
+          "Von der neuesten zur ältesten.",
+          "Geben Sie die Auszeichnung an, wenn sie besonders ist.",
+          "Bei Berufseinsteigern kann die Ausbildung vor der Erfahrung stehen."
+        ]
+      },
+      "skills": {
+        "title": "Fähigkeiten",
+        "name": "Name",
+        "level": "Niveau",
+        "levels": {
+          "beginner": "Anfänger",
+          "intermediate": "Mittelstufe",
+          "advanced": "Fortgeschritten",
+          "expert": "Experte"
+        },
+        "addButton": "Fähigkeit hinzufügen",
+        "tips": [
+          "8 bis 12 gut gewählte Fähigkeiten.",
+          "Mischen Sie Hard Skills und Soft Skills.",
+          "Sortieren Sie nach Beherrschung / Relevanz.",
+          "Seien Sie ehrlich bei den Niveaus."
+        ]
+      },
+      "languages": {
+        "title": "Sprachen",
+        "name": "Sprache",
+        "level": "Niveau",
+        "levels": {
+          "native": "Muttersprache",
+          "fluent": "Fließend (C1/C2)",
+          "advanced": "Fortgeschritten (B2)",
+          "intermediate": "Mittelstufe (B1)",
+          "beginner": "Anfänger (A1/A2)",
+          "notions": "Grundkenntnisse"
+        },
+        "addButton": "Sprache hinzufügen"
+      },
+      "certifications": {
+        "title": "Zertifizierungen",
+        "name": "Name",
+        "issuer": "Aussteller",
+        "year": "Jahr",
+        "addButton": "Zertifizierung hinzufügen"
+      },
+      "projects": {
+        "title": "Projekte",
+        "name": "Name",
+        "description": "Beschreibung",
+        "technologies": "Technologien (Komma)",
+        "link": "Link",
+        "addButton": "Projekt hinzufügen"
+      },
+      "interests": {
+        "title": "Interessen",
+        "name": "Interesse",
+        "description": "Optionale Angabe",
+        "addButton": "Hinzufügen",
+        "suggestions": "Schnellvorschläge",
+        "tips": [
+          "Seien Sie präzise: «Bergwandern» statt «Sport».",
+          "Ein originelles Interesse kann ein Gespräch im Vorstellungsgespräch starten.",
+          "Beschränken Sie sich auf 3-5 Interessen."
+        ]
+      },
+      "appearance": {
+        "title": "Lebenslauf-Erscheinungsbild",
+        "primaryColor": "Hauptfarbe",
+        "font": "Schriftart",
+        "fonts": {
+          "inter": "Inter (Modern)",
+          "roboto": "Roboto (Neutral)",
+          "openSans": "Open Sans (Lesbar)",
+          "merriweather": "Merriweather (Klassisch)",
+          "montserrat": "Montserrat (Elegant)"
+        }
+      },
+      "export": {
+        "title": "Exportieren",
+        "ready": "Lebenslauf {type} bereit zur Generierung",
+        "generate": "PDF generieren",
+        "share": "Teilen",
+        "history": "Verlauf",
+        "restart": "Neu beginnen"
+      },
+      "buttons": {
+        "previous": "Zurück",
+        "next": "Weiter",
+        "locked": "Gesperrt",
+        "import": "Importieren",
+        "generate": "Generieren"
+      },
+      "mode": {
+        "howToProceed": "Wie möchten Sie vorgehen?",
+        "chooseOption": "Wählen Sie eine Option, um zu beginnen",
+        "create": {
+          "title": "Lebenslauf erstellen",
+          "description": "Füllen Sie die Abschnitte Schritt für Schritt aus"
+        },
+        "import": {
+          "title": "Lebenslauf importieren",
+          "description": "Verwenden Sie eine vorhandene Datei (PDF, DOCX)",
+          "dragOrClick": "Ziehen oder klicken zum Importieren",
+          "maxSize": "PDF, DOC, DOCX — max. 10 MB",
+          "ready": "Bereit zum Importieren — manuelle Schritte sind deaktiviert",
+          "lockedMessage": "Die folgenden Schritte sind gesperrt. Klicken Sie direkt auf Importieren."
+        },
+        "format": {
+          "title": "Lebenslauf-Format",
+          "classic": "Klassisch",
+          "classicDesc": "Standard, alle Branchen",
+          "fibem": "FIBEM",
+          "fibemDesc": "Plattformeigen",
+          "selectRequired": "Wählen Sie ein Format, um fortzufahren."
+        }
+      },
+      "navigation": {
+        "history": "Verlauf"
+      },
+      "generalTips": [
+        "Seien Sie prägnant — max. 2 Seiten",
+        "Passen Sie an jede Bewerbung an",
+        "Verwenden Sie branchenspezifische Schlüsselwörter",
+        "Rechtschreibung überprüfen",
+        "Leistungen quantifizieren",
+        "Übersichtliches Layout beibehalten"
+      ],
+      "alerts": {
+        "importSuccess": "Lebenslauf erfolgreich importiert",
+        "importError": "Import fehlgeschlagen",
+        "generationError": "Fehler: {message}",
+        "defaultError": "Ein Fehler ist aufgetreten",
+        "noLink": "Lebenslauf generiert, aber Link nicht verfügbar."
+      },
+      "history": {
+        "title": "Lebenslauf-Verlauf",
+        "importedCv": "Importierter Lebenslauf",
+        "cv": "Lebenslauf",
+        "main": "Haupt",
+        "modified": "geändert",
+        "searchPlaceholder": "Lebenslauf suchen…",
+        "noCvFound": "Kein Lebenslauf gefunden",
+        "resetFilters": "Filter zurücksetzen",
+        "close": "Schließen",
+        "page": "Seite",
+        "cvCount": "Lebenslauf{count, plural, =0 {} one {} other {e}}",
+        "resultCount": "{count} Ergebnis{count, plural, =0 {} =1 {} other {se}}",
+        "types": {
+          "fibem": "FIBEM",
+          "classic": "Klassisch",
+          "imported": "Importiert"
+        },
+        "actions": {
+          "preview": "Vorschau",
+          "download": "Herunterladen",
+          "downloadFile": "Datei herunterladen",
+          "duplicate": "Duplizieren",
+          "delete": "Löschen"
+        },
+        "filters": {
+          "all": "Alle"
+        },
+        "pagination": {
+          "previous": "Vorherige Seite",
+          "next": "Nächste Seite"
+        },
+        "deleteDialog": {
+          "title": "Lebenslauf löschen",
+          "message": "Diese Aktion ist unwiderruflich. Sind Sie sicher, dass Sie diesen Lebenslauf löschen möchten?",
+          "confirm": "Löschen",
+          "cancel": "Abbrechen"
+        }
+      }
+    },
+    "contact": {
+      "hero": {
+        "title": "Kontaktieren Sie uns",
+        "subtitle": "Entdecken Sie die beruflichen Möglichkeiten unserer Partnerunternehmen"
+      },
+      "form": {
+        "title": "Senden Sie uns eine Nachricht",
+        "subtitle": "Wir antworten Ihnen innerhalb von 48 Stunden",
+        "firstName": "Nachname",
+        "firstNamePlaceholder": "Ihr Nachname",
+        "lastName": "Vorname",
+        "lastNamePlaceholder": "Ihr Vorname",
+        "email": "E-Mail",
+        "emailPlaceholder": "ihre@email.com",
+        "address": "Adresse",
+        "addressPlaceholder": "Z.B.: Vernon",
+        "phone": "Telefon",
+        "phonePlaceholder": "+33 1 23 45 67 89",
+        "subject": "Betreff",
+        "subjectPlaceholder": "Betreff Ihrer Nachricht",
+        "message": "Nachricht",
+        "messagePlaceholder": "Beschreiben Sie Ihr Anliegen oder stellen Sie uns Ihre Fragen...",
+        "locationNote": "Ihr aktueller Standort wird automatisch Ihrer Nachricht hinzugefügt, um einen besseren Service zu bieten.",
+        "sending": "Wird gesendet...",
+        "submit": "Nachricht senden",
+        "success": {
+          "title": "Nachricht gesendet!",
+          "message": "Danke für Ihre Nachricht. Unser Team wird sich sehr bald mit Ihnen in Verbindung setzen.",
+          "button": "Eine weitere Nachricht senden"
+        }
+      },
+      "info": {
+        "title1": "Lassen Sie uns über Ihr",
+        "title2": "Projekt sprechen",
+        "subtitle": "Unser Expertenteam steht Ihnen zur Verfügung.",
+        "email": {
+          "title": "E-Mail",
+          "details": "Antwort innerhalb von 24 Stunden"
+        },
+        "phone": {
+          "title": "Telefon",
+          "details": "Mo-Fr: 9-18 Uhr"
+        },
+        "address": {
+          "title": "Adresse",
+          "details": "75 001"
+        },
+        "hours": {
+          "title": "Öffnungszeiten",
+          "days": "Montag - Freitag",
+          "time": "9:00 - 18:00 Uhr"
+        }
+      },
+      "offices": {
+        "title": "Unsere Büros",
+        "france": {
+          "name": "FIBEM Frankreich",
+          "address": "51 Rue du Grévarin – 27200 Vernon"
+        },
+        "senegal": {
+          "name": "FIBEM Senegal",
+          "address": "Rue 7 Corniche x 6, Médina, Dakar"
+        }
+      },
+      "location": {
+        "title": "Ihr Standort",
+        "description": "Für einen personalisierten Service wird Ihr Standort automatisch mit Ihrer Nachricht übermittelt.",
+        "detected": "Aktueller Standort erkannt",
+        "included": "(In Ihrer Nachricht enthalten)",
+        "consent": "Standort wird nur mit Ihrer Zustimmung geteilt"
+      }
+    },
+    "invoice": {
+      "title": "Rechnungs-Generator",
+      "subtitle": "Erstellen Sie eine professionelle Rechnung in wenigen geführten Schritten",
+      "fileName": "Rechnung",
+      "emailMessage": "Bitte finden Sie anbei die Rechnung {number}",
+      "steps": {
+        "invoice": "Rechnung",
+        "company": "Aussteller",
+        "client": "Kunde",
+        "items": "Artikel",
+        "payment": "Zahlung",
+        "notes": "Notizen",
+        "preview": "Vorschau"
+      },
+      "progress": {
+        "step": "Schritt"
+      },
+      "help": {
+        "title": "Tipps"
+      },
+      "status": {
+        "draft": "Entwurf",
+        "sent": "Gesendet",
+        "paid": "Bezahlt",
+        "overdue": "Überfällig",
+        "genere": "Generiert",
+        "envoye": "Gesendet",
+        "paye": "Bezahlt",
+        "en_retard": "Überfällig",
+        "brouillon": "Entwurf"
+      },
+      "paymentMethods": {
+        "bankTransfer": "Banküberweisung",
+        "creditCard": "Bankkarte",
+        "cash": "Bargeld",
+        "paypal": "PayPal",
+        "check": "Scheck",
+        "stripe": "Stripe",
+        "directDebit": "Lastschrift",
+        "bitcoin": "Bitcoin",
+        "applePay": "Apple Pay",
+        "googlePay": "Google Pay",
+        "wireTransfer": "Internationale Überweisung",
+        "other": "Sonstige"
+      },
+      "paymentTerms": {
+        "immediate": "Sofort",
+        "days7": "7 Tage",
+        "days15": "15 Tage",
+        "days30": "30 Tage",
+        "days45": "45 Tage",
+        "days60": "60 Tage",
+        "days90": "90 Tage"
+      },
+      "invoice": {
+        "title": "Rechnungsinformationen",
+        "subtitle": "Füllen Sie die grundlegenden Informationen Ihrer Rechnung aus.",
+        "quoteSelection": "Angebotswahl",
+        "selectQuote": "Angebot auswählen",
+        "quoteNumber": "Angebot",
+        "client": "Kunde",
+        "amount": "Betrag",
+        "purchaseOrder": "Bestellnummer",
+        "purchaseOrderPlaceholder": "PO-2026-001",
+        "invoiceDate": "Rechnungsdatum",
+        "dueDate": "Fälligkeitsdatum",
+        "paymentTerms": "Zahlungsbedingungen",
+        "paymentMethod": "Zahlungsmethode",
+        "selectPaymentMethod": "Auswählen",
+        "tips": [
+          "Die Rechnungsnummer wird automatisch generiert, Sie können sie ändern.",
+          "Das Fälligkeitsdatum wird automatisch anhand der Zahlungsbedingungen berechnet.",
+          "Die Bestellnummer (PO) ist optional, wird jedoch für Unternehmen empfohlen."
+        ]
+      },
+      "company": {
+        "title": "Ihr Unternehmen",
+        "subtitle": "Diese Informationen erscheinen als Aussteller auf der Rechnung.",
+        "name": "Unternehmensname",
+        "namePlaceholder": "Ihr Unternehmen GmbH",
+        "address": "Adresse",
+        "addressPlaceholder": "123 Hauptstraße",
+        "city": "Stadt",
+        "cityPlaceholder": "Douala",
+        "postalCode": "Postleitzahl / Postfach",
+        "postalCodePlaceholder": "PF 1234",
+        "phone": "Telefon",
+        "phonePlaceholder": "+237 6XX XX XX XX",
+        "email": "E-Mail",
+        "emailPlaceholder": "kontakt@ihrunternehmen.com",
+        "taxId": "Steuernummer",
+        "taxIdPlaceholder": "CM12345678901",
+        "logo": "Unternehmenslogo",
+        "logoAlt": "Unternehmenslogo",
+        "tips": [
+          "Der Unternehmensname ist Pflicht.",
+          "Fügen Sie Ihre Steuernummer hinzu, wenn Sie mehrwertsteuerpflichtig sind."
+        ]
+      },
+      "client": {
+        "title": "Kundeninformationen",
+        "subtitle": "Diese Informationen erscheinen als Empfänger auf der Rechnung.",
+        "name": "Kundenname",
+        "namePlaceholder": "Hans Müller",
+        "company": "Kundenunternehmen",
+        "companyPlaceholder": "Kundenunternehmen AG",
+        "email": "E-Mail",
+        "emailPlaceholder": "kunde@email.com",
+        "phone": "Telefon",
+        "phonePlaceholder": "+237 6XX XX XX XX",
+        "address": "Adresse",
+        "addressPlaceholder": "456 Hauptboulevard",
+        "city": "Stadt",
+        "cityPlaceholder": "Yaoundé",
+        "postalCode": "Postleitzahl / Postfach",
+        "postalCodePlaceholder": "PF 456",
+        "taxId": "Steuernummer",
+        "taxIdPlaceholder": "CM98765432101",
+        "tips": [
+          "Der Kundenname ist Pflicht.",
+          "Geben Sie die E-Mail an, um die Rechnung direkt aus der Anwendung senden zu können."
+        ]
+      },
+      "items": {
+        "title": "Rechnungspositionen",
+        "subtitle": "Fügen Sie die zu berechnenden Produkte oder Dienstleistungen hinzu.",
+        "count": "Artikel",
+        "line": "Position",
+        "description": "Beschreibung",
+        "descriptionPlaceholder": "Z.B.: Entwicklung einer Webanwendung",
+        "quantity": "Menge",
+        "unitPrice": "Einzelpreis",
+        "discount": "Rabatt %",
+        "taxRate": "MwSt. %",
+        "total": "Gesamt",
+        "addButton": "Position hinzufügen",
+        "summary": "Zusammenfassung",
+        "subtotal": "Zwischensumme netto",
+        "totalDiscount": "Gesamtrabatt",
+        "totalTax": "MwSt.",
+        "grandTotal": "Gesamtbetrag brutto",
+        "duplicate": "Duplizieren",
+        "delete": "Löschen",
+        "tips": [
+          "Jede Position muss eine Beschreibung und einen Einzelpreis über 0 haben.",
+          "Der Rabatt ist in Prozent (z.B.: 10 für 10%).",
+          "Der Gesamtbetrag jeder Position wird automatisch berechnet."
+        ]
+      },
+      "payment": {
+        "title": "Bankverbindung",
+        "subtitle": "Diese Informationen erleichtern die Zahlung durch Ihren Kunden.",
+        "bankName": "Bankname",
+        "bankNamePlaceholder": "Banque Atlantique, SCB Kamerun…",
+        "bankAccount": "Kontonummer / IBAN",
+        "bankAccountPlaceholder": "CM21 1000 1234 5678 9012 3456 789",
+        "tips": [
+          "Bankverbindungen sind optional, werden jedoch für Überweisungen empfohlen.",
+          "Für Kamerun geben Sie Ihre BEAC-Kontonummer oder Ihre RIB an."
+        ]
+      },
+      "notes": {
+        "title": "Notizen und Bedingungen",
+        "subtitle": "Fügen Sie eine persönliche Nachricht oder Ihre allgemeinen Geschäftsbedingungen hinzu.",
+        "message": "Nachricht / Notizen",
+        "messagePlaceholder": "Vielen Dank für Ihr Vertrauen. Zögern Sie nicht, uns bei Fragen zu kontaktieren.",
+        "terms": "Allgemeine Geschäftsbedingungen",
+        "termsPlaceholder": "Zahlung bei Rechnungserhalt. Jede unbezahlte Rechnung nach dem Fälligkeitsdatum wird mit Verzugszinsen von 1,5% pro Monat belastet."
+      },
+      "preview": {
+        "title": "Rechnungsvorschau",
+        "subtitle": "Überprüfen Sie Ihre Rechnung, bevor Sie sie generieren.",
+        "downloadPdf": "PDF herunterladen",
+        "downloadExcel": "Excel herunterladen",
+        "newInvoice": "Neue Rechnung"
+      },
+      "navigation": {
+        "previous": "Zurück",
+        "next": "Weiter",
+        "history": "Verlauf",
+        "generate": "Generieren",
+        "generating": "Wird generiert…"
+      },
+      "tips": {
+        "title": "Tipps für eine effektive Rechnung",
+        "list": [
+          "Überprüfen Sie die Rechnungsnummer, um Duplikate zu vermeiden",
+          "Geben Sie die Zahlungsfristen klar an",
+          "Fügen Sie Ihre Bankverbindung hinzu, um die Zahlung zu erleichtern",
+          "Fügen Sie eine Danksagung in den Notizen hinzu",
+          "Überprüfen Sie die Beträge, bevor Sie das PDF generieren",
+          "Bewahren Sie eine Kopie jeder gesendeten Rechnung auf"
+        ]
+      },
+      "quoteDialog": {
+        "title": "Ein zu berechnendes Angebot auswählen",
+        "description": "Wählen Sie die Version des Angebots, das Sie in eine Rechnung umwandeln möchten"
+      },
+      "errors": {
+        "idNotFound": "Rechnungs-ID nicht gefunden",
+        "generationError": "Fehler bei der Rechnungserstellung",
+        "generateFirst": "Bitte generieren Sie zuerst die Rechnung",
+        "clientEmailRequired": "Bitte geben Sie die E-Mail des Kunden an"
+      },
+      "alerts": {
+        "sendSuccess": "Rechnung erfolgreich gesendet",
+        "sendError": "Fehler beim Senden der Rechnung"
+      },
+      "history": {
+        "title": "Rechnungsverlauf",
+        "ref_quote": "Ref.",
+        "modified": "geändert",
+        "due_date": "Fälligkeit",
+        "preview": "Vorschau / Wiederverwenden",
+        "download_pdf": "PDF herunterladen",
+        "download_excel": "Excel-Datei herunterladen",
+        "duplicate": "Duplizieren",
+        "delete": "Löschen",
+        "delete_confirm_title": "Rechnung löschen",
+        "delete_confirm_message": "Diese Aktion ist unwiderruflich. Sind Sie sicher, dass Sie diese Rechnung löschen möchten?",
+        "delete_confirm_button": "Löschen",
+        "cancel": "Abbrechen",
+        "search_placeholder": "Rechnungsnr., Kunde…",
+        "no_invoices": "Keine Rechnung gefunden",
+        "reset_filters": "Filter zurücksetzen",
+        "invoices": "Rechnung",
+        "page": "Seite",
+        "result": "Ergebnis",
+        "close": "Schließen",
+        "filters": {
+          "all": "Alle",
+          "generated": "Generiert",
+          "sent": "Gesendet",
+          "paid": "Bezahlt",
+          "overdue": "Überfällig",
+          "draft": "Entwürfe"
+        },
+        "stats": {
+          "paid": "bezahlt",
+          "sent": "gesendet",
+          "overdue": "überfällig"
+        }
+      }
+    },
+    "quote": {
+      "steps": {
+        "client": "Kunde",
+        "emetteur": "Aussteller",
+        "project": "Projekt",
+        "items": "Artikel",
+        "payment": "Zahlung",
+        "notes": "Notizen",
+        "preview": "Vorschau"
+      },
+      "help_notice": {
+        "tips_title": "Tipps",
+        "info_title": "Zu wissen"
+      },
+      "progress": {
+        "step_label": "Schritt",
+        "of": "von"
+      },
+      "client_step": {
+        "title": "Kundeninformationen",
+        "subtitle": "Geben Sie die Kontaktdaten des Empfängers des Angebots an.",
+        "tips": [
+          "Vorname, Nachname, E-Mail und Telefon sind Pflichtfelder.",
+          "Das Unternehmen ist optional, wird jedoch für B2B-Angebote empfohlen.",
+          "Der Angebotstyp ermöglicht die Kategorisierung der Art der Arbeiten."
+        ],
+        "first_name": "Vorname",
+        "last_name": "Nachname",
+        "email": "E-Mail",
+        "phone": "Telefon",
+        "company": "Kundenunternehmen",
+        "quote_type": "Angebotstyp",
+        "address": "Adresse",
+        "city": "Stadt",
+        "postal_code": "Postleitzahl / Postfach",
+        "first_name_placeholder": "Samuel",
+        "last_name_placeholder": "Müller",
+        "email_placeholder": "kontakt@email.com",
+        "phone_placeholder": "+237 6XX XX XX XX",
+        "company_placeholder": "Name des Kundenunternehmens",
+        "address_placeholder": "123 Hauptstraße",
+        "city_placeholder": "Douala",
+        "postal_code_placeholder": "PF 456",
+        "select_quote_type": "Typ auswählen"
+      },
+      "emitter_step": {
+        "title": "Ihr Unternehmen (Aussteller)",
+        "subtitle": "Diese Informationen erscheinen im Dienstleisterblock des Angebots.",
+        "tips": [
+          "Der Unternehmensname ist Pflicht.",
+          "Das Logo wird oben links im PDF des Angebots angezeigt.",
+          "SIRET, APE und USt-IdNr. erscheinen im Dienstleisterblock."
+        ],
+        "company_name": "Unternehmensname",
+        "company_contact": "Kontakt / Ansprechpartner",
+        "company_address": "Adresse",
+        "company_city": "Stadt (mit Postleitzahl)",
+        "company_phone": "Festnetz",
+        "company_port": "Mobiltelefon",
+        "company_email": "E-Mail",
+        "company_siret": "SIRET",
+        "company_ape": "APE-Code",
+        "company_tva": "Innergemeinschaftliche USt-IdNr.",
+        "contact_be": "Kontakt B.E. (interne Referenz)",
+        "company_logo": "Unternehmenslogo",
+        "company_name_placeholder": "Sté SEN FIBEM France",
+        "company_contact_placeholder": "Hr. GOMIS",
+        "company_address_placeholder": "51 Rue du Grevarin",
+        "company_city_placeholder": "27200 Vernon",
+        "company_phone_placeholder": "+33 1 XX XX XX XX",
+        "company_port_placeholder": "07.52.49.75.46",
+        "company_email_placeholder": "kontakt@ihrunternehmen.com",
+        "company_siret_placeholder": "445 374 937 00032",
+        "company_ape_placeholder": "4120B Bau- und Industriearbeiten",
+        "company_tva_placeholder": "FR17378128441",
+        "contact_be_placeholder": "Ref. Ingenieurbüro",
+        "logo_preview": "Logo-Vorschau"
+      },
+      "project_step": {
+        "title": "Projektdetails",
+        "subtitle": "Beschreiben Sie das für dieses Angebot durchzuführende Projekt.",
+        "tips": [
+          "Der Projektname ist Pflicht.",
+          "Eine klare Beschreibung gibt dem Kunden Sicherheit über Ihr Verständnis des Bedarfs.",
+          "Das Gültigkeitsdatum wird automatisch auf 30 Tage festgelegt, kann aber geändert werden."
+        ],
+        "project_name": "Projektname",
+        "category": "Kategorie",
+        "project_description": "Projektbeschreibung",
+        "start_date": "Geplantes Startdatum",
+        "deadline": "Projektfrist",
+        "budget": "Geschätztes Budget",
+        "valid_until": "Angebot gültig bis",
+        "project_name_placeholder": "Z.B.: Wohnbau Makepe",
+        "project_description_placeholder": "Beschreiben Sie das Projekt im Detail...",
+        "select_category": "Kategorie auswählen",
+        "categories": {
+          "development": "Webentwicklung",
+          "design": "Grafikdesign",
+          "marketing": "Digitales Marketing",
+          "consulting": "Beratung & Schulung",
+          "delivery": "Dienstleistungserbringung",
+          "construction": "Bau",
+          "renovation": "Renovierung",
+          "other": "Sonstige"
+        }
+      },
+      "items_step": {
+        "title": "Angebotspositionen",
+        "subtitle": "Listen Sie die zu berechnenden Leistungen oder Lieferungen auf.",
+        "items_count": "Artikel",
+        "tips": [
+          "Jeder Artikel muss eine Beschreibung und einen Einzelpreis haben.",
+          "Arbeitszeit: Arbeitsdauer (z.B.: 1,0h). Einheit: Psch, h, m², usw.",
+          "Der Rabatt pro Position ist in Prozent.",
+          "Verwenden Sie die Pfeile ↑↓, um Artikel neu zu ordnen."
+        ],
+        "article": "Artikel",
+        "description": "Beschreibung",
+        "description_placeholder": "Z.B.: Lieferung und Verlegung von Fliesen",
+        "time_mo": "Arbeitszeit",
+        "time_mo_placeholder": "1,0h",
+        "unit": "Einheit",
+        "quantity": "Menge",
+        "unit_price": "Einzelpreis",
+        "discount": "Rabatt %",
+        "tax": "MwSt. %",
+        "total_ht": "Netto-Gesamt",
+        "add_item": "Artikel hinzufügen",
+        "summary": "Artikelzusammenfassung",
+        "subtotal_ht": "Netto-Zwischensumme",
+        "total_before_discount": "Gesamt vor Globalrabatt",
+        "duplicate": "Duplizieren",
+        "delete": "Löschen",
+        "units": {
+          "ens": "Psch",
+          "h": "h",
+          "j": "T",
+          "m2": "m²",
+          "m3": "m³",
+          "ml": "ml",
+          "u": "Stk",
+          "kg": "kg",
+          "t": "t",
+          "forfait": "Pauschale"
+        }
+      },
+      "payment_step": {
+        "title": "Zahlungsparameter",
+        "subtitle": "Konfigurieren Sie die globale MwSt., den Rabatt und die Anzahlung.",
+        "tips": [
+          "Die MwSt. in Kamerun beträgt 19,25% (offizieller Satz). In Frankreich: 20%.",
+          "Der Globalrabatt wird auf die Zwischensumme aller Artikel angewendet.",
+          "Die Anzahlung kann ein fester Betrag oder ein Prozentsatz des Bruttogesamts sein."
+        ],
+        "global_tax": "Globale MwSt. (%)",
+        "global_discount": "Globalrabatt (%)",
+        "deposit": "Anzahlung",
+        "percentage": "%",
+        "fixed": "Fester Betrag",
+        "financial_summary": "Finanzielle Zusammenfassung",
+        "subtotal_ht": "Netto-Zwischensumme",
+        "discount": "Rabatt",
+        "total_ht": "Netto-Gesamt",
+        "tax_amount": "MwSt.",
+        "total_ttc": "Brutto-Gesamt",
+        "deposit_amount": "Anzahlung",
+        "remaining": "Restbetrag"
+      },
+      "notes_step": {
+        "title": "Notizen und Bedingungen",
+        "subtitle": "Diese Texte erscheinen im Abschnitt \"Zahlungsbedingungen\" des Angebots.",
+        "tips": [
+          "Zusätzliche Notizen werden unter 'Zahlungsbedingungen' angezeigt.",
+          "Geben Sie die Anzahlungsbedingungen an (z.B.: 30% bei Beginn, 70% am Ende)."
+        ],
+        "payment_conditions": "Zahlungsbedingungen / Notizen",
+        "payment_conditions_placeholder": "- 30% eine Woche nach Beginn zu zahlen\n- 70% am Ende des 1. Monats",
+        "general_conditions": "Allgemeine Bedingungen",
+        "general_conditions_placeholder": "Zahlungsbedingungen, Gültigkeit, Verzugszinsen..."
+      },
+      "preview_step": {
+        "title": "Angebotsvorschau",
+        "subtitle": "Überprüfen Sie Ihr Angebot, bevor Sie es generieren.",
+        "modify": "Bearbeiten",
+        "print": "Drucken",
+        "send": "Senden",
+        "download_excel": "Excel herunterladen",
+        "download_pdf": "PDF herunterladen",
+        "quote_preview": "Angebotsvorschau",
+        "provider": "Dienstleister",
+        "client": "Kunde",
+        "project": "Projekt",
+        "valid_until": "Gültig bis",
+        "start_date": "Beginn",
+        "table": {
+          "time_mo": "Arb.-Zeit",
+          "description": "Beschreibung",
+          "unit": "E",
+          "unit_price_ht": "Einzelpreis netto",
+          "quantity": "Menge",
+          "amount_ht": "Betrag netto"
+        },
+        "total_ht": "Netto-Gesamtbetrag",
+        "total_ttc": "Brutto-Gesamtbetrag",
+        "payment_conditions_title": "Zahlungsbedingungen"
+      },
+      "buttons": {
+        "previous": "Zurück",
+        "next": "Weiter",
+        "generate_quote": "Angebot generieren",
+        "generating": "Wird generiert…",
+        "new_quote": "Neues Angebot",
+        "history": "Angebotsverlauf"
+      },
+      "tips_section": {
+        "title": "Tipps für ein effektives Angebot",
+        "tips": [
+          "Beschreiben Sie jede Position präzise, um Streitigkeiten zu vermeiden",
+          "Geben Sie die Gültigkeitsdauer des Angebots klar an (30 Tage empfohlen)",
+          "Erwähnen Sie Ausführungsfristen und Lieferbedingungen",
+          "Verlangen Sie eine Anzahlung bei Unterzeichnung, um das Projekt abzusichern",
+          "Überprüfen Sie die Beträge, bevor Sie an den Kunden senden",
+          "Bewahren Sie eine unterzeichnete Kopie jedes akzeptierten Angebots auf"
+        ]
+      },
+      "status": {
+        "draft": "Entwurf",
+        "sent": "Gesendet",
+        "accepted": "Akzeptiert",
+        "rejected": "Abgelehnt",
+        "expired": "Abgelaufen"
+      },
+      "alerts": {
+        "error_generating": "Fehler bei der Angebotserstellung",
+        "generate_first": "Bitte generieren Sie zuerst das Angebot",
+        "email_required": "Bitte geben Sie die E-Mail des Kunden an",
+        "email_sent": "Angebot erfolgreich gesendet",
+        "email_error": "Fehler beim Senden des Angebots"
+      },
+      "quote_types": {
+        "0": "Nur Montagearbeiten",
+        "1": "Lieferung und Montage",
+        "2": "Renovierung",
+        "3": "Bau",
+        "4": "Ausbau",
+        "5": "Verleger & Monteur",
+        "6": "Studien und Planrealisierung",
+        "7": "Dimensionierungsberechnung",
+        "8": "Prüfungsberechnung",
+        "9": "Technische Unterstützung",
+        "10": "Sonstige"
+      },
+      "history": {
+        "title": "Angebotsverlauf",
+        "modified": "geändert",
+        "preview": "Vorschau / Wiederverwenden",
+        "download_pdf": "PDF herunterladen",
+        "download_excel": "Excel-Datei herunterladen",
+        "duplicate": "Duplizieren",
+        "delete": "Löschen",
+        "delete_confirm_title": "Angebot löschen",
+        "delete_confirm_message": "Diese Aktion ist unwiderruflich. Sind Sie sicher, dass Sie dieses Angebot löschen möchten?",
+        "delete_confirm_button": "Löschen",
+        "cancel": "Abbrechen",
+        "search_placeholder": "Angebotsnr., Kunde, Projekt…",
+        "no_quotes": "Kein Angebot gefunden",
+        "reset_filters": "Filter zurücksetzen",
+        "quotes": "Angebot",
+        "page": "Seite",
+        "result": "Ergebnis",
+        "close": "Schließen",
+        "filters": {
+          "all": "Alle",
+          "draft": "Entwürfe",
+          "sent": "Gesendet",
+          "accepted": "Akzeptiert",
+          "rejected": "Abgelehnt",
+          "expired": "Abgelaufen"
+        },
+        "stats": {
+          "accepted": "akzeptiert",
+          "sent": "gesendet",
+          "rejected": "abgelehnt",
+          "expired": "abgelaufen",
+          "acceptance_rate": "Akzeptanzrate"
+        }
+      },
+      "selection": {
+        "title": "Angebot auswählen",
+        "search_placeholder": "Nummer, Kunde…",
+        "no_results": "Keine Ergebnisse",
+        "no_quotes": "Keine Angebote verfügbar",
+        "reset": "Zurücksetzen",
+        "quotes": "Angebot",
+        "page": "Seite",
+        "cancel": "Abbrechen",
+        "select": "Auswählen"
+      }
+    },
+    "credit_note": {
+      "title": "Gutschriften-Generator",
+      "subtitle": "Erstellen Sie eine professionelle Gutschrift zu einer bestehenden Rechnung",
+      "steps": {
+        "identification": "Gutschrift",
+        "emetteur": "Aussteller",
+        "client": "Kunde",
+        "items": "Artikel",
+        "notes": "Notizen",
+        "preview": "Vorschau"
+      },
+      "progress": {
+        "step": "Schritt"
+      },
+      "help_notice": {
+        "tips_title": "Tipps",
+        "info_title": "Zu wissen"
+      },
+      "identification_step": {
+        "title": "Gutschriftidentifikation",
+        "subtitle": "Nummer, Datum, Originalrechnung, Grund und Rückerstattungsmethode.",
+        "tips": [
+          "Die Gutschriftnummer ist Pflicht und muss eindeutig sein.",
+          "Geben Sie immer die Originalrechnung an, auf die sich die Gutschrift bezieht.",
+          "Grund und Rückerstattungsmethode erscheinen im PDF-Dokument."
+        ],
+        "credit_note_date": "Gutschriftdatum",
+        "original_invoice_number": "Originalrechnungsnr.",
+        "original_invoice_placeholder": "FA-202601-0042",
+        "original_invoice_date": "Datum der Originalrechnung",
+        "credit_reason": "Gutschriftgrund",
+        "refund_method": "Rückerstattungsmethode"
+      },
+      "emitter_step": {
+        "title": "Ihr Unternehmen (Aussteller)",
+        "subtitle": "Diese Informationen erscheinen im Dienstleisterblock der Gutschrift.",
+        "tips": [
+          "Der Unternehmensname ist Pflicht.",
+          "Das Logo wird oben links im PDF angezeigt.",
+          "SIRET, APE und USt-IdNr. erscheinen im Ausstellerblock."
+        ],
+        "company_name": "Unternehmensname",
+        "company_name_placeholder": "Sté SEN FIBEM France",
+        "company_address": "Adresse",
+        "company_address_placeholder": "51 Rue du Grevarin",
+        "company_city": "Stadt (mit Postleitzahl)",
+        "company_city_placeholder": "27200 Vernon",
+        "company_phone": "Festnetz",
+        "company_phone_placeholder": "+33 1 XX XX XX XX",
+        "company_port": "Mobiltelefon",
+        "company_port_placeholder": "07.52.49.75.46",
+        "company_email": "E-Mail",
+        "company_email_placeholder": "kontakt@ihrunternehmen.com",
+        "company_siret": "SIRET",
+        "company_siret_placeholder": "445 374 937 00032",
+        "company_ape": "APE-Code",
+        "company_ape_placeholder": "4120B Bau- und Industriearbeiten",
+        "company_tva": "Innergemeinschaftliche USt-IdNr.",
+        "company_tva_placeholder": "FR17378128441",
+        "company_logo": "Unternehmenslogo",
+        "logo_preview": "Logo-Vorschau"
+      },
+      "client_step": {
+        "title": "Kundeninformationen",
+        "subtitle": "Empfänger der Gutschrift.",
+        "tips": [
+          "Geben Sie die E-Mail an, um die Gutschrift direkt aus der Anwendung senden zu können.",
+          "Die USt-IdNr. des Kunden erscheint in der EWG-Spalte der Übersichtstabelle."
+        ],
+        "client_name": "Kundenname",
+        "client_name_placeholder": "Hans Müller",
+        "client_company": "Kundenunternehmen",
+        "client_company_placeholder": "Kunde AG",
+        "client_email": "E-Mail",
+        "client_email_placeholder": "kunde@email.com",
+        "client_phone": "Telefon",
+        "client_phone_placeholder": "+237 6XX XX XX XX",
+        "client_address": "Adresse",
+        "client_address_placeholder": "456 Hauptboulevard",
+        "client_city": "Stadt",
+        "client_city_placeholder": "Yaoundé",
+        "client_postal_code": "Postleitzahl / Postfach",
+        "client_postal_code_placeholder": "PF 456",
+        "client_tax_id": "USt-IdNr. / Steueridentifikation",
+        "client_tax_id_placeholder": "FR12345678901"
+      },
+      "items_step": {
+        "title": "Gutschriftpositionen",
+        "subtitle": "Fügen Sie die gutzuschreibenden Artikel oder Leistungen hinzu.",
+        "lines_count": "Position(en)",
+        "line": "Position",
+        "tips": [
+          "Jede Position muss eine Beschreibung und einen Einzelpreis > 0 haben.",
+          "Die Beträge stellen Gutschriften dar — sie werden im PDF orange angezeigt.",
+          "Der Rabatt ist in Prozent (z.B.: 10 für 10%)."
+        ],
+        "description": "Beschreibung",
+        "description_placeholder": "Z.B.: Warenrückgabe / Regulierung",
+        "quantity": "Menge",
+        "unit_price": "Einzelpreis",
+        "discount": "Rabatt %",
+        "tax": "MwSt. %",
+        "total_ht": "Netto-Gesamt",
+        "add_item": "Position hinzufügen",
+        "summary": "Zusammenfassung",
+        "estimated_tax": "Geschätzte MwSt.",
+        "net_refund": "Netto-Rückerstattung brutto",
+        "duplicate": "Duplizieren",
+        "delete": "Löschen"
+      },
+      "notes_step": {
+        "title": "Notizen und Referenzen",
+        "subtitle": "Zusätzliche Informationen, die auf der Gutschrift erscheinen.",
+        "notes": "Referenzen / Notizen",
+        "notes_placeholder": "Aktenreferenz, detaillierter Grund, Rückgabenummer...",
+        "terms_and_conditions": "Allgemeine Bedingungen",
+        "terms_placeholder": "Rückerstattungsbedingungen, Bearbeitungsfristen..."
+      },
+      "preview_step": {
+        "title": "Gutschriftvorschau",
+        "subtitle": "Überprüfen Sie vor der PDF-Generierung.",
+        "download_excel": "Excel herunterladen",
+        "download_pdf": "PDF herunterladen",
+        "credit_note_title": "GUTSCHRIFT",
+        "number": "Nr.",
+        "invoice_ref": "Rechnungsref.",
+        "reason": "Grund",
+        "refund": "Rückerstattung",
+        "emitter": "Aussteller",
+        "client": "Kunde",
+        "portable": "Mobil",
+        "total_ht": "Netto-Gesamt",
+        "estimated_tax": "Geschätzte MwSt.",
+        "net_refund": "Netto-Rückerstattung brutto",
+        "references": "Referenzen",
+        "table": {
+          "description": "Beschreibung",
+          "quantity": "Menge",
+          "unit_price_ht": "Einzelpreis netto",
+          "discount": "Rabatt",
+          "tax": "MwSt. %",
+          "amount_ht": "Betrag netto"
+        }
+      },
+      "status": {
+        "draft": "Entwurf",
+        "issued": "Ausgestellt",
+        "processed": "Verarbeitet",
+        "cancelled": "Storniert"
+      },
+      "credit_reasons": {
+        "product_return": "Warenrückgabe",
+        "defective_product": "Defektes Produkt",
+        "billing_error": "Abrechnungsfehler",
+        "discount": "Handelsrabatt",
+        "price_adjustment": "Preisanpassung",
+        "cancelled_order": "Bestellstornierung",
+        "goodwill": "Kulanzgeste",
+        "other": "Sonstige"
+      },
+      "refund_methods": {
+        "bank_transfer": "Banküberweisung",
+        "original_payment": "Ursprüngliche Zahlungsmethode",
+        "store_credit": "Ladenguthaben",
+        "cash": "Bargeld",
+        "check": "Scheck"
+      },
+      "buttons": {
+        "history": "Verlauf",
+        "previous": "Zurück",
+        "next": "Weiter",
+        "generate": "Generieren",
+        "generating": "Wird generiert…",
+        "new_credit_note": "Neue Gutschrift"
+      },
+      "tips_section": {
+        "title": "Best Practices für Gutschriften",
+        "tips": [
+          "Referenzieren Sie immer die Originalrechnung, um die Rückverfolgbarkeit zu gewährleisten",
+          "Eine Gutschrift sollte ausgestellt werden, sobald die Rückerstattung vereinbart ist",
+          "Bewahren Sie eine unterschriebene Kopie in Ihrer Kundenakte auf",
+          "Überprüfen Sie, dass der Gutschriftbetrag der Originalrechnung entspricht"
+        ]
+      },
+      "alerts": {
+        "error_generating": "Fehler bei der Gutschrifterstellung",
+        "generate_first": "Bitte generieren Sie zuerst die Gutschrift",
+        "email_required": "Bitte geben Sie die E-Mail des Kunden an",
+        "email_sent": "Gutschrift erfolgreich gesendet",
+        "email_error": "Fehler beim Senden der Gutschrift"
+      },
+      "history": {
+        "title": "Gutschriftverlauf",
+        "ref_invoice": "Ref.",
+        "modified": "geändert",
+        "preview": "Vorschau / Wiederverwenden",
+        "download_pdf": "PDF herunterladen",
+        "download_excel": "Excel-Datei herunterladen",
+        "duplicate": "Duplizieren",
+        "delete": "Löschen",
+        "delete_confirm_title": "Gutschrift löschen",
+        "delete_confirm_message": "Diese Aktion ist unwiderruflich. Sind Sie sicher, dass Sie diese Gutschrift löschen möchten?",
+        "delete_confirm_button": "Löschen",
+        "cancel": "Abbrechen",
+        "search_placeholder": "Gutschriftnr., Kunde, Rechnung…",
+        "no_credit_notes": "Keine Gutschrift gefunden",
+        "reset_filters": "Filter zurücksetzen",
+        "credit_notes": "Gutschrift",
+        "page": "Seite",
+        "result": "Ergebnis",
+        "close": "Schließen",
+        "all_reasons": "Alle Gründe",
+        "filters": {
+          "all": "Alle",
+          "draft": "Entwürfe",
+          "issued": "Ausgestellt",
+          "processed": "Verarbeitet",
+          "cancelled": "Storniert"
+        },
+        "stats": {
+          "issued": "ausgestellt",
+          "processed": "verarbeitet",
+          "cancelled": "storniert"
+        }
+      }
+    },
+    "mainMenu": {
+      "home": {
+        "label": "Startseite",
+        "about": "Über uns",
+        "us": "Wer sind wir?",
+        "blog": "Blog"
+      },
+      "service": {
+        "label": "Dienstleistungen",
+        "prestation": "Mahlzeit suchen",
+        "formulaireCV": "Lebenslauf-Formular FIBEM",
+        "formulaireDevis": "Angebot",
+        "formulaireFacture": "Rechnung",
+        "formulaireAvoirs": "Gutschriften"
+      },
+      "emploi": {
+        "label": "Beschäftigung",
+        "espaceCandidat": "Bewerberbereich",
+        "espaceRecruteur": "Recruiter-Bereich",
+        "espaceAbonnement": "Abonnementbereich"
+      },
+      "foods": "Mahlzeit suchen",
+      "job": "Job suchen",
+      "cv": "Lebenslauf",
+      "contact": "Kontakt",
+      "facture": "Rechnung"
+    },
+    "authMenu": {
+      "login": "Anmelden",
+      "register": "Registrieren"
+    },
+    "userMenu": {
+      "shoppingCart": "Warenkorb",
+      "dashboard": "Dashboard",
+      "profile": "Profil"
+    },
+    "search_placeholder": "Suchen"
+  }

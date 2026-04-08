@@ -1,6 +1,8 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import { useAppMainContext } from "@/context/AppProvider";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 
 /**
  * UnauthorizedDialog — 100% custom, zéro dépendance shadcn/ui
@@ -14,7 +16,7 @@ import { useNavigate } from "react-router-dom";
  */
 export default function UnauthorizedDialog() {
   const { isViewLocked, setIsViewLocked } = useAppMainContext();
-  const navigate = useNavigate();
+  const router = useRouter();
 
   // Gestion montage/démontage avec animation
   const [mounted,  setMounted]  = useState(false);
@@ -36,12 +38,12 @@ export default function UnauthorizedDialog() {
 
   const handleLogin = () => {
     setIsViewLocked(false);
-    setTimeout(() => navigate("/auth/login"), 100);
+    setTimeout(() => router.replace("/auth/login"), 50);
   };
 
   const handleClose = () => {
     setIsViewLocked(false);
-    setTimeout(() => navigate("/"), 100);
+    setTimeout(() => router.replace("/"), 50);
   };
 
   if (!mounted) return null;

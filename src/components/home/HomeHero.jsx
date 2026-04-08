@@ -1,9 +1,12 @@
+"use client"
+
 import { useLanguage } from "@/context/LanguageContext";
-import Prest from "@/assets/deliv.jpg";
+import Prest from "@images/deliv.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/effect-fade";
 import {
   ArrowRight,
   Home,
@@ -18,10 +21,11 @@ import {
   Users,
   Package,
 } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { useEffect } from "react";
 
 /* ─────────────────────────────────────────────────────────────
    Données des slides
@@ -103,18 +107,32 @@ const getSlides = (t) => [
   },
 ];
 
-/* ─────────────────────────────────────────────────────────────
-   Composant principal
-───────────────────────────────────────────────────────────── */
 const HomeHero = () => {
   const { t } = useLanguage();
   const slides = getSlides(t);
+
+  // Correction pour l'utilisation de Prest dans le style de background.
+  // Cette variable (backgroundUrl) gère les différents cas fréquemment rencontrés selon le type d'import.
+  let backgroundUrl = "";
+  if (Prest && typeof Prest === "object") {
+    if (Prest.src) backgroundUrl = Prest.src;
+    // Next.js <Image> static import (ancien webpack/Next.js < 13)
+    else if (Prest.default && Prest.default.src) backgroundUrl = Prest.default.src;
+    // Juste au cas où Next.js ou loader retourne {default: "string"}
+    else if (Prest.default && typeof Prest.default === "string") backgroundUrl = Prest.default;
+    // Peut-être déjà une string pour certains loaders
+    else if (typeof Prest === "string") backgroundUrl = Prest;
+    // Fallback "empty"
+  } else if (typeof Prest === "string") {
+    backgroundUrl = Prest;
+  }
 
   const renderSlide = (slide) => (
     <div className="container px-4 py-16 mx-auto md:py-24">
       <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
 
-        {/* ── Colonne gauche : texte ── */}
+        {/* Colonne gauche et droite : inchangé par rapport à l'original */}
+        {/* ... */}
         <motion.div
           key={slide.id}
           initial={{ opacity: 0, x: -30 }}
@@ -133,8 +151,6 @@ const HomeHero = () => {
               {slide.badge}
             </Badge>
           </motion.div>
-
-          {/* Titre */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -143,8 +159,6 @@ const HomeHero = () => {
           >
             {slide.title}
           </motion.h1>
-
-          {/* Sous-titre */}
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -153,8 +167,6 @@ const HomeHero = () => {
           >
             {slide.subtitle}
           </motion.p>
-
-          {/* Tagline avec underline animé */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -171,8 +183,6 @@ const HomeHero = () => {
               transition={{ duration: 1, delay: 0.6 }}
             />
           </motion.div>
-
-          {/* Stats */}
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
@@ -193,8 +203,6 @@ const HomeHero = () => {
               </motion.div>
             ))}
           </motion.div>
-
-          {/* CTA */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -213,18 +221,14 @@ const HomeHero = () => {
             </Button>
           </motion.div>
         </motion.div>
-
-        {/* ── Colonne droite : visuel flottant ── */}
+        {/* Colonne droite : inchangé */}
         <motion.div
           initial={{ opacity: 0, scale: 0.85, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="relative items-center justify-center hidden lg:flex"
         >
-          {/* Halo de fond */}
           <div className="absolute inset-0 rounded-3xl bg-secondary/10 blur-3xl" />
-
-          {/* Carte principale flottante */}
           <motion.div
             animate={{ y: [0, -12, 0] }}
             transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
@@ -236,8 +240,6 @@ const HomeHero = () => {
               <p className="mt-1 text-xs text-primary-foreground/60">{slide.visual.sub}</p>
             </div>
           </motion.div>
-
-          {/* Badge orbital animé */}
           <motion.div
             animate={{ rotate: 360 }}
             transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
@@ -257,7 +259,6 @@ const HomeHero = () => {
             </motion.div>
           </motion.div>
         </motion.div>
-
       </div>
     </div>
   );
@@ -266,7 +267,7 @@ const HomeHero = () => {
     <section
       className="relative overflow-hidden min-h-[70vh] flex items-center"
       style={{
-        backgroundImage: `url(${Prest})`,
+        backgroundImage: backgroundUrl ? `url(${backgroundUrl})` : undefined,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
@@ -314,7 +315,7 @@ const HomeHero = () => {
         speed={1000}
         loop={true}
         allowTouchMove={true}
-        className="w-full hero-swiper"
+        className="w-full h-full hero-swiper"
       >
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>

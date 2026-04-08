@@ -1,0 +1,1699 @@
+{
+    "common": {
+      "logoAlt": "FIBEM ロゴ",
+      "showPassword": "パスワードを表示",
+      "hidePassword": "パスワードを非表示",
+      "emailOrPhone": "メールアドレスまたは電話番号"
+    },
+    "login": {
+      "title": "ログイン",
+      "subtitle": "プロフェッショナルスペースにアクセス",
+      "description": "メールアドレスまたは電話番号を使用してください",
+      "identifier": {
+        "required": "メールアドレスまたは電話番号が必要です",
+        "incorrect": "有効なメールアドレスまたは国際形式の電話番号を入力してください",
+        "placeholder": "メールアドレスまたは電話番号",
+        "tooLong": "パスワードが長すぎます"
+      },
+      "password": {
+        "tooShort": "パスワードは6文字以上必要です",
+        "placeholder": "パスワード"
+      },
+      "forgotPassword": "パスワードをお忘れですか？",
+      "rememberMe": "ログイン状態を保持する",
+      "secureConnection": "セキュア接続",
+      "loginButton": "ログイン",
+      "loggingIn": "ログイン中...",
+      "noAccount": "アカウントをお持ちでないですか？",
+      "signUp": "無料登録",
+      "termsAndPrivacy": "ログインすることで、利用規約およびプライバシーポリシーに同意したものとみなされます",
+      "terms": "利用規約",
+      "privacy": "プライバシーポリシー"
+    },
+    "register": {
+      "title": "アカウント作成",
+      "subtitle": "フードデリバリープラットフォームに参加する",
+      "description": "アカウント作成のために情報を入力してください",
+      "redirectMessage": "お問い合わせありがとうございます。メッセージを送信するには、アカウント作成を完了してください",
+      "createButton": "アカウントを作成する",
+      "creatingAccount": "アカウント作成中...",
+      "alreadyHaveAccount": "すでにアカウントをお持ちですか？",
+      "loginLink": "ログイン",
+      "firstName": {
+        "label": "名",
+        "placeholder": "あなたの名前",
+        "tooShort": "名前は2文字以上必要です",
+        "tooLong": "名前が長すぎます",
+        "invalid": "特殊文字は使用できません（スペースを除く）"
+      },
+      "lastName": {
+        "label": "姓",
+        "placeholder": "あなたの姓",
+        "tooShort": "姓は2文字以上必要です",
+        "tooLong": "姓が長すぎます",
+        "invalid": "特殊文字は使用できません（スペースを除く）"
+      },
+      "phone": {
+        "label": "電話番号（国際形式）",
+        "placeholder": "+33 1 23 45 67 89",
+        "tooShort": "電話番号が短すぎます",
+        "tooLong": "電話番号が長すぎます",
+        "invalid": "無効な形式（例：+012 34 56 78）"
+      },
+      "email": {
+        "label": "メールアドレス",
+        "placeholder": "あなたの@メール.com",
+        "required": "メールアドレスが必要です",
+        "invalid": "無効なメール形式"
+      },
+      "accountType": {
+        "label": "アカウントの種類",
+        "required": "アカウントの種類が必要です"
+      },
+      "accountTypes": {
+        "individual": {
+          "label": "個人",
+          "description": "個人ユーザー、雇用主など"
+        },
+        "candidate": {
+          "label": "求職者",
+          "description": "求職・業務探し（求職者、インターン、見習い）"
+        },
+        "professional": {
+          "label": "プロフェッショナル",
+          "description": "企業、フリーランスなど"
+        },
+        "partner": {
+          "label": "パートナー",
+          "description": "大口顧客および派遣"
+        },
+        "admin": {
+          "label": "管理者",
+          "description": "プラットフォームへの高度なアクセス（営業担当者など）"
+        }
+      },
+      "language": {
+        "label": "優先言語",
+        "placeholder": "言語を選択してください",
+        "required": "優先言語が必要です"
+      },
+      "password": {
+        "label": "パスワード",
+        "placeholder": "パスワード",
+        "tooShort": "パスワードは8文字以上必要です",
+        "tooLong": "パスワードが長すぎます",
+        "uppercase": "少なくとも1つの大文字",
+        "lowercase": "少なくとも1つの小文字",
+        "number": "少なくとも1つの数字",
+        "special": "少なくとも1つの特殊文字"
+      },
+      "passwordStrength": {
+        "label": "パスワードの強度：",
+        "empty": "未入力",
+        "veryWeak": "非常に弱い",
+        "weak": "弱い",
+        "medium": "普通",
+        "good": "良い",
+        "veryGood": "非常に良い",
+        "excellent": "優秀"
+      },
+      "passwordCriteria": {
+        "minChars": "最小8文字",
+        "uppercase": "大文字1字",
+        "lowercase": "小文字1字",
+        "number": "数字1字",
+        "specialChar": "特殊文字1字"
+      },
+      "confirmPassword": {
+        "label": "パスワードを確認",
+        "placeholder": "パスワードを再入力してください",
+        "required": "パスワードの確認が必要です"
+      },
+      "passwords": {
+        "mismatch": "パスワードが一致しません",
+        "match": "パスワードが一致しています"
+      }
+    },
+    "verification": {
+      "title": "メールアドレスを確認",
+      "description": "確認コードが送信されました：",
+      "instruction": "登録を確認するため、メールアドレスに送信された6桁のコードを入力してください。",
+      "codeLabel": "確認コード",
+      "codeError": "6桁のコードを入力してください。",
+      "codeIncorrect": "コードが正しくないか、有効期限が切れています。",
+      "verifyButton": "確認してアカウントを作成",
+      "verifying": "確認中...",
+      "codeNotReceived": "コードが届いていませんか？",
+      "resendIn": "再送信まで",
+      "resend": "コードを再送信",
+      "backToForm": "情報を編集する",
+      "errorOccurred": "エラーが発生しました。もう一度お試しください。"
+    },
+    "errors": {
+      "loginFailed": "ログインエラー"
+    },
+    "hero": {
+      "slide1": {
+        "badge": "ようこそ",
+        "title": {
+          "part1": "ようこそ",
+          "part2": "ivrer",
+          "part3": "ourriture"
+        },
+        "subtitle": "お気に入りの料理を瞬時にお届け",
+        "tagline": "3クリックで注文。30分で受け取り。",
+        "cta": "今すぐ注文",
+        "stats": {
+          "restaurants": "レストラン",
+          "deliveryTime": "平均配達時間",
+          "satisfiedClients": "満足した顧客",
+          "deliveryRadius": "配達範囲"
+        },
+        "visual": {
+          "label": "注文処理中…",
+          "sub": "18分後に配達"
+        }
+      },
+      "slide2": {
+        "badge": "エクスプレス",
+        "title": "速い。簡単。手間いらず。",
+        "subtitle": "数クリックで、食事が出発します。",
+        "tagline": "直感的なUI • 100%セキュアな決済 • GPS追跡",
+        "cta": "アプリを利用する",
+        "stats": {
+          "securePayment": "セキュアな決済",
+          "liveTracking": "リアルタイム追跡",
+          "clicks": "注文まで",
+          "availability": "利用可能時間"
+        },
+        "visual": {
+          "label": "GPS追跡中",
+          "sub": "配達員がご自宅から2km圏内"
+        }
+      },
+      "slide3": {
+        "badge": "人気",
+        "title": "あらゆる気分に合う選択肢",
+        "subtitle": "バーガー、ピザ、郷土料理、ヘルシーオプション…",
+        "tagline": "100以上のレストラン • 多彩な料理 • ベジタリアンオプション",
+        "cta": "レストランを探索する",
+        "stats": {
+          "cuisineTypes": "料理の種類",
+          "dishes": "メニュー料理数",
+          "rating": "平均評価",
+          "new": "新着",
+          "perWeek": "毎週"
+        },
+        "visual": {
+          "label": "今日のおすすめ",
+          "sub": "ヘルシーボウル • 1,200 FCFA"
+        }
+      },
+      "slide4": {
+        "badge": "地元",
+        "title": "地元のレストラン、丁寧にお届け",
+        "subtitle": "地元パートナー • 新鮮な食材 • 品質へのこだわり",
+        "tagline": "あなたの街のレストランをサポートします。",
+        "cta": "パートナーになる",
+        "stats": {
+          "fresh": "新鮮",
+          "localProducts": "地元産品",
+          "certified": "認定済み",
+          "quality": "品質保証",
+          "partners": "パートナー",
+          "sales": "飲食店の売上"
+        },
+        "visual": {
+          "label": "認定パートナー",
+          "sub": "近所のレストラン"
+        }
+      }
+    },
+    "characteristics": {
+      "title": "なぜ私たちを選ぶのか？",
+      "subtitle": "あなたのビジネスのための具体的な保証",
+      "security": {
+        "title": "セキュリティ保証",
+        "description": "データとトランザクションを保護する信頼性の高いシステム。"
+      },
+      "transparent_prices": {
+        "title": "透明な価格設定",
+        "description": "隠れた費用なし、各サービスの明確な見積もりを最初から提供。"
+      },
+      "fast_delivery": {
+        "title": "スピード",
+        "description": "納期を守り、ニーズに応じた迅速な対応。"
+      }
+    },
+    "services": {
+      "discoverBadge": "サービスをご覧ください",
+      "title": "何をご希望ですか？",
+      "subtitle": "美味しい料理とプロのキャリアチャンスで完全な食の体験を",
+      "popularMeals": "人気料理",
+      "popularMealsDesc": "コミュニティのお気に入りを発見する",
+      "previous": "前へ",
+      "next": "次へ",
+      "addToCart": "カートに追加",
+      "seeMoreMeals": "もっと料理を見る",
+      "seeMoreMealsDesc": "全レストランとそのメニューをご覧ください",
+      "explore": "探索する",
+      "jobOffers": "飲食業の求人情報",
+      "jobOffersDesc": "近くの一流レストランに参加しよう",
+      "viewOffer": "求人を見る",
+      "moreJobs": "もっと求人を見る",
+      "moreJobsDesc": "飲食業界の全求人を探す",
+      "exploreJobs": "求人を探す",
+      "forProfessionals": "プロフェッショナル向け",
+      "toolsTitle": "飲食店経営者向けプロツール",
+      "toolsDesc": "無料のプロツールスイートで施設を効率的に管理",
+      "contract": "契約",
+      "salary": "給与",
+      "experience": {
+        "years": "{years}年",
+        "beginner": "未経験可"
+      },
+      "posted": {
+        "daysAgo": "{days}日前"
+      },
+      "tags": {
+        "popular": "人気",
+        "spicy": "辛口",
+        "new": "新着",
+        "vegetarian": "ベジタリアン",
+        "healthy": "ヘルシー",
+        "premium": "プレミアム",
+        "family": "ファミリー向け",
+        "experienced": "経験者",
+        "fullTime": "フルタイム",
+        "beginner": "未経験",
+        "training": "研修あり",
+        "management": "マネジメント",
+        "specialized": "専門職",
+        "seasonal": "季節限定",
+        "creative": "クリエイティブ",
+        "evening": "夜間",
+        "flexible": "フレキシブル",
+        "senior": "上級者"
+      },
+      "badges": {
+        "favorite": "お気に入り",
+        "new": "新着",
+        "topChef": "トップシェフ",
+        "light": "ライト",
+        "chefSpecial": "シェフのスペシャル",
+        "authentic": "本格的",
+        "mustHave": "必食",
+        "familyMeal": "ファミリー料理",
+        "premium": "プレミアム",
+        "urgent": "急募",
+        "training": "研修あり",
+        "topSalary": "高給",
+        "seasonal": "季節限定",
+        "creative": "クリエイティブ",
+        "housingPossible": "住居提供可",
+        "executive": "管理職",
+        "artisan": "職人"
+      },
+      "contracts": {
+        "permanent": "正社員",
+        "fixedTerm": "契約社員",
+        "seasonal": "季節雇用"
+      },
+      "jobTypes": {
+        "kitchen": "キッチン",
+        "dining": "ホール",
+        "bar": "バー",
+        "cleaning": "清掃",
+        "management": "マネジメント",
+        "pastry": "パティスリー"
+      },
+      "meals": {
+        "yassa": {
+          "title": "チキンヤッサ",
+          "restaurant": "ル・ダカロワ",
+          "category": "アフリカン",
+          "description": "レモンとカラメライズドオニオンでマリネしたチキン、白米添え"
+        },
+        "burger": {
+          "title": "グルメバーガー",
+          "restaurant": "バーガーハウス",
+          "category": "ファストフード",
+          "description": "180gのパティ、溶けたチェダー、クリスピーベーコン、特製ソース"
+        },
+        "pizza": {
+          "title": "ピザ・マルゲリータ",
+          "restaurant": "ピッツェリア・ローマ",
+          "category": "イタリアン",
+          "description": "トマトベース、フレッシュモッツァレラ、バジル、オリーブオイル"
+        },
+        "salad": {
+          "title": "シーザーサラダ",
+          "restaurant": "グリーンライフ",
+          "category": "ヘルシー",
+          "description": "グリルチキン、パルメザン、クルトン、特製シーザーソース"
+        },
+        "padthai": {
+          "title": "パッタイ",
+          "restaurant": "タイ・オーキデ",
+          "category": "アジアン",
+          "description": "海老とピーナッツ、もやし炒めの米麺"
+        },
+        "poke": {
+          "title": "ポケボウル",
+          "restaurant": "ハワイボウル",
+          "category": "ヘルシー",
+          "description": "新鮮なサーモン、酢飯、アボカド、海藻、醤油"
+        },
+        "tacos": {
+          "title": "タコス・アル・パストール",
+          "restaurant": "エル・カミーノ",
+          "category": "メキシカン",
+          "description": "コーントルティーヤ、マリネポーク、パイナップル、玉ねぎ、コリアンダー"
+        },
+        "ramen": {
+          "title": "豚骨ラーメン",
+          "restaurant": "居酒屋サン",
+          "category": "日本食",
+          "description": "豚骨スープ、麺、味付け卵、のり、チャーシュー"
+        },
+        "couscous": {
+          "title": "ロイヤルクスクス",
+          "restaurant": "ル・マロカン",
+          "category": "アフリカン",
+          "description": "細粒セモリナ、野菜、メルゲーズ、チキン、マトン"
+        },
+        "sushi": {
+          "title": "スシデラックス",
+          "restaurant": "スシマスター",
+          "category": "日本食",
+          "description": "20貫盛り合わせ：サーモン、マグロ、鯛、巻き寿司、カリフォルニアロール"
+        }
+      },
+      "jobs": {
+        "chef": {
+          "title": "部門シェフ",
+          "restaurant": "ル・グラン・レストラン",
+          "location": "パリ8区",
+          "description": "情熱を持った部門シェフを募集しています。ブリゲードに参加しませんか。"
+        },
+        "waiter": {
+          "title": "ウェイター / ウェイトレス",
+          "restaurant": "ブラッスリー・モデルン",
+          "location": "リヨン2区",
+          "description": "活気あるホールサービス、チームワーク、英語歓迎。"
+        },
+        "sousChef": {
+          "title": "副料理長",
+          "restaurant": "オーベルジュ・デュ・ソレイユ",
+          "location": "ニース",
+          "description": "ブリゲード管理、メニュー作成、HACCPの遵守。"
+        },
+        "pizzaiolo": {
+          "title": "ピッツァイオーロ",
+          "restaurant": "ピッツァ・ディ・ナポリ",
+          "location": "マルセイユ",
+          "description": "ピザ生地の技術、薪窯焼き、創造性。"
+        },
+        "bartender": {
+          "title": "バーテンダー",
+          "restaurant": "スカイバーラウンジ",
+          "location": "ボルドー",
+          "description": "カクテル作成、バーサービス、在庫管理。"
+        },
+        "dishwasher": {
+          "title": "食洗担当",
+          "restaurant": "ホテル・パレス",
+          "location": "カンヌ",
+          "description": "食器と施設の洗浄、キッチンの補助。"
+        },
+        "manager": {
+          "title": "レストランマネージャー",
+          "restaurant": "ファストフードチェーン",
+          "location": "トゥールーズ",
+          "description": "レストランの総合管理、チームマネジメント、売上目標。"
+        },
+        "pastryChef": {
+          "title": "パティシエ",
+          "restaurant": "フィーヌ・ブーランジェリー",
+          "location": "ストラスブール",
+          "description": "パティスリー、アントルメ、ヴィエノワズリーの作成。創造性必須。"
+        }
+      },
+      "tools": {
+        "cv": {
+          "title": "履歴書ジェネレーター",
+          "description": "数分で飲食業向けプロの履歴書を作成",
+          "button": "履歴書を作成",
+          "bottom": "飲食業専用テンプレート"
+        },
+        "quote": {
+          "title": "見積書ジェネレーター",
+          "description": "サービスとイベントのプロ見積書",
+          "button": "見積書を作成",
+          "bottom": "カスタマイズ可能、請求書に変換"
+        },
+        "invoice": {
+          "title": "請求書ジェネレーター",
+          "description": "法令に準拠したパーソナライズ請求書",
+          "button": "請求書を作成",
+          "bottom": "税込み、自動採番"
+        },
+        "creditNote": {
+          "title": "クレジットノートジェネレーター",
+          "description": "数クリックでクレジットノートを作成",
+          "button": "クレジットノートを作成",
+          "bottom": "返金、キャンセル、修正"
+        },
+        "employeeManagement": {
+          "title": "従業員管理",
+          "description": "シフト、給与、労働契約"
+        },
+        "inventoryManagement": {
+          "title": "在庫管理",
+          "description": "棚卸し、アラート、仕入れ発注"
+        },
+        "dashboard": {
+          "title": "ダッシュボード",
+          "description": "分析、売上、パフォーマンス"
+        }
+      },
+      "stats": {
+        "documents": "月間生成ドキュメント数",
+        "satisfaction": "ユーザー満足度",
+        "free": "無料ツール"
+      }
+    },
+    "footer": {
+      "logoAlt": "FIBEM ロゴ",
+      "contacts": "オフィス所在地",
+      "newsletter": "ニュースレター",
+      "emailPlaceholder": "メールアドレス",
+      "subscribed": "登録ありがとうございます！",
+      "newsletterDesc": "最新情報と特別オファーをメールボックスに直接お届けします。",
+      "rights": "全著作権所有。",
+      "privacy": "プライバシー",
+      "terms": "利用規約",
+      "cookies": "クッキー",
+      "sitemap": "サイトマップ",
+      "contact": "お問い合わせ",
+      "viewGoogleMap": "Google マップで見る",
+      "whatsapp": "Whatsapp",
+      "france": {
+        "name": "FIBEM フランス",
+        "address": "51 Rue du Grévarin – 27200 Vernon",
+        "phone": "電話: +33 6 05 51 14 32",
+        "siret": "SIRET 445 374 937 00032"
+      },
+      "senegal": {
+        "name": "FIBEM セネガル",
+        "address": "Rue 7 Corniche x 6, Médina, Dakar",
+        "phone": "電話: +221 78 370 06 02",
+        "ninea": "N.I.N.E.A.: 30 84 31 62 U2 — NAF: 7112B エンジニアリング"
+      },
+      "social": {
+        "followUs": "フォローしてください",
+        "facebook": "Facebook",
+        "twitter": "Twitter",
+        "instagram": "Instagram",
+        "youtube": "YouTube"
+      },
+      "tagline": "フランス、セネガル、カメルーンの人事・飲食・プロサービスパートナー。",
+      "send": "送信",
+      "gdpr": "データ保護 — RGPD準拠",
+      "unsubscribe": "ワンクリックで配信停止"
+    },
+    "cv": {
+      "title": "履歴書ジェネレーター",
+      "subtitle": "ガイドに従ってステップバイステップでプロの履歴書を作成",
+      "newCv": "新しい履歴書",
+      "help": {
+        "title": "アドバイス"
+      },
+      "steps": {
+        "start": "開始",
+        "personal": "個人情報",
+        "experience": "職歴",
+        "education": "学歴",
+        "skills": "スキル",
+        "languages": "言語",
+        "certifications": "資格",
+        "projects": "プロジェクト",
+        "interests": "趣味・関心",
+        "appearance": "外観",
+        "export": "エクスポート"
+      },
+      "personal": {
+        "title": "職業上のタイトル",
+        "firstName": "名",
+        "lastName": "姓",
+        "age": "年齢",
+        "email": "メール",
+        "phone": "電話",
+        "address": "住所",
+        "city": "市区町村",
+        "country": "国",
+        "driverLicense": "運転免許",
+        "maritalStatus": "配偶者の有無",
+        "mobility": "移動可能範囲",
+        "linkedin": "LinkedIn",
+        "github": "GitHub",
+        "portfolio": "ポートフォリオ / ウェブサイト",
+        "photo": "プロフィール写真",
+        "includePhoto": "履歴書に含める",
+        "summary": "職業プロフィール",
+        "placeholders": {
+          "firstName": "Marie",
+          "lastName": "Dupont",
+          "age": "30",
+          "title": "シニアフルスタック開発者",
+          "email": "contact@email.com",
+          "phone": "+33 6 12 34 56 78",
+          "address": "12 rue de Paris",
+          "city": "Paris",
+          "country": "France",
+          "linkedin": "linkedin.com/in/marie-dupont",
+          "github": "github.com/marie-dupont",
+          "portfolio": "https://marie-dupont.dev",
+          "summary": "あなたの経験と目標をまとめた2〜3文…"
+        },
+        "tips": [
+          "名、姓、メールは必須です。",
+          "職業上のタイトルはあなたの名前のすぐ下に表示されます。",
+          "LinkedIn / GitHub はプロフィールが最新の場合のみ記入してください。",
+          "年齢、免許、移動可能範囲は採用担当者にとって重要な情報です。"
+        ]
+      },
+      "driverLicense": {
+        "label": "運転免許",
+        "options": {
+          "B": "普通免許（自動車）",
+          "A": "二輪免許（バイク）",
+          "C": "大型免許",
+          "D": "旅客輸送免許",
+          "BE": "けん引免許",
+          "none": "免許なし"
+        }
+      },
+      "maritalStatus": {
+        "label": "配偶者の有無",
+        "options": {
+          "single": "独身",
+          "married": "既婚",
+          "divorced": "離婚",
+          "widowed": "配偶者死別",
+          "pacsed": "パートナーシップ締結"
+        }
+      },
+      "mobility": {
+        "label": "移動可能範囲",
+        "options": {
+          "negrepelisse_30": "NEGREPELISSE (82) + 30 km",
+          "montauban_100": "MONTAUBAN (82) + 100 km",
+          "caussade_40": "CAUSSADE (82) + 40 km",
+          "custom": "その他（指定）"
+        },
+        "placeholder": "移動可能範囲を指定してください（例：Toulouse + 50 km、全国…）"
+      },
+      "experience": {
+        "title": "職歴",
+        "position": "役職",
+        "company": "会社名",
+        "location": "勤務地",
+        "currentlyWorking": "現在も在籍中",
+        "startDate": "開始日",
+        "endDate": "終了日",
+        "description": "詳細",
+        "addButton": "職歴を追加",
+        "tips": [
+          "最新から古い順に記入してください。",
+          "行動動詞を使用してください：開発した、管理した、最適化した…",
+          "実績を数値で示してください。",
+          "現在も在籍中の場合は「在籍中」にチェックを入れてください。"
+        ]
+      },
+      "education": {
+        "title": "学歴",
+        "degree": "学位・資格",
+        "school": "学校名",
+        "location": "所在地",
+        "currentlyStudying": "在学中",
+        "startDate": "開始日",
+        "endDate": "終了日",
+        "description": "詳細",
+        "addButton": "学歴を追加",
+        "tips": [
+          "最新から古い順に記入してください。",
+          "優秀な成績の場合は記載してください。",
+          "新卒者の場合は学歴を職歴より前に記載できます。"
+        ]
+      },
+      "skills": {
+        "title": "スキル",
+        "name": "スキル名",
+        "level": "レベル",
+        "levels": {
+          "beginner": "初心者",
+          "intermediate": "中級",
+          "advanced": "上級",
+          "expert": "エキスパート"
+        },
+        "addButton": "スキルを追加",
+        "tips": [
+          "8〜12個の厳選したスキル。",
+          "ハードスキルとソフトスキルを組み合わせる。",
+          "習熟度・関連性でランク付け。",
+          "レベルについて正直に記入してください。"
+        ]
+      },
+      "languages": {
+        "title": "言語",
+        "name": "言語",
+        "level": "レベル",
+        "levels": {
+          "native": "母国語",
+          "fluent": "流暢（C1/C2）",
+          "advanced": "上級（B2）",
+          "intermediate": "中級（B1）",
+          "beginner": "初級（A1/A2）",
+          "notions": "基礎知識"
+        },
+        "addButton": "言語を追加"
+      },
+      "certifications": {
+        "title": "資格・認定",
+        "name": "名称",
+        "issuer": "発行機関",
+        "year": "年",
+        "addButton": "資格を追加"
+      },
+      "projects": {
+        "title": "プロジェクト",
+        "name": "名称",
+        "description": "詳細",
+        "technologies": "使用技術（カンマ区切り）",
+        "link": "リンク",
+        "addButton": "プロジェクトを追加"
+      },
+      "interests": {
+        "title": "趣味・関心",
+        "name": "趣味・関心",
+        "description": "任意の補足説明",
+        "addButton": "追加",
+        "suggestions": "クイック提案",
+        "tips": [
+          "具体的に記入してください：「スポーツ」より「山岳トレイルラン」。",
+          "ユニークな趣味は面接での話のきっかけになります。",
+          "趣味・関心は3〜5項目に絞りましょう。"
+        ]
+      },
+      "appearance": {
+        "title": "履歴書の外観",
+        "primaryColor": "メインカラー",
+        "font": "フォント",
+        "fonts": {
+          "inter": "Inter（モダン）",
+          "roboto": "Roboto（ニュートラル）",
+          "openSans": "Open Sans（読みやすい）",
+          "merriweather": "Merriweather（クラシック）",
+          "montserrat": "Montserrat（エレガント）"
+        }
+      },
+      "export": {
+        "title": "エクスポート",
+        "ready": "{type}の履歴書を生成する準備ができました",
+        "generate": "PDFを生成",
+        "share": "共有",
+        "history": "履歴",
+        "restart": "最初からやり直す"
+      },
+      "buttons": {
+        "previous": "前へ",
+        "next": "次へ",
+        "locked": "ロック済み",
+        "import": "インポート",
+        "generate": "生成"
+      },
+      "mode": {
+        "howToProceed": "どのように進めますか？",
+        "chooseOption": "オプションを選択して開始してください",
+        "create": {
+          "title": "履歴書を作成",
+          "description": "各セクションをステップバイステップで記入"
+        },
+        "import": {
+          "title": "履歴書をインポート",
+          "description": "既存のファイルを使用（PDF、DOCX）",
+          "dragOrClick": "ドラッグまたはクリックでインポート",
+          "maxSize": "PDF、DOC、DOCX — 最大10MB",
+          "ready": "インポート準備完了 — 手動入力は無効化されています",
+          "lockedMessage": "以降のステップはロックされています。直接インポートをクリックしてください。"
+        },
+        "format": {
+          "title": "履歴書の形式",
+          "classic": "クラシック",
+          "classicDesc": "標準、全業種対応",
+          "fibem": "FIBEM",
+          "fibemDesc": "プラットフォーム専用",
+          "selectRequired": "続けるには形式を選択してください。"
+        }
+      },
+      "navigation": {
+        "history": "履歴"
+      },
+      "generalTips": [
+        "簡潔に — 最大2ページ",
+        "各応募に合わせて調整する",
+        "業界のキーワードを使用する",
+        "スペルチェックをする",
+        "実績を数値で示す",
+        "見やすいレイアウトを保つ"
+      ],
+      "alerts": {
+        "importSuccess": "履歴書のインポートに成功しました",
+        "importError": "インポートに失敗しました",
+        "generationError": "エラー：{message}",
+        "defaultError": "エラーが発生しました",
+        "noLink": "履歴書は生成されましたが、リンクが利用できません。"
+      },
+      "history": {
+        "title": "履歴書の履歴",
+        "importedCv": "インポートされた履歴書",
+        "cv": "履歴書",
+        "main": "メイン",
+        "modified": "変更済み",
+        "searchPlaceholder": "履歴書を検索…",
+        "noCvFound": "履歴書が見つかりません",
+        "resetFilters": "フィルターをリセット",
+        "close": "閉じる",
+        "page": "ページ",
+        "cvCount": "CV{count, plural, =0 {} one {} other {s}}",
+        "resultCount": "{count}件の結果",
+        "types": {
+          "fibem": "FIBEM",
+          "classic": "クラシック",
+          "imported": "インポート済み"
+        },
+        "actions": {
+          "preview": "プレビュー",
+          "download": "ダウンロード",
+          "downloadFile": "ファイルをダウンロード",
+          "duplicate": "複製",
+          "delete": "削除"
+        },
+        "filters": {
+          "all": "すべて"
+        },
+        "pagination": {
+          "previous": "前のページ",
+          "next": "次のページ"
+        },
+        "deleteDialog": {
+          "title": "履歴書を削除",
+          "message": "この操作は元に戻せません。この履歴書を削除してよろしいですか？",
+          "confirm": "削除",
+          "cancel": "キャンセル"
+        }
+      }
+    },
+    "contact": {
+      "hero": {
+        "title": "お問い合わせ",
+        "subtitle": "パートナー企業が提供するプロのキャリアチャンスをご覧ください"
+      },
+      "form": {
+        "title": "メッセージを送る",
+        "subtitle": "48時間以内にご返信いたします",
+        "firstName": "姓",
+        "firstNamePlaceholder": "あなたの姓",
+        "lastName": "名",
+        "lastNamePlaceholder": "あなたの名前",
+        "email": "メール",
+        "emailPlaceholder": "あなたの@メール.com",
+        "address": "住所",
+        "addressPlaceholder": "例：Vernon",
+        "phone": "電話",
+        "phonePlaceholder": "+33 1 23 45 67 89",
+        "subject": "件名",
+        "subjectPlaceholder": "メッセージの件名",
+        "message": "メッセージ",
+        "messagePlaceholder": "ご要望を説明するか、ご質問をお寄せください...",
+        "locationNote": "より良いサービスのため、現在地が自動的にメッセージに添付されます。",
+        "sending": "送信中...",
+        "submit": "メッセージを送信",
+        "success": {
+          "title": "メッセージを送信しました！",
+          "message": "メッセージありがとうございます。担当者が速やかにご連絡いたします。",
+          "button": "別のメッセージを送る"
+        }
+      },
+      "info": {
+        "title1": "あなたの",
+        "title2": "プロジェクトについて話しましょう",
+        "subtitle": "専門家チームがあなたのサポートのためにいつでも対応いたします。",
+        "email": {
+          "title": "メール",
+          "details": "24時間以内に返信"
+        },
+        "phone": {
+          "title": "電話",
+          "details": "月〜金：9時〜18時"
+        },
+        "address": {
+          "title": "住所",
+          "details": "75 001"
+        },
+        "hours": {
+          "title": "営業時間",
+          "days": "月曜日〜金曜日",
+          "time": "9:00〜18:00"
+        }
+      },
+      "offices": {
+        "title": "オフィス所在地",
+        "france": {
+          "name": "FIBEM フランス",
+          "address": "51 Rue du Grévarin – 27200 Vernon"
+        },
+        "senegal": {
+          "name": "FIBEM セネガル",
+          "address": "Rue 7 Corniche x 6, Médina, Dakar"
+        }
+      },
+      "location": {
+        "title": "現在地",
+        "description": "パーソナライズされたサービスのため、現在地が自動的にメッセージに含まれます。",
+        "detected": "現在地を検出しました",
+        "included": "（メッセージに含まれます）",
+        "consent": "現在地はご同意の上でのみ共有されます"
+      }
+    },
+    "invoice": {
+      "title": "請求書ジェネレーター",
+      "subtitle": "ガイドに従ってステップバイステップでプロの請求書を作成",
+      "fileName": "請求書",
+      "emailMessage": "請求書{number}を添付いたします",
+      "steps": {
+        "invoice": "請求書",
+        "company": "発行者",
+        "client": "顧客",
+        "items": "明細",
+        "payment": "支払い",
+        "notes": "備考",
+        "preview": "プレビュー"
+      },
+      "progress": {
+        "step": "ステップ"
+      },
+      "help": {
+        "title": "アドバイス"
+      },
+      "status": {
+        "draft": "下書き",
+        "sent": "送信済み",
+        "paid": "支払済み",
+        "overdue": "期限超過",
+        "genere": "生成済み",
+        "envoye": "送信済み",
+        "paye": "支払済み",
+        "en_retard": "期限超過",
+        "brouillon": "下書き"
+      },
+      "paymentMethods": {
+        "bankTransfer": "銀行振込",
+        "creditCard": "クレジットカード",
+        "cash": "現金",
+        "paypal": "PayPal",
+        "check": "小切手",
+        "stripe": "Stripe",
+        "directDebit": "口座引き落とし",
+        "bitcoin": "Bitcoin",
+        "applePay": "Apple Pay",
+        "googlePay": "Google Pay",
+        "wireTransfer": "国際送金",
+        "other": "その他"
+      },
+      "paymentTerms": {
+        "immediate": "即時",
+        "days7": "7日",
+        "days15": "15日",
+        "days30": "30日",
+        "days45": "45日",
+        "days60": "60日",
+        "days90": "90日"
+      },
+      "invoice": {
+        "title": "請求書情報",
+        "subtitle": "請求書の基本情報を入力してください。",
+        "quoteSelection": "見積書の選択",
+        "selectQuote": "見積書を選択",
+        "quoteNumber": "見積書",
+        "client": "顧客",
+        "amount": "金額",
+        "purchaseOrder": "発注書",
+        "purchaseOrderPlaceholder": "PO-2026-001",
+        "invoiceDate": "請求日",
+        "dueDate": "支払期日",
+        "paymentTerms": "支払条件",
+        "paymentMethod": "支払方法",
+        "selectPaymentMethod": "選択してください",
+        "tips": [
+          "請求書番号は自動生成されますが、変更可能です。",
+          "支払期日は支払条件に応じて自動計算されます。",
+          "発注書（PO）は任意ですが、企業間取引では推奨されます。"
+        ]
+      },
+      "company": {
+        "title": "あなたの会社",
+        "subtitle": "この情報が請求書の発行者として表示されます。",
+        "name": "会社名",
+        "namePlaceholder": "御社名 株式会社",
+        "address": "住所",
+        "addressPlaceholder": "123 Avenue de la République",
+        "city": "市区町村",
+        "cityPlaceholder": "ドゥアラ",
+        "postalCode": "郵便番号 / 私書箱",
+        "postalCodePlaceholder": "BP 1234",
+        "phone": "電話",
+        "phonePlaceholder": "+237 6XX XX XX XX",
+        "email": "メール",
+        "emailPlaceholder": "contact@votreentreprise.com",
+        "taxId": "税務識別番号",
+        "taxIdPlaceholder": "CM12345678901",
+        "logo": "会社ロゴ",
+        "logoAlt": "会社ロゴ",
+        "tips": [
+          "会社名は必須です。",
+          "付加価値税の課税対象者の場合は税務識別番号を追加してください。"
+        ]
+      },
+      "client": {
+        "title": "顧客情報",
+        "subtitle": "この情報が請求書の宛先として表示されます。",
+        "name": "顧客名",
+        "namePlaceholder": "山田 太郎",
+        "company": "顧客会社名",
+        "companyPlaceholder": "顧客企業 株式会社",
+        "email": "メール",
+        "emailPlaceholder": "client@email.com",
+        "phone": "電話",
+        "phonePlaceholder": "+237 6XX XX XX XX",
+        "address": "住所",
+        "addressPlaceholder": "456 Boulevard Principal",
+        "city": "市区町村",
+        "cityPlaceholder": "ヤウンデ",
+        "postalCode": "郵便番号 / 私書箱",
+        "postalCodePlaceholder": "BP 456",
+        "taxId": "税務識別番号",
+        "taxIdPlaceholder": "CM98765432101",
+        "tips": [
+          "顧客名は必須です。",
+          "アプリから直接請求書を送付するためにメールを入力してください。"
+        ]
+      },
+      "items": {
+        "title": "請求明細",
+        "subtitle": "請求する商品またはサービスを追加してください。",
+        "count": "件",
+        "line": "行",
+        "description": "説明",
+        "descriptionPlaceholder": "例：ウェブアプリケーション開発",
+        "quantity": "数量",
+        "unitPrice": "単価",
+        "discount": "割引率 %",
+        "taxRate": "税率 %",
+        "total": "合計",
+        "addButton": "行を追加",
+        "summary": "小計",
+        "subtotal": "税抜き小計",
+        "totalDiscount": "合計割引",
+        "totalTax": "消費税",
+        "grandTotal": "税込合計",
+        "duplicate": "複製",
+        "delete": "削除",
+        "tips": [
+          "各行には説明と0より大きい単価が必要です。",
+          "割引はパーセンテージです（例：10は10%）。",
+          "各行の合計は自動計算されます。"
+        ]
+      },
+      "payment": {
+        "title": "銀行情報",
+        "subtitle": "この情報により顧客の支払いが容易になります。",
+        "bankName": "銀行名",
+        "bankNamePlaceholder": "Banque Atlantique, SCB Cameroun…",
+        "bankAccount": "口座番号 / IBAN",
+        "bankAccountPlaceholder": "CM21 1000 1234 5678 9012 3456 789",
+        "tips": [
+          "銀行情報は任意ですが、振込の場合は推奨されます。",
+          "カメルーンの場合はBEAC口座番号またはRIBをご記入ください。"
+        ]
+      },
+      "notes": {
+        "title": "備考と条件",
+        "subtitle": "個別メッセージまたは一般販売条件を追加してください。",
+        "message": "メッセージ / 備考",
+        "messagePlaceholder": "ご利用ありがとうございます。ご不明な点はお気軽にお問い合わせください。",
+        "terms": "一般条件",
+        "termsPlaceholder": "請求書受領後即時払い。支払期日を過ぎた未払い請求書には月1.5%の遅延損害金が発生します。"
+      },
+      "preview": {
+        "title": "請求書プレビュー",
+        "subtitle": "生成前に請求書を確認してください。",
+        "downloadPdf": "PDFをダウンロード",
+        "downloadExcel": "Excelをダウンロード",
+        "newInvoice": "新しい請求書"
+      },
+      "navigation": {
+        "previous": "前へ",
+        "next": "次へ",
+        "history": "履歴",
+        "generate": "生成",
+        "generating": "生成中…"
+      },
+      "tips": {
+        "title": "効果的な請求書のためのアドバイス",
+        "list": [
+          "重複を避けるため請求書番号を確認する",
+          "支払期限を明確に記載する",
+          "支払いを容易にするため銀行情報を含める",
+          "備考欄に感謝メッセージを追加する",
+          "PDFを生成する前に金額を確認する",
+          "送付した全ての請求書のコピーを保管する"
+        ]
+      },
+      "quoteDialog": {
+        "title": "請求する見積書を選択",
+        "description": "請求書に変換したい見積書のバージョンを選択してください"
+      },
+      "errors": {
+        "idNotFound": "請求書IDが見つかりません",
+        "generationError": "請求書の生成中にエラーが発生しました",
+        "generateFirst": "まず請求書を生成してください",
+        "clientEmailRequired": "顧客のメールアドレスを入力してください"
+      },
+      "alerts": {
+        "sendSuccess": "請求書を正常に送信しました",
+        "sendError": "請求書の送信中にエラーが発生しました"
+      },
+      "history": {
+        "title": "請求書履歴",
+        "ref_quote": "参照",
+        "modified": "変更済み",
+        "due_date": "期日",
+        "preview": "プレビュー / 再利用",
+        "download_pdf": "PDFをダウンロード",
+        "download_excel": "Excelファイルをダウンロード",
+        "duplicate": "複製",
+        "delete": "削除",
+        "delete_confirm_title": "請求書を削除",
+        "delete_confirm_message": "この操作は元に戻せません。この請求書を削除してよろしいですか？",
+        "delete_confirm_button": "削除",
+        "cancel": "キャンセル",
+        "search_placeholder": "請求書番号、顧客名…",
+        "no_invoices": "請求書が見つかりません",
+        "reset_filters": "フィルターをリセット",
+        "invoices": "請求書",
+        "page": "ページ",
+        "result": "件",
+        "close": "閉じる",
+        "filters": {
+          "all": "すべて",
+          "generated": "生成済み",
+          "sent": "送信済み",
+          "paid": "支払済み",
+          "overdue": "期限超過",
+          "draft": "下書き"
+        },
+        "stats": {
+          "paid": "支払済み",
+          "sent": "送信済み",
+          "overdue": "期限超過"
+        }
+      }
+    },
+    "quote": {
+      "title": "見積書ジェネレーター",
+      "subtitle": "ガイドに従ってステップバイステップでプロの見積書を作成",
+      "steps": {
+        "client": "顧客",
+        "emetteur": "発行者",
+        "project": "プロジェクト",
+        "items": "明細",
+        "payment": "支払い",
+        "notes": "備考",
+        "preview": "プレビュー"
+      },
+      "help_notice": {
+        "tips_title": "アドバイス",
+        "info_title": "ご注意"
+      },
+      "progress": {
+        "step_label": "ステップ",
+        "of": "/"
+      },
+      "client_step": {
+        "title": "顧客情報",
+        "subtitle": "見積書の宛先となる顧客の連絡先を入力してください。",
+        "tips": [
+          "名、姓、メール、電話は必須です。",
+          "会社名は任意ですが、B2B見積書には推奨されます。",
+          "見積書の種類により業務の性質を分類できます。"
+        ],
+        "first_name": "名",
+        "last_name": "姓",
+        "email": "メール",
+        "phone": "電話",
+        "company": "顧客会社",
+        "quote_type": "見積書の種類",
+        "address": "住所",
+        "city": "市区町村",
+        "postal_code": "郵便番号 / 私書箱",
+        "first_name_placeholder": "Samuel",
+        "last_name_placeholder": "Dupont",
+        "email_placeholder": "contact@email.com",
+        "phone_placeholder": "+237 6XX XX XX XX",
+        "company_placeholder": "顧客会社名",
+        "address_placeholder": "123 Rue de la République",
+        "city_placeholder": "ドゥアラ",
+        "postal_code_placeholder": "BP 456",
+        "select_quote_type": "種類を選択してください"
+      },
+      "emitter_step": {
+        "title": "あなたの会社（発行者）",
+        "subtitle": "この情報が見積書の業者欄に表示されます。",
+        "tips": [
+          "会社名は必須です。",
+          "ロゴはPDF見積書の左上に表示されます。",
+          "SIRET、APE、TVA番号が業者欄に表示されます。"
+        ],
+        "company_name": "会社名",
+        "company_contact": "担当者",
+        "company_address": "住所",
+        "company_city": "市区町村（郵便番号付き）",
+        "company_phone": "固定電話",
+        "company_port": "携帯電話",
+        "company_email": "メール",
+        "company_siret": "SIRET",
+        "company_ape": "APEコード",
+        "company_tva": "EU内共通TVA番号",
+        "contact_be": "設計部門担当者（内部参照）",
+        "company_logo": "会社ロゴ",
+        "company_name_placeholder": "Sté SEN FIBEM France",
+        "company_contact_placeholder": "Mr GOMIS",
+        "company_address_placeholder": "51 Rue du Grevarin",
+        "company_city_placeholder": "27200 Vernon",
+        "company_phone_placeholder": "+33 1 XX XX XX XX",
+        "company_port_placeholder": "07.52.49.75.46",
+        "company_email_placeholder": "contact@votreentreprise.com",
+        "company_siret_placeholder": "445 374 937 00032",
+        "company_ape_placeholder": "4120B Travaux Bâtiment & Industrie",
+        "company_tva_placeholder": "FR17378128441",
+        "contact_be_placeholder": "設計部門参照番号",
+        "logo_preview": "ロゴプレビュー"
+      },
+      "project_step": {
+        "title": "プロジェクト詳細",
+        "subtitle": "この見積書に関するプロジェクトの内容を説明してください。",
+        "tips": [
+          "プロジェクト名は必須です。",
+          "明確な説明は顧客に要件を理解していることを示します。",
+          "有効期限はデフォルトで30日後に設定されますが、変更可能です。"
+        ],
+        "project_name": "プロジェクト名",
+        "category": "カテゴリー",
+        "project_description": "プロジェクト説明",
+        "start_date": "開始予定日",
+        "deadline": "納期",
+        "budget": "見込み予算",
+        "valid_until": "見積書有効期限",
+        "project_name_placeholder": "例：Makepe住宅建設",
+        "project_description_placeholder": "プロジェクトを詳しく説明してください...",
+        "select_category": "カテゴリーを選択してください",
+        "categories": {
+          "development": "ウェブ開発",
+          "design": "グラフィックデザイン",
+          "marketing": "デジタルマーケティング",
+          "consulting": "コンサルティング・研修",
+          "delivery": "サービス提供",
+          "construction": "建設",
+          "renovation": "リノベーション",
+          "other": "その他"
+        }
+      },
+      "items_step": {
+        "title": "見積書明細",
+        "subtitle": "見積もる業務または資材をリストアップしてください。",
+        "items_count": "件",
+        "tips": [
+          "各明細には説明と単価が必要です。",
+          "工数：労働時間（例：1.0h）。単位：Ens、h、m²など。",
+          "行ごとの割引はパーセンテージです。",
+          "↑↓ 矢印を使って明細の順序を変更できます。"
+        ],
+        "article": "明細",
+        "description": "説明",
+        "description_placeholder": "例：タイル施工一式",
+        "time_mo": "工数",
+        "time_mo_placeholder": "1.0h",
+        "unit": "単位",
+        "quantity": "数量",
+        "unit_price": "単価",
+        "discount": "割引率 %",
+        "tax": "税率 %",
+        "total_ht": "税抜合計",
+        "add_item": "明細を追加",
+        "summary": "明細小計",
+        "subtotal_ht": "税抜小計",
+        "total_before_discount": "割引前合計",
+        "duplicate": "複製",
+        "delete": "削除",
+        "units": {
+          "ens": "一式",
+          "h": "時間",
+          "j": "日",
+          "m2": "m²",
+          "m3": "m³",
+          "ml": "ml",
+          "u": "個",
+          "kg": "kg",
+          "t": "t",
+          "forfait": "定額"
+        }
+      },
+      "payment_step": {
+        "title": "支払い設定",
+        "subtitle": "全体の税率、割引、頭金を設定してください。",
+        "tips": [
+          "カメルーンの消費税率は19.25%（公定税率）。フランスは20%。",
+          "全体割引は全明細の小計に適用されます。",
+          "頭金は固定金額またはTTC合計のパーセンテージで設定できます。"
+        ],
+        "global_tax": "全体税率 (%)",
+        "global_discount": "全体割引率 (%)",
+        "deposit": "頭金",
+        "percentage": "%",
+        "fixed": "固定金額",
+        "financial_summary": "財務サマリー",
+        "subtotal_ht": "税抜小計",
+        "discount": "割引",
+        "total_ht": "税抜合計",
+        "tax_amount": "消費税",
+        "total_ttc": "税込合計",
+        "deposit_amount": "頭金",
+        "remaining": "残金"
+      },
+      "notes_step": {
+        "title": "備考と条件",
+        "subtitle": "このテキストは見積書の「支払条件」セクションに表示されます。",
+        "tips": [
+          "追加備考は「支払条件」に表示されます。",
+          "頭金条件を記載してください（例：開始時30%、終了時70%）。"
+        ],
+        "payment_conditions": "支払条件 / 備考",
+        "payment_conditions_placeholder": "- 開始1週間後に30%を支払う\n- 最初の月の終わりに70%を支払う",
+        "general_conditions": "一般条件",
+        "general_conditions_placeholder": "支払条件、有効期限、遅延損害金..."
+      },
+      "preview_step": {
+        "title": "見積書プレビュー",
+        "subtitle": "生成前に見積書を確認してください。",
+        "modify": "編集",
+        "print": "印刷",
+        "send": "送信",
+        "download_excel": "Excelをダウンロード",
+        "download_pdf": "PDFをダウンロード",
+        "quote_preview": "見積書プレビュー",
+        "provider": "業者",
+        "client": "顧客",
+        "project": "プロジェクト",
+        "valid_until": "有効期限",
+        "start_date": "開始日",
+        "table": {
+          "time_mo": "工数",
+          "description": "説明",
+          "unit": "単位",
+          "unit_price_ht": "税抜単価",
+          "quantity": "数量",
+          "amount_ht": "税抜金額"
+        },
+        "total_ht": "税抜合計金額",
+        "total_ttc": "税込合計金額",
+        "payment_conditions_title": "支払条件"
+      },
+      "buttons": {
+        "previous": "前へ",
+        "next": "次へ",
+        "generate_quote": "見積書を生成",
+        "generating": "生成中…",
+        "new_quote": "新しい見積書",
+        "history": "見積書履歴"
+      },
+      "tips_section": {
+        "title": "効果的な見積書のためのアドバイス",
+        "tips": [
+          "トラブルを避けるため各項目を詳細に記載する",
+          "見積書の有効期限を明確に記載する（30日推奨）",
+          "納期と納品条件を記載する",
+          "契約確保のため署名時に頭金を求める",
+          "顧客に送付する前に金額を確認する",
+          "承認を受けた見積書の署名入りコピーを保管する"
+        ]
+      },
+      "status": {
+        "draft": "下書き",
+        "sent": "送信済み",
+        "accepted": "承認済み",
+        "rejected": "却下",
+        "expired": "期限切れ"
+      },
+      "alerts": {
+        "error_generating": "見積書の生成中にエラーが発生しました",
+        "generate_first": "まず見積書を生成してください",
+        "email_required": "顧客のメールアドレスを入力してください",
+        "email_sent": "見積書を正常に送信しました",
+        "email_error": "見積書の送信中にエラーが発生しました"
+      },
+      "quote_types": {
+        "0": "施工のみ",
+        "1": "材工一式",
+        "2": "リノベーション",
+        "3": "建設",
+        "4": "内装",
+        "5": "設置・組立",
+        "6": "調査・図面作成",
+        "7": "寸法計算",
+        "8": "検証計算",
+        "9": "技術支援",
+        "10": "その他"
+      },
+      "history": {
+        "title": "見積書履歴",
+        "modified": "変更済み",
+        "preview": "プレビュー / 再利用",
+        "download_pdf": "PDFをダウンロード",
+        "download_excel": "Excelファイルをダウンロード",
+        "duplicate": "複製",
+        "delete": "削除",
+        "delete_confirm_title": "見積書を削除",
+        "delete_confirm_message": "この操作は元に戻せません。この見積書を削除してよろしいですか？",
+        "delete_confirm_button": "削除",
+        "cancel": "キャンセル",
+        "search_placeholder": "見積書番号、顧客名、プロジェクト…",
+        "no_quotes": "見積書が見つかりません",
+        "reset_filters": "フィルターをリセット",
+        "quotes": "見積書",
+        "page": "ページ",
+        "result": "件",
+        "close": "閉じる",
+        "filters": {
+          "all": "すべて",
+          "draft": "下書き",
+          "sent": "送信済み",
+          "accepted": "承認済み",
+          "rejected": "却下",
+          "expired": "期限切れ"
+        },
+        "stats": {
+          "accepted": "承認済み",
+          "sent": "送信済み",
+          "rejected": "却下",
+          "expired": "期限切れ",
+          "acceptance_rate": "承認率"
+        }
+      },
+      "selection": {
+        "title": "見積書を選択",
+        "search_placeholder": "番号、顧客名…",
+        "no_results": "結果なし",
+        "no_quotes": "利用可能な見積書なし",
+        "reset": "リセット",
+        "quotes": "見積書",
+        "page": "ページ",
+        "cancel": "キャンセル",
+        "select": "選択"
+      }
+    },
+    "credit_note": {
+      "title": "クレジットノートジェネレーター",
+      "subtitle": "既存の請求書に関連するプロのクレジットノートを作成",
+      "steps": {
+        "identification": "クレジットノート",
+        "emetteur": "発行者",
+        "client": "顧客",
+        "items": "明細",
+        "notes": "備考",
+        "preview": "プレビュー"
+      },
+      "progress": {
+        "step": "ステップ"
+      },
+      "help_notice": {
+        "tips_title": "アドバイス",
+        "info_title": "ご注意"
+      },
+      "identification_step": {
+        "title": "クレジットノートの識別",
+        "subtitle": "番号、日付、元請求書、理由、返金方法。",
+        "tips": [
+          "クレジットノート番号は必須で一意でなければなりません。",
+          "常にクレジットノートに関連する元請求書を記載してください。",
+          "理由と返金方法はPDFに表示されます。"
+        ],
+        "credit_note_date": "クレジットノートの日付",
+        "original_invoice_number": "元請求書番号",
+        "original_invoice_placeholder": "FA-202601-0042",
+        "original_invoice_date": "元請求書の日付",
+        "credit_reason": "クレジットノートの理由",
+        "refund_method": "返金方法"
+      },
+      "emitter_step": {
+        "title": "あなたの会社（発行者）",
+        "subtitle": "この情報がクレジットノートの業者欄に表示されます。",
+        "tips": [
+          "会社名は必須です。",
+          "ロゴはPDFの左上に表示されます。",
+          "SIRET、APE、TVA番号が発行者欄に表示されます。"
+        ],
+        "company_name": "会社名",
+        "company_name_placeholder": "Sté SEN FIBEM France",
+        "company_address": "住所",
+        "company_address_placeholder": "51 Rue du Grevarin",
+        "company_city": "市区町村（郵便番号付き）",
+        "company_city_placeholder": "27200 Vernon",
+        "company_phone": "固定電話",
+        "company_phone_placeholder": "+33 1 XX XX XX XX",
+        "company_port": "携帯電話",
+        "company_port_placeholder": "07.52.49.75.46",
+        "company_email": "メール",
+        "company_email_placeholder": "contact@votreentreprise.com",
+        "company_siret": "SIRET",
+        "company_siret_placeholder": "445 374 937 00032",
+        "company_ape": "APEコード",
+        "company_ape_placeholder": "4120B Travaux Bâtiment & Industrie",
+        "company_tva": "EU内共通TVA番号",
+        "company_tva_placeholder": "FR17378128441",
+        "company_logo": "会社ロゴ",
+        "logo_preview": "ロゴプレビュー"
+      },
+      "client_step": {
+        "title": "顧客情報",
+        "subtitle": "クレジットノートの受取人。",
+        "tips": [
+          "アプリから直接クレジットノートを送付するためにメールを入力してください。",
+          "顧客のTVA番号はサマリーテーブルのEEE欄に表示されます。"
+        ],
+        "client_name": "顧客名",
+        "client_name_placeholder": "Jean Dupont",
+        "client_company": "顧客会社",
+        "client_company_placeholder": "Client SA",
+        "client_email": "メール",
+        "client_email_placeholder": "client@email.com",
+        "client_phone": "電話",
+        "client_phone_placeholder": "+237 6XX XX XX XX",
+        "client_address": "住所",
+        "client_address_placeholder": "456 Boulevard Principal",
+        "client_city": "市区町村",
+        "client_city_placeholder": "ヤウンデ",
+        "client_postal_code": "郵便番号 / 私書箱",
+        "client_postal_code_placeholder": "BP 456",
+        "client_tax_id": "TVA番号 / 税務識別番号",
+        "client_tax_id_placeholder": "FR12345678901"
+      },
+      "items_step": {
+        "title": "クレジットノート明細",
+        "subtitle": "クレジット対象の商品またはサービスを追加してください。",
+        "lines_count": "行",
+        "line": "行",
+        "tips": [
+          "各行には説明と0より大きい単価が必要です。",
+          "金額はクレジットを表します — PDFにオレンジ色で表示されます。",
+          "割引はパーセンテージです（例：10は10%）。"
+        ],
+        "description": "説明",
+        "description_placeholder": "例：返品 / 修正",
+        "quantity": "数量",
+        "unit_price": "単価",
+        "discount": "割引率 %",
+        "tax": "税率 %",
+        "total_ht": "税抜合計",
+        "add_item": "行を追加",
+        "summary": "小計",
+        "estimated_tax": "推定消費税",
+        "net_refund": "税込返金額",
+        "duplicate": "複製",
+        "delete": "削除"
+      },
+      "notes_step": {
+        "title": "備考と参照",
+        "subtitle": "クレジットノートに表示される追加情報。",
+        "notes": "参照 / 備考",
+        "notes_placeholder": "案件参照番号、詳細な理由、返品番号...",
+        "terms_and_conditions": "一般条件",
+        "terms_placeholder": "返金条件、処理期間..."
+      },
+      "preview_step": {
+        "title": "クレジットノートプレビュー",
+        "subtitle": "PDF生成前に確認してください。",
+        "download_excel": "Excelをダウンロード",
+        "download_pdf": "PDFをダウンロード",
+        "credit_note_title": "クレジットノート",
+        "number": "番号",
+        "invoice_ref": "請求書参照",
+        "reason": "理由",
+        "refund": "返金",
+        "emitter": "発行者",
+        "client": "顧客",
+        "portable": "携帯",
+        "total_ht": "税抜合計",
+        "estimated_tax": "推定消費税",
+        "net_refund": "税込返金額",
+        "references": "参照",
+        "table": {
+          "description": "説明",
+          "quantity": "数量",
+          "unit_price_ht": "税抜単価",
+          "discount": "割引",
+          "tax": "税率 %",
+          "amount_ht": "税抜金額"
+        }
+      },
+      "status": {
+        "draft": "下書き",
+        "issued": "発行済み",
+        "processed": "処理済み",
+        "cancelled": "キャンセル済み"
+      },
+      "credit_reasons": {
+        "product_return": "商品返品",
+        "defective_product": "不良品",
+        "billing_error": "請求エラー",
+        "discount": "商業割引",
+        "price_adjustment": "価格調整",
+        "cancelled_order": "注文キャンセル",
+        "goodwill": "サービスジェスチャー",
+        "other": "その他"
+      },
+      "refund_methods": {
+        "bank_transfer": "銀行振込",
+        "original_payment": "元の支払方法",
+        "store_credit": "店舗クレジット",
+        "cash": "現金",
+        "check": "小切手"
+      },
+      "buttons": {
+        "history": "履歴",
+        "previous": "前へ",
+        "next": "次へ",
+        "generate": "生成",
+        "generating": "生成中…",
+        "new_credit_note": "新しいクレジットノート"
+      },
+      "tips_section": {
+        "title": "クレジットノートのベストプラクティス",
+        "tips": [
+          "追跡可能性を確保するため常に元請求書を参照する",
+          "返金が確定したらすぐにクレジットノートを発行する",
+          "署名入りコピーを顧客ファイルに保管する",
+          "クレジットノートの金額が元請求書と一致することを確認する"
+        ]
+      },
+      "alerts": {
+        "error_generating": "クレジットノートの生成中にエラーが発生しました",
+        "generate_first": "まずクレジットノートを生成してください",
+        "email_required": "顧客のメールアドレスを入力してください",
+        "email_sent": "クレジットノートを正常に送信しました",
+        "email_error": "クレジットノートの送信中にエラーが発生しました"
+      },
+      "history": {
+        "title": "クレジットノート履歴",
+        "ref_invoice": "参照",
+        "modified": "変更済み",
+        "preview": "プレビュー / 再利用",
+        "download_pdf": "PDFをダウンロード",
+        "download_excel": "Excelファイルをダウンロード",
+        "duplicate": "複製",
+        "delete": "削除",
+        "delete_confirm_title": "クレジットノートを削除",
+        "delete_confirm_message": "この操作は元に戻せません。このクレジットノートを削除してよろしいですか？",
+        "delete_confirm_button": "削除",
+        "cancel": "キャンセル",
+        "search_placeholder": "クレジットノート番号、顧客名、請求書…",
+        "no_credit_notes": "クレジットノートが見つかりません",
+        "reset_filters": "フィルターをリセット",
+        "credit_notes": "クレジットノート",
+        "page": "ページ",
+        "result": "件",
+        "close": "閉じる",
+        "all_reasons": "全ての理由",
+        "filters": {
+          "all": "すべて",
+          "draft": "下書き",
+          "issued": "発行済み",
+          "processed": "処理済み",
+          "cancelled": "キャンセル済み"
+        },
+        "stats": {
+          "issued": "発行済み",
+          "processed": "処理済み",
+          "cancelled": "キャンセル済み"
+        }
+      }
+    },
+    "mainMenu": {
+      "home": {
+        "label": "ホーム",
+        "about": "概要",
+        "us": "私たちについて",
+        "blog": "ブログ"
+      },
+      "service": {
+        "label": "サービス",
+        "prestation": "食事を探す",
+        "formulaireCV": "FIBEM履歴書フォーム",
+        "formulaireDevis": "見積書",
+        "formulaireFacture": "請求書",
+        "formulaireAvoirs": "クレジットノート"
+      },
+      "emploi": {
+        "label": "雇用",
+        "espaceCandidat": "求職者スペース",
+        "espaceRecruteur": "採用担当者スペース",
+        "espaceAbonnement": "サブスクリプションスペース"
+      },
+      "foods": "食事を探す",
+      "job": "仕事を探す",
+      "cv": "履歴書",
+      "contact": "お問い合わせ",
+      "facture": "請求書"
+    },
+    "authMenu": {
+      "login": "ログイン",
+      "register": "新規登録"
+    },
+    "userMenu": {
+      "shoppingCart": "カート",
+      "dashboard": "ダッシュボード",
+      "profile": "プロフィール"
+    },
+    "search_placeholder": "検索"
+}

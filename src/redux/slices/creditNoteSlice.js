@@ -16,7 +16,7 @@ const initialState = {
   filters: {},
   loading: false,
   error: null,
-  generatedPDF: null,
+  generatedFiles: null, // CHANGEMENT: generatedPDF -> generatedFiles
   stats: null,
 };
 
@@ -48,7 +48,6 @@ export const fetchCreditNotes = createAsyncThunk(
   'creditNote/fetchCreditNotes',
   async ({ page = 1, pageSize = 10, filters = {}, ...rest } = {}, { rejectWithValue }) => {
     try {
-      // Construit la query string pagination + filtres
       const merged = { page, pageSize, ...filters, ...rest };
       const qs = new URLSearchParams(merged).toString();
       const response = await axios.get(`/credit-notes${qs ? `?${qs}` : ''}`);
@@ -192,17 +191,17 @@ export const duplicateCreditNote = createAsyncThunk(
   }
 );
 
-// POST — générer le PDF d'un avoir
-export const generateCreditNotePDF = createAsyncThunk(
-  'creditNote/generateCreditNotePDF',
-  async ({ id, format = 'pdf' }, { rejectWithValue }) => {
+// POST — générer les fichiers d'un avoir (remplace generatePDF)
+export const generateCreditNoteFiles = createAsyncThunk(
+  'creditNote/generateCreditNoteFiles',
+  async ({ id, format = "all" }, { rejectWithValue }) => {
     try {
       const response = await axios.post(`/credit-notes/${id}/generate?format=${format}`);
       return response.data;
     } catch (error) {
-      console.error('GENERATE CREDIT NOTE PDF ERROR', error);
+      console.error('GENERATE CREDIT NOTE FILES ERROR', error);
       return rejectWithValue(
-        error.response?.data?.message || "Erreur lors de la génération de l'avoir"
+        error.response?.data?.message || "Erreur lors de la génération des fichiers de l'avoir"
       );
     }
   }
@@ -274,7 +273,7 @@ const creditNoteSlice = createSlice({
     },
     clearCreditNote: (state) => {
       state.currentCreditNote = null;
-      state.generatedPDF = null;
+      state.generatedFiles = null;
     },
     clearCreditNotes: (state) => {
       state.creditNotes = [];
@@ -507,27 +506,34 @@ const creditNoteSlice = createSlice({
           action.payload || "Erreur lors de la duplication de l'avoir";
       });
 
-    // generateCreditNotePDF
+    // generateCreditNoteFiles
     builder
-      .addCase(generateCreditNotePDF.pending, (state) => {
+      .addCase(generateCreditNoteFiles.pending, (state) => {
         state.loading = true;
         state.error = null;
       })
-      .addCase(generateCreditNotePDF.fulfilled, (state, action) => {
+      .addCase(generateCreditNoteFiles.fulfilled, (state, action) => {
         state.loading = false;
-        state.generatedPDF = action.payload.content;
+        state.generatedFiles = action.payload.content;
         if (
           state.currentCreditNote &&
-          action.payload.content?.filePath
+          Array.isArray(action.payload.content?.files)
         ) {
-          state.currentCreditNote.file = action.payload.content.filePath;
+          // On peut par exemple, pour chaque format généré, attacher à currentCreditNote:
+          action.payload.content.files.forEach(file => {
+            if (file.format && file.filePath) {
+              // Ex: currentCreditNote.files = { pdf: '/...', xml: '/...' }
+              if (!state.currentCreditNote.files) state.currentCreditNote.files = {};
+              state.currentCreditNote.files[file.format] = file.filePath;
+            }
+          });
         }
         state.error = null;
       })
-      .addCase(generateCreditNotePDF.rejected, (state, action) => {
+      .addCase(generateCreditNoteFiles.rejected, (state, action) => {
         state.loading = false;
         state.error =
-          action.payload || "Erreur lors de la génération de l'avoir";
+          action.payload || "Erreur lors de la génération des fichiers de l'avoir";
       });
 
     // sendCreditNoteByEmail
@@ -604,5 +610,5 @@ export const selectCreditNotePagination = (state) => state.creditNote.pagination
 export const selectCreditNoteFilters = (state) => state.creditNote.filters;
 export const selectCreditNoteLoading = (state) => state.creditNote.loading;
 export const selectCreditNoteError = (state) => state.creditNote.error;
-export const selectGeneratedCreditPDF = (state) => state.creditNote.generatedPDF;
+export const selectGeneratedCreditFiles = (state) => state.creditNote.generatedFiles; // CHANGEMENT
 export const selectCreditNoteStats = (state) => state.creditNote.stats;

@@ -1,0 +1,1699 @@
+{
+    "common": {
+      "logoAlt": "FIBEM Logosu",
+      "showPassword": "Şifreyi Göster",
+      "hidePassword": "Şifreyi Gizle",
+      "emailOrPhone": "E-posta veya Telefon Numarası"
+    },
+    "login": {
+      "title": "Giriş Yap",
+      "subtitle": "Profesyonel alanınıza erişin",
+      "description": "E-posta adresinizi veya telefon numaranızı kullanın",
+      "identifier": {
+        "required": "E-posta veya telefon numarası zorunludur",
+        "incorrect": "Geçerli bir e-posta veya telefon numarası (uluslararası format) girin",
+        "placeholder": "E-posta veya Telefon Numarası",
+        "tooLong": "Şifre çok uzun"
+      },
+      "password": {
+        "tooShort": "Şifre en az 6 karakter olmalıdır",
+        "placeholder": "Şifreniz"
+      },
+      "forgotPassword": "Şifremi unuttum ?",
+      "rememberMe": "Beni hatırla",
+      "secureConnection": "Güvenli bağlantı",
+      "loginButton": "Giriş Yap",
+      "loggingIn": "Giriş yapılıyor...",
+      "noAccount": "Hesabınız yok mu ?",
+      "signUp": "Ücretsiz kaydol",
+      "termsAndPrivacy": "Giriş yaparak kullanım koşullarımızı ve gizlilik politikamızı kabul etmiş olursunuz",
+      "terms": "kullanım koşulları",
+      "privacy": "gizlilik politikası"
+    },
+    "register": {
+      "title": "Hesap Oluştur",
+      "subtitle": "Yemek teslimat platformumuza katılın",
+      "description": "Hesabınızı oluşturmak için bilgileri doldurun",
+      "redirectMessage": "Lütfen bizimle iletişime geçin, bize mesaj gönderebilmek için hesap oluşturmayı tamamlayın",
+      "createButton": "Hesabımı Oluştur",
+      "creatingAccount": "Hesap oluşturuluyor...",
+      "alreadyHaveAccount": "Zaten bir hesabınız var mı ?",
+      "loginLink": "Giriş Yap",
+      "firstName": {
+        "label": "Ad",
+        "placeholder": "Adınız",
+        "tooShort": "Ad en az 2 karakter olmalıdır",
+        "tooLong": "Ad çok uzun",
+        "invalid": "Özel karakterlere izin verilmiyor (boşluk hariç)"
+      },
+      "lastName": {
+        "label": "Soyad",
+        "placeholder": "Soyadınız",
+        "tooShort": "Soyad en az 2 karakter olmalıdır",
+        "tooLong": "Soyad çok uzun",
+        "invalid": "Özel karakterlere izin verilmiyor (boşluk hariç)"
+      },
+      "phone": {
+        "label": "Telefon (uluslararası format)",
+        "placeholder": "+90 5XX XXX XX XX",
+        "tooShort": "Telefon numarası çok kısa",
+        "tooLong": "Telefon numarası çok uzun",
+        "invalid": "Geçersiz format (örnek: +90 5XX XXX XX XX)"
+      },
+      "email": {
+        "label": "E-posta Adresi",
+        "placeholder": "email@ornek.com",
+        "required": "E-posta zorunludur",
+        "invalid": "Geçersiz e-posta formatı"
+      },
+      "accountType": {
+        "label": "Hesap Türü",
+        "required": "Hesap türü zorunludur"
+      },
+      "accountTypes": {
+        "individual": {
+          "label": "Bireysel",
+          "description": "Bireysel kullanıcılar, işverenler için..."
+        },
+        "candidate": {
+          "label": "Aday",
+          "description": "İş veya görev arayışı (adaylar, stajyerler, çıraklar)"
+        },
+        "professional": {
+          "label": "Profesyonel",
+          "description": "Şirket, Serbest çalışanlar,..."
+        },
+        "partner": {
+          "label": "Ortak",
+          "description": "Büyük Hesap ve geçici iş"
+        },
+        "admin": {
+          "label": "Yönetici",
+          "description": "Platforma daha derin erişim (Satış görevlileri,...)"
+        }
+      },
+      "language": {
+        "label": "Tercih Edilen Dil",
+        "placeholder": "Bir dil seçin",
+        "required": "Tercih edilen dil zorunludur"
+      },
+      "password": {
+        "label": "Şifre",
+        "placeholder": "Şifreniz",
+        "tooShort": "Şifre en az 8 karakter olmalıdır",
+        "tooLong": "Şifre çok uzun",
+        "uppercase": "En az bir büyük harf",
+        "lowercase": "En az bir küçük harf",
+        "number": "En az bir rakam",
+        "special": "En az bir özel karakter"
+      },
+      "passwordStrength": {
+        "label": "Şifre Gücü:",
+        "empty": "Boş",
+        "veryWeak": "Çok Zayıf",
+        "weak": "Zayıf",
+        "medium": "Orta",
+        "good": "İyi",
+        "veryGood": "Çok İyi",
+        "excellent": "Mükemmel"
+      },
+      "passwordCriteria": {
+        "minChars": "En az 8 karakter",
+        "uppercase": "1 büyük harf",
+        "lowercase": "1 küçük harf",
+        "number": "1 rakam",
+        "specialChar": "1 özel karakter"
+      },
+      "confirmPassword": {
+        "label": "Şifreyi Onayla",
+        "placeholder": "Şifrenizi onaylayın",
+        "required": "Şifre onayı zorunludur"
+      },
+      "passwords": {
+        "mismatch": "Şifreler eşleşmiyor",
+        "match": "Şifreler eşleşiyor"
+      }
+    },
+    "verification": {
+      "title": "E-postanızı Doğrulayın",
+      "description": "Bir doğrulama kodu gönderildi",
+      "instruction": "Kaydınızı onaylamak için e-posta adresinize gönderilen 6 haneli kodu girin.",
+      "codeLabel": "Doğrulama Kodu",
+      "codeError": "Lütfen kodun 6 hanesini girin.",
+      "codeIncorrect": "Kod hatalı veya süresi doldu.",
+      "verifyButton": "Onayla ve Hesabımı Oluştur",
+      "verifying": "Doğrulanıyor...",
+      "codeNotReceived": "Kod almadınız mı ?",
+      "resendIn": "Yeniden gönder",
+      "resend": "Kodu yeniden gönder",
+      "backToForm": "Bilgilerimi düzenle",
+      "errorOccurred": "Bir hata oluştu. Lütfen tekrar deneyin."
+    },
+    "errors": {
+      "loginFailed": "Giriş hatası"
+    },
+    "hero": {
+      "slide1": {
+        "badge": "Hoş Geldiniz",
+        "title": {
+          "part1": "Hoş Geldiniz",
+          "part2": "Yemek",
+          "part3": "Teslimat"
+        },
+        "subtitle": "En sevdiğiniz yemekler, bir anda kapınızda",
+        "tagline": "3 tıklamayla sipariş verin. 30 dakikada teslim alın.",
+        "cta": "Şimdi Sipariş Ver",
+        "stats": {
+          "restaurants": "Restoran",
+          "deliveryTime": "Ort. Teslimat",
+          "satisfiedClients": "Memnun Müşteri",
+          "deliveryRadius": "Teslimat Alanı"
+        },
+        "visual": {
+          "label": "Sipariş hazırlanıyor...",
+          "sub": "18 dakikada teslimat"
+        }
+      },
+      "slide2": {
+        "badge": "Ekspres",
+        "title": "Hızlı. Basit. Sorunsuz.",
+        "subtitle": "Birkaç tıklamayla yemeğiniz yolda.",
+        "tagline": "Sezgisel arayüz • %100 güvenli ödeme • GPS takibi",
+        "cta": "Uygulamaya Eriş",
+        "stats": {
+          "securePayment": "Güvenli Ödeme",
+          "liveTracking": "Canlı Takip",
+          "clicks": "Sipariş için",
+          "availability": "Kullanılabilirlik"
+        },
+        "visual": {
+          "label": "Aktif GPS Takibi",
+          "sub": "Kurye evinize 2 km uzaklıkta"
+        }
+      },
+      "slide3": {
+        "badge": "Popüler",
+        "title": "Tüm istekleriniz için bir seçim",
+        "subtitle": "Burgerler, pizzalar, yerel yemekler, sağlıklı seçenekler…",
+        "tagline": "100+ restoran • Çeşitli mutfaklar • Vejetaryen seçenekler",
+        "cta": "Restoranları Keşfet",
+        "stats": {
+          "cuisineTypes": "Mutfak Çeşidi",
+          "dishes": "Menüdeki Yemekler",
+          "rating": "Ortalama Puan",
+          "new": "Yeni",
+          "perWeek": "Her Hafta"
+        },
+        "visual": {
+          "label": "Günün Önerisi",
+          "sub": "Sağlıklı kase • 1.200 FCFA"
+        }
+      },
+      "slide4": {
+        "badge": "Yerel",
+        "title": "Buradan restoranlar, özenle teslim edilir",
+        "subtitle": "Yerel ortaklar • Taze ürünler • Kalite taahhüdü",
+        "tagline": "Şehrinizdeki restoran sahiplerini destekliyoruz.",
+        "cta": "Ortak Olun",
+        "stats": {
+          "fresh": "Taze",
+          "localProducts": "Yerel Ürünler",
+          "certified": "Sertifikalı",
+          "quality": "Garantili Kalite",
+          "partners": "Ortak",
+          "sales": "Restoran Satışları"
+        },
+        "visual": {
+          "label": "Sertifikalı Ortak",
+          "sub": "Mahalle Restoranı"
+        }
+      }
+    },
+    "characteristics": {
+      "title": "Bizi Neden Tercih Etmelisiniz ?",
+      "subtitle": "İşletmeniz için somut garantiler",
+      "security": {
+        "title": "Garantili Güvenlik",
+        "description": "Verilerinizi ve işlemlerinizi korumak için güvenilir sistemler."
+      },
+      "transparent_prices": {
+        "title": "Şeffaf Fiyatlar",
+        "description": "Gizli ücret yok, her hizmet için baştan net bir teklif."
+      },
+      "fast_delivery": {
+        "title": "Hızlılık",
+        "description": "İhtiyaçlarınıza göre saygı duyulan teslimat süreleri ve hızlı müdahaleler."
+      }
+    },
+    "services": {
+      "discoverBadge": "Hizmetlerimizi Keşfedin",
+      "title": "Sizi ne mutlu eder ?",
+      "subtitle": "Lezzetli yemekler ve profesyonel fırsatlarla tam bir yemek deneyimi",
+      "popularMeals": "Popüler Yemekler",
+      "popularMealsDesc": "Topluluğumuzun favorilerini keşfedin",
+      "previous": "Önceki",
+      "next": "Sonraki",
+      "addToCart": "Sepete Ekle",
+      "seeMoreMeals": "Daha fazla yemek gör",
+      "seeMoreMealsDesc": "Tüm restoranlarımızı ve menülerini keşfedin",
+      "explore": "Keşfet",
+      "jobOffers": "Restoran İş İlanları",
+      "jobOffersDesc": "Yakınınızdaki en iyi restoranlara katılın",
+      "viewOffer": "İlanı Gör",
+      "moreJobs": "Daha fazla iş ilanı",
+      "moreJobsDesc": "Restoran sektöründeki tüm fırsatları keşfedin",
+      "exploreJobs": "İlanları Keşfet",
+      "forProfessionals": "Profesyoneller için",
+      "toolsTitle": "Restoran işletmecileri için profesyonel araçlar",
+      "toolsDesc": "Ücretsiz profesyonel araç setimizle işletmenizi verimli bir şekilde yönetin",
+      "contract": "Sözleşme",
+      "salary": "Maaş",
+      "experience": {
+        "years": "{years} yıl",
+        "beginner": "Başlangıç seviyesi kabul edilir"
+      },
+      "posted": {
+        "daysAgo": "{days} gün önce"
+      },
+      "tags": {
+        "popular": "Popüler",
+        "spicy": "Acılı",
+        "new": "Yeni",
+        "vegetarian": "Vejetaryen",
+        "healthy": "Sağlıklı",
+        "premium": "Premium",
+        "family": "Aile",
+        "experienced": "Deneyimli",
+        "fullTime": "Tam Zamanlı",
+        "beginner": "Başlangıç",
+        "training": "Eğitim",
+        "management": "Yönetim",
+        "specialized": "Uzmanlaşmış",
+        "seasonal": "Mevsimlik",
+        "creative": "Yaratıcı",
+        "evening": "Akşam",
+        "flexible": "Esnek",
+        "senior": "Kıdemli"
+      },
+      "badges": {
+        "favorite": "Favori",
+        "new": "Yeni",
+        "topChef": "Şefin Seçimi",
+        "light": "Hafif",
+        "chefSpecial": "Şefin Özel",
+        "authentic": "Otantik",
+        "mustHave": "Kaçırılmamalı",
+        "familyMeal": "Aile Yemeği",
+        "premium": "Premium",
+        "urgent": "Acil",
+        "training": "Eğitim",
+        "topSalary": "Yüksek Maaş",
+        "seasonal": "Mevsimlik",
+        "creative": "Yaratıcı",
+        "housingPossible": "Konaklama İmkanı",
+        "executive": "Yönetici",
+        "artisan": "Zanaatkar"
+      },
+      "contracts": {
+        "permanent": "Süresiz Sözleşme (CDI)",
+        "fixedTerm": "Belirli Süreli Sözleşme (CDD)",
+        "seasonal": "Mevsimlik"
+      },
+      "jobTypes": {
+        "kitchen": "Mutfak",
+        "dining": "Servis Alanı",
+        "bar": "Bar",
+        "cleaning": "Temizlik",
+        "management": "Yönetim",
+        "pastry": "Pastacılık"
+      },
+      "meals": {
+        "yassa": {
+          "title": "Yassa Tavuk",
+          "restaurant": "Le Dakarois",
+          "category": "Afrika",
+          "description": "Limonlu marine tavuk, karamelize soğan, beyaz pirinç ile servis edilir"
+        },
+        "burger": {
+          "title": "Gurme Burger",
+          "restaurant": "Burger House",
+          "category": "Fast-food",
+          "description": "180g dana köfte, eritilmiş cheddar, çıtır pastırma ve ev yapımı sos"
+        },
+        "pizza": {
+          "title": "Margherita Pizza",
+          "restaurant": "Pizzeria Roma",
+          "category": "İtalyan",
+          "description": "Domates sosu, taze mozzarella, fesleğen ve zeytinyağı"
+        },
+        "salad": {
+          "title": "Sezar Salata",
+          "restaurant": "Green Life",
+          "category": "Sağlıklı",
+          "description": "Izgara tavuk, parmesan, kruton ve ev yapımı Sezar sosu"
+        },
+        "padthai": {
+          "title": "Pad Thai",
+          "restaurant": "Thai Orchidée",
+          "category": "Asya",
+          "description": "Karides, fıstık ve soya filizi ile sotelenmiş pirinç eriştesi"
+        },
+        "poke": {
+          "title": "Poke Kasesi",
+          "restaurant": "Hawaii Bowl",
+          "category": "Sağlıklı",
+          "description": "Taze somon, sirkeli pirinç, avokado, deniz yosunu ve soya sosu"
+        },
+        "tacos": {
+          "title": "Al Pastor Tacos",
+          "restaurant": "El Camino",
+          "category": "Meksika",
+          "description": "Mısır tortillası, marine domuz eti, ananas, soğan ve kişniş"
+        },
+        "ramen": {
+          "title": "Tonkotsu Ramen",
+          "restaurant": "Izakaya San",
+          "category": "Japon",
+          "description": "Domuz suyu, erişte, marine yumurta, nori ve domuz göbeği"
+        },
+        "couscous": {
+          "title": "Kral Kuskus",
+          "restaurant": "Le Marocain",
+          "category": "Afrika",
+          "description": "İnce irmik, sebzeler, sucuk, tavuk ve kuzu eti"
+        },
+        "sushi": {
+          "title": "Deluxe Suşi",
+          "restaurant": "Sushi Master",
+          "category": "Japon",
+          "description": "20 parçalık çeşit: somon, orkinos, çupra, maki ve Kaliforniya roll"
+        }
+      },
+      "jobs": {
+        "chef": {
+          "title": "Bölüm Şefi",
+          "restaurant": "Le Grand Restaurant",
+          "location": "Paris 8. Bölge",
+          "description": "Ekibimize katılmak için tutkulu bir bölüm şefi arıyoruz."
+        },
+        "waiter": {
+          "title": "Garson",
+          "restaurant": "Brasserie Moderne",
+          "location": "Lyon 2. Bölge",
+          "description": "Dinamik servis, ekip çalışması, İngilizce tercih sebebi."
+        },
+        "sousChef": {
+          "title": "Mutfak Şef Yardımcısı",
+          "restaurant": "Auberge du Soleil",
+          "location": "Nice",
+          "description": "Ekibin yönetimi, menü oluşturma, HACCP standartlarına uyum."
+        },
+        "pizzaiolo": {
+          "title": "Pizzacı",
+          "restaurant": "Pizza Di Napoli",
+          "location": "Marsilya",
+          "description": "Hamur ustalığı, odun ateşinde pişirme, yaratıcılık."
+        },
+        "bartender": {
+          "title": "Barmen/Barmaid",
+          "restaurant": "Skybar Lounge",
+          "location": "Bordeaux",
+          "description": "Kokteyl hazırlama, bar servisi, stok yönetimi."
+        },
+        "dishwasher": {
+          "title": "Bulaşıkçı",
+          "restaurant": "Hôtel Palace",
+          "location": "Cannes",
+          "description": "Bulaşık ve alan temizliği, mutfakta yardım."
+        },
+        "manager": {
+          "title": "Restoran Müdürü",
+          "restaurant": "Fast Food Chain",
+          "location": "Toulouse",
+          "description": "Restoranın tam yönetimi, ekip yönetimi, ticari hedefler."
+        },
+        "pastryChef": {
+          "title": "Pastacı Şef",
+          "restaurant": "Boulangerie Fine",
+          "location": "Strazburg",
+          "description": "Pastacılık ürünleri, ara sıcaklar, kruvasanlar. Yaratıcılık gerekir."
+        }
+      },
+      "tools": {
+        "cv": {
+          "title": "CV Oluşturucu",
+          "description": "Birkaç dakikada restoran sektörü için profesyonel bir CV oluşturun",
+          "button": "CV'mi Oluştur",
+          "bottom": "Restoran sektörü için özel şablonlar"
+        },
+        "quote": {
+          "title": "Teklif Oluşturucu",
+          "description": "Hizmetleriniz ve etkinlikleriniz için profesyonel teklifler",
+          "button": "Teklif Oluştur",
+          "bottom": "Özelleştirilebilir, faturaya dönüştürme"
+        },
+        "invoice": {
+          "title": "Fatura Oluşturucu",
+          "description": "Yasalara uygun özelleştirilmiş faturalar",
+          "button": "Fatura Oluştur",
+          "bottom": "KDV dahil, otomatik numaralandırma"
+        },
+        "creditNote": {
+          "title": "Alacak Dekontu Oluşturucu",
+          "description": "Birkaç tıklamayla alacak dekontları ve kredi notları oluşturun",
+          "button": "Alacak Dekontu Oluştur",
+          "bottom": "İadeler, iptaller, düzeltmeler"
+        },
+        "employeeManagement": {
+          "title": "Çalışan Yönetimi",
+          "description": "Planlama, maaş bordrosu, iş sözleşmeleri"
+        },
+        "inventoryManagement": {
+          "title": "Stok Yönetimi",
+          "description": "Envanter, uyarılar, tedarikçi siparişleri"
+        },
+        "dashboard": {
+          "title": "Gösterge Tabloları",
+          "description": "Analizler, ciro, performans"
+        }
+      },
+      "stats": {
+        "documents": "Aylık Oluşturulan Belgeler",
+        "satisfaction": "Kullanıcı Memnuniyeti",
+        "free": "Ücretsiz Araçlar"
+      }
+    },
+    "footer": {
+      "logoAlt": "FIBEM LOGOSU",
+      "contacts": "Ofislerimiz",
+      "newsletter": "Bülten",
+      "emailPlaceholder": "E-posta adresiniz",
+      "subscribed": "Kaydınız için teşekkürler !",
+      "newsletterDesc": "Haberlerimizi ve özel tekliflerimizi doğrudan posta kutunuza alın.",
+      "rights": "Tüm hakları saklıdır.",
+      "privacy": "Gizlilik",
+      "terms": "Kullanım Koşulları (CGU)",
+      "cookies": "Çerezler",
+      "sitemap": "Site Haritası",
+      "contact": "İletişim",
+      "viewGoogleMap": "Google Harita'yı Görüntüle",
+      "whatsapp": "Whatsapp",
+      "france": {
+        "name": "FIBEM Fransa",
+        "address": "51 Rue du Grévarin – 27200 Vernon",
+        "phone": "Tel: +33 6 05 51 14 32",
+        "siret": "SIRET 445 374 937 00032"
+      },
+      "senegal": {
+        "name": "FIBEM Senegal",
+        "address": "Rue 7 Corniche x 6, Médina, Dakar",
+        "phone": "Tel: +221 78 370 06 02",
+        "ninea": "N.I.N.E.A.: 30 84 31 62 U2 — NAF: 7112B Mühendislik"
+      },
+      "social": {
+        "followUs": "Bizi Takip Edin",
+        "facebook": "Facebook",
+        "twitter": "Twitter",
+        "instagram": "Instagram",
+        "youtube": "YouTube"
+      },
+      "tagline": "Fransa, Senegal ve Kamerun'da İK, restoran ve profesyonel hizmetler ortağınız.",
+      "send": "Gönder",
+      "gdpr": "Korunan veriler — GDPR uyumlu",
+      "unsubscribe": "Tek tıklamayla abonelik iptali"
+    },
+    "cv": {
+      "title": "CV Oluşturucu",
+      "subtitle": "Profesyonel CV'nizi adım adım oluşturun",
+      "newCv": "Yeni CV",
+      "help": {
+        "title": "İpuçları"
+      },
+      "steps": {
+        "start": "Başlangıç",
+        "personal": "Kişisel Bilgiler",
+        "experience": "Deneyim",
+        "education": "Eğitim",
+        "skills": "Yetenekler",
+        "languages": "Diller",
+        "certifications": "Sertifikalar",
+        "projects": "Projeler",
+        "interests": "İlgi Alanları",
+        "appearance": "Görünüm",
+        "export": "Dışa Aktar"
+      },
+      "personal": {
+        "title": "Profesyonel Unvan",
+        "firstName": "Ad",
+        "lastName": "Soyad",
+        "age": "Yaş",
+        "email": "E-posta",
+        "phone": "Telefon",
+        "address": "Adres",
+        "city": "Şehir",
+        "country": "Ülke",
+        "driverLicense": "Ehliyet",
+        "maritalStatus": "Medeni Durum",
+        "mobility": "Mobilite",
+        "linkedin": "LinkedIn",
+        "github": "GitHub",
+        "portfolio": "Portfolyo / Web Sitesi",
+        "photo": "Profil Fotoğrafı",
+        "includePhoto": "CV'ye ekle",
+        "summary": "Profesyonel Profil",
+        "placeholders": {
+          "firstName": "Ayşe",
+          "lastName": "Demir",
+          "age": "30",
+          "title": "Kıdemli Tam Yığın Geliştirici",
+          "email": "iletisim@email.com",
+          "phone": "+90 5XX XXX XX XX",
+          "address": "Atatürk Cad. No:123",
+          "city": "İstanbul",
+          "country": "Türkiye",
+          "linkedin": "linkedin.com/in/ayse-demir",
+          "github": "github.com/ayse-demir",
+          "portfolio": "https://ayse-demir.dev",
+          "summary": "Deneyiminizi ve hedeflerinizi özetleyen 2-3 cümle…"
+        },
+        "tips": [
+          "Ad, soyad ve e-posta zorunludur.",
+          "Profesyonel unvanınız isminizin hemen altında görünecektir.",
+          "LinkedIn/GitHub profilleriniz güncel ise ekleyin.",
+          "Yaş, ehliyet ve mobilite işe alımcılar için önemli bilgilerdir."
+        ]
+      },
+      "driverLicense": {
+        "label": "Ehliyet",
+        "options": {
+          "B": "B Sınıfı (Otomobil)",
+          "A": "A Sınıfı (Motosiklet)",
+          "C": "C Sınıfı (Kamyon)",
+          "D": "D Sınıfı (Toplu Taşıma)",
+          "BE": "BE Sınıfı (Römorklu Otomobil)",
+          "none": "Ehliyetsiz"
+        }
+      },
+      "maritalStatus": {
+        "label": "Medeni Durum",
+        "options": {
+          "single": "Bekar",
+          "married": "Evli",
+          "divorced": "Boşanmış",
+          "widowed": "Dul",
+          "pacsed": "Medeni Birliktelik (PACS)"
+        }
+      },
+      "mobility": {
+        "label": "Mobilite",
+        "options": {
+          "negrepelisse_30": "NEGREPELISSE (82) + 30 km",
+          "montauban_100": "MONTAUBAN (82) + 100 km",
+          "caussade_40": "CAUSSADE (82) + 40 km",
+          "custom": "Diğer (belirtiniz)"
+        },
+        "placeholder": "Mobiliteyi belirtiniz (örn: İzmir + 50 km, Ulusal…)"
+      },
+      "experience": {
+        "title": "Profesyonel Deneyim",
+        "position": "Pozisyon",
+        "company": "Şirket",
+        "location": "Yer",
+        "currentlyWorking": "Halihazırda çalışıyorum",
+        "startDate": "Başlangıç Tarihi",
+        "endDate": "Bitiş Tarihi",
+        "description": "Açıklama",
+        "addButton": "Deneyim Ekle",
+        "tips": [
+          "En yeniden en eskiye doğru sıralayın.",
+          "Eylem fiilleri kullanın: geliştirdim, yönettim, optimize ettim…",
+          "Başarılarınızı sayısallaştırın.",
+          "Hala şirketteyseniz 'Halihazırda çalışıyorum' seçeneğini işaretleyin."
+        ]
+      },
+      "education": {
+        "title": "Eğitim",
+        "degree": "Diploma",
+        "school": "Okul/Kurum",
+        "location": "Yer",
+        "currentlyStudying": "Eğitime devam ediyor",
+        "startDate": "Başlangıç Tarihi",
+        "endDate": "Bitiş Tarihi",
+        "description": "Açıklama",
+        "addButton": "Eğitim Ekle",
+        "tips": [
+          "En yeniden en eskiye doğru sıralayın.",
+          "Derece varsa belirtin.",
+          "Yeni mezunlar için eğitim, deneyimden önce gelebilir."
+        ]
+      },
+      "skills": {
+        "title": "Yetenekler",
+        "name": "Yetenek Adı",
+        "level": "Seviye",
+        "levels": {
+          "beginner": "Başlangıç",
+          "intermediate": "Orta",
+          "advanced": "İleri",
+          "expert": "Uzman"
+        },
+        "addButton": "Yetenek Ekle",
+        "tips": [
+          "İyi seçilmiş 8-12 yetenek.",
+          "Teknik ve sosyal yetenekleri karıştırın.",
+          "Yeterlilik/önem sırasına göre sıralayın.",
+          "Seviyeler konusunda dürüst olun."
+        ]
+      },
+      "languages": {
+        "title": "Diller",
+        "name": "Dil",
+        "level": "Seviye",
+        "levels": {
+          "native": "Ana Dil",
+          "fluent": "Akıcı (C1/C2)",
+          "advanced": "İleri (B2)",
+          "intermediate": "Orta (B1)",
+          "beginner": "Başlangıç (A1/A2)",
+          "notions": "Temel Bilgiler"
+        },
+        "addButton": "Dil Ekle"
+      },
+      "certifications": {
+        "title": "Sertifikalar",
+        "name": "Sertifika Adı",
+        "issuer": "Kurum",
+        "year": "Yıl",
+        "addButton": "Sertifika Ekle"
+      },
+      "projects": {
+        "title": "Projeler",
+        "name": "Proje Adı",
+        "description": "Açıklama",
+        "technologies": "Teknolojiler (virgülle ayırın)",
+        "link": "Bağlantı",
+        "addButton": "Proje Ekle"
+      },
+      "interests": {
+        "title": "İlgi Alanları",
+        "name": "İlgi Alanı",
+        "description": "İsteğe bağlı detay",
+        "addButton": "Ekle",
+        "suggestions": "Hızlı Öneriler",
+        "tips": [
+          "Spesifik olun: 'Spor' yerine 'Dağda Koşu'.",
+          "Özgün bir ilgi alanı mülakatta sohbet başlatabilir.",
+          "3-5 ilgi alanı ile sınırlayın."
+        ]
+      },
+      "appearance": {
+        "title": "CV Görünümü",
+        "primaryColor": "Ana Renk",
+        "font": "Yazı Tipi",
+        "fonts": {
+          "inter": "Inter (Modern)",
+          "roboto": "Roboto (Nötr)",
+          "openSans": "Open Sans (Okunabilir)",
+          "merriweather": "Merriweather (Klasik)",
+          "montserrat": "Montserrat (Zarif)"
+        }
+      },
+      "export": {
+        "title": "Dışa Aktar",
+        "ready": "{type} CV oluşturulmaya hazır",
+        "generate": "PDF Oluştur",
+        "share": "Paylaş",
+        "history": "Geçmiş",
+        "restart": "Yeniden Başla"
+      },
+      "buttons": {
+        "previous": "Önceki",
+        "next": "Sonraki",
+        "locked": "Kilitli",
+        "import": "İçe Aktar",
+        "generate": "Oluştur"
+      },
+      "mode": {
+        "howToProceed": "Nasıl ilerlemek istersiniz ?",
+        "chooseOption": "Başlamak için bir seçenek seçin",
+        "create": {
+          "title": "CV Oluştur",
+          "description": "Bölümleri adım adım doldurun"
+        },
+        "import": {
+          "title": "CV İçe Aktar",
+          "description": "Mevcut bir dosyayı kullanın (PDF, DOCX)",
+          "dragOrClick": "İçe aktarmak için sürükleyin veya tıklayın",
+          "maxSize": "PDF, DOC, DOCX — maks. 10 MB",
+          "ready": "İçe aktarmaya hazır — manuel adımlar devre dışı",
+          "lockedMessage": "Sonraki adımlar kilitlidir. Doğrudan İçe Aktar'a tıklayın."
+        },
+        "format": {
+          "title": "CV Formatı",
+          "classic": "Klasik",
+          "classicDesc": "Standart, tüm sektörler",
+          "fibem": "FIBEM",
+          "fibemDesc": "Platforma özel",
+          "selectRequired": "Devam etmek için bir format seçin."
+        }
+      },
+      "navigation": {
+        "history": "Geçmiş"
+      },
+      "generalTips": [
+        "Kısa ve öz olun — maks. 2 sayfa",
+        "Her başvuruya uyarlayın",
+        "Sektöre özel anahtar kelimeler kullanın",
+        "Yazım hatalarını kontrol edin",
+        "Başarılarınızı sayısallaştırın",
+        "Düzenin havalandırılmış olmasına dikkat edin"
+      ],
+      "alerts": {
+        "importSuccess": "CV başarıyla içe aktarıldı",
+        "importError": "İçe aktarma başarısız oldu",
+        "generationError": "Hata: {message}",
+        "defaultError": "Bir hata oluştu",
+        "noLink": "CV oluşturuldu ancak bağlantı mevcut değil."
+      },
+      "history": {
+        "title": "CV Geçmişi",
+        "importedCv": "İçe aktarılan CV",
+        "cv": "CV",
+        "main": "Ana",
+        "modified": "düzenlendi",
+        "searchPlaceholder": "CV ara…",
+        "noCvFound": "CV bulunamadı",
+        "resetFilters": "Filtreleri sıfırla",
+        "close": "Kapat",
+        "page": "sayfa",
+        "cvCount": "CV{count, plural, =0 {} one {} other {}}",
+        "resultCount": "{count} sonuç{count, plural, =0 {} one {} other {}}",
+        "types": {
+          "fibem": "FIBEM",
+          "classic": "Klasik",
+          "imported": "İçe aktarılmış"
+        },
+        "actions": {
+          "preview": "Önizleme",
+          "download": "İndir",
+          "downloadFile": "Dosyayı indir",
+          "duplicate": "Çoğalt",
+          "delete": "Sil"
+        },
+        "filters": {
+          "all": "Tümü"
+        },
+        "pagination": {
+          "previous": "Önceki sayfa",
+          "next": "Sonraki sayfa"
+        },
+        "deleteDialog": {
+          "title": "CV'yi Sil",
+          "message": "Bu işlem geri alınamaz. Bu CV'yi silmek istediğinizden emin misiniz ?",
+          "confirm": "Sil",
+          "cancel": "İptal"
+        }
+      }
+    },
+    "contact": {
+      "hero": {
+        "title": "Bize Ulaşın",
+        "subtitle": "İş ortağı şirketlerimizin sunduğu profesyonel fırsatları keşfedin"
+      },
+      "form": {
+        "title": "Bize Mesaj Gönderin",
+        "subtitle": "48 saat içinde size dönüş yapacağız",
+        "firstName": "Soyad",
+        "firstNamePlaceholder": "Soyadınız",
+        "lastName": "Ad",
+        "lastNamePlaceholder": "Adınız",
+        "email": "E-posta",
+        "emailPlaceholder": "email@ornek.com",
+        "address": "Adres",
+        "addressPlaceholder": "Örn: İstanbul",
+        "phone": "Telefon",
+        "phonePlaceholder": "+90 5XX XXX XX XX",
+        "subject": "Konu",
+        "subjectPlaceholder": "Mesajınızın konusu",
+        "message": "Mesaj",
+        "messagePlaceholder": "Talebinizi açıklayın veya sorularınızı sorun...",
+        "locationNote": "Daha iyi hizmet için mevcut konumunuz mesajınıza otomatik olarak eklenecektir.",
+        "sending": "Gönderiliyor...",
+        "submit": "Mesajı Gönder",
+        "success": {
+          "title": "Mesaj gönderildi !",
+          "message": "Mesajınız için teşekkürler. Ekibimiz en kısa sürede sizinle iletişime geçecektir.",
+          "button": "Başka bir mesaj gönder"
+        }
+      },
+      "info": {
+        "title1": "Projeniz",
+        "title2": "Hakkında Konuşalım",
+        "subtitle": "Uzman ekibimiz size yardımcı olmak için hizmetinizdedir.",
+        "email": {
+          "title": "E-posta",
+          "details": "24 saat içinde yanıt"
+        },
+        "phone": {
+          "title": "Telefon",
+          "details": "Pzt-Cum: 09:00-18:00"
+        },
+        "address": {
+          "title": "Adres",
+          "details": "75 001"
+        },
+        "hours": {
+          "title": "Çalışma Saatleri",
+          "days": "Pazartesi - Cuma",
+          "time": "09:00 - 18:00"
+        }
+      },
+      "offices": {
+        "title": "Ofislerimiz",
+        "france": {
+          "name": "FIBEM Fransa",
+          "address": "51 Rue du Grévarin – 27200 Vernon"
+        },
+        "senegal": {
+          "name": "FIBEM Senegal",
+          "address": "Rue 7 Corniche x 6, Médina, Dakar"
+        }
+      },
+      "location": {
+        "title": "Konumunuz",
+        "description": "Kişiselleştirilmiş hizmet için konumunuz mesajınıza otomatik olarak eklenecektir.",
+        "detected": "Mevcut konum algılandı",
+        "included": "(Mesajınıza eklendi)",
+        "consent": "Konum yalnızca izninizle paylaşılır"
+      }
+    },
+    "invoice": {
+      "title": "Fatura Oluşturucu",
+      "subtitle": "Adım adım profesyonel bir fatura oluşturun",
+      "fileName": "Fatura",
+      "emailMessage": "Ekranda {number} numaralı faturayı bulabilirsiniz",
+      "steps": {
+        "invoice": "Fatura",
+        "company": "Düzenleyen",
+        "client": "Müşteri",
+        "items": "Kalemler",
+        "payment": "Ödeme",
+        "notes": "Notlar",
+        "preview": "Önizleme"
+      },
+      "progress": {
+        "step": "Adım"
+      },
+      "help": {
+        "title": "İpuçları"
+      },
+      "status": {
+        "draft": "Taslak",
+        "sent": "Gönderildi",
+        "paid": "Ödendi",
+        "overdue": "Gecikmiş",
+        "genere": "Oluşturuldu",
+        "envoye": "Gönderildi",
+        "paye": "Ödendi",
+        "en_retard": "Gecikmiş",
+        "brouillon": "Taslak"
+      },
+      "paymentMethods": {
+        "bankTransfer": "Banka Havalesi",
+        "creditCard": "Kredi Kartı",
+        "cash": "Nakit",
+        "paypal": "PayPal",
+        "check": "Çek",
+        "stripe": "Stripe",
+        "directDebit": "Otomatik Ödeme",
+        "bitcoin": "Bitcoin",
+        "applePay": "Apple Pay",
+        "googlePay": "Google Pay",
+        "wireTransfer": "Uluslararası Havale",
+        "other": "Diğer"
+      },
+      "paymentTerms": {
+        "immediate": "Hemen",
+        "days7": "7 gün",
+        "days15": "15 gün",
+        "days30": "30 gün",
+        "days45": "45 gün",
+        "days60": "60 gün",
+        "days90": "90 gün"
+      },
+      "invoice": {
+        "title": "Fatura Bilgileri",
+        "subtitle": "Faturanızın temel bilgilerini girin.",
+        "quoteSelection": "Teklif Seçimi",
+        "selectQuote": "Bir teklif seçin",
+        "quoteNumber": "Teklif",
+        "client": "Müşteri",
+        "amount": "Tutar",
+        "purchaseOrder": "Sipariş Formu (PO)",
+        "purchaseOrderPlaceholder": "PO-2026-001",
+        "invoiceDate": "Fatura Tarihi",
+        "dueDate": "Vade Tarihi",
+        "paymentTerms": "Ödeme Koşulları",
+        "paymentMethod": "Ödeme Yöntemi",
+        "selectPaymentMethod": "Seçiniz",
+        "tips": [
+          "Fatura numarası otomatik olarak oluşturulur, değiştirebilirsiniz.",
+          "Vade tarihi, ödeme koşullarına göre otomatik olarak hesaplanır.",
+          "Sipariş formu (PO) isteğe bağlıdır ancak şirketler için önerilir."
+        ]
+      },
+      "company": {
+        "title": "Şirketiniz",
+        "subtitle": "Bu bilgiler faturada düzenleyen olarak görünecektir.",
+        "name": "Şirket Adı",
+        "namePlaceholder": "Şirketiniz Ltd. Şti.",
+        "address": "Adres",
+        "addressPlaceholder": "Cumhuriyet Cad. No: 123",
+        "city": "Şehir",
+        "cityPlaceholder": "İstanbul",
+        "postalCode": "Posta Kodu / PK",
+        "postalCodePlaceholder": "34000",
+        "phone": "Telefon",
+        "phonePlaceholder": "+90 2XX XXX XX XX",
+        "email": "E-posta",
+        "emailPlaceholder": "info@sirketiniz.com",
+        "taxId": "Vergi Kimlik Numarası",
+        "taxIdPlaceholder": "1234567890",
+        "logo": "Şirket Logosu",
+        "logoAlt": "Şirket Logosu",
+        "tips": [
+          "Şirket adı zorunludur.",
+          "KDV mükellefiyseniz Vergi Kimlik Numaranızı ekleyin."
+        ]
+      },
+      "client": {
+        "title": "Müşteri Bilgileri",
+        "subtitle": "Bu bilgiler faturada alıcı olarak görünecektir.",
+        "name": "Müşteri Adı",
+        "namePlaceholder": "Ahmet Yılmaz",
+        "company": "Müşteri Şirketi",
+        "companyPlaceholder": "Müşteri Şirketi A.Ş.",
+        "email": "E-posta",
+        "emailPlaceholder": "musteri@email.com",
+        "phone": "Telefon",
+        "phonePlaceholder": "+90 5XX XXX XX XX",
+        "address": "Adres",
+        "addressPlaceholder": "Atatürk Bulvarı No: 456",
+        "city": "Şehir",
+        "cityPlaceholder": "Ankara",
+        "postalCode": "Posta Kodu / PK",
+        "postalCodePlaceholder": "06000",
+        "taxId": "Vergi Kimlik Numarası",
+        "taxIdPlaceholder": "9876543210",
+        "tips": [
+          "Müşteri adı zorunludur.",
+          "Faturayı uygulamadan doğrudan gönderebilmek için e-postayı girin."
+        ]
+      },
+      "items": {
+        "title": "Fatura Satırları",
+        "subtitle": "Faturalanacak ürün veya hizmetleri ekleyin.",
+        "count": "kalem",
+        "line": "Satır",
+        "description": "Açıklama",
+        "descriptionPlaceholder": "Örn: Web uygulaması geliştirme",
+        "quantity": "Miktar",
+        "unitPrice": "Birim Fiyat",
+        "discount": "İskonto %",
+        "taxRate": "KDV %",
+        "total": "Toplam",
+        "addButton": "Satır Ekle",
+        "summary": "Özet",
+        "subtotal": "Ara Toplam (KDV Hariç)",
+        "totalDiscount": "Toplam İskonto",
+        "totalTax": "KDV",
+        "grandTotal": "Genel Toplam (KDV Dahil)",
+        "duplicate": "Çoğalt",
+        "delete": "Sil",
+        "tips": [
+          "Her satırda bir açıklama ve sıfırdan büyük birim fiyat olmalıdır.",
+          "İskonto yüzde olarak girilir (örn: 10 için %10).",
+          "Her satırın toplamı otomatik olarak hesaplanır."
+        ]
+      },
+      "payment": {
+        "title": "Banka Hesap Bilgileri",
+        "subtitle": "Bu bilgiler müşterinizin ödemeyi yapmasını kolaylaştıracaktır.",
+        "bankName": "Banka Adı",
+        "bankNamePlaceholder": "Banka Adı",
+        "bankAccount": "Hesap Numarası / IBAN",
+        "bankAccountPlaceholder": "TR00 0000 0000 0000 0000 0000 00",
+        "tips": [
+          "Banka hesap bilgileri isteğe bağlıdır ancak havale için önerilir.",
+          "IBAN veya hesap numaranızı belirtin."
+        ]
+      },
+      "notes": {
+        "title": "Notlar ve Koşullar",
+        "subtitle": "Kişiselleştirilmiş bir mesaj veya genel satış koşullarınızı ekleyin.",
+        "message": "Mesaj / Notlar",
+        "messagePlaceholder": "Güveniniz için teşekkür ederiz. Herhangi bir sorunuz için bize ulaşmaktan çekinmeyin.",
+        "terms": "Genel Koşullar",
+        "termsPlaceholder": "Fatura karşılığında ödeme. Vade tarihinden sonra ödenmeyen faturalar için aylık %1,5 gecikme cezası uygulanacaktır."
+      },
+      "preview": {
+        "title": "Fatura Önizleme",
+        "subtitle": "Oluşturmadan önce faturanızı kontrol edin.",
+        "downloadPdf": "PDF İndir",
+        "downloadExcel": "Excel İndir",
+        "newInvoice": "Yeni Fatura"
+      },
+      "navigation": {
+        "previous": "Önceki",
+        "next": "Sonraki",
+        "history": "Geçmiş",
+        "generate": "Oluştur",
+        "generating": "Oluşturuluyor…"
+      },
+      "tips": {
+        "title": "Etkili bir fatura için ipuçları",
+        "list": [
+          "Tekrarları önlemek için fatura numarasını kontrol edin",
+          "Ödeme sürelerini açıkça belirtin",
+          "Ödemeyi kolaylaştırmak için banka hesap bilgilerinizi ekleyin",
+          "Notlara bir teşekkür mesajı ekleyin",
+          "PDF oluşturmadan önce tutarları kontrol edin",
+          "Gönderilen her faturanın bir kopyasını saklayın"
+        ]
+      },
+      "quoteDialog": {
+        "title": "Faturalanacak Teklifi Seçin",
+        "description": "Faturaya dönüştürmek istediğiniz teklif sürümünü seçin"
+      },
+      "errors": {
+        "idNotFound": "Fatura kimliği bulunamadı",
+        "generationError": "Fatura oluşturulurken hata oluştu",
+        "generateFirst": "Lütfen önce faturayı oluşturun",
+        "clientEmailRequired": "Lütfen müşterinin e-postasını girin"
+      },
+      "alerts": {
+        "sendSuccess": "Fatura başarıyla gönderildi",
+        "sendError": "Fatura gönderilirken hata oluştu"
+      },
+      "history": {
+        "title": "Fatura Geçmişi",
+        "ref_quote": "ref.",
+        "modified": "düzenlendi",
+        "due_date": "vade",
+        "preview": "Önizle / Yeniden Kullan",
+        "download_pdf": "PDF İndir",
+        "download_excel": "Excel Dosyasını İndir",
+        "duplicate": "Çoğalt",
+        "delete": "Sil",
+        "delete_confirm_title": "Faturayı Sil",
+        "delete_confirm_message": "Bu işlem geri alınamaz. Bu faturayı silmek istediğinizden emin misiniz ?",
+        "delete_confirm_button": "Sil",
+        "cancel": "İptal",
+        "search_placeholder": "Fatura No, müşteri…",
+        "no_invoices": "Fatura bulunamadı",
+        "reset_filters": "Filtreleri sıfırla",
+        "invoices": "fatura",
+        "page": "sayfa",
+        "result": "sonuç",
+        "close": "Kapat",
+        "filters": {
+          "all": "Tümü",
+          "generated": "Oluşturulanlar",
+          "sent": "Gönderilenler",
+          "paid": "Ödenenler",
+          "overdue": "Gecikmiş",
+          "draft": "Taslaklar"
+        },
+        "stats": {
+          "paid": "ödendi",
+          "sent": "gönderildi",
+          "overdue": "gecikmiş"
+        }
+      }
+    },
+    "quote": {
+      "title": "Teklif Oluşturucu",
+      "subtitle": "Adım adım profesyonel bir teklif oluşturun",
+      "steps": {
+        "client": "Müşteri",
+        "emetteur": "Düzenleyen",
+        "project": "Proje",
+        "items": "Kalemler",
+        "payment": "Ödeme",
+        "notes": "Notlar",
+        "preview": "Önizleme"
+      },
+      "help_notice": {
+        "tips_title": "İpuçları",
+        "info_title": "Bilgi"
+      },
+      "progress": {
+        "step_label": "Adım",
+        "of": "/"
+      },
+      "client_step": {
+        "title": "Müşteri Bilgileri",
+        "subtitle": "Teklifin alıcısı olan müşterinin iletişim bilgilerini girin.",
+        "tips": [
+          "Ad, soyad, e-posta ve telefon zorunludur.",
+          "Şirket alanı isteğe bağlıdır ancak B2B teklifleri için önerilir.",
+          "Teklif türü, işin niteliğini kategorilendirmenizi sağlar."
+        ],
+        "first_name": "Ad",
+        "last_name": "Soyad",
+        "email": "E-posta",
+        "phone": "Telefon",
+        "company": "Müşteri Şirketi",
+        "quote_type": "Teklif Türü",
+        "address": "Adres",
+        "city": "Şehir",
+        "postal_code": "Posta Kodu / PK",
+        "first_name_placeholder": "Mehmet",
+        "last_name_placeholder": "Kaya",
+        "email_placeholder": "iletisim@email.com",
+        "phone_placeholder": "+90 5XX XXX XX XX",
+        "company_placeholder": "Müşteri Şirket Adı",
+        "address_placeholder": "İstiklal Cad. No: 123",
+        "city_placeholder": "İstanbul",
+        "postal_code_placeholder": "34000",
+        "select_quote_type": "Bir tür seçin"
+      },
+      "emitter_step": {
+        "title": "Şirketiniz (Düzenleyen)",
+        "subtitle": "Bu bilgiler teklifte hizmet sağlayıcı bloğunda görünecektir.",
+        "tips": [
+          "Şirket adı zorunludur.",
+          "Logo, PDF teklifin sol üst köşesinde görünecektir.",
+          "SIRET, APE ve KDV No, hizmet sağlayıcı bloğunda görünür."
+        ],
+        "company_name": "Şirket Adı",
+        "company_contact": "İletişim / Yetkili",
+        "company_address": "Adres",
+        "company_city": "Şehir (Posta kodu ile)",
+        "company_phone": "Sabit Telefon",
+        "company_port": "Cep Telefonu",
+        "company_email": "E-posta",
+        "company_siret": "SIRET (Fransa)",
+        "company_ape": "APE Kodu (Fransa)",
+        "company_tva": "KDV No",
+        "contact_be": "İş Etüdü Referansı (dahili)",
+        "company_logo": "Şirket Logosu",
+        "company_name_placeholder": "Şirketiniz Ltd. Şti.",
+        "company_contact_placeholder": "Ahmet Yılmaz",
+        "company_address_placeholder": "Cumhuriyet Cad. No: 51",
+        "company_city_placeholder": "34000 İstanbul",
+        "company_phone_placeholder": "+90 2XX XXX XX XX",
+        "company_port_placeholder": "+90 5XX XXX XX XX",
+        "company_email_placeholder": "info@sirketiniz.com",
+        "company_siret_placeholder": "123 456 789 00012",
+        "company_ape_placeholder": "6201B",
+        "company_tva_placeholder": "TR1234567890",
+        "contact_be_placeholder": "Etüt ref.",
+        "logo_preview": "Logo Önizleme"
+      },
+      "project_step": {
+        "title": "Proje Detayları",
+        "subtitle": "Bu teklif için gerçekleştirilecek projeyi tanımlayın.",
+        "tips": [
+          "Proje adı zorunludur.",
+          "Açık bir açıklama, müşteriyi ihtiyacı anladığınız konusunda ikna eder.",
+          "Geçerlilik tarihi otomatik olarak 30 gün olarak ayarlanır ancak değiştirilebilir."
+        ],
+        "project_name": "Proje Adı",
+        "category": "Kategori",
+        "project_description": "Proje Açıklaması",
+        "start_date": "Planlanan Başlangıç Tarihi",
+        "deadline": "Proje Teslim Tarihi",
+        "budget": "Tahmini Bütçe",
+        "valid_until": "Teklif Geçerlilik Tarihi",
+        "project_name_placeholder": "Örn: Web Sitesi Geliştirme",
+        "project_description_placeholder": "Projeyi detaylıca açıklayın...",
+        "select_category": "Bir kategori seçin",
+        "categories": {
+          "development": "Web Geliştirme",
+          "design": "Grafik Tasarım",
+          "marketing": "Dijital Pazarlama",
+          "consulting": "Danışmanlık & Eğitim",
+          "delivery": "Hizmet Teslimatı",
+          "construction": "İnşaat",
+          "renovation": "Yenileme",
+          "other": "Diğer"
+        }
+      },
+      "items_step": {
+        "title": "Teklif Kalemleri",
+        "subtitle": "Fiyatlandırılacak hizmetleri veya tedarikleri listeleyin.",
+        "items_count": "kalem",
+        "tips": [
+          "Her kalem bir açıklama ve birim fiyata sahip olmalıdır.",
+          "İşçilik Süresi: işçilik süresi (örn: 1,0 saat). Birim: Takım, saat, m² vb.",
+          "Satır bazında iskonto yüzde olarak girilir.",
+          "Kalemleri yeniden sıralamak için ↑↓ oklarını kullanın."
+        ],
+        "article": "Kalem",
+        "description": "Açıklama",
+        "description_placeholder": "Örn: Fayans tedariki ve döşenmesi",
+        "time_mo": "İşçilik Süresi",
+        "time_mo_placeholder": "1,0 saat",
+        "unit": "Birim",
+        "quantity": "Miktar",
+        "unit_price": "Birim Fiyat",
+        "discount": "İskonto %",
+        "tax": "KDV %",
+        "total_ht": "KDV Hariç Toplam",
+        "add_item": "Kalem Ekle",
+        "summary": "Kalem Özeti",
+        "subtotal_ht": "KDV Hariç Ara Toplam",
+        "total_before_discount": "Genel İskonto Öncesi Toplam",
+        "duplicate": "Çoğalt",
+        "delete": "Sil",
+        "units": {
+          "ens": "Takım",
+          "h": "saat",
+          "j": "gün",
+          "m2": "m²",
+          "m3": "m³",
+          "ml": "ml",
+          "u": "adet",
+          "kg": "kg",
+          "t": "t",
+          "forfait": "toplu fiyat"
+        }
+      },
+      "payment_step": {
+        "title": "Ödeme Parametreleri",
+        "subtitle": "Genel KDV, iskonto ve peşinat yapılandırması.",
+        "tips": [
+          "Türkiye'de KDV oranı genel olarak %20'dir.",
+          "Genel iskonto tüm kalemlerin ara toplamına uygulanır.",
+          "Peşinat, KDV Dahil toplamın sabit bir tutarı veya yüzdesi olabilir."
+        ],
+        "global_tax": "Genel KDV (%)",
+        "global_discount": "Genel İskonto (%)",
+        "deposit": "Peşinat",
+        "percentage": "%",
+        "fixed": "Sabit Tutar",
+        "financial_summary": "Finansal Özet",
+        "subtotal_ht": "KDV Hariç Ara Toplam",
+        "discount": "İskonto",
+        "total_ht": "KDV Hariç Toplam",
+        "tax_amount": "KDV",
+        "total_ttc": "KDV Dahil Toplam",
+        "deposit_amount": "Peşinat",
+        "remaining": "Ödenecek Kalan"
+      },
+      "notes_step": {
+        "title": "Notlar ve Koşullar",
+        "subtitle": "Bu metinler teklifin \"Ödeme Koşulları\" bölümünde görünecektir.",
+        "tips": [
+          "Ek notlar 'Ödeme Koşulları' içinde gösterilir.",
+          "Peşinat koşullarını belirtin (örn: %30 başlangıçta, %70 teslimatta)."
+        ],
+        "payment_conditions": "Ödeme Koşulları / Notlar",
+        "payment_conditions_placeholder": "- %30 başlangıçtan 1 hafta sonra ödenecek\n- %70 ilk ayın sonunda",
+        "general_conditions": "Genel Koşullar",
+        "general_conditions_placeholder": "Ödeme koşulları, geçerlilik, gecikme cezaları..."
+      },
+      "preview_step": {
+        "title": "Teklif Önizleme",
+        "subtitle": "Oluşturmadan önce teklifinizi kontrol edin.",
+        "modify": "Düzenle",
+        "print": "Yazdır",
+        "send": "Gönder",
+        "download_excel": "Excel İndir",
+        "download_pdf": "PDF İndir",
+        "quote_preview": "Teklif Önizleme",
+        "provider": "Hizmet Sağlayıcı",
+        "client": "Müşteri",
+        "project": "Proje",
+        "valid_until": "Geçerlilik Tarihi",
+        "start_date": "Başlangıç",
+        "table": {
+          "time_mo": "İşçilik Süresi",
+          "description": "Açıklama",
+          "unit": "Birim",
+          "unit_price_ht": "Birim Fiyat (KDV Hariç)",
+          "quantity": "Miktar",
+          "amount_ht": "KDV Hariç Tutar"
+        },
+        "total_ht": "KDV Hariç Toplam Tutar",
+        "total_ttc": "KDV Dahil Toplam Tutar",
+        "payment_conditions_title": "Ödeme Koşulları"
+      },
+      "buttons": {
+        "previous": "Önceki",
+        "next": "Sonraki",
+        "generate_quote": "Teklif Oluştur",
+        "generating": "Oluşturuluyor…",
+        "new_quote": "Yeni Teklif",
+        "history": "Teklif Geçmişi"
+      },
+      "tips_section": {
+        "title": "Etkili bir teklif için ipuçları",
+        "tips": [
+          "Anlaşmazlıkları önlemek için her kalemi detaylıca açıklayın",
+          "Teklif geçerlilik süresini açıkça belirtin (30 gün önerilir)",
+          "Teslimat sürelerini ve koşullarını belirtin",
+          "Projeyi güvence altına almak için imza aşamasında peşinat isteyin",
+          "Göndermeden önce tutarları kontrol edin",
+          "Kabul edilen her teklifin imzalı bir kopyasını saklayın"
+        ]
+      },
+      "status": {
+        "draft": "Taslak",
+        "sent": "Gönderildi",
+        "accepted": "Kabul Edildi",
+        "rejected": "Reddedildi",
+        "expired": "Süresi Doldu"
+      },
+      "alerts": {
+        "error_generating": "Teklif oluşturulurken hata oluştu",
+        "generate_first": "Lütfen önce teklifi oluşturun",
+        "email_required": "Lütfen müşterinin e-postasını girin",
+        "email_sent": "Teklif başarıyla gönderildi",
+        "email_error": "Teklif gönderilirken hata oluştu"
+      },
+      "quote_types": {
+        "0": "Sadece İşçilik",
+        "1": "Malzeme ve İşçilik",
+        "2": "Yenileme",
+        "3": "İnşaat",
+        "4": "Düzenleme",
+        "5": "Montaj & Kurulum",
+        "6": "Etüt ve Plan Çizimi",
+        "7": "Boyutlandırma Hesabı",
+        "8": "Doğrulama Hesabı",
+        "9": "Teknik Destek",
+        "10": "Diğer"
+      },
+      "history": {
+        "title": "Teklif Geçmişi",
+        "modified": "düzenlendi",
+        "preview": "Önizle / Yeniden Kullan",
+        "download_pdf": "PDF İndir",
+        "download_excel": "Excel Dosyasını İndir",
+        "duplicate": "Çoğalt",
+        "delete": "Sil",
+        "delete_confirm_title": "Teklifi Sil",
+        "delete_confirm_message": "Bu işlem geri alınamaz. Bu teklifi silmek istediğinizden emin misiniz ?",
+        "delete_confirm_button": "Sil",
+        "cancel": "İptal",
+        "search_placeholder": "Teklif No, müşteri, proje…",
+        "no_quotes": "Teklif bulunamadı",
+        "reset_filters": "Filtreleri sıfırla",
+        "quotes": "teklif",
+        "page": "sayfa",
+        "result": "sonuç",
+        "close": "Kapat",
+        "filters": {
+          "all": "Tümü",
+          "draft": "Taslaklar",
+          "sent": "Gönderilenler",
+          "accepted": "Kabul Edilenler",
+          "rejected": "Reddedilenler",
+          "expired": "Süresi Dolanlar"
+        },
+        "stats": {
+          "accepted": "kabul edildi",
+          "sent": "gönderildi",
+          "rejected": "reddedildi",
+          "expired": "süresi doldu",
+          "acceptance_rate": "kabul"
+        }
+      },
+      "selection": {
+        "title": "Bir Teklif Seçin",
+        "search_placeholder": "Numara, müşteri…",
+        "no_results": "Sonuç yok",
+        "no_quotes": "Uygun teklif yok",
+        "reset": "Sıfırla",
+        "quotes": "teklif",
+        "page": "sayfa",
+        "cancel": "İptal",
+        "select": "Seç"
+      }
+    },
+    "credit_note": {
+      "title": "Alacak Dekontu Oluşturucu",
+      "subtitle": "Mevcut bir faturaya bağlı profesyonel bir alacak dekontu oluşturun",
+      "steps": {
+        "identification": "Alacak Dekontu",
+        "emetteur": "Düzenleyen",
+        "client": "Müşteri",
+        "items": "Kalemler",
+        "notes": "Notlar",
+        "preview": "Önizleme"
+      },
+      "progress": {
+        "step": "Adım"
+      },
+      "help_notice": {
+        "tips_title": "İpuçları",
+        "info_title": "Bilgi"
+      },
+      "identification_step": {
+        "title": "Alacak Dekontu Kimliği",
+        "subtitle": "Numara, tarih, orijinal fatura, neden ve geri ödeme yöntemi.",
+        "tips": [
+          "Alacak dekontu numarası zorunludur ve benzersiz olmalıdır.",
+          "Alacak dekontunun ilişkili olduğu orijinal faturayı her zaman belirtin.",
+          "Neden ve geri ödeme yöntemi PDF belgesinde görünecektir."
+        ],
+        "credit_note_date": "Alacak Dekontu Tarihi",
+        "original_invoice_number": "Orijinal Fatura No",
+        "original_invoice_placeholder": "FA-202601-0042",
+        "original_invoice_date": "Orijinal Fatura Tarihi",
+        "credit_reason": "Alacak Dekontu Nedeni",
+        "refund_method": "Geri Ödeme Yöntemi"
+      },
+      "emitter_step": {
+        "title": "Şirketiniz (Düzenleyen)",
+        "subtitle": "Bu bilgiler alacak dekontunda hizmet sağlayıcı bloğunda görünecektir.",
+        "tips": [
+          "Şirket adı zorunludur.",
+          "Logo, PDF belgesinin sol üst köşesinde görünecektir.",
+          "SIRET, APE ve KDV No, düzenleyen bloğunda görünür."
+        ],
+        "company_name": "Şirket Adı",
+        "company_name_placeholder": "Şirketiniz Ltd. Şti.",
+        "company_address": "Adres",
+        "company_address_placeholder": "Cumhuriyet Cad. No: 51",
+        "company_city": "Şehir (Posta kodu ile)",
+        "company_city_placeholder": "34000 İstanbul",
+        "company_phone": "Sabit Telefon",
+        "company_phone_placeholder": "+90 2XX XXX XX XX",
+        "company_port": "Cep Telefonu",
+        "company_port_placeholder": "+90 5XX XXX XX XX",
+        "company_email": "E-posta",
+        "company_email_placeholder": "info@sirketiniz.com",
+        "company_siret": "SIRET (Fransa)",
+        "company_siret_placeholder": "123 456 789 00012",
+        "company_ape": "APE Kodu (Fransa)",
+        "company_ape_placeholder": "6201B",
+        "company_tva": "KDV No",
+        "company_tva_placeholder": "TR1234567890",
+        "company_logo": "Şirket Logosu",
+        "logo_preview": "Logo Önizleme"
+      },
+      "client_step": {
+        "title": "Müşteri Bilgileri",
+        "subtitle": "Alacak dekontunun alıcısı.",
+        "tips": [
+          "Alacak dekontunu uygulamadan doğrudan göndermek için e-postayı girin.",
+          "Müşteri KDV No, özet tablosunun AB sütununda görünür."
+        ],
+        "client_name": "Müşteri Adı",
+        "client_name_placeholder": "Ahmet Yılmaz",
+        "client_company": "Müşteri Şirketi",
+        "client_company_placeholder": "Müşteri A.Ş.",
+        "client_email": "E-posta",
+        "client_email_placeholder": "musteri@email.com",
+        "client_phone": "Telefon",
+        "client_phone_placeholder": "+90 5XX XXX XX XX",
+        "client_address": "Adres",
+        "client_address_placeholder": "Atatürk Bulvarı No: 456",
+        "client_city": "Şehir",
+        "client_city_placeholder": "Ankara",
+        "client_postal_code": "Posta Kodu / PK",
+        "client_postal_code_placeholder": "06000",
+        "client_tax_id": "KDV No / Vergi Kimlik Numarası",
+        "client_tax_id_placeholder": "TR9876543210"
+      },
+      "items_step": {
+        "title": "Alacak Dekontu Satırları",
+        "subtitle": "İade edilecek kalemleri veya hizmetleri ekleyin.",
+        "lines_count": "satır",
+        "line": "Satır",
+        "tips": [
+          "Her satırda bir açıklama ve sıfırdan büyük birim fiyat olmalıdır.",
+          "Tutarlar alacakları temsil eder — PDF'de turuncu renkte görüneceklerdir.",
+          "İskonto yüzde olarak girilir (örn: 10 için %10)."
+        ],
+        "description": "Açıklama",
+        "description_placeholder": "Örn: Ürün iadesi / Düzeltme",
+        "quantity": "Miktar",
+        "unit_price": "Birim Fiyat",
+        "discount": "İskonto %",
+        "tax": "KDV %",
+        "total_ht": "KDV Hariç Toplam",
+        "add_item": "Satır Ekle",
+        "summary": "Özet",
+        "estimated_tax": "Tahmini KDV",
+        "net_refund": "İade Edilecek Net Tutar (KDV Dahil)",
+        "duplicate": "Çoğalt",
+        "delete": "Sil"
+      },
+      "notes_step": {
+        "title": "Notlar ve Referanslar",
+        "subtitle": "Alacak dekontunda görünecek ek bilgiler.",
+        "notes": "Referanslar / Notlar",
+        "notes_placeholder": "Dosya referansı, detaylı gerekçe, iade numarası...",
+        "terms_and_conditions": "Genel Koşullar",
+        "terms_placeholder": "Geri ödeme koşulları, işlem süreleri..."
+      },
+      "preview_step": {
+        "title": "Alacak Dekontu Önizleme",
+        "subtitle": "PDF oluşturmadan önce kontrol edin.",
+        "download_excel": "Excel İndir",
+        "download_pdf": "PDF İndir",
+        "credit_note_title": "ALACAK DEKONTU",
+        "number": "No",
+        "invoice_ref": "Fatura Ref.",
+        "reason": "Neden",
+        "refund": "Geri Ödeme",
+        "emitter": "Düzenleyen",
+        "client": "Müşteri",
+        "portable": "Cep",
+        "total_ht": "KDV Hariç Toplam",
+        "estimated_tax": "Tahmini KDV",
+        "net_refund": "İade Edilecek Net Tutar (KDV Dahil)",
+        "references": "Referanslar",
+        "table": {
+          "description": "Açıklama",
+          "quantity": "Miktar",
+          "unit_price_ht": "Birim Fiyat (KDV Hariç)",
+          "discount": "İskonto",
+          "tax": "KDV %",
+          "amount_ht": "KDV Hariç Tutar"
+        }
+      },
+      "status": {
+        "draft": "Taslak",
+        "issued": "Düzenlendi",
+        "processed": "İşleme Alındı",
+        "cancelled": "İptal Edildi"
+      },
+      "credit_reasons": {
+        "product_return": "Ürün İadesi",
+        "defective_product": "Hatalı Ürün",
+        "billing_error": "Faturalama Hatası",
+        "discount": "Ticari İskonto",
+        "price_adjustment": "Fiyat Ayarlaması",
+        "cancelled_order": "Sipariş İptali",
+        "goodwill": "Ticari Jest",
+        "other": "Diğer"
+      },
+      "refund_methods": {
+        "bank_transfer": "Banka Havalesi",
+        "original_payment": "Orijinal Ödeme Yöntemi",
+        "store_credit": "Mağaza Kredisi",
+        "cash": "Nakit",
+        "check": "Çek"
+      },
+      "buttons": {
+        "history": "Geçmiş",
+        "previous": "Önceki",
+        "next": "Sonraki",
+        "generate": "Oluştur",
+        "generating": "Oluşturuluyor…",
+        "new_credit_note": "Yeni Alacak Dekontu"
+      },
+      "tips_section": {
+        "title": "Alacak Dekontları için İyi Uygulamalar",
+        "tips": [
+          "İzlenebilirlik için her zaman orijinal faturayı referans verin",
+          "Geri ödeme onaylanır onaylanmaz alacak dekontu düzenlenmelidir",
+          "Müşteri dosyanızda imzalı bir kopya saklayın",
+          "Alacak dekontu tutarının orijinal fatura ile eşleştiğini kontrol edin"
+        ]
+      },
+      "alerts": {
+        "error_generating": "Alacak dekontu oluşturulurken hata oluştu",
+        "generate_first": "Lütfen önce alacak dekontunu oluşturun",
+        "email_required": "Lütfen müşterinin e-postasını girin",
+        "email_sent": "Alacak dekontu başarıyla gönderildi",
+        "email_error": "Alacak dekontu gönderilirken hata oluştu"
+      },
+      "history": {
+        "title": "Alacak Dekontu Geçmişi",
+        "ref_invoice": "Ref.",
+        "modified": "düzenlendi",
+        "preview": "Önizle / Yeniden Kullan",
+        "download_pdf": "PDF İndir",
+        "download_excel": "Excel Dosyasını İndir",
+        "duplicate": "Çoğalt",
+        "delete": "Sil",
+        "delete_confirm_title": "Alacak Dekontunu Sil",
+        "delete_confirm_message": "Bu işlem geri alınamaz. Bu alacak dekontunu silmek istediğinizden emin misiniz ?",
+        "delete_confirm_button": "Sil",
+        "cancel": "İptal",
+        "search_placeholder": "Alacak dekontu No, müşteri, fatura…",
+        "no_credit_notes": "Alacak dekontu bulunamadı",
+        "reset_filters": "Filtreleri sıfırla",
+        "credit_notes": "alacak dekontu",
+        "page": "sayfa",
+        "result": "sonuç",
+        "close": "Kapat",
+        "all_reasons": "Tüm Nedenler",
+        "filters": {
+          "all": "Tümü",
+          "draft": "Taslaklar",
+          "issued": "Düzenlenenler",
+          "processed": "İşleme Alınanlar",
+          "cancelled": "İptal Edilenler"
+        },
+        "stats": {
+          "issued": "düzenlendi",
+          "processed": "işleme alındı",
+          "cancelled": "iptal edildi"
+        }
+      }
+    },
+    "mainMenu": {
+      "home": {
+        "label": "Ana Sayfa",
+        "about": "Hakkımızda",
+        "us": "Biz Kimiz ?",
+        "blog": "Blog"
+      },
+      "service": {
+        "label": "Hizmetler",
+        "prestation": "Yemek Ara",
+        "formulaireCV": "FIBEM CV Formu",
+        "formulaireDevis": "Teklif",
+        "formulaireFacture": "Fatura",
+        "formulaireAvoirs": "Alacak Dekontu"
+      },
+      "emploi": {
+        "label": "İstihdam",
+        "espaceCandidat": "Aday Alanı",
+        "espaceRecruteur": "İşveren Alanı",
+        "espaceAbonnement": "Abonelik Alanı"
+      },
+      "foods": "Yemek Ara",
+      "job": "İş Ara",
+      "cv": "CV",
+      "contact": "İletişim",
+      "facture": "Fatura"
+    },
+    "authMenu": {
+      "login": "Giriş Yap",
+      "register": "Kaydol"
+    },
+    "userMenu": {
+      "shoppingCart": "Sepet",
+      "dashboard": "Kontrol Paneli",
+      "profile": "Profil"
+    },
+    "search_placeholder": "Ara"
+}

@@ -2,10 +2,11 @@ import axios from "axios";
 
 // export const API_URL = "http://localhost:5005/api/v1";
 export const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5005/api/v1";
-// export const API_URL = "https://api.reimca-app.com/api/v1";
+// export const API_URL = "https://api.livrernourriture-fibem.com/api/v1";
 
 //console.log("process.env : ", process.env);
-export const UPLOADED_FILES_URL = `${API_URL}/uploads`;
+//export const UPLOADED_FILES_URL = `${API_URL}/uploads`;
+export const UPLOADED_FILES_URL = `${API_URL}`;
 
 // Créer l'instance axios de base
 const axiosInstance = axios.create({

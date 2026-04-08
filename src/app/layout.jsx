@@ -1,9 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { Provider } from "react-redux";
-import { persistor, store } from "@/redux/store";
-import { PersistGate } from "redux-persist/integration/react";
 import { LanguageProvider } from "@/providers/LanguageProvider";
 import { CurrencyProvider } from "@/context/CurrencyContext";
 import AppProvider from "@/context/AppProvider";
@@ -11,6 +8,8 @@ import Head from "next/head";
 import StoreProvider from "@/context/storeProvider";
 import ScrollToTop from "@/components/custom/ScrollToTop";
 import UnauthorizedDialog from "@/components/dialog/UnauthorizedDialog";
+import Header from "@/components/partials/Header";
+import Footer from "@/components/partials/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -39,14 +38,14 @@ export const metadata = {
     description: "Commandez vos repas favoris et faites-vous livrer rapidement chez vous avec LivrerNourriture.",
     images: ["https://livrernourriture-fibem.com/og-image.jpg"],
   },
-  authors: [{ name: "LivrerNourriture" }],
-  themeColor: "#ffffff",
+  authors: [{ name: "Fibem" }],
 };
 
 export default function RootLayout({ children }) {
   return (
     <html
-      lang="fr"
+      // lang="fr"
+      dir="rtl" lang="ar"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <Head>
@@ -71,6 +70,7 @@ export default function RootLayout({ children }) {
                 <StoreProvider>
                   <ScrollToTop />
                   <UnauthorizedDialog />
+                  <Header />
                   {children}
                 </StoreProvider>
               </TooltipProvider>

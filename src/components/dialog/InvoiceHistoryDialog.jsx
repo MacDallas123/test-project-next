@@ -4,6 +4,7 @@ import {
   Calendar, Search, AlertCircle, CheckCircle2,
   XCircle, MoreHorizontal, RefreshCw, CreditCard,
   DollarSign, Copy, ChevronLeft, ChevronRight,
+  FileSpreadsheet,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -35,10 +36,11 @@ import {
 import { UPLOADED_FILES_URL } from "@/api/axios";
 import { thunkSucceed } from "@/lib/tools";
 import { useDialog } from "@/hooks/useDialog";
+import { useLanguage } from "@/context/LanguageContext";
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
-function formatDate(isoString) {
+function formatDate(isoString, t) {
   if (!isoString) return null;
   return new Date(isoString).toLocaleDateString("fr-FR", {
     day: "2-digit",
@@ -47,10 +49,6 @@ function formatDate(isoString) {
   });
 }
 
-/**
- * Lit le nom du client depuis la structure API imbriquée.
- * L'API renvoie clientInfo.name et clientInfo.company.
- */
 function invoiceClientName(invoice) {
   return (invoice.clientInfo ?? invoice).name ?? null;
 }
@@ -60,24 +58,40 @@ function invoiceClientCompany(invoice) {
 }
 
 function invoiceDueDate(invoice) {
-  // La date d'échéance est dans invoiceInfo.dueDate côté API
   return (invoice.invoiceInfo ?? invoice).dueDate ?? null;
+}
+
+/**
+ * Résout l'URL complète d'un fichier depuis son chemin relatif.
+ */
+function resolveFileUrl(filePath) {
+  if (!filePath) return null;
+  let base = UPLOADED_FILES_URL ?? "";
+  if (base && !base.endsWith("/")) base += "/";
+  const clean = filePath.startsWith("/") ? filePath.substring(1) : filePath;
+  return `${base}${clean}`;
+}
+
+function openFile(filePath) {
+  const url = resolveFileUrl(filePath);
+  if (url) window.open(url, "_blank", "noopener,noreferrer");
 }
 
 // ── Méta statut ───────────────────────────────────────────────────────────────
 
 const INVOICE_STATUS_META = {
-  genere:    { label: "Générée",   Icon: CheckCircle2, pill: "bg-emerald-50 text-emerald-700 border border-emerald-200" },
-  envoye:    { label: "Envoyée",   Icon: Send,         pill: "bg-sky-50     text-sky-700     border border-sky-200"     },
-  paye:      { label: "Payée",     Icon: CreditCard,   pill: "bg-violet-50  text-violet-700  border border-violet-200"  },
-  en_retard: { label: "En retard", Icon: XCircle,      pill: "bg-red-50     text-red-700     border border-red-200"     },
-  brouillon: { label: "Brouillon", Icon: RefreshCw,    pill: "bg-gray-50    text-gray-600    border border-gray-200"    },
+  genere:    { Icon: CheckCircle2, pill: "bg-emerald-50 text-emerald-700 border border-emerald-200" },
+  envoye:    { Icon: Send,         pill: "bg-sky-50     text-sky-700     border border-sky-200"     },
+  paye:      { Icon: CreditCard,   pill: "bg-violet-50  text-violet-700  border border-violet-200"  },
+  en_retard: { Icon: XCircle,      pill: "bg-red-50     text-red-700     border border-red-200"     },
+  brouillon: { Icon: RefreshCw,    pill: "bg-gray-50    text-gray-600    border border-gray-200"    },
 };
 
-function InvoiceStatusBadge({ status }) {
-  // l'API renvoie invoiceStatus
+function InvoiceStatusBadge({ status, t }) {
   const meta = INVOICE_STATUS_META[status] ?? INVOICE_STATUS_META.brouillon;
-  const { Icon, label, pill } = meta;
+  const { Icon, pill } = meta;
+  const labelKey = `invoice.status.${status}`;
+  const label = t(labelKey, status);
   return (
     <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[11px] font-semibold tracking-wide ${pill}`}>
       <Icon className="w-3 h-3" />
@@ -88,14 +102,18 @@ function InvoiceStatusBadge({ status }) {
 
 // ── Ligne facture ─────────────────────────────────────────────────────────────
 
-function InvoiceRow({ invoice, onPreview, onDownload, onDelete, onDuplicate, index, symbol = "FCFA" }) {
+function InvoiceRow({ invoice, onPreview, onDownloadPdf, onDownloadXlsx, onDelete, onDuplicate, index, symbol = "FCFA", t }) {
   const clientName    = invoiceClientName(invoice);
   const clientCompany = invoiceClientCompany(invoice);
   const dueDate       = invoiceDueDate(invoice);
   const status        = invoice.invoiceStatus ?? "brouillon";
-  const created       = formatDate(invoice.createdAt);
-  const updated       = formatDate(invoice.updatedAt !== invoice.createdAt ? invoice.updatedAt : null);
-  const hasFile       = !!invoice.file;
+  const created       = formatDate(invoice.createdAt, t);
+  const updated       = formatDate(invoice.updatedAt !== invoice.createdAt ? invoice.updatedAt : null, t);
+
+  // invoice.files est un objet JSON : { pdf: "...", xlsx: "..." }
+  const files   = invoice.files ?? {};
+  const hasPdf  = !!files.pdf;
+  const hasXlsx = !!files.xlsx;
 
   return (
     <div
@@ -113,10 +131,15 @@ function InvoiceRow({ invoice, onPreview, onDownload, onDelete, onDuplicate, ind
           <span className="font-mono text-sm font-semibold text-gray-800 truncate">
             {invoice.invoiceNumber ?? `#${invoice.id}`}
           </span>
-          {invoice.quoteNumber && (
-            <span className="text-[11px] text-gray-400 font-mono">ref. {invoice.quoteNumber}</span>
+          {invoice.bisNumber && (
+            <span className="text-[11px] text-gray-500 font-mono">
+              v{invoice.bisNumber}
+            </span>
           )}
-          <InvoiceStatusBadge status={status} />
+          {invoice.quoteNumber && (
+            <span className="text-[11px] text-gray-400 font-mono">{t("invoice.history.ref_quote", "ref.")} {invoice.quoteNumber}</span>
+          )}
+          <InvoiceStatusBadge status={status} t={t} />
         </div>
 
         <div className="flex flex-wrap items-center gap-3 mt-0.5 text-[11px] text-gray-400">
@@ -138,86 +161,146 @@ function InvoiceRow({ invoice, onPreview, onDownload, onDelete, onDuplicate, ind
           )}
           {updated && (
             <span className="flex items-center gap-1">
-              <Clock className="w-3 h-3" /> modifié {updated}
+              <Clock className="w-3 h-3" /> {t("invoice.history.modified", "modifié")} {updated}
             </span>
           )}
           {dueDate && (
             <span className="flex items-center gap-1">
-              <Clock className="w-3 h-3" /> échéance {formatDate(dueDate)}
+              <Clock className="w-3 h-3" /> {t("invoice.history.due_date", "échéance")} {formatDate(dueDate, t)}
             </span>
           )}
         </div>
       </div>
 
-      {/* Actions desktop (hover) */}
+      {/* ── Actions desktop (visible au hover) ─────────────────────────────── */}
       <div className="items-center hidden gap-1 transition-opacity opacity-0 sm:flex group-hover:opacity-100">
+
+        {/* Aperçu */}
         <Button
           variant="ghost"
           size="icon"
           className="w-8 h-8 text-gray-400 hover:text-primary hover:bg-primary/10"
           onClick={() => onPreview(invoice)}
-          title="Aperçu / Réutiliser"
+          title={t("invoice.history.preview", "Aperçu / Réutiliser")}
         >
           <Eye className="w-4 h-4" />
         </Button>
-        {hasFile && (
+
+        {/* Télécharger PDF */}
+        {hasPdf && (
           <Button
             variant="ghost"
             size="icon"
-            className="w-8 h-8 text-gray-400 hover:text-emerald-600 hover:bg-emerald-50"
-            onClick={() => onDownload(invoice)}
-            title="Télécharger le PDF"
+            className="w-8 h-8 text-gray-400 hover:text-rose-600 hover:bg-rose-50"
+            onClick={() => onDownloadPdf(invoice)}
+            title={t("invoice.history.download_pdf", "Télécharger le PDF")}
           >
             <Download className="w-4 h-4" />
           </Button>
         )}
+
+        {/* Télécharger Excel */}
+        {hasXlsx && (
+          <Button
+            variant="ghost"
+            size="icon"
+            className="w-8 h-8 text-gray-400 hover:text-emerald-600 hover:bg-emerald-50"
+            onClick={() => onDownloadXlsx(invoice)}
+            title={t("invoice.history.download_excel", "Télécharger le fichier Excel")}
+          >
+            <FileSpreadsheet className="w-4 h-4" />
+          </Button>
+        )}
+
+        {/* Menu 3 points desktop (dupliquer + supprimer) */}
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="ghost" size="icon" className="w-8 h-8 text-gray-400 hover:text-gray-700">
               <MoreHorizontal className="w-4 h-4" />
             </Button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent align="end" className="w-44 z-[2010]">
+          <DropdownMenuContent align="end" className="w-48 z-[2010]">
             <DropdownMenuItem onClick={() => onPreview(invoice)} className="gap-2 text-sm">
-              <Eye className="w-4 h-4" /> Aperçu / Réutiliser
+              <Eye className="w-4 h-4" /> {t("invoice.history.preview", "Aperçu / Réutiliser")}
             </DropdownMenuItem>
-            {hasFile && (
-              <DropdownMenuItem onClick={() => onDownload(invoice)} className="gap-2 text-sm">
-                <Download className="w-4 h-4" /> Télécharger le PDF
+            {hasPdf && (
+              <DropdownMenuItem onClick={() => onDownloadPdf(invoice)} className="gap-2 text-sm">
+                <Download className="w-4 h-4 text-rose-500" /> {t("invoice.history.download_pdf", "Télécharger PDF")}
+              </DropdownMenuItem>
+            )}
+            {hasXlsx && (
+              <DropdownMenuItem onClick={() => onDownloadXlsx(invoice)} className="gap-2 text-sm">
+                <FileSpreadsheet className="w-4 h-4 text-emerald-500" /> {t("invoice.history.download_excel", "Télécharger Excel")}
               </DropdownMenuItem>
             )}
             <DropdownMenuItem onClick={() => onDuplicate(invoice)} className="gap-2 text-sm">
-              <Copy className="w-4 h-4" /> Dupliquer
+              <Copy className="w-4 h-4" /> {t("invoice.history.duplicate", "Dupliquer")}
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem
               onClick={() => onDelete(invoice)}
               className="gap-2 text-sm text-red-500 focus:text-red-600 focus:bg-red-50"
             >
-              <Trash2 className="w-4 h-4" /> Supprimer
+              <Trash2 className="w-4 h-4" /> {t("invoice.history.delete", "Supprimer")}
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
 
-      {/* Actions mobiles */}
-      <div className="flex items-center gap-1 sm:hidden">
-        <Button
-          variant="ghost"
-          size="icon"
-          className="w-8 h-8 text-gray-400"
-          onClick={() => onPreview(invoice)}
-        >
-          <Eye className="w-4 h-4" />
-        </Button>
-        <Button
-          variant="ghost"
-          size="icon"
-          className="w-8 h-8 text-red-400"
-          onClick={() => onDelete(invoice)}
-        >
-          <Trash2 className="w-4 h-4" />
-        </Button>
+      {/* ── Menu 3 points mobile (toutes les actions) ──────────────────────── */}
+      <div className="flex items-center sm:hidden">
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="text-gray-400 w-9 h-9 hover:text-gray-700 hover:bg-gray-100 rounded-xl"
+            >
+              <MoreHorizontal className="w-5 h-5" />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end" className="w-52 z-[2010]">
+
+            {/* Aperçu */}
+            <DropdownMenuItem onClick={() => onPreview(invoice)} className="gap-2.5 text-sm py-2.5">
+              <Eye className="w-4 h-4 text-gray-500" />
+              <span>{t("invoice.history.preview", "Aperçu / Réutiliser")}</span>
+            </DropdownMenuItem>
+
+            {/* PDF */}
+            {hasPdf && (
+              <DropdownMenuItem onClick={() => onDownloadPdf(invoice)} className="gap-2.5 text-sm py-2.5">
+                <Download className="w-4 h-4 text-rose-500" />
+                <span>{t("invoice.history.download_pdf", "Télécharger PDF")}</span>
+              </DropdownMenuItem>
+            )}
+
+            {/* Excel */}
+            {hasXlsx && (
+              <DropdownMenuItem onClick={() => onDownloadXlsx(invoice)} className="gap-2.5 text-sm py-2.5">
+                <FileSpreadsheet className="w-4 h-4 text-emerald-500" />
+                <span>{t("invoice.history.download_excel", "Télécharger Excel")}</span>
+              </DropdownMenuItem>
+            )}
+
+            {/* Dupliquer */}
+            <DropdownMenuItem onClick={() => onDuplicate(invoice)} className="gap-2.5 text-sm py-2.5">
+              <Copy className="w-4 h-4 text-gray-500" />
+              <span>{t("invoice.history.duplicate", "Dupliquer")}</span>
+            </DropdownMenuItem>
+
+            <DropdownMenuSeparator />
+
+            {/* Supprimer */}
+            <DropdownMenuItem
+              onClick={() => onDelete(invoice)}
+              className="gap-2.5 text-sm py-2.5 text-red-500 focus:text-red-600 focus:bg-red-50"
+            >
+              <Trash2 className="w-4 h-4" />
+              <span>{t("invoice.history.delete", "Supprimer")}</span>
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </div>
     </div>
   );
@@ -225,7 +308,7 @@ function InvoiceRow({ invoice, onPreview, onDownload, onDelete, onDuplicate, ind
 
 // ── Pagination ────────────────────────────────────────────────────────────────
 
-function Pagination({ pagination, onPageChange }) {
+function Pagination({ pagination, onPageChange, t }) {
   if (!pagination || pagination.totalPages <= 1) return null;
 
   const { page, totalPages, hasNext, hasPrev } = pagination;
@@ -281,15 +364,15 @@ function Pagination({ pagination, onPageChange }) {
   );
 }
 
-// ── Filtres statut ────────────────────────────────────────────────────────────
+// ── Filtres statut (avec clés de traduction) ─────────────────────────────────
 
 const STATUS_FILTERS = [
-  { val: "ALL",       label: "Tous"       },
-  { val: "genere",    label: "Générées"   },
-  { val: "envoye",    label: "Envoyées"   },
-  { val: "paye",      label: "Payées"     },
-  { val: "en_retard", label: "En retard"  },
-  { val: "brouillon", label: "Brouillons" },
+  { val: "ALL",       labelKey: "invoice.history.filters.all"       },
+  { val: "genere",    labelKey: "invoice.history.filters.generated" },
+  { val: "envoye",    labelKey: "invoice.history.filters.sent"      },
+  { val: "paye",      labelKey: "invoice.history.filters.paid"      },
+  { val: "en_retard", labelKey: "invoice.history.filters.overdue"   },
+  { val: "brouillon", labelKey: "invoice.history.filters.draft"     },
 ];
 
 // ── Composant principal ───────────────────────────────────────────────────────
@@ -306,6 +389,7 @@ const InvoiceHistoryDialog = ({
   const invoicesFS               = useSelector(selectInvoices);
   const invoicesFilterFS         = useSelector(selectInvoicesFilter);
   const invoicesPaginationFS     = useSelector(selectInvoicesPagination);
+  const { t } = useLanguage();
 
   const [search,         setSearch]         = useState("");
   const [debounceSearch, setDebounceSearch] = useState("");
@@ -347,24 +431,33 @@ const InvoiceHistoryDialog = ({
     onClose();
   };
 
-  const onDownloadInvoice = (invoice) => {
-    if (!invoice?.file) {
-      console.error("Aucun fichier PDF pour cette facture");
+  /** Télécharge le PDF depuis invoice.files.pdf */
+  const onDownloadPdfInvoice = (invoice) => {
+    const filePath = invoice?.files?.pdf;
+    if (!filePath) {
+      console.error("Aucun fichier PDF pour cette facture :", invoice?.id);
       return;
     }
-    let base = UPLOADED_FILES_URL;
-    if (base && !base.endsWith("/")) base += "/";
-    const filePath = invoice.file.startsWith("/") ? invoice.file.substring(1) : invoice.file;
-    window.open(`${base}${filePath}`, "_blank", "noopener,noreferrer");
+    openFile(filePath);
+  };
+
+  /** Télécharge le XLSX depuis invoice.files.xlsx */
+  const onDownloadXlsxInvoice = (invoice) => {
+    const filePath = invoice?.files?.xlsx;
+    if (!filePath) {
+      console.error("Aucun fichier Excel pour cette facture :", invoice?.id);
+      return;
+    }
+    openFile(filePath);
   };
 
   const handleDeleteInvoice = (invoice) => {
     showConfirm({
-      title: "Supprimer la facture",
-      message: "Cette action est irréversible. Êtes-vous sûr de vouloir supprimer cette facture ?",
+      title: t("invoice.history.delete_confirm_title", "Supprimer la facture"),
+      message: t("invoice.history.delete_confirm_message", "Cette action est irréversible. Êtes-vous sûr de vouloir supprimer cette facture ?"),
       variant: "danger",
-      confirmText: "Supprimer",
-      cancelText: "Annuler",
+      confirmText: t("invoice.history.delete_confirm_button", "Supprimer"),
+      cancelText: t("invoice.history.cancel", "Annuler"),
       icon: Trash2,
       onConfirm: () => deleteAction(invoice.id),
       isLoading: false,
@@ -408,7 +501,7 @@ const InvoiceHistoryDialog = ({
               <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10">
                 <Receipt className="w-4 h-4 text-primary" />
               </div>
-              Historique des factures
+              {t("invoice.history.title", "Historique des factures")}
             </DialogTitle>
             {selectedUser && (
               <DialogDescription className="flex items-center gap-2 mt-1.5">
@@ -429,13 +522,32 @@ const InvoiceHistoryDialog = ({
           {/* Statistiques rapides */}
           {invoiceList.length > 0 && (
             <div className="flex flex-wrap items-center gap-4 pt-3 mt-3 border-t border-gray-100">
-              <Stat value={payees}   label="payée"     Icon={CreditCard}   color="text-violet-400" bold="text-violet-700" />
+              <Stat 
+                value={payees}   
+                label={t("invoice.history.stats.paid", "payée")}
+                Icon={CreditCard}   
+                color="text-violet-400" 
+                bold="text-violet-700" 
+              />
               <Sep />
-              <Stat value={envoyees} label="envoyée"   Icon={Send}         color="text-sky-400"    bold="text-sky-700"    />
+              <Stat 
+                value={envoyees} 
+                label={t("invoice.history.stats.sent", "envoyée")}
+                Icon={Send}         
+                color="text-sky-400"    
+                bold="text-sky-700"    
+              />
               {retard > 0 && (
                 <>
                   <Sep />
-                  <Stat value={retard} label="en retard" Icon={XCircle} color="text-red-400" bold="text-red-600" plural={false} />
+                  <Stat 
+                    value={retard} 
+                    label={t("invoice.history.stats.overdue", "en retard")}
+                    Icon={XCircle} 
+                    color="text-red-400" 
+                    bold="text-red-600" 
+                    plural={false} 
+                  />
                 </>
               )}
               <Sep />
@@ -455,7 +567,7 @@ const InvoiceHistoryDialog = ({
             <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-gray-400" />
             <Input
               className="h-8 pl-8 pr-3 text-xs bg-white border-gray-200 rounded-lg focus-visible:ring-1 focus-visible:ring-primary/30"
-              placeholder="N° facture, client…"
+              placeholder={t("invoice.history.search_placeholder", "N° facture, client…")}
               value={search}
               onChange={(e) => setSearch(e.target.value)}
             />
@@ -474,7 +586,7 @@ const InvoiceHistoryDialog = ({
                     : "text-gray-500 hover:text-gray-800"
                   }`}
               >
-                {opt.label}
+                {t(opt.labelKey, opt.val)}
               </button>
             ))}
           </div>
@@ -493,14 +605,14 @@ const InvoiceHistoryDialog = ({
               <div className="flex items-center justify-center w-12 h-12 mb-3 bg-gray-100 rounded-full">
                 <AlertCircle className="w-5 h-5 text-gray-300" />
               </div>
-              <p className="text-sm font-medium text-gray-500">Aucune facture trouvée</p>
+              <p className="text-sm font-medium text-gray-500">{t("invoice.history.no_invoices", "Aucune facture trouvée")}</p>
               {(search || filterStatus !== "ALL") && (
                 <button
                   type="button"
                   onClick={() => { setSearch(""); setFilterStatus("ALL"); }}
                   className="mt-2 text-xs text-primary hover:underline"
                 >
-                  Réinitialiser les filtres
+                  {t("invoice.history.reset_filters", "Réinitialiser les filtres")}
                 </button>
               )}
             </div>
@@ -511,8 +623,10 @@ const InvoiceHistoryDialog = ({
                 invoice={invoice}
                 index={i}
                 symbol={symbol}
+                t={t}
                 onPreview={onPreviewInvoice}
-                onDownload={onDownloadInvoice}
+                onDownloadPdf={onDownloadPdfInvoice}
+                onDownloadXlsx={onDownloadXlsxInvoice}
                 onDelete={handleDeleteInvoice}
                 onDuplicate={onDuplicateInvoice}
               />
@@ -525,18 +639,18 @@ const InvoiceHistoryDialog = ({
           <p className="text-xs text-gray-400 shrink-0">
             {total != null ? (
               <>
-                <span className="font-semibold text-gray-700">{total}</span> facture{total !== 1 ? "s" : ""}
-                {totalPages > 1 && ` · page ${page} / ${totalPages}`}
+                <span className="font-semibold text-gray-700">{total}</span> {t("invoice.history.invoices", "facture")}{total !== 1 ? "s" : ""}
+                {totalPages > 1 && ` · ${t("invoice.history.page", "page")} ${page} / ${totalPages}`}
               </>
             ) : (
-              `${invoiceList.length} résultat${invoiceList.length !== 1 ? "s" : ""}`
+              `${invoiceList.length} ${t("invoice.history.result", "résultat")}${invoiceList.length !== 1 ? "s" : ""}`
             )}
           </p>
 
-          <Pagination pagination={invoicesPaginationFS} onPageChange={handlePageChange} />
+          <Pagination pagination={invoicesPaginationFS} onPageChange={handlePageChange} t={t} />
 
           <Button variant="outline" size="sm" className="text-xs rounded-lg shrink-0" onClick={onClose}>
-            Fermer
+            {t("invoice.history.close", "Fermer")}
           </Button>
         </div>
 

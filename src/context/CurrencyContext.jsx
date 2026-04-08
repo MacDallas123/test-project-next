@@ -1,3 +1,5 @@
+"use client";
+
 import { availableCurrencies } from "@/components/custom/CurrencySelector";
 import React, { createContext, useContext, useState, useEffect } from "react";
 import currencyRates from "@/assets/currency.json";

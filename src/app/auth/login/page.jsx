@@ -243,7 +243,7 @@ const LoginPage = () => {
               <SiteTileForm1 />
             </div>
             <p className="text-primary-foreground">
-              Accédez à votre espace professionnel
+              {t("login.subtitle", "Accédez à votre espace professionnel")}
             </p>
           </div>
 
@@ -323,7 +323,7 @@ const LoginPage = () => {
                     <Input
                       id="password"
                       type={showPassword ? "text" : "password"}
-                      placeholder={t("common.yourPassword", "Votre mot de passe")}
+                      placeholder={t("login.password.placeholder", "Votre mot de passe")}
                       className="pl-10 pr-10"
                       {...register("password", {
                         onChange: () => onFieldChange()

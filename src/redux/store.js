@@ -1,5 +1,4 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import { createWrapper } from 'next-redux-wrapper';
 
 import appReducer from "./slices/AppSlice";
 import authReducer from "./slices/authSlice";
@@ -62,4 +61,4 @@ export const store = configureStore({
   // devTools: process.env.NODE_ENV !== 'production'
 });
 
-export const persistor = persistStore(store);
+// export const persistor = persistStore(store);

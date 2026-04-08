@@ -3,6 +3,10 @@ import en from "@/i18n/lang/en.json";
 import es from "@/i18n/lang/es.json";
 import ch from "@/i18n/lang/ch.json";
 import de from "@/i18n/lang/de.json";
+import it from "@/i18n/lang/it.json";
+import pt from "@/i18n/lang/pt.json";
+import nl from "@/i18n/lang/nl.json";
+import ru from "@/i18n/lang/ru.json";
 
 export const translations = {
   fr,
@@ -10,6 +14,10 @@ export const translations = {
   es,
   ch,
   de,
+  it,
+  pt,
+  nl,
+  ru
 };
 
 export const availableLanguages = [

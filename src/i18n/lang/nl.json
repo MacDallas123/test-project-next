@@ -1,0 +1,1682 @@
+{
+    "common": {
+      "logoAlt": "FIBEM-logo",
+      "showPassword": "Wachtwoord weergeven",
+      "hidePassword": "Wachtwoord verbergen",
+      "emailOrPhone": "E-mail of telefoonnummer"
+    },
+    "login": {
+      "title": "Inloggen",
+      "subtitle": "Toegang tot uw professionele omgeving",
+      "description": "Gebruik uw e-mailadres of telefoonnummer",
+      "identifier": {
+        "required": "E-mailadres of telefoonnummer is verplicht",
+        "incorrect": "Voer een geldig e-mailadres of telefoonnummer in (internationaal formaat)",
+        "placeholder": "E-mailadres of telefoonnummer",
+        "tooLong": "Het e-mailadres of telefoonnummer is te lang"
+      },
+      "password": {
+        "tooShort": "Het wachtwoord moet minstens 6 tekens bevatten",
+        "placeholder": "Uw wachtwoord"
+      },
+      "forgotPassword": "Wachtwoord vergeten?",
+      "rememberMe": "Onthoud mij",
+      "secureConnection": "Beveiligde verbinding",
+      "loginButton": "Inloggen",
+      "loggingIn": "Bezig met inloggen...",
+      "noAccount": "Nog geen account?",
+      "signUp": "Gratis registreren",
+      "termsAndPrivacy": "Door in te loggen gaat u akkoord met onze gebruiksvoorwaarden en ons privacybeleid",
+      "terms": "gebruiksvoorwaarden",
+      "privacy": "privacybeleid"
+    },
+    "register": {
+      "title": "Account aanmaken",
+      "subtitle": "Word lid van ons maaltijdbezorgplatform",
+      "description": "Vul de gegevens in om uw account aan te maken",
+      "redirectMessage": "Bedankt voor uw bericht. Voltooi eerst het aanmaken van uw account om ons een bericht te sturen",
+      "createButton": "Mijn account aanmaken",
+      "creatingAccount": "Account wordt aangemaakt...",
+      "alreadyHaveAccount": "Heeft u al een account?",
+      "loginLink": "Inloggen",
+      "firstName": {
+        "label": "Voornaam",
+        "placeholder": "Uw voornaam",
+        "tooShort": "De voornaam moet minimaal 2 tekens bevatten",
+        "tooLong": "De voornaam is te lang",
+        "invalid": "Speciale tekens niet toegestaan (behalve spatie)"
+      },
+      "lastName": {
+        "label": "Achternaam",
+        "placeholder": "Uw achternaam",
+        "tooShort": "De achternaam moet minimaal 2 tekens bevatten",
+        "tooLong": "De achternaam is te lang",
+        "invalid": "Speciale tekens niet toegestaan (behalve spatie)"
+      },
+      "phone": {
+        "label": "Telefoon (internationaal formaat)",
+        "placeholder": "+33 1 23 45 67 89",
+        "tooShort": "Het telefoonnummer is te kort",
+        "tooLong": "Het telefoonnummer is te lang",
+        "invalid": "Ongeldig formaat (bijv. +012 34 56 78)"
+      },
+      "email": {
+        "label": "E-mailadres",
+        "placeholder": "uw@email.com",
+        "required": "E-mail is verplicht",
+        "invalid": "Ongeldig e-mailformaat"
+      },
+      "accountType": {
+        "label": "Accounttype",
+        "required": "Accounttype is verplicht"
+      },
+      "accountTypes": {
+        "individual": {
+          "label": "Particulier",
+          "description": "Voor individuele gebruikers, werkgevers, ..."
+        },
+        "candidate": {
+          "label": "Kandidaat",
+          "description": "Op zoek naar werk of opdrachten (kandidaten, stagiairs, leerlingen)"
+        },
+        "professional": {
+          "label": "Professional",
+          "description": "Bedrijf, freelancers, ..."
+        },
+        "partner": {
+          "label": "Partner",
+          "description": "Grootzakelijke klanten en uitzendbureau's"
+        },
+        "admin": {
+          "label": "Beheerder",
+          "description": "Uitgebreidere platformtoegang (commercieel medewerkers, ...)"
+        }
+      },
+      "language": {
+        "label": "Voorkeurstaal",
+        "placeholder": "Selecteer een taal",
+        "required": "Voorkeurstaal is verplicht"
+      },
+      "password": {
+        "label": "Wachtwoord",
+        "placeholder": "Uw wachtwoord",
+        "tooShort": "Het wachtwoord moet minimaal 8 tekens bevatten",
+        "tooLong": "Het wachtwoord is te lang",
+        "uppercase": "Minimaal één hoofdletter",
+        "lowercase": "Minimaal één kleine letter",
+        "number": "Minimaal één cijfer",
+        "special": "Minimaal één speciaal teken"
+      },
+      "passwordStrength": {
+        "label": "Wachtwoordsterkte:",
+        "empty": "Leeg",
+        "veryWeak": "Zeer zwak",
+        "weak": "Zwak",
+        "medium": "Gemiddeld",
+        "good": "Goed",
+        "veryGood": "Zeer goed",
+        "excellent": "Uitstekend"
+      },
+      "passwordCriteria": {
+        "minChars": "Min. 8 tekens",
+        "uppercase": "1 hoofdletter",
+        "lowercase": "1 kleine letter",
+        "number": "1 cijfer",
+        "specialChar": "1 speciaal teken"
+      },
+      "confirmPassword": {
+        "label": "Wachtwoord bevestigen",
+        "placeholder": "Bevestig uw wachtwoord",
+        "required": "Wachtwoordbevestiging is verplicht"
+      },
+      "passwords": {
+        "mismatch": "De wachtwoorden komen niet overeen",
+        "match": "De wachtwoorden komen overeen"
+      }
+    },
+    "verification": {
+      "title": "Uw e-mail verifiëren",
+      "description": "Er is een verificatiecode verzonden naar",
+      "instruction": "Voer de 6-cijferige code in die naar uw e-mailadres is gestuurd om uw registratie te bevestigen.",
+      "codeLabel": "Verificatiecode",
+      "codeError": "Voer alle 6 cijfers van de code in.",
+      "codeIncorrect": "Onjuiste of verlopen code.",
+      "verifyButton": "Valideren en mijn account aanmaken",
+      "verifying": "Bezig met verifiëren...",
+      "codeNotReceived": "Geen code ontvangen?",
+      "resendIn": "Opnieuw verzenden over",
+      "resend": "Code opnieuw verzenden",
+      "backToForm": "Mijn gegevens wijzigen",
+      "errorOccurred": "Er is een fout opgetreden. Probeer het opnieuw."
+    },
+    "errors": {
+      "loginFailed": "Aanmeldingsfout"
+    },
+    "hero": {
+      "slide1": {
+        "badge": "Welkom",
+        "title": {
+          "part1": "Welkom bij",
+          "part2": "ivrer",
+          "part3": "ourriture"
+        },
+        "subtitle": "Uw favoriete gerechten, in een oogwenk bezorgd",
+        "tagline": "Bestellen in 3 klikken. Ontvangen binnen 30 min.",
+        "cta": "Nu bestellen",
+        "stats": {
+          "restaurants": "Restaurants",
+          "deliveryTime": "Gem. bezorgtijd",
+          "satisfiedClients": "Tevreden klanten",
+          "deliveryRadius": "Bezorgradius"
+        },
+        "visual": {
+          "label": "Bestelling onderweg…",
+          "sub": "Bezorging over 18 min"
+        }
+      },
+      "slide2": {
+        "badge": "Express",
+        "title": "Snel. Eenvoudig. Zorgeloos.",
+        "subtitle": "Met een paar klikken is uw maaltijd onderweg.",
+        "tagline": "Intuïtieve interface • 100% veilige betaling • GPS-tracking",
+        "cta": "App openen",
+        "stats": {
+          "securePayment": "Veilige betaling",
+          "liveTracking": "Live tracking",
+          "clicks": "Om te bestellen",
+          "availability": "Beschikbaarheid"
+        },
+        "visual": {
+          "label": "GPS-tracking actief",
+          "sub": "Bezorger op 2 km van u"
+        }
+      },
+      "slide3": {
+        "badge": "Populair",
+        "title": "Een keuze voor al uw wensen",
+        "subtitle": "Burgers, pizza's, lokale gerechten, gezonde opties…",
+        "tagline": "100+ restaurants • Gevarieerde keukens • Vegetarische opties",
+        "cta": "Restaurants ontdekken",
+        "stats": {
+          "cuisineTypes": "Keukensoorten",
+          "dishes": "Gerechten op het menu",
+          "rating": "Gemiddelde beoordeling",
+          "new": "Nieuw",
+          "perWeek": "Elke week"
+        },
+        "visual": {
+          "label": "Suggestie van de dag",
+          "sub": "Gezonde bowl • 1 200 FCFA"
+        }
+      },
+      "slide4": {
+        "badge": "Lokaal",
+        "title": "Restaurants uit de buurt, met zorg bezorgd",
+        "subtitle": "Lokale partners • Verse producten • Kwaliteitsbelofte",
+        "tagline": "Wij steunen de restauranthouders in uw stad.",
+        "cta": "Partner worden",
+        "stats": {
+          "fresh": "Vers",
+          "localProducts": "Lokale producten",
+          "certified": "Gecertificeerd",
+          "quality": "Kwaliteit gegarandeerd",
+          "partners": "Partners",
+          "sales": "Restaurantverkopen"
+        },
+        "visual": {
+          "label": "Gecertificeerde partner",
+          "sub": "Buurtrestaurant"
+        }
+      }
+    },
+    "characteristics": {
+      "title": "Waarom ons kiezen?",
+      "subtitle": "Concrete garanties voor uw bedrijf",
+      "security": {
+        "title": "Gegarandeerde veiligheid",
+        "description": "Betrouwbare systemen om uw gegevens en transacties te beschermen."
+      },
+      "transparent_prices": {
+        "title": "Transparante prijzen",
+        "description": "Geen verborgen kosten, een duidelijke offerte vooraf voor elke dienst."
+      },
+      "fast_delivery": {
+        "title": "Snelheid",
+        "description": "Deadlines gehaald en snelle interventies op basis van uw behoeften."
+      }
+    },
+    "services": {
+      "discoverBadge": "Ontdek onze diensten",
+      "title": "Wat zou u willen?",
+      "subtitle": "Heerlijke gerechten en professionele kansen voor een complete culinaire ervaring",
+      "popularMeals": "Populaire gerechten",
+      "popularMealsDesc": "Ontdek de favorieten van onze community",
+      "previous": "Vorige",
+      "next": "Volgende",
+      "addToCart": "Aan winkelwagen toevoegen",
+      "seeMoreMeals": "Meer gerechten bekijken",
+      "seeMoreMealsDesc": "Ontdek al onze restaurants en hun menu's",
+      "explore": "Verkennen",
+      "jobOffers": "Vacatures in de horeca",
+      "jobOffersDesc": "Sluit u aan bij de beste restaurants bij u in de buurt",
+      "viewOffer": "Vacature bekijken",
+      "moreJobs": "Meer vacatures",
+      "moreJobsDesc": "Ontdek alle kansen in de horeca",
+      "exploreJobs": "Vacatures verkennen",
+      "forProfessionals": "Voor professionals",
+      "toolsTitle": "Professionele tools voor restauranthouders",
+      "toolsDesc": "Beheer uw etablissement efficiënt met onze suite van gratis professionele tools",
+      "contract": "Contract",
+      "salary": "Salaris",
+      "experience": {
+        "years": "{years} jaar",
+        "beginner": "Beginners welkom"
+      },
+      "posted": {
+        "daysAgo": "{days} dagen geleden"
+      },
+      "tags": {
+        "popular": "Populair",
+        "spicy": "Pittig",
+        "new": "Nieuw",
+        "vegetarian": "Vegetarisch",
+        "healthy": "Gezond",
+        "premium": "Premium",
+        "family": "Familie",
+        "experienced": "Ervaren",
+        "fullTime": "Voltijds",
+        "beginner": "Beginner",
+        "training": "Opleiding",
+        "management": "Management",
+        "specialized": "Gespecialiseerd",
+        "seasonal": "Seizoensgebonden",
+        "creative": "Creatief",
+        "evening": "Avond",
+        "flexible": "Flexibel",
+        "senior": "Senior"
+      },
+      "badges": {
+        "favorite": "Favoriet",
+        "new": "Nieuw",
+        "topChef": "Top Chef",
+        "light": "Licht",
+        "chefSpecial": "Specialiteit van de chef",
+        "authentic": "Authentiek",
+        "mustHave": "Aanrader",
+        "familyMeal": "Familiegerecht",
+        "premium": "Premium",
+        "urgent": "Urgent",
+        "training": "Opleiding",
+        "topSalary": "Topсалarisverdienste",
+        "seasonal": "Seizoensgebonden",
+        "creative": "Creatief",
+        "housingPossible": "Huisvesting mogelijk",
+        "executive": "Leidinggevend",
+        "artisan": "Ambachtelijk"
+      },
+      "contracts": {
+        "permanent": "Vast contract",
+        "fixedTerm": "Tijdelijk contract",
+        "seasonal": "Seizoenscontract"
+      },
+      "jobTypes": {
+        "kitchen": "Keuken",
+        "dining": "Zaal",
+        "bar": "Bar",
+        "cleaning": "Schoonmaak",
+        "management": "Management",
+        "pastry": "Banketbakkerij"
+      },
+      "meals": {
+        "yassa": {
+          "title": "Kip Yassa",
+          "restaurant": "Le Dakarois",
+          "category": "Afrikaans",
+          "description": "In citroen gemarineerde kip met gekarameliseerde uien, geserveerd met witte rijst"
+        },
+        "burger": {
+          "title": "Gourmetburger",
+          "restaurant": "Burger House",
+          "category": "Fastfood",
+          "description": "Hamburger van 180 g, gesmolten cheddar, krokant spek en huissaus"
+        },
+        "pizza": {
+          "title": "Pizza Margherita",
+          "restaurant": "Pizzeria Roma",
+          "category": "Italiaans",
+          "description": "Tomatenbasis, verse mozzarella, basilicum en olijfolie"
+        },
+        "salad": {
+          "title": "César-salade",
+          "restaurant": "Green Life",
+          "category": "Gezond",
+          "description": "Gegrilde kip, parmezaan, croutons en huisdressing césar"
+        },
+        "padthai": {
+          "title": "Pad Thai",
+          "restaurant": "Thai Orchidée",
+          "category": "Aziatisch",
+          "description": "Roergebakken rijstnoedels met garnalen, pinda's en taugé"
+        },
+        "poke": {
+          "title": "Poké Bowl",
+          "restaurant": "Hawaii Bowl",
+          "category": "Gezond",
+          "description": "Verse zalm, gekruide rijst, avocado, zeewier en sojasaus"
+        },
+        "tacos": {
+          "title": "Tacos Al Pastor",
+          "restaurant": "El Camino",
+          "category": "Mexicaans",
+          "description": "Maïstortilla's, gemarineerd varkensvlees, ananas, uien en koriander"
+        },
+        "ramen": {
+          "title": "Tonkotsu Ramen",
+          "restaurant": "Izakaya San",
+          "category": "Japans",
+          "description": "Varkensbouillon, noedels, gemarineerd ei, nori en buikspek"
+        },
+        "couscous": {
+          "title": "Koninklijke Couscous",
+          "restaurant": "Le Marocain",
+          "category": "Afrikaans",
+          "description": "Fijne griesmeel, groenten, merguez, kip en lam"
+        },
+        "sushi": {
+          "title": "Sushi Deluxe",
+          "restaurant": "Sushi Master",
+          "category": "Japans",
+          "description": "Assortiment van 20 stuks: zalm, tonijn, zeebrasem, makis en california rolls"
+        }
+      },
+      "jobs": {
+        "chef": {
+          "title": "Chef de partie",
+          "restaurant": "Le Grand Restaurant",
+          "location": "Parijs 8e",
+          "description": "Wij zoeken een gepassioneerde chef de partie voor onze keukenbrigade."
+        },
+        "waiter": {
+          "title": "Ober / Serveerster",
+          "restaurant": "Brasserie Moderne",
+          "location": "Lyon 2e",
+          "description": "Dynamische bediening in de zaal, teamwork, Engels gewenst."
+        },
+        "sousChef": {
+          "title": "Souschef",
+          "restaurant": "Auberge du Soleil",
+          "location": "Nice",
+          "description": "Brigadebeheer, menuontwikkeling, naleving van HACCP-normen."
+        },
+        "pizzaiolo": {
+          "title": "Pizzabakker",
+          "restaurant": "Pizza Di Napoli",
+          "location": "Marseille",
+          "description": "Beheersing van pizzadeeg, houtgestookt ovenwerk, creativiteit."
+        },
+        "bartender": {
+          "title": "Barman / Barmaid",
+          "restaurant": "Skybar Lounge",
+          "location": "Bordeaux",
+          "description": "Cocktails maken, bardienst, voorraadbeheer."
+        },
+        "dishwasher": {
+          "title": "Afwasser",
+          "restaurant": "Hôtel Palace",
+          "location": "Cannes",
+          "description": "Afwassen en schoonmaken van de ruimtes, hulp in de keuken."
+        },
+        "manager": {
+          "title": "Restaurantmanager",
+          "restaurant": "Fast Food Chain",
+          "location": "Toulouse",
+          "description": "Volledige restaurantbeheer, teamleiding, commerciële doelstellingen."
+        },
+        "pastryChef": {
+          "title": "Banketbakker",
+          "restaurant": "Boulangerie Fine",
+          "location": "Strasbourg",
+          "description": "Creëren van gebak, entremet, viennoiseries. Creativiteit vereist."
+        }
+      },
+      "tools": {
+        "cv": {
+          "title": "CV-generator",
+          "description": "Maak in enkele minuten een professioneel cv voor de horeca",
+          "button": "Mijn cv maken",
+          "bottom": "Exclusieve sjablonen voor de horeca"
+        },
+        "quote": {
+          "title": "Offertemaker",
+          "description": "Professionele offertes voor uw diensten en evenementen",
+          "button": "Een offerte maken",
+          "bottom": "Aanpasbaar, omzetbaar naar factuur"
+        },
+        "invoice": {
+          "title": "Factuurgenerator",
+          "description": "Gepersonaliseerde facturen conform de wetgeving",
+          "button": "Een factuur maken",
+          "bottom": "BTW inbegrepen, automatische nummering"
+        },
+        "creditNote": {
+          "title": "Creditnotammaker",
+          "description": "Maak creditnota's in enkele klikken",
+          "button": "Een creditnota maken",
+          "bottom": "Terugbetalingen, annuleringen, correcties"
+        },
+        "employeeManagement": {
+          "title": "Personeelsbeheer",
+          "description": "Roosters, salarisadministratie, arbeidscontracten"
+        },
+        "inventoryManagement": {
+          "title": "Voorraadbeheer",
+          "description": "Inventaris, waarschuwingen, leveranciersbestellingen"
+        },
+        "dashboard": {
+          "title": "Dashboards",
+          "description": "Analyses, omzet, prestaties"
+        }
+      },
+      "stats": {
+        "documents": "Documenten gegenereerd per maand",
+        "satisfaction": "Gebruikerstevredenheid",
+        "free": "Gratis tools"
+      }
+    },
+    "footer": {
+      "logoAlt": "FIBEM-LOGO",
+      "contacts": "Contacten",
+      "newsletter": "Nieuwsbrief",
+      "emailPlaceholder": "Uw e-mail",
+      "subscribed": "Bedankt voor uw aanmelding!",
+      "newsletterDesc": "Ontvang onze nieuwtjes en speciale aanbiedingen",
+      "rights": "Alle rechten voorbehouden.",
+      "privacy": "Privacybeleid",
+      "terms": "Gebruiksvoorwaarden",
+      "cookies": "Cookies",
+      "sitemap": "Sitemap",
+      "contact": "Contact",
+      "viewGoogleMap": "Bekijk op Google Maps",
+      "whatsapp": "Whatsapp",
+      "france": {
+        "name": "FIBEM Frankrijk",
+        "address": "51 Rue du Grévarin – 27200 Vernon",
+        "phone": "Tel: +33 6 05 51 14 32",
+        "siret": "SIRET 445 374 937 00032"
+      },
+      "senegal": {
+        "name": "FIBEM Senegal",
+        "address": "Rue 7 Corniche x 6, Médina, Dakar",
+        "phone": "Tel: +221 78 370 06 02",
+        "ninea": "N.I.N.E.A.: 30 84 31 62 U2 — NAF: 7112B Engineering"
+      },
+      "social": {
+        "followUs": "Volg ons:",
+        "facebook": "Facebook",
+        "twitter": "Twitter",
+        "instagram": "Instagram",
+        "youtube": "YouTube"
+      }
+    },
+    "cv": {
+      "title": "CV-generator",
+      "subtitle": "Maak uw professionele cv in enkele begeleide stappen",
+      "newCv": "Nieuw cv",
+      "help": {
+        "title": "Tips"
+      },
+      "steps": {
+        "start": "Start",
+        "personal": "Persoonlijke gegevens",
+        "experience": "Ervaring",
+        "education": "Opleiding",
+        "skills": "Vaardigheden",
+        "languages": "Talen",
+        "certifications": "Certificeringen",
+        "projects": "Projecten",
+        "interests": "Interesses",
+        "appearance": "Uiterlijk",
+        "export": "Exporteren"
+      },
+      "personal": {
+        "title": "Professionele titel",
+        "firstName": "Voornaam",
+        "lastName": "Achternaam",
+        "age": "Leeftijd",
+        "email": "E-mail",
+        "phone": "Telefoon",
+        "address": "Adres",
+        "city": "Stad",
+        "country": "Land",
+        "driverLicense": "Rijbewijs",
+        "maritalStatus": "Burgerlijke staat",
+        "mobility": "Mobiliteit",
+        "linkedin": "LinkedIn",
+        "github": "GitHub",
+        "portfolio": "Portfolio / Website",
+        "photo": "Profielfoto",
+        "includePhoto": "Opnemen in cv",
+        "summary": "Professioneel profiel",
+        "placeholders": {
+          "firstName": "Marie",
+          "lastName": "Dupont",
+          "age": "30",
+          "title": "Senior Full Stack Ontwikkelaar",
+          "email": "contact@email.com",
+          "phone": "+33 6 12 34 56 78",
+          "address": "12 rue de Paris",
+          "city": "Paris",
+          "country": "France",
+          "linkedin": "linkedin.com/in/marie-dupont",
+          "github": "github.com/marie-dupont",
+          "portfolio": "https://marie-dupont.dev",
+          "summary": "2-3 zinnen die uw ervaring en doelstellingen samenvatten…"
+        },
+        "tips": [
+          "Voornaam, achternaam en e-mail zijn verplicht.",
+          "Uw professionele titel verschijnt direct onder uw naam.",
+          "Vul LinkedIn / GitHub alleen in als uw profielen up-to-date zijn.",
+          "Leeftijd, rijbewijs en mobiliteit zijn belangrijke informatie voor recruiters."
+        ]
+      },
+      "driverLicense": {
+        "label": "Rijbewijs",
+        "options": {
+          "B": "Rijbewijs B (Personenauto)",
+          "A": "Rijbewijs A (Motor)",
+          "C": "Rijbewijs C (Vrachtwagen)",
+          "D": "Rijbewijs D (Openbaar vervoer)",
+          "BE": "Rijbewijs BE (Auto met aanhanger)",
+          "none": "Geen rijbewijs"
+        }
+      },
+      "maritalStatus": {
+        "label": "Burgerlijke staat",
+        "options": {
+          "single": "Ongehuwd",
+          "married": "Gehuwd",
+          "divorced": "Gescheiden",
+          "widowed": "Weduwe/Weduwnaar",
+          "pacsed": "Geregistreerd partnerschap"
+        }
+      },
+      "mobility": {
+        "label": "Mobiliteit",
+        "options": {
+          "negrepelisse_30": "NEGREPELISSE (82) + 30 km",
+          "montauban_100": "MONTAUBAN (82) + 100 km",
+          "caussade_40": "CAUSSADE (82) + 40 km",
+          "custom": "Anders (nader te omschrijven)"
+        },
+        "placeholder": "Geef uw mobiliteit aan (bijv.: Toulouse + 50 km, Nationaal...)"
+      },
+      "experience": {
+        "title": "Werkervaring",
+        "position": "Functie",
+        "company": "Bedrijf",
+        "location": "Locatie",
+        "currentlyWorking": "Ik werk hier nog steeds",
+        "startDate": "Startdatum",
+        "endDate": "Einddatum",
+        "description": "Beschrijving",
+        "addButton": "Ervaring toevoegen",
+        "tips": [
+          "Van meest recent naar oudst.",
+          "Actiewerkwoorden: ontwikkeld, beheerd, geoptimaliseerd…",
+          "Kwantificeer uw prestaties.",
+          "Vink 'Nog in dienst' aan als u nog bij het bedrijf werkt."
+        ]
+      },
+      "education": {
+        "title": "Opleiding",
+        "degree": "Diploma",
+        "school": "Instelling",
+        "location": "Locatie",
+        "currentlyStudying": "Nog in opleiding",
+        "startDate": "Startdatum",
+        "endDate": "Einddatum",
+        "description": "Beschrijving",
+        "addButton": "Opleiding toevoegen",
+        "tips": [
+          "Van meest recent naar oudst.",
+          "Vermeld de vermelding als die eervol is.",
+          "Voor recent afgestudeerden kan de opleiding vóór de ervaring staan."
+        ]
+      },
+      "skills": {
+        "title": "Vaardigheden",
+        "name": "Naam",
+        "level": "Niveau",
+        "levels": {
+          "beginner": "Beginner",
+          "intermediate": "Gevorderd",
+          "advanced": "Geavanceerd",
+          "expert": "Expert"
+        },
+        "addButton": "Vaardigheid toevoegen",
+        "tips": [
+          "8 tot 12 goed gekozen vaardigheden.",
+          "Mix harde en zachte vaardigheden.",
+          "Rangschik op beheersingsniveau / relevantie.",
+          "Wees eerlijk over de niveaus."
+        ]
+      },
+      "languages": {
+        "title": "Talen",
+        "name": "Taal",
+        "level": "Niveau",
+        "levels": {
+          "native": "Moedertaal",
+          "fluent": "Vloeiend (C1/C2)",
+          "advanced": "Gevorderd (B2)",
+          "intermediate": "Gemiddeld (B1)",
+          "beginner": "Beginner (A1/A2)",
+          "notions": "Basiskennis"
+        },
+        "addButton": "Taal toevoegen"
+      },
+      "certifications": {
+        "title": "Certificeringen",
+        "name": "Naam",
+        "issuer": "Uitgevende instelling",
+        "year": "Jaar",
+        "addButton": "Certificering toevoegen"
+      },
+      "projects": {
+        "title": "Projecten",
+        "name": "Naam",
+        "description": "Beschrijving",
+        "technologies": "Technologieën (komma)",
+        "link": "Link",
+        "addButton": "Project toevoegen"
+      },
+      "interests": {
+        "title": "Interesses",
+        "name": "Interesse",
+        "description": "Optionele toelichting",
+        "addButton": "Toevoegen",
+        "suggestions": "Snelle suggesties",
+        "tips": [
+          "Wees specifiek: 'Bergwandelen' in plaats van 'Sport'.",
+          "Een originele interesse kan een gesprek op gang brengen in een sollicitatiegesprek.",
+          "Beperk u tot 3-5 interesses."
+        ]
+      },
+      "appearance": {
+        "title": "CV-uiterlijk",
+        "primaryColor": "Hoofdkleur",
+        "font": "Lettertype",
+        "fonts": {
+          "inter": "Inter (Modern)",
+          "roboto": "Roboto (Neutraal)",
+          "openSans": "Open Sans (Leesbaar)",
+          "merriweather": "Merriweather (Klassiek)",
+          "montserrat": "Montserrat (Elegant)"
+        }
+      },
+      "export": {
+        "title": "Exporteren",
+        "ready": "{type} cv klaar om te genereren",
+        "generate": "PDF genereren",
+        "share": "Delen",
+        "history": "Geschiedenis",
+        "restart": "Opnieuw beginnen"
+      },
+      "buttons": {
+        "previous": "Vorige",
+        "next": "Volgende",
+        "locked": "Vergrendeld",
+        "import": "Importeren",
+        "generate": "Genereren"
+      },
+      "mode": {
+        "howToProceed": "Hoe wilt u doorgaan?",
+        "chooseOption": "Kies een optie om te beginnen",
+        "create": {
+          "title": "Een cv maken",
+          "description": "Vul de secties stap voor stap in"
+        },
+        "import": {
+          "title": "Een cv importeren",
+          "description": "Gebruik een bestaand bestand (PDF, DOCX)",
+          "dragOrClick": "Slepen of klikken om te importeren",
+          "maxSize": "PDF, DOC, DOCX — max. 10 MB",
+          "ready": "Klaar om te importeren — handmatige stappen zijn uitgeschakeld",
+          "lockedMessage": "De volgende stappen zijn vergrendeld. Klik direct op Importeren."
+        },
+        "format": {
+          "title": "CV-formaat",
+          "classic": "Klassiek",
+          "classicDesc": "Standaard, alle sectoren",
+          "fibem": "FIBEM",
+          "fibemDesc": "Eigen platformformaat",
+          "selectRequired": "Selecteer een formaat om verder te gaan."
+        }
+      },
+      "navigation": {
+        "history": "Geschiedenis"
+      },
+      "generalTips": [
+        "Wees beknopt — max. 2 pagina's",
+        "Pas aan per sollicitatie",
+        "Gebruik sectorspecifieke trefwoorden",
+        "Controleer de spelling",
+        "Kwantificeer uw prestaties",
+        "Houd de opmaak luchtig"
+      ],
+      "alerts": {
+        "importSuccess": "CV succesvol geïmporteerd",
+        "importError": "Importeren mislukt",
+        "generationError": "Fout: {message}",
+        "defaultError": "Er is een fout opgetreden",
+        "noLink": "CV gegenereerd maar link niet beschikbaar."
+      },
+      "history": {
+        "title": "CV-geschiedenis",
+        "importedCv": "Geïmporteerd cv",
+        "cv": "CV",
+        "main": "Primair",
+        "modified": "gewijzigd",
+        "searchPlaceholder": "Een cv zoeken…",
+        "noCvFound": "Geen cv gevonden",
+        "resetFilters": "Filters resetten",
+        "close": "Sluiten",
+        "page": "pagina",
+        "cvCount": "CV{count, plural, =0 {} one {} other {s}}",
+        "resultCount": "{count} resultaat{count, plural, =0 {} =1 {} other {en}}",
+        "types": {
+          "fibem": "FIBEM",
+          "classic": "Klassiek",
+          "imported": "Geïmporteerd"
+        },
+        "actions": {
+          "preview": "Voorbeeld",
+          "download": "Downloaden",
+          "downloadFile": "Bestand downloaden",
+          "duplicate": "Dupliceren",
+          "delete": "Verwijderen"
+        },
+        "filters": {
+          "all": "Alle"
+        },
+        "pagination": {
+          "previous": "Vorige pagina",
+          "next": "Volgende pagina"
+        },
+        "deleteDialog": {
+          "title": "CV verwijderen",
+          "message": "Deze actie is onomkeerbaar. Weet u zeker dat u dit cv wilt verwijderen?",
+          "confirm": "Verwijderen",
+          "cancel": "Annuleren"
+        }
+      }
+    },
+    "contact": {
+      "hero": {
+        "title": "Neem contact met ons op",
+        "subtitle": "Ontdek de professionele kansen die onze partnerbedrijven bieden"
+      },
+      "form": {
+        "title": "Stuur ons een bericht",
+        "subtitle": "Wij reageren binnen 48 uur",
+        "firstName": "Achternaam",
+        "firstNamePlaceholder": "Uw achternaam",
+        "lastName": "Voornaam",
+        "lastNamePlaceholder": "Uw voornaam",
+        "email": "E-mail",
+        "emailPlaceholder": "uw@email.com",
+        "address": "Adres",
+        "addressPlaceholder": "Bijv.: Vernon",
+        "phone": "Telefoon",
+        "phonePlaceholder": "+33 1 23 45 67 89",
+        "subject": "Onderwerp",
+        "subjectPlaceholder": "Onderwerp van uw bericht",
+        "message": "Bericht",
+        "messagePlaceholder": "Beschrijf uw aanvraag of stel ons uw vragen...",
+        "locationNote": "Uw huidige locatie wordt automatisch aan uw bericht toegevoegd voor een betere service.",
+        "sending": "Bezig met verzenden...",
+        "submit": "Bericht versturen",
+        "success": {
+          "title": "Bericht verzonden!",
+          "message": "Bedankt voor uw bericht. Ons team neemt zo snel mogelijk contact met u op.",
+          "button": "Nog een bericht sturen"
+        }
+      },
+      "info": {
+        "title1": "Laten we praten over uw",
+        "title2": "Project",
+        "subtitle": "Ons team van experts staat tot uw beschikking om u te begeleiden.",
+        "email": {
+          "title": "E-mail",
+          "details": "Reactie binnen 24 uur"
+        },
+        "phone": {
+          "title": "Telefoon",
+          "details": "Ma-vr: 9u-18u"
+        },
+        "address": {
+          "title": "Adres",
+          "details": "75 001"
+        },
+        "hours": {
+          "title": "Openingstijden",
+          "days": "Maandag - Vrijdag",
+          "time": "9u00 - 18u00"
+        }
+      },
+      "offices": {
+        "title": "Onze Kantoren",
+        "france": {
+          "name": "FIBEM Frankrijk",
+          "address": "51 Rue du Grévarin – 27200 Vernon"
+        },
+        "senegal": {
+          "name": "FIBEM Senegal",
+          "address": "Rue 7 Corniche x 6, Médina, Dakar"
+        }
+      },
+      "location": {
+        "title": "Uw Locatie",
+        "description": "Voor een gepersonaliseerde service wordt uw locatie automatisch bij uw bericht gevoegd.",
+        "detected": "Huidige locatie gedetecteerd",
+        "included": "(Opgenomen in uw bericht)",
+        "consent": "Locatie alleen gedeeld met uw toestemming"
+      }
+    },
+    "invoice": {
+      "title": "Factuurgenerator",
+      "subtitle": "Maak een professionele factuur in enkele begeleide stappen",
+      "fileName": "Factuur",
+      "emailMessage": "Bijgevoegd vindt u factuur {number}",
+      "steps": {
+        "invoice": "Factuur",
+        "company": "Afzender",
+        "client": "Klant",
+        "items": "Artikelen",
+        "payment": "Betaling",
+        "notes": "Notities",
+        "preview": "Voorbeeld"
+      },
+      "progress": {
+        "step": "Stap"
+      },
+      "help": {
+        "title": "Tips"
+      },
+      "status": {
+        "draft": "Concept",
+        "sent": "Verzonden",
+        "paid": "Betaald",
+        "overdue": "Achterstallig",
+        "genere": "Gegenereerd",
+        "envoye": "Verzonden",
+        "paye": "Betaald",
+        "en_retard": "Achterstallig",
+        "brouillon": "Concept"
+      },
+      "paymentMethods": {
+        "bankTransfer": "Bankoverschrijving",
+        "creditCard": "Bankkaart",
+        "cash": "Contant",
+        "paypal": "PayPal",
+        "check": "Cheque",
+        "stripe": "Stripe",
+        "directDebit": "Automatische incasso",
+        "bitcoin": "Bitcoin",
+        "applePay": "Apple Pay",
+        "googlePay": "Google Pay",
+        "wireTransfer": "Internationale overboeking",
+        "other": "Anders"
+      },
+      "paymentTerms": {
+        "immediate": "Direct",
+        "days7": "7 dagen",
+        "days15": "15 dagen",
+        "days30": "30 dagen",
+        "days45": "45 dagen",
+        "days60": "60 dagen",
+        "days90": "90 dagen"
+      },
+      "invoice": {
+        "title": "Factuurgegevens",
+        "subtitle": "Vul de basisinformatie van uw factuur in.",
+        "quoteSelection": "Offerteselectie",
+        "selectQuote": "Een offerte kiezen",
+        "quoteNumber": "Offerte",
+        "client": "Klant",
+        "amount": "Bedrag",
+        "purchaseOrder": "Inkooporder",
+        "purchaseOrderPlaceholder": "PO-2026-001",
+        "invoiceDate": "Factuurdatum",
+        "dueDate": "Vervaldatum",
+        "paymentTerms": "Betalingsvoorwaarden",
+        "paymentMethod": "Betaalmethode",
+        "selectPaymentMethod": "Selecteer",
+        "tips": [
+          "Het factuurnummer wordt automatisch gegenereerd en kan worden aangepast.",
+          "De vervaldatum wordt automatisch berekend op basis van de betalingsvoorwaarden.",
+          "De inkooporder (PO) is optioneel maar aanbevolen voor bedrijven."
+        ]
+      },
+      "company": {
+        "title": "Uw bedrijf",
+        "subtitle": "Deze informatie verschijnt als afzender op de factuur.",
+        "name": "Bedrijfsnaam",
+        "namePlaceholder": "Uw Bedrijf BV",
+        "address": "Adres",
+        "addressPlaceholder": "123 Avenue de la République",
+        "city": "Stad",
+        "cityPlaceholder": "Douala",
+        "postalCode": "Postcode / Postbus",
+        "postalCodePlaceholder": "Postbus 1234",
+        "phone": "Telefoon",
+        "phonePlaceholder": "+237 6XX XX XX XX",
+        "email": "E-mail",
+        "emailPlaceholder": "info@uwbedrijf.com",
+        "taxId": "BTW-nummer / Fiscaal identificatienummer",
+        "taxIdPlaceholder": "CM12345678901",
+        "logo": "Bedrijfslogo",
+        "logoAlt": "Bedrijfslogo",
+        "tips": [
+          "De bedrijfsnaam is verplicht.",
+          "Voeg uw BTW-nummer toe als u BTW-plichtig bent."
+        ]
+      },
+      "client": {
+        "title": "Klantgegevens",
+        "subtitle": "Deze informatie verschijnt als ontvanger op de factuur.",
+        "name": "Klantnaam",
+        "namePlaceholder": "Jan de Vries",
+        "company": "Bedrijf van de klant",
+        "companyPlaceholder": "Klantbedrijf NV",
+        "email": "E-mail",
+        "emailPlaceholder": "klant@email.com",
+        "phone": "Telefoon",
+        "phonePlaceholder": "+237 6XX XX XX XX",
+        "address": "Adres",
+        "addressPlaceholder": "456 Boulevard Principal",
+        "city": "Stad",
+        "cityPlaceholder": "Yaoundé",
+        "postalCode": "Postcode / Postbus",
+        "postalCodePlaceholder": "Postbus 456",
+        "taxId": "BTW-nummer / Fiscaal identificatienummer",
+        "taxIdPlaceholder": "CM98765432101",
+        "tips": [
+          "De klantnaam is verplicht.",
+          "Vul het e-mailadres in om de factuur direct vanuit de applicatie te versturen."
+        ]
+      },
+      "items": {
+        "title": "Factuurrijen",
+        "subtitle": "Voeg de te factureren producten of diensten toe.",
+        "count": "artikel(en)",
+        "line": "Rij",
+        "description": "Beschrijving",
+        "descriptionPlaceholder": "Bijv.: Ontwikkeling webapplicatie",
+        "quantity": "Aant.",
+        "unitPrice": "Stukprijs",
+        "discount": "Korting %",
+        "taxRate": "BTW %",
+        "total": "Totaal",
+        "addButton": "Rij toevoegen",
+        "summary": "Samenvatting",
+        "subtotal": "Subtotaal excl. BTW",
+        "totalDiscount": "Totale korting",
+        "totalTax": "BTW",
+        "grandTotal": "Totaal incl. BTW",
+        "duplicate": "Dupliceren",
+        "delete": "Verwijderen",
+        "tips": [
+          "Elke rij moet een beschrijving en een stukprijs groter dan 0 hebben.",
+          "De korting is in procenten (bijv.: 10 voor 10%).",
+          "Het totaal van elke rij wordt automatisch berekend."
+        ]
+      },
+      "payment": {
+        "title": "Bankgegevens",
+        "subtitle": "Deze informatie vergemakkelijkt de betaling door uw klant.",
+        "bankName": "Naam van de bank",
+        "bankNamePlaceholder": "Banque Atlantique, SCB Cameroun…",
+        "bankAccount": "Rekeningnummer / IBAN",
+        "bankAccountPlaceholder": "CM21 1000 1234 5678 9012 3456 789",
+        "tips": [
+          "Bankgegevens zijn optioneel maar aanbevolen voor overschrijvingen.",
+          "Voor Kameroen vermeldt u uw BEAC-rekeningnummer of uw bankrekeningnummer."
+        ]
+      },
+      "notes": {
+        "title": "Notities en voorwaarden",
+        "subtitle": "Voeg een gepersonaliseerde boodschap of uw algemene verkoopvoorwaarden toe.",
+        "message": "Bericht / Notities",
+        "messagePlaceholder": "Bedankt voor uw vertrouwen. Aarzel niet om contact met ons op te nemen voor vragen.",
+        "terms": "Algemene voorwaarden",
+        "termsPlaceholder": "Betaling bij ontvangst van factuur. Elke onbetaalde factuur na de vervaldatum brengt vertragingsrente van 1,5% per maand met zich mee."
+      },
+      "preview": {
+        "title": "Factuurvoorbeeld",
+        "subtitle": "Controleer uw factuur voordat u deze genereert.",
+        "downloadPdf": "PDF downloaden",
+        "downloadExcel": "Excel downloaden",
+        "newInvoice": "Nieuwe factuur"
+      },
+      "navigation": {
+        "previous": "Vorige",
+        "next": "Volgende",
+        "history": "Geschiedenis",
+        "generate": "Genereren",
+        "generating": "Bezig met genereren…"
+      },
+      "tips": {
+        "title": "Tips voor een effectieve factuur",
+        "list": [
+          "Controleer het factuurnummer om duplicaten te vermijden",
+          "Vermeld de betalingstermijnen duidelijk",
+          "Voeg uw bankgegevens toe om betaling te vergemakkelijken",
+          "Voeg een bedankboodschap toe in de notities",
+          "Controleer de bedragen voordat u de PDF genereert",
+          "Bewaar een kopie van elke verzonden factuur"
+        ]
+      },
+      "quoteDialog": {
+        "title": "Selecteer een te factureren offerte",
+        "description": "Kies de versie van de offerte die u naar een factuur wilt omzetten"
+      },
+      "errors": {
+        "idNotFound": "Factuur-ID niet gevonden",
+        "generationError": "Fout bij het genereren van de factuur",
+        "generateFirst": "Genereer eerst de factuur",
+        "clientEmailRequired": "Vul het e-mailadres van de klant in"
+      },
+      "alerts": {
+        "sendSuccess": "Factuur succesvol verzonden",
+        "sendError": "Fout bij het verzenden van de factuur"
+      },
+      "history": {
+        "title": "Factuurgeschiedenis",
+        "ref_quote": "ref.",
+        "modified": "gewijzigd",
+        "due_date": "vervaldatum",
+        "preview": "Voorbeeld / Hergebruiken",
+        "download_pdf": "PDF downloaden",
+        "download_excel": "Excel-bestand downloaden",
+        "duplicate": "Dupliceren",
+        "delete": "Verwijderen",
+        "delete_confirm_title": "Factuur verwijderen",
+        "delete_confirm_message": "Deze actie is onomkeerbaar. Weet u zeker dat u deze factuur wilt verwijderen?",
+        "delete_confirm_button": "Verwijderen",
+        "cancel": "Annuleren",
+        "search_placeholder": "Factuurnr., klant…",
+        "no_invoices": "Geen factuur gevonden",
+        "reset_filters": "Filters resetten",
+        "invoices": "factuur",
+        "page": "pagina",
+        "result": "resultaat",
+        "close": "Sluiten",
+        "filters": {
+          "all": "Alle",
+          "generated": "Gegenereerd",
+          "sent": "Verzonden",
+          "paid": "Betaald",
+          "overdue": "Achterstallig",
+          "draft": "Concepten"
+        },
+        "stats": {
+          "paid": "betaald",
+          "sent": "verzonden",
+          "overdue": "achterstallig"
+        }
+      }
+    },
+    "quote": {
+      "steps": {
+        "client": "Klant",
+        "emetteur": "Afzender",
+        "project": "Project",
+        "items": "Artikelen",
+        "payment": "Betaling",
+        "notes": "Notities",
+        "preview": "Voorbeeld"
+      },
+      "help_notice": {
+        "tips_title": "Tips",
+        "info_title": "Wist u dat"
+      },
+      "progress": {
+        "step_label": "Stap",
+        "of": "van"
+      },
+      "client_step": {
+        "title": "Klantgegevens",
+        "subtitle": "Vul de contactgegevens in van de klant die de offerte ontvangt.",
+        "tips": [
+          "Voornaam, achternaam, e-mail en telefoon zijn verplicht.",
+          "Het bedrijf is optioneel maar aanbevolen voor B2B-offertes.",
+          "Het offerteype maakt het mogelijk de aard van de werkzaamheden te categoriseren."
+        ],
+        "first_name": "Voornaam",
+        "last_name": "Achternaam",
+        "email": "E-mail",
+        "phone": "Telefoon",
+        "company": "Bedrijf van de klant",
+        "quote_type": "Offerteype",
+        "address": "Adres",
+        "city": "Stad",
+        "postal_code": "Postcode / Postbus",
+        "first_name_placeholder": "Samuel",
+        "last_name_placeholder": "Dupont",
+        "email_placeholder": "contact@email.com",
+        "phone_placeholder": "+237 6XX XX XX XX",
+        "company_placeholder": "Naam van het klantbedrijf",
+        "address_placeholder": "123 Rue de la République",
+        "city_placeholder": "Douala",
+        "postal_code_placeholder": "Postbus 456",
+        "select_quote_type": "Selecteer een type"
+      },
+      "emitter_step": {
+        "title": "Uw bedrijf (afzender)",
+        "subtitle": "Deze informatie verschijnt in het leveranciersblok van de offerte.",
+        "tips": [
+          "De bedrijfsnaam is verplicht.",
+          "Het logo wordt linksboven in de PDF-offerte weergegeven.",
+          "SIRET, APE en BTW-nummer verschijnen in het leveranciersblok."
+        ],
+        "company_name": "Bedrijfsnaam",
+        "company_contact": "Contactpersoon",
+        "company_address": "Adres",
+        "company_city": "Stad (met postcode)",
+        "company_phone": "Vaste telefoon",
+        "company_port": "Mobiel",
+        "company_email": "E-mail",
+        "company_siret": "SIRET",
+        "company_ape": "APE-code",
+        "company_tva": "Intra-communautair BTW-nummer",
+        "contact_be": "Contact studiebureau (interne referentie)",
+        "company_logo": "Bedrijfslogo",
+        "company_name_placeholder": "Sté SEN FIBEM France",
+        "company_contact_placeholder": "Mr GOMIS",
+        "company_address_placeholder": "51 Rue du Grevarin",
+        "company_city_placeholder": "27200 Vernon",
+        "company_phone_placeholder": "+33 1 XX XX XX XX",
+        "company_port_placeholder": "07.52.49.75.46",
+        "company_email_placeholder": "contact@uwbedrijf.com",
+        "company_siret_placeholder": "445 374 937 00032",
+        "company_ape_placeholder": "4120B Travaux Bâtiment & Industrie",
+        "company_tva_placeholder": "FR17378128441",
+        "contact_be_placeholder": "Ref. studiebureau",
+        "logo_preview": "Logovoorbeeld"
+      },
+      "project_step": {
+        "title": "Projectdetails",
+        "subtitle": "Beschrijf het project dat voor deze offerte uitgevoerd moet worden.",
+        "tips": [
+          "De projectnaam is verplicht.",
+          "Een duidelijke beschrijving stelt de klant gerust over uw begrip van de behoefte.",
+          "De geldigheidsdatum wordt automatisch ingesteld op 30 dagen maar kan worden aangepast."
+        ],
+        "project_name": "Projectnaam",
+        "category": "Categorie",
+        "project_description": "Projectbeschrijving",
+        "start_date": "Geplande startdatum",
+        "deadline": "Projectdeadline",
+        "budget": "Geschat budget",
+        "valid_until": "Offerte geldig tot",
+        "project_name_placeholder": "Bijv.: Bouw Residentie Makepe",
+        "project_description_placeholder": "Beschrijf het project in detail...",
+        "select_category": "Selecteer een categorie",
+        "categories": {
+          "development": "Webontwikkeling",
+          "design": "Grafisch ontwerp",
+          "marketing": "Digitale marketing",
+          "consulting": "Advies en opleiding",
+          "delivery": "Dienstverlening",
+          "construction": "Bouw",
+          "renovation": "Renovatie",
+          "other": "Anders"
+        }
+      },
+      "items_step": {
+        "title": "Offerteartikelen",
+        "subtitle": "Maak een lijst van de te begroten diensten of leveringen.",
+        "items_count": "artikel(en)",
+        "tips": [
+          "Elk artikel moet een beschrijving en een stukprijs hebben.",
+          "Arbeidstijd: duur van de arbeid (bijv.: 1,0u). Eenheid: Set, u, m², enz.",
+          "De regelkorting is in procenten.",
+          "Gebruik de pijlen ↑↓ om de artikelen te herordenen."
+        ],
+        "article": "Artikel",
+        "description": "Beschrijving",
+        "description_placeholder": "Bijv.: Levering en plaatsing van tegels",
+        "time_mo": "Arbeidstijd",
+        "time_mo_placeholder": "1,0u",
+        "unit": "Eenheid",
+        "quantity": "Hoeveelheid",
+        "unit_price": "Stukprijs",
+        "discount": "Korting %",
+        "tax": "BTW %",
+        "total_ht": "Totaal excl. BTW",
+        "add_item": "Artikel toevoegen",
+        "summary": "Artikeloverzicht",
+        "subtotal_ht": "Subtotaal excl. BTW",
+        "total_before_discount": "Totaal vóór globale korting",
+        "duplicate": "Dupliceren",
+        "delete": "Verwijderen",
+        "units": {
+          "ens": "Set",
+          "h": "u",
+          "j": "d",
+          "m2": "m²",
+          "m3": "m³",
+          "ml": "ml",
+          "u": "st.",
+          "kg": "kg",
+          "t": "t",
+          "forfait": "forfait"
+        }
+      },
+      "payment_step": {
+        "title": "Betalingsinstellingen",
+        "subtitle": "Configureer de globale BTW, de korting en het voorschot.",
+        "tips": [
+          "De BTW in Kameroen bedraagt 19,25% (officieel tarief). In Frankrijk: 20%.",
+          "De globale korting wordt toegepast op het subtotaal van alle artikelen.",
+          "Het voorschot kan een vast bedrag of een percentage van het totaal incl. BTW zijn."
+        ],
+        "global_tax": "Globale BTW (%)",
+        "global_discount": "Globale korting (%)",
+        "deposit": "Voorschot",
+        "percentage": "%",
+        "fixed": "Vast bedrag",
+        "financial_summary": "Financieel overzicht",
+        "subtotal_ht": "Subtotaal excl. BTW",
+        "discount": "Korting",
+        "total_ht": "Totaal excl. BTW",
+        "tax_amount": "BTW",
+        "total_ttc": "Totaal incl. BTW",
+        "deposit_amount": "Voorschot",
+        "remaining": "Resterende te betalen"
+      },
+      "notes_step": {
+        "title": "Notities en voorwaarden",
+        "subtitle": "Deze teksten verschijnen in de sectie \"Betalingsvoorwaarden\" van de offerte.",
+        "tips": [
+          "Aanvullende notities worden weergegeven onder 'Betalingsvoorwaarden'.",
+          "Vermeld de voorschotvoorwaarden (bijv.: 30% bij aanvang, 70% bij afronding)."
+        ],
+        "payment_conditions": "Betalingsvoorwaarden / Notities",
+        "payment_conditions_placeholder": "- 30% te betalen 1 week na aanvang\n- 70% aan het einde van de 1e maand",
+        "general_conditions": "Algemene voorwaarden",
+        "general_conditions_placeholder": "Betalingsvoorwaarden, geldigheid, vertragingsrente..."
+      },
+      "preview_step": {
+        "title": "Offertevoorbeeld",
+        "subtitle": "Controleer uw offerte voordat u deze genereert.",
+        "modify": "Aanpassen",
+        "print": "Afdrukken",
+        "send": "Verzenden",
+        "download_excel": "Excel downloaden",
+        "download_pdf": "PDF downloaden",
+        "quote_preview": "Offertevoorbeeld",
+        "provider": "Dienstverlener",
+        "client": "Klant",
+        "project": "Project",
+        "valid_until": "Geldig tot",
+        "start_date": "Start",
+        "table": {
+          "time_mo": "Arb.tijd",
+          "description": "Beschrijving",
+          "unit": "E.",
+          "unit_price_ht": "Stukprijs excl. BTW",
+          "quantity": "Aant.",
+          "amount_ht": "Bedrag excl. BTW"
+        },
+        "total_ht": "Totaalbedrag excl. BTW",
+        "total_ttc": "Totaalbedrag incl. BTW",
+        "payment_conditions_title": "Betalingsvoorwaarden"
+      },
+      "buttons": {
+        "previous": "Vorige",
+        "next": "Volgende",
+        "generate_quote": "Offerte genereren",
+        "generating": "Bezig met genereren…",
+        "new_quote": "Nieuwe offerte",
+        "history": "Offertegeschiedenis"
+      },
+      "tips_section": {
+        "title": "Tips voor een effectieve offerte",
+        "tips": [
+          "Specificeer elke post nauwkeurig om geschillen te vermijden",
+          "Vermeld de geldigheidsduur van de offerte duidelijk (30 dagen aanbevolen)",
+          "Vermeld de uitvoeringstermijnen en leveringsvoorwaarden",
+          "Vraag een voorschot bij ondertekening om het project te beveiligen",
+          "Controleer de bedragen voordat u naar de klant verzendt",
+          "Bewaar een ondertekende kopie van elke geaccepteerde offerte"
+        ]
+      },
+      "status": {
+        "draft": "Concept",
+        "sent": "Verzonden",
+        "accepted": "Geaccepteerd",
+        "rejected": "Afgewezen",
+        "expired": "Verlopen"
+      },
+      "alerts": {
+        "error_generating": "Fout bij het genereren van de offerte",
+        "generate_first": "Genereer eerst de offerte",
+        "email_required": "Vul het e-mailadres van de klant in",
+        "email_sent": "Offerte succesvol verzonden",
+        "email_error": "Fout bij het verzenden van de offerte"
+      },
+      "quote_types": {
+        "0": "Arbeidswerken alleen",
+        "1": "Levering en plaatsingswerken",
+        "2": "Renovatie",
+        "3": "Bouw",
+        "4": "Inrichting",
+        "5": "Monteur en installateur",
+        "6": "Studies en plantekenwerk",
+        "7": "Maatberekening",
+        "8": "Verificatieberekening",
+        "9": "Technische bijstand",
+        "10": "Anders"
+      },
+      "history": {
+        "title": "Offertegeschiedenis",
+        "modified": "gewijzigd",
+        "preview": "Voorbeeld / Hergebruiken",
+        "download_pdf": "PDF downloaden",
+        "download_excel": "Excel-bestand downloaden",
+        "duplicate": "Dupliceren",
+        "delete": "Verwijderen",
+        "delete_confirm_title": "Offerte verwijderen",
+        "delete_confirm_message": "Deze actie is onomkeerbaar. Weet u zeker dat u deze offerte wilt verwijderen?",
+        "delete_confirm_button": "Verwijderen",
+        "cancel": "Annuleren",
+        "search_placeholder": "Offertenr., klant, project…",
+        "no_quotes": "Geen offerte gevonden",
+        "reset_filters": "Filters resetten",
+        "quotes": "offerte",
+        "page": "pagina",
+        "result": "resultaat",
+        "close": "Sluiten",
+        "filters": {
+          "all": "Alle",
+          "draft": "Concepten",
+          "sent": "Verzonden",
+          "accepted": "Geaccepteerd",
+          "rejected": "Afgewezen",
+          "expired": "Verlopen"
+        },
+        "stats": {
+          "accepted": "geaccepteerd",
+          "sent": "verzonden",
+          "rejected": "afgewezen",
+          "expired": "verlopen",
+          "acceptance_rate": "acceptatie"
+        }
+      }
+    },
+    "credit_note": {
+      "title": "Creditnotagenerator",
+      "subtitle": "Maak een professionele creditnota gekoppeld aan een bestaande factuur",
+      "steps": {
+        "identification": "Creditnota",
+        "emetteur": "Afzender",
+        "client": "Klant",
+        "items": "Artikelen",
+        "notes": "Notities",
+        "preview": "Voorbeeld"
+      },
+      "progress": {
+        "step": "Stap"
+      },
+      "help_notice": {
+        "tips_title": "Tips",
+        "info_title": "Wist u dat"
+      },
+      "identification_step": {
+        "title": "Identificatie van de creditnota",
+        "subtitle": "Nummer, datum, oorspronkelijke factuur, reden en terugbetalingsmethode.",
+        "tips": [
+          "Het creditnotanummer is verplicht en moet uniek zijn.",
+          "Vermeld altijd de oorspronkelijke factuur waarnaar de creditnota verwijst.",
+          "De reden en de terugbetalingsmethode verschijnen op het PDF-document."
+        ],
+        "credit_note_date": "Datum creditnota",
+        "original_invoice_number": "Nr. oorspronkelijke factuur",
+        "original_invoice_placeholder": "FA-202601-0042",
+        "original_invoice_date": "Datum oorspronkelijke factuur",
+        "credit_reason": "Reden van de creditnota",
+        "refund_method": "Terugbetalingsmethode"
+      },
+      "emitter_step": {
+        "title": "Uw bedrijf (afzender)",
+        "subtitle": "Deze informatie verschijnt in het leveranciersblok van de creditnota.",
+        "tips": [
+          "De bedrijfsnaam is verplicht.",
+          "Het logo wordt linksboven in de PDF weergegeven.",
+          "SIRET, APE en BTW-nummer verschijnen in het afzenderblok."
+        ],
+        "company_name": "Bedrijfsnaam",
+        "company_name_placeholder": "Sté SEN FIBEM France",
+        "company_address": "Adres",
+        "company_address_placeholder": "51 Rue du Grevarin",
+        "company_city": "Stad (met postcode)",
+        "company_city_placeholder": "27200 Vernon",
+        "company_phone": "Vaste telefoon",
+        "company_phone_placeholder": "+33 1 XX XX XX XX",
+        "company_port": "Mobiel",
+        "company_port_placeholder": "07.52.49.75.46",
+        "company_email": "E-mail",
+        "company_email_placeholder": "contact@uwbedrijf.com",
+        "company_siret": "SIRET",
+        "company_siret_placeholder": "445 374 937 00032",
+        "company_ape": "APE-code",
+        "company_ape_placeholder": "4120B Travaux Bâtiment & Industrie",
+        "company_tva": "Intra-communautair BTW-nummer",
+        "company_tva_placeholder": "FR17378128441",
+        "company_logo": "Bedrijfslogo",
+        "logo_preview": "Logovoorbeeld"
+      },
+      "client_step": {
+        "title": "Klantgegevens",
+        "subtitle": "Ontvanger van de creditnota.",
+        "tips": [
+          "Vul het e-mailadres in om de creditnota direct vanuit de applicatie te versturen.",
+          "Het BTW-nummer van de klant verschijnt in de EEG-kolom van de overzichtstabel."
+        ],
+        "client_name": "Klantnaam",
+        "client_name_placeholder": "Jan de Vries",
+        "client_company": "Bedrijf van de klant",
+        "client_company_placeholder": "Klant NV",
+        "client_email": "E-mail",
+        "client_email_placeholder": "klant@email.com",
+        "client_phone": "Telefoon",
+        "client_phone_placeholder": "+237 6XX XX XX XX",
+        "client_address": "Adres",
+        "client_address_placeholder": "456 Boulevard Principal",
+        "client_city": "Stad",
+        "client_city_placeholder": "Yaoundé",
+        "client_postal_code": "Postcode / Postbus",
+        "client_postal_code_placeholder": "Postbus 456",
+        "client_tax_id": "BTW-nr. / Fiscale identificatie",
+        "client_tax_id_placeholder": "FR12345678901"
+      },
+      "items_step": {
+        "title": "Creditnotarijen",
+        "subtitle": "Voeg de te crediteren artikelen of diensten toe.",
+        "lines_count": "rij(en)",
+        "line": "Rij",
+        "tips": [
+          "Elke rij moet een beschrijving en een stukprijs > 0 hebben.",
+          "De bedragen vertegenwoordigen credits — ze worden oranje weergegeven op de PDF.",
+          "De korting is in procenten (bijv.: 10 voor 10%)."
+        ],
+        "description": "Beschrijving",
+        "description_placeholder": "Bijv.: Retourartikel / Regularisatie",
+        "quantity": "Hoeveelheid",
+        "unit_price": "Stukprijs",
+        "discount": "Korting %",
+        "tax": "BTW %",
+        "total_ht": "Totaal excl. BTW",
+        "add_item": "Rij toevoegen",
+        "summary": "Samenvatting",
+        "estimated_tax": "Geschatte BTW",
+        "net_refund": "Netto te betalen incl. BTW",
+        "duplicate": "Dupliceren",
+        "delete": "Verwijderen"
+      },
+      "notes_step": {
+        "title": "Notities en referenties",
+        "subtitle": "Aanvullende informatie die op de creditnota verschijnt.",
+        "notes": "Referenties / Notities",
+        "notes_placeholder": "Dossiernummer, gedetailleerde reden, retournummer...",
+        "terms_and_conditions": "Algemene voorwaarden",
+        "terms_placeholder": "Terugbetalingsvoorwaarden, verwerkingstermijnen..."
+      },
+      "preview_step": {
+        "title": "Creditnotavoorbeeld",
+        "subtitle": "Controleer voordat u de PDF genereert.",
+        "download_excel": "Excel downloaden",
+        "download_pdf": "PDF downloaden",
+        "credit_note_title": "CREDITNOTA",
+        "number": "Nr.",
+        "invoice_ref": "Factuurref.",
+        "reason": "Reden",
+        "refund": "Terugbetaling",
+        "emitter": "Afzender",
+        "client": "Klant",
+        "portable": "Mobiel",
+        "total_ht": "Totaal excl. BTW",
+        "estimated_tax": "Geschatte BTW",
+        "net_refund": "Netto te betalen incl. BTW",
+        "references": "Referenties",
+        "table": {
+          "description": "Beschrijving",
+          "quantity": "Aant.",
+          "unit_price_ht": "Stukprijs excl. BTW",
+          "discount": "Korting",
+          "tax": "BTW %",
+          "amount_ht": "Bedrag excl. BTW"
+        }
+      },
+      "status": {
+        "draft": "Concept",
+        "issued": "Uitgegeven",
+        "processed": "Verwerkt",
+        "cancelled": "Geannuleerd"
+      },
+      "credit_reasons": {
+        "product_return": "Retour van goederen",
+        "defective_product": "Defect product",
+        "billing_error": "Factureringsfout",
+        "discount": "Handelskorting",
+        "price_adjustment": "Prijsaanpassing",
+        "cancelled_order": "Annulering van bestelling",
+        "goodwill": "Commercieel gebaar",
+        "other": "Anders"
+      },
+      "refund_methods": {
+        "bank_transfer": "Bankoverschrijving",
+        "original_payment": "Oorspronkelijke betaalmethode",
+        "store_credit": "Tegoed in de winkel",
+        "cash": "Contant",
+        "check": "Cheque"
+      },
+      "buttons": {
+        "history": "Geschiedenis",
+        "previous": "Vorige",
+        "next": "Volgende",
+        "generate": "Genereren",
+        "generating": "Bezig met genereren…",
+        "new_credit_note": "Nieuwe creditnota"
+      },
+      "tips_section": {
+        "title": "Goede praktijken voor creditnota's",
+        "tips": [
+          "Verwijs altijd naar de oorspronkelijke factuur voor traceerbaarheid",
+          "Een creditnota moet worden uitgeschreven zodra de terugbetaling is bevestigd",
+          "Bewaar een ondertekende kopie in uw klantdossier",
+          "Controleer of het creditnotabedrag overeenkomt met de oorspronkelijke factuur"
+        ]
+      },
+      "alerts": {
+        "error_generating": "Fout bij het genereren van de creditnota",
+        "generate_first": "Genereer eerst de creditnota",
+        "email_required": "Vul het e-mailadres van de klant in",
+        "email_sent": "Creditnota succesvol verzonden",
+        "email_error": "Fout bij het verzenden van de creditnota"
+      },
+      "history": {
+        "title": "Creditnotageschiedenis",
+        "ref_invoice": "Ref.",
+        "modified": "gewijzigd",
+        "preview": "Voorbeeld / Hergebruiken",
+        "download_pdf": "PDF downloaden",
+        "download_excel": "Excel-bestand downloaden",
+        "duplicate": "Dupliceren",
+        "delete": "Verwijderen",
+        "delete_confirm_title": "Creditnota verwijderen",
+        "delete_confirm_message": "Deze actie is onomkeerbaar. Weet u zeker dat u deze creditnota wilt verwijderen?",
+        "delete_confirm_button": "Verwijderen",
+        "cancel": "Annuleren",
+        "search_placeholder": "Creditnotanr., klant, factuur…",
+        "no_credit_notes": "Geen creditnota gevonden",
+        "reset_filters": "Filters resetten",
+        "credit_notes": "creditnota",
+        "page": "pagina",
+        "result": "resultaat",
+        "close": "Sluiten",
+        "all_reasons": "Alle redenen",
+        "filters": {
+          "all": "Alle",
+          "draft": "Concepten",
+          "issued": "Uitgegeven",
+          "processed": "Verwerkt",
+          "cancelled": "Geannuleerd"
+        },
+        "stats": {
+          "issued": "uitgegeven",
+          "processed": "verwerkt",
+          "cancelled": "geannuleerd"
+        }
+      }
+    },
+    "mainMenu": {
+        "home": {
+          "label": "Home",
+          "about": "Over ons",
+          "us": "Wie zijn wij?",
+          "blog": "Blog"
+        },
+        "service": {
+          "label": "Diensten",
+          "prestation": "Maaltijd zoeken",
+          "formulaireCV": "FIBEM CV-formulier",
+          "formulaireDevis": "Offerte",
+          "formulaireFacture": "Factuur",
+          "formulaireAvoirs": "Creditnota's"
+        },
+        "emploi": {
+          "label": "Werk",
+          "espaceCandidat": "Kandidatenruimte",
+          "espaceRecruteur": "Recruiterruimte",
+          "espaceAbonnement": "Abonnementsruimte"
+        },
+        "foods": "Maaltijd zoeken",
+        "job": "Vacature zoeken",
+        "cv": "CV",
+        "contact": "Contact",
+        "facture": "Factuur"
+      },
+      "authMenu": {
+        "login": "Inloggen",
+        "register": "Registreren"
+      },
+      "userMenu": {
+        "shoppingCart": "Winkelwagen",
+        "dashboard": "Dashboard",
+        "profile": "Profiel"
+      },
+      "search_placeholder": "Zoeken"
+  }

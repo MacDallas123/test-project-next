@@ -3,6 +3,8 @@
 import CharacteristicsSection from "@/components/home/CharacteristicsSection";
 import HomeHero from "@/components/home/HomeHero";
 import ServicesSection from "@/components/home/ServiceSection";
+import Footer from "@/components/partials/Footer";
+import { useLanguage } from "@/context/LanguageContext";
 import { useState, useEffect } from "react";
 
 const Home = () => {
@@ -23,6 +25,8 @@ const Home = () => {
 
       {/* Section CV FIBEM */}
       <ServicesSection />
+
+      <Footer />
     </div>
   );
 };

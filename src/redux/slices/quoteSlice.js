@@ -205,9 +205,9 @@ export const duplicateQuote = createAsyncThunk(
 );
 
 // POST generate quote PDF
-export const generateQuotePDF = createAsyncThunk(
-  "quote/generateQuotePDF",
-  async ({ id, format = 'pdf' }, { rejectWithValue }) => {
+export const generateQuoteFiles = createAsyncThunk(
+  "quote/generateQuoteFiles",
+  async ({ id, format = 'all' }, { rejectWithValue }) => {
     try {
       const response = await axios.post(`/quotes/${id}/generate?format=${format}`);
       return response.data;
@@ -455,13 +455,13 @@ const quoteSlice = createSlice({
             state.error = action.payload || "Erreur lors de la duplication du devis";
         });
 
-        // generateQuotePDF
+        // generateQuoteFiles
         builder
-        .addCase(generateQuotePDF.pending, (state) => {
+        .addCase(generateQuoteFiles.pending, (state) => {
             state.loading = true;
             state.error = null;
         })
-        .addCase(generateQuotePDF.fulfilled, (state, action) => {
+        .addCase(generateQuoteFiles.fulfilled, (state, action) => {
             state.loading = false;
             state.generatedPDF = action.payload.content;
             // Mettre à jour le currentQuote avec le chemin du fichier si présent
@@ -470,7 +470,7 @@ const quoteSlice = createSlice({
             }
             state.error = null;
         })
-        .addCase(generateQuotePDF.rejected, (state, action) => {
+        .addCase(generateQuoteFiles.rejected, (state, action) => {
             state.loading = false;
             state.error = action.payload || "Erreur lors de la génération du devis";
         });

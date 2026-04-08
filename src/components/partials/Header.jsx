@@ -1,19 +1,39 @@
 /**
- * Header.jsx — Zéro Tailwind, Zéro shadcn
- * Tous les styles sont des objets JS inline.
- * Seules dépendances : react, react-router-dom, framer-motion, lucide-react
- * + tes propres composants : LanguageSelector, CurrencySelector, SiteTitleForm1, useAuth, useLanguage
+ * Header.jsx - Next.js Compatible Version
+ * Zero Tailwind, Zero shadcn - All styles are inline JS objects
+ * Dependencies: react, next/navigation, framer-motion, lucide-react
+ * + custom components: LanguageSelector, CurrencySelector, SiteTitleForm1, useAuth, useLanguage
  */
 
+"use client"; // Required for client-side components with hooks and interactivity
+
 import {
-  ChevronDown, Home, LayoutDashboard, LogIn, LogOut,
-  Menu, Search, ServerIcon, ShoppingCart, User, UserPlus, X,
-  FileText, Receipt, CreditCard, Briefcase, UserCheck, Utensils, Star,
+  ChevronDown,
+  Home,
+  LayoutDashboard,
+  LogIn,
+  LogOut,
+  Menu,
+  Search,
+  ServerIcon,
+  ShoppingCart,
+  User,
+  UserPlus,
+  X,
+  FileText,
+  Receipt,
+  CreditCard,
+  Briefcase,
+  UserCheck,
+  Utensils,
+  Star,
 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link, useLocation } from "react-router-dom";
-import Logo from "@/assets/logo_fibem3.jpg";
+import { usePathname, useRouter } from "next/navigation";
+import Link from "next/link";
+import Image from "next/image";
+import Logo from "@images/logo_fibem3.jpg";
 import { useLanguage } from "@/context/LanguageContext";
 import LanguageSelector from "@/components/custom/languageSelector";
 import CurrencySelector from "@/components/custom/CurrencySelector";
@@ -21,7 +41,7 @@ import SiteTileForm1 from "@/components/custom/SiteTitleForm1";
 import { useAuth } from "@/hooks/useAuth";
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Design tokens — modifie ici pour changer les couleurs globalement
+// Design tokens — modify here to change global colors
 // ─────────────────────────────────────────────────────────────────────────────
 const TOKEN = {
   primary: "#1a6fc4",
@@ -51,7 +71,7 @@ const TOKEN = {
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Styles partagés (objets statiques — aucune purge possible)
+// Shared styles (static objects — no purge possible)
 // ─────────────────────────────────────────────────────────────────────────────
 const S = {
   header: {
@@ -502,7 +522,7 @@ const S = {
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
-// CollapsibleMenuItem — inline, sans shadcn, sans Tailwind
+// CollapsibleMenuItem — inline, no shadcn, no Tailwind
 // ─────────────────────────────────────────────────────────────────────────────
 const CollapsibleMenuItem = ({ label, icon, children = [], closeMobileMenu }) => {
   const [open, setOpen] = useState(false);
@@ -548,7 +568,7 @@ const CollapsibleMenuItem = ({ label, icon, children = [], closeMobileMenu }) =>
               return (
                 <Link
                   key={sub.href || i}
-                  to={sub.href}
+                  href={sub.href}
                   onClick={closeMobileMenu}
                   style={S.subItem}
                   onMouseEnter={(e) => {
@@ -583,7 +603,7 @@ const MegaMenuItem = ({ sub, isActive, onClose }) => {
 
   return (
     <Link
-      to={sub.href}
+      href={sub.href}
       onClick={onClose}
       style={S.megaItem(active)}
       onMouseEnter={() => setHovered(true)}
@@ -643,7 +663,7 @@ const DesktopNavItem = ({ item, idx, isActive, hoveredMenu, onEnter, onLeave }) 
   if (!item.subMenus) {
     return (
       <Link
-        to={item.href}
+        href={item.href}
         style={style}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
@@ -695,7 +715,7 @@ const MobileMenuList = ({ items, closeMobileMenu }) =>
       );
     }
     return (
-      <Link key={index} to={item.href} onClick={closeMobileMenu} style={S.mobileNavItem}>
+      <Link key={index} href={item.href} onClick={closeMobileMenu} style={S.mobileNavItem}>
         <Icon size={15} color={TOKEN.accent} style={{ flexShrink: 0 }} />
         <span style={{ flex: 1 }}>{item.label}</span>
         {item.badge != null && <span style={S.chip}>{item.badge}</span>}
@@ -714,9 +734,15 @@ const Header = ({ authPage = false, dasboardPage = false }) => {
   const [searchValue, setSearchValue] = useState("");
   const hoverTimeoutRef = useRef(null);
   const headerRef = useRef(null);
-  const [isDesktop, setIsDesktop] = useState(() => window.innerWidth >= 1280);
+  const [isDesktop, setIsDesktop] = useState(() => {
+    if (typeof window !== "undefined") {
+      return window.innerWidth >= 1280;
+    }
+    return true; // Default to desktop for SSR
+  });
 
-  const location = useLocation();
+  const pathname = usePathname();
+  const router = useRouter();
   const { t } = useLanguage();
   const { isLoggedIn, user, logout } = useAuth();
 
@@ -756,7 +782,7 @@ const Header = ({ authPage = false, dasboardPage = false }) => {
         { label: t("mainMenu.emploi.espaceRecruteur", "Espace recruteur"), href: "/dashboard/offres", icon: Briefcase },
       ],
     },
-    { icon: User, label: "Contact", href: "/contact" },
+    { icon: User, label: t("mainMenu.contact", "Contact"), href: "/contact" },
   ];
 
   const authMenus = [
@@ -773,15 +799,15 @@ const Header = ({ authPage = false, dasboardPage = false }) => {
   // ── Active route helpers ───────────────────────────────────────────────────
   const isMenuActive = (menuItem) => {
     if (menuItem.href) {
-      return location.pathname === menuItem.href || location.pathname.startsWith(menuItem.href + "/");
+      return pathname === menuItem.href || pathname.startsWith(menuItem.href + "/");
     }
     return menuItem.subMenus?.some((sub) => {
-      if (sub.href === "/" && location.pathname === "/") return true;
+      if (sub.href === "/" && pathname === "/") return true;
       if (sub.href?.includes("#")) {
         const [p, h] = sub.href.split("#");
-        return location.pathname === (p || "/") && location.hash.replace("#", "") === h;
+        return pathname === (p || "/") && window.location.hash.replace("#", "") === h;
       }
-      return location.pathname === sub.href || location.pathname.startsWith((sub.href || "") + "/");
+      return pathname === sub.href || pathname.startsWith((sub.href || "") + "/");
     }) ?? false;
   };
 
@@ -797,7 +823,7 @@ const Header = ({ authPage = false, dasboardPage = false }) => {
   // ── Effects ───────────────────────────────────────────────────────────────
   useEffect(() => {
     const update = () => {
-      if (headerRef.current) {
+      if (headerRef.current && typeof document !== "undefined") {
         document.documentElement.style.setProperty("--header-height", `${headerRef.current.offsetHeight}px`);
       }
       setIsDesktop(window.innerWidth >= 1280);
@@ -808,17 +834,35 @@ const Header = ({ authPage = false, dasboardPage = false }) => {
   }, []);
 
   useEffect(() => {
-    document.body.style.overflow = isMobileMenuOpen ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
+    if (typeof document !== "undefined") {
+      document.body.style.overflow = isMobileMenuOpen ? "hidden" : "";
+      return () => { document.body.style.overflow = ""; };
+    }
   }, [isMobileMenuOpen]);
 
   // ── Handlers ─────────────────────────────────────────────────────────────
   const toggleMobileMenu = () => { setIsMobileSearchOpen(false); setIsMobileMenuOpen((v) => !v); };
   const toggleMobileSearch = () => { setIsMobileMenuOpen(false); setIsMobileSearchOpen((v) => !v); };
   const closeMobileMenu = () => { setIsMobileMenuOpen(false); setIsMobileSearchOpen(false); };
-  const handleLogout = async () => { await logout(); window.location.reload(); };
+  const handleLogout = async () => { await logout(); router.refresh(); };
 
   const activeMegaMenu = hoveredMenu !== null ? mainMenus[hoveredMenu] : null;
+
+  // Handle hash links for Next.js
+  const handleHashLink = (e, href) => {
+    if (href.includes("#")) {
+      e.preventDefault();
+      const [path, hash] = href.split("#");
+      if (path === pathname || (!path && pathname === "/")) {
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      } else {
+        router.push(href);
+      }
+    }
+  };
 
   // ── Render ────────────────────────────────────────────────────────────────
   return (
@@ -833,8 +877,17 @@ const Header = ({ authPage = false, dasboardPage = false }) => {
         <div style={S.inner}>
 
           {/* Logo */}
-          <Link to="/" style={S.logoWrap} onClick={closeMobileMenu}>
-            <img src={Logo} alt="FIBEM" style={S.logoImg} />
+          <Link href="/" style={S.logoWrap} onClick={closeMobileMenu}>
+            <div style={{ position: "relative", width: 44, height: 44 }}>
+              <img
+                src="/img/logo_fibem3.jpg"
+                alt="FIBEM"
+                style={{ objectFit: "contain", width: "100%", height: "100%" }}
+                width={44}
+                height={44}
+                loading="eager"
+              />
+            </div>
             <SiteTileForm1 />
           </Link>
 
@@ -899,11 +952,11 @@ const Header = ({ authPage = false, dasboardPage = false }) => {
                           </div>
 
                           {userMenuItems.map((item) => {
-                            const active = location.pathname === item.href || location.pathname.startsWith(item.href + "/");
+                            const active = pathname === item.href || pathname.startsWith(item.href + "/");
                             return (
                               <Link
                                 key={item.href}
-                                to={item.href}
+                                href={item.href}
                                 onClick={() => setUserMenuOpen(false)}
                                 style={S.dropdownItem(active)}
                                 onMouseEnter={(e) => { if (!active) e.currentTarget.style.backgroundColor = TOKEN.hoverRow; }}
@@ -932,8 +985,8 @@ const Header = ({ authPage = false, dasboardPage = false }) => {
                 </div>
               ) : (
                 <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-                  <Link to="/auth/login" style={S.authLogin}>{t("authMenu.login", "Connexion")}</Link>
-                  <Link to="/auth/register" style={S.authRegister}>{t("authMenu.register", "Inscription")}</Link>
+                  <Link href="/auth/login" style={S.authLogin}>{t("authMenu.login", "Connexion")}</Link>
+                  <Link href="/auth/register" style={S.authRegister}>{t("authMenu.register", "Inscription")}</Link>
                 </div>
               )}
             </div>
@@ -1018,7 +1071,7 @@ const Header = ({ authPage = false, dasboardPage = false }) => {
                         {authMenus.map((item, i) => (
                           <Link
                             key={item.href}
-                            to={item.href}
+                            href={item.href}
                             style={S.mobileAuthBtn(i === 0)}
                             onClick={() => setIsMobileMenuOpen(false)}
                           >

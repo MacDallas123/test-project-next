@@ -1,3 +1,5 @@
+"use client"
+
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -36,7 +38,7 @@ import {
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
-import Plat1 from "@/assets/hero.avif";
+import Plat1 from "@/assets/food_3.jpg";
 
 const Plat2 = "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80";
 const Plat3 = "https://images.unsplash.com/photo-1458642849426-cfb724f15ef7?auto=format&fit=crop&w=600&q=80";
@@ -277,7 +279,7 @@ const ServicesSection = () => {
       postedAt: t("services.posted.daysAgo", "Il y a 2 jours", { days: 2 }),
       type: t("services.jobTypes.kitchen", "Cuisine"),
       description: t("services.jobs.chef.description", "Nous recherchons un chef de partie passionné pour rejoindre notre brigade."),
-      image: Plat1,
+      image: Plat10,
       tags: [t("services.tags.experienced", "Expérimenté"), t("services.tags.fullTime", "Temps plein")],
       badge: t("services.badges.urgent", "Urgent"),
       badgeColor: "bg-red-500",

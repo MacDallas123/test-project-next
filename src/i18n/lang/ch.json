@@ -1,1 +1,1682 @@
-{}
+{
+    "common": {
+      "logoAlt": "FIBEM 标志",
+      "showPassword": "显示密码",
+      "hidePassword": "隐藏密码",
+      "emailOrPhone": "邮箱或手机号码"
+    },
+    "login": {
+      "title": "登录",
+      "subtitle": "访问您的专业空间",
+      "description": "使用您的邮箱或手机号码",
+      "identifier": {
+        "required": "邮箱或手机号码为必填项",
+        "incorrect": "请输入有效的邮箱或手机号码（国际格式）",
+        "placeholder": "邮箱或手机号码",
+        "tooLong": "输入内容过长"
+      },
+      "password": {
+        "tooShort": "密码至少需要6个字符",
+        "placeholder": "您的密码"
+      },
+      "forgotPassword": "忘记密码？",
+      "rememberMe": "记住我",
+      "secureConnection": "安全连接",
+      "loginButton": "登录",
+      "loggingIn": "正在登录...",
+      "noAccount": "还没有账户？",
+      "signUp": "免费注册",
+      "termsAndPrivacy": "登录即表示您同意我们的使用条款和隐私政策",
+      "terms": "使用条款",
+      "privacy": "隐私政策"
+    },
+    "register": {
+      "title": "创建账户",
+      "subtitle": "加入我们的餐饮配送平台",
+      "description": "填写信息以创建您的账户",
+      "redirectMessage": "感谢您联系我们，请先完成账户创建，然后才能向我们发送消息",
+      "createButton": "创建我的账户",
+      "creatingAccount": "正在创建账户...",
+      "alreadyHaveAccount": "已有账户？",
+      "loginLink": "登录",
+      "firstName": {
+        "label": "名字",
+        "placeholder": "您的名字",
+        "tooShort": "名字至少需要2个字符",
+        "tooLong": "名字过长",
+        "invalid": "不允许使用特殊字符（空格除外）"
+      },
+      "lastName": {
+        "label": "姓氏",
+        "placeholder": "您的姓氏",
+        "tooShort": "姓氏至少需要2个字符",
+        "tooLong": "姓氏过长",
+        "invalid": "不允许使用特殊字符（空格除外）"
+      },
+      "phone": {
+        "label": "手机号码（国际格式）",
+        "placeholder": "+33 1 23 45 67 89",
+        "tooShort": "手机号码过短",
+        "tooLong": "手机号码过长",
+        "invalid": "格式无效（例：+012 34 56 78）"
+      },
+      "email": {
+        "label": "电子邮箱",
+        "placeholder": "your@email.com",
+        "required": "邮箱为必填项",
+        "invalid": "邮箱格式无效"
+      },
+      "accountType": {
+        "label": "账户类型",
+        "required": "账户类型为必填项"
+      },
+      "accountTypes": {
+        "individual": {
+          "label": "个人",
+          "description": "适用于个人用户、雇主等..."
+        },
+        "candidate": {
+          "label": "求职者",
+          "description": "寻找工作或项目机会（求职者、实习生、学徒）"
+        },
+        "professional": {
+          "label": "专业人士",
+          "description": "企业、自由职业者等..."
+        },
+        "partner": {
+          "label": "合作伙伴",
+          "description": "大客户及劳务派遣机构"
+        },
+        "admin": {
+          "label": "管理员",
+          "description": "更深层次的平台访问权限（销售人员等...）"
+        }
+      },
+      "language": {
+        "label": "首选语言",
+        "placeholder": "请选择语言",
+        "required": "首选语言为必填项"
+      },
+      "password": {
+        "label": "密码",
+        "placeholder": "您的密码",
+        "tooShort": "密码至少需要8个字符",
+        "tooLong": "密码过长",
+        "uppercase": "至少一个大写字母",
+        "lowercase": "至少一个小写字母",
+        "number": "至少一个数字",
+        "special": "至少一个特殊字符"
+      },
+      "passwordStrength": {
+        "label": "密码强度：",
+        "empty": "空",
+        "veryWeak": "非常弱",
+        "weak": "弱",
+        "medium": "中等",
+        "good": "良好",
+        "veryGood": "很好",
+        "excellent": "极强"
+      },
+      "passwordCriteria": {
+        "minChars": "至少8个字符",
+        "uppercase": "1个大写字母",
+        "lowercase": "1个小写字母",
+        "number": "1个数字",
+        "specialChar": "1个特殊字符"
+      },
+      "confirmPassword": {
+        "label": "确认密码",
+        "placeholder": "确认您的密码",
+        "required": "密码确认为必填项"
+      },
+      "passwords": {
+        "mismatch": "两次密码不一致",
+        "match": "密码一致"
+      }
+    },
+    "verification": {
+      "title": "验证您的邮箱",
+      "description": "验证码已发送至",
+      "instruction": "请输入发送至您邮箱的6位验证码以完成注册。",
+      "codeLabel": "验证码",
+      "codeError": "请输入完整的6位验证码。",
+      "codeIncorrect": "验证码错误或已过期。",
+      "verifyButton": "确认并创建我的账户",
+      "verifying": "验证中...",
+      "codeNotReceived": "没有收到验证码？",
+      "resendIn": "重新发送倒计时",
+      "resend": "重新发送验证码",
+      "backToForm": "修改我的信息",
+      "errorOccurred": "发生错误，请重试。"
+    },
+    "errors": {
+      "loginFailed": "登录错误"
+    },
+    "hero": {
+      "slide1": {
+        "badge": "欢迎",
+        "title": {
+          "part1": "欢迎来到",
+          "part2": "ivrer",
+          "part3": "ourriture"
+        },
+        "subtitle": "您喜爱的美食，眨眼间送达",
+        "tagline": "3次点击下单，30分钟送达。",
+        "cta": "立即点餐",
+        "stats": {
+          "restaurants": "餐厅数量",
+          "deliveryTime": "平均配送时间",
+          "satisfiedClients": "满意用户",
+          "deliveryRadius": "配送范围"
+        },
+        "visual": {
+          "label": "订单进行中…",
+          "sub": "18分钟后送达"
+        }
+      },
+      "slide2": {
+        "badge": "极速",
+        "title": "快速。简单。无烦恼。",
+        "subtitle": "几次点击，您的餐食即刻出发。",
+        "tagline": "直观界面 • 100%安全支付 • GPS追踪",
+        "cta": "打开应用",
+        "stats": {
+          "securePayment": "安全支付",
+          "liveTracking": "实时追踪",
+          "clicks": "点击下单",
+          "availability": "可用性"
+        },
+        "visual": {
+          "label": "GPS追踪已激活",
+          "sub": "配送员距您2公里"
+        }
+      },
+      "slide3": {
+        "badge": "热门",
+        "title": "满足您的所有口味",
+        "subtitle": "汉堡、披萨、本地菜肴、健康选项…",
+        "tagline": "100+餐厅 • 多样菜系 • 素食选项",
+        "cta": "探索餐厅",
+        "stats": {
+          "cuisineTypes": "菜系种类",
+          "dishes": "菜单菜品",
+          "rating": "平均评分",
+          "new": "新品",
+          "perWeek": "每周更新"
+        },
+        "visual": {
+          "label": "今日推荐",
+          "sub": "健康碗 • 1,200 FCFA"
+        }
+      },
+      "slide4": {
+        "badge": "本地",
+        "title": "本地餐厅，用心配送",
+        "subtitle": "本地合作伙伴 • 新鲜食材 • 品质承诺",
+        "tagline": "我们支持您所在城市的餐厅经营者。",
+        "cta": "成为合作伙伴",
+        "stats": {
+          "fresh": "新鲜",
+          "localProducts": "本地产品",
+          "certified": "认证",
+          "quality": "品质保证",
+          "partners": "合作伙伴",
+          "sales": "餐厅销售额"
+        },
+        "visual": {
+          "label": "认证合作伙伴",
+          "sub": "街区餐厅"
+        }
+      }
+    },
+    "characteristics": {
+      "title": "为什么选择我们？",
+      "subtitle": "为您的企业提供具体保障",
+      "security": {
+        "title": "安全保障",
+        "description": "可靠的系统保护您的数据和交易。"
+      },
+      "transparent_prices": {
+        "title": "透明定价",
+        "description": "无隐藏费用，每项服务均提供清晰报价。"
+      },
+      "fast_delivery": {
+        "title": "高效快速",
+        "description": "按时完成，根据您的需求快速响应。"
+      }
+    },
+    "services": {
+      "discoverBadge": "探索我们的服务",
+      "title": "您想要什么？",
+      "subtitle": "美味佳肴和职业机会，带来完整的饮食体验",
+      "popularMeals": "热门菜品",
+      "popularMealsDesc": "发现我们社区最受欢迎的菜品",
+      "previous": "上一个",
+      "next": "下一个",
+      "addToCart": "加入购物车",
+      "seeMoreMeals": "查看更多菜品",
+      "seeMoreMealsDesc": "探索我们所有餐厅及其菜单",
+      "explore": "探索",
+      "jobOffers": "餐饮行业招聘信息",
+      "jobOffersDesc": "加入您附近最优秀的餐厅",
+      "viewOffer": "查看职位",
+      "moreJobs": "更多招聘信息",
+      "moreJobsDesc": "探索餐饮行业的所有机会",
+      "exploreJobs": "浏览职位",
+      "forProfessionals": "面向专业人士",
+      "toolsTitle": "为餐厅经营者提供的专业工具",
+      "toolsDesc": "使用我们的免费专业工具套件高效管理您的餐厅",
+      "contract": "合同类型",
+      "salary": "薪资",
+      "experience": {
+        "years": "{years}年",
+        "beginner": "欢迎新人"
+      },
+      "posted": {
+        "daysAgo": "{days}天前"
+      },
+      "tags": {
+        "popular": "热门",
+        "spicy": "辛辣",
+        "new": "新品",
+        "vegetarian": "素食",
+        "healthy": "健康",
+        "premium": "精品",
+        "family": "家庭",
+        "experienced": "有经验",
+        "fullTime": "全职",
+        "beginner": "新手",
+        "training": "培训",
+        "management": "管理",
+        "specialized": "专业",
+        "seasonal": "季节性",
+        "creative": "创意",
+        "evening": "夜班",
+        "flexible": "弹性",
+        "senior": "资深"
+      },
+      "badges": {
+        "favorite": "员工之选",
+        "new": "新品",
+        "topChef": "顶级厨师",
+        "light": "清淡",
+        "chefSpecial": "主厨特选",
+        "authentic": "正宗",
+        "mustHave": "必点",
+        "familyMeal": "家庭餐",
+        "premium": "精品",
+        "urgent": "急聘",
+        "training": "含培训",
+        "topSalary": "高薪",
+        "seasonal": "季节性",
+        "creative": "创意",
+        "housingPossible": "可提供住宿",
+        "executive": "管理层",
+        "artisan": "工匠"
+      },
+      "contracts": {
+        "permanent": "无固定期限合同",
+        "fixedTerm": "固定期限合同",
+        "seasonal": "季节性合同"
+      },
+      "jobTypes": {
+        "kitchen": "厨房",
+        "dining": "前厅",
+        "bar": "吧台",
+        "cleaning": "清洁",
+        "management": "管理",
+        "pastry": "糕点"
+      },
+      "meals": {
+        "yassa": {
+          "title": "亚萨鸡",
+          "restaurant": "达喀尔餐厅",
+          "category": "非洲菜",
+          "description": "柠檬腌制鸡肉配焦糖洋葱，搭配白米饭"
+        },
+        "burger": {
+          "title": "精品汉堡",
+          "restaurant": "汉堡屋",
+          "category": "快餐",
+          "description": "180克牛肉饼、融化切达芝士、脆培根和自制酱汁"
+        },
+        "pizza": {
+          "title": "玛格丽特披萨",
+          "restaurant": "罗马披萨店",
+          "category": "意大利菜",
+          "description": "番茄底料、新鲜马苏里拉奶酪、罗勒和橄榄油"
+        },
+        "salad": {
+          "title": "凯撒沙拉",
+          "restaurant": "绿色生活",
+          "category": "健康",
+          "description": "烤鸡肉、帕玛森奶酪、面包丁和自制凯撒酱"
+        },
+        "padthai": {
+          "title": "泰式炒河粉",
+          "restaurant": "泰国兰花",
+          "category": "亚洲菜",
+          "description": "虾仁炒米粉配花生和豆芽"
+        },
+        "poke": {
+          "title": "波奇碗",
+          "restaurant": "夏威夷碗",
+          "category": "健康",
+          "description": "新鲜三文鱼、醋饭、牛油果、海藻和酱油"
+        },
+        "tacos": {
+          "title": "牧羊人玉米饼",
+          "restaurant": "卡米诺餐厅",
+          "category": "墨西哥菜",
+          "description": "玉米薄饼、腌制猪肉、菠萝、洋葱和香菜"
+        },
+        "ramen": {
+          "title": "豚骨拉面",
+          "restaurant": "居酒屋三",
+          "category": "日本菜",
+          "description": "猪骨汤、面条、溏心蛋、海苔和五花肉"
+        },
+        "couscous": {
+          "title": "皇家库斯库斯",
+          "restaurant": "摩洛哥餐厅",
+          "category": "非洲菜",
+          "description": "细粒小麦粉、蔬菜、辣肠、鸡肉和羊肉"
+        },
+        "sushi": {
+          "title": "豪华寿司",
+          "restaurant": "寿司大师",
+          "category": "日本菜",
+          "description": "20件什锦：三文鱼、金枪鱼、鲷鱼、卷及加州卷"
+        }
+      },
+      "jobs": {
+        "chef": {
+          "title": "厨师长",
+          "restaurant": "大餐厅",
+          "location": "巴黎第8区",
+          "description": "我们正在寻找一位充满热情的厨师长加入我们的厨房团队。"
+        },
+        "waiter": {
+          "title": "服务员",
+          "restaurant": "现代啤酒馆",
+          "location": "里昂第2区",
+          "description": "动感餐厅服务，团队合作，会英语者优先。"
+        },
+        "sousChef": {
+          "title": "副主厨",
+          "restaurant": "阳光客栈",
+          "location": "尼斯",
+          "description": "团队管理、菜单创作、遵守HACCP标准。"
+        },
+        "pizzaiolo": {
+          "title": "披萨厨师",
+          "restaurant": "那不勒斯披萨",
+          "location": "马赛",
+          "description": "精通披萨面团制作、柴火炉烤制，富有创意。"
+        },
+        "bartender": {
+          "title": "调酒师",
+          "restaurant": "天空酒吧",
+          "location": "波尔多",
+          "description": "调制鸡尾酒、吧台服务、库存管理。"
+        },
+        "dishwasher": {
+          "title": "洗碗工",
+          "restaurant": "宫殿酒店",
+          "location": "戛纳",
+          "description": "清洗餐具和场所，协助厨房工作。"
+        },
+        "manager": {
+          "title": "餐厅经理",
+          "restaurant": "连锁快餐",
+          "location": "图卢兹",
+          "description": "全面管理餐厅、团队领导、完成商业目标。"
+        },
+        "pastryChef": {
+          "title": "糕点师",
+          "restaurant": "精品面包店",
+          "location": "斯特拉斯堡",
+          "description": "制作糕点、慕斯蛋糕、维也纳面包。要求富有创意。"
+        }
+      },
+      "tools": {
+        "cv": {
+          "title": "简历生成器",
+          "description": "几分钟内创建餐饮行业专业简历",
+          "button": "创建我的简历",
+          "bottom": "餐饮行业专属模板"
+        },
+        "quote": {
+          "title": "报价单生成器",
+          "description": "为您的服务和活动生成专业报价单",
+          "button": "创建报价单",
+          "bottom": "可自定义，可转换为发票"
+        },
+        "invoice": {
+          "title": "发票生成器",
+          "description": "符合法律法规的个性化发票",
+          "button": "创建发票",
+          "bottom": "含增值税，自动编号"
+        },
+        "creditNote": {
+          "title": "贷项通知单生成器",
+          "description": "几次点击即可创建贷项通知单",
+          "button": "创建贷项通知单",
+          "bottom": "退款、取消、更正"
+        },
+        "employeeManagement": {
+          "title": "员工管理",
+          "description": "排班、薪资、劳动合同"
+        },
+        "inventoryManagement": {
+          "title": "库存管理",
+          "description": "库存、预警、供应商订单"
+        },
+        "dashboard": {
+          "title": "数据看板",
+          "description": "分析、营业额、业绩"
+        }
+      },
+      "stats": {
+        "documents": "每月生成文件数",
+        "satisfaction": "用户满意度",
+        "free": "免费工具"
+      }
+    },
+    "footer": {
+      "logoAlt": "FIBEM 标志",
+      "contacts": "联系方式",
+      "newsletter": "电子通讯",
+      "emailPlaceholder": "您的邮箱",
+      "subscribed": "感谢您的订阅！",
+      "newsletterDesc": "接收我们的最新资讯和特别优惠",
+      "rights": "版权所有。",
+      "privacy": "隐私政策",
+      "terms": "使用条款",
+      "cookies": "Cookies",
+      "sitemap": "网站地图",
+      "contact": "联系我们",
+      "viewGoogleMap": "查看谷歌地图",
+      "whatsapp": "Whatsapp",
+      "france": {
+        "name": "FIBEM 法国",
+        "address": "51 Rue du Grévarin – 27200 Vernon",
+        "phone": "电话：+33 6 05 51 14 32",
+        "siret": "SIRET 445 374 937 00032"
+      },
+      "senegal": {
+        "name": "FIBEM 塞内加尔",
+        "address": "Rue 7 Corniche x 6, Médina, Dakar",
+        "phone": "电话：+221 78 370 06 02",
+        "ninea": "N.I.N.E.A.: 30 84 31 62 U2 — NAF: 7112B Engineering"
+      },
+      "social": {
+        "followUs": "关注我们：",
+        "facebook": "Facebook",
+        "twitter": "Twitter",
+        "instagram": "Instagram",
+        "youtube": "YouTube"
+      }
+    },
+    "cv": {
+      "title": "简历生成器",
+      "subtitle": "通过几个引导步骤创建您的专业简历",
+      "newCv": "新建简历",
+      "help": {
+        "title": "建议"
+      },
+      "steps": {
+        "start": "开始",
+        "personal": "个人信息",
+        "experience": "工作经历",
+        "education": "教育背景",
+        "skills": "技能",
+        "languages": "语言",
+        "certifications": "证书",
+        "projects": "项目",
+        "interests": "兴趣爱好",
+        "appearance": "外观",
+        "export": "导出"
+      },
+      "personal": {
+        "title": "职业头衔",
+        "firstName": "名字",
+        "lastName": "姓氏",
+        "age": "年龄",
+        "email": "邮箱",
+        "phone": "手机号码",
+        "address": "地址",
+        "city": "城市",
+        "country": "国家",
+        "driverLicense": "驾照",
+        "maritalStatus": "婚姻状况",
+        "mobility": "工作地点意向",
+        "linkedin": "LinkedIn",
+        "github": "GitHub",
+        "portfolio": "作品集 / 个人网站",
+        "photo": "个人照片",
+        "includePhoto": "包含在简历中",
+        "summary": "个人简介",
+        "placeholders": {
+          "firstName": "Marie",
+          "lastName": "Dupont",
+          "age": "30",
+          "title": "高级全栈开发工程师",
+          "email": "contact@email.com",
+          "phone": "+33 6 12 34 56 78",
+          "address": "12 rue de Paris",
+          "city": "Paris",
+          "country": "France",
+          "linkedin": "linkedin.com/in/marie-dupont",
+          "github": "github.com/marie-dupont",
+          "portfolio": "https://marie-dupont.dev",
+          "summary": "2-3句话概括您的经验和目标…"
+        },
+        "tips": [
+          "名字、姓氏和邮箱为必填项。",
+          "您的职业头衔将显示在您的姓名正下方。",
+          "仅在您的资料是最新的情况下填写LinkedIn / GitHub。",
+          "年龄、驾照和工作地点意向是招聘人员的重要参考信息。"
+        ]
+      },
+      "driverLicense": {
+        "label": "驾照",
+        "options": {
+          "B": "B类（小型汽车）",
+          "A": "A类（摩托车）",
+          "C": "C类（重型货车）",
+          "D": "D类（公共交通）",
+          "BE": "BE类（汽车带拖车）",
+          "none": "无驾照"
+        }
+      },
+      "maritalStatus": {
+        "label": "婚姻状况",
+        "options": {
+          "single": "未婚",
+          "married": "已婚",
+          "divorced": "离异",
+          "widowed": "丧偶",
+          "pacsed": "民事结合"
+        }
+      },
+      "mobility": {
+        "label": "工作地点意向",
+        "options": {
+          "negrepelisse_30": "NEGREPELISSE (82) + 30公里",
+          "montauban_100": "MONTAUBAN (82) + 100公里",
+          "caussade_40": "CAUSSADE (82) + 40公里",
+          "custom": "其他（请注明）"
+        },
+        "placeholder": "请注明您的工作地点意向（例：Toulouse + 50公里，全国...）"
+      },
+      "experience": {
+        "title": "工作经历",
+        "position": "职位",
+        "company": "公司",
+        "location": "地点",
+        "currentlyWorking": "目前仍在职",
+        "startDate": "开始日期",
+        "endDate": "结束日期",
+        "description": "描述",
+        "addButton": "添加工作经历",
+        "tips": [
+          "按时间倒序排列（最新在前）。",
+          "使用动词：开发、管理、优化…",
+          "用数据量化您的成就。",
+          "如果您仍在该公司，勾选「目前在职」。"
+        ]
+      },
+      "education": {
+        "title": "教育背景",
+        "degree": "学位",
+        "school": "院校",
+        "location": "地点",
+        "currentlyStudying": "仍在就读",
+        "startDate": "开始日期",
+        "endDate": "结束日期",
+        "description": "描述",
+        "addButton": "添加教育背景",
+        "tips": [
+          "按时间倒序排列（最新在前）。",
+          "如有优异成绩，请注明。",
+          "对于应届毕业生，教育背景可放在工作经历之前。"
+        ]
+      },
+      "skills": {
+        "title": "技能",
+        "name": "名称",
+        "level": "水平",
+        "levels": {
+          "beginner": "初级",
+          "intermediate": "中级",
+          "advanced": "高级",
+          "expert": "专家"
+        },
+        "addButton": "添加技能",
+        "tips": [
+          "精选8至12项技能。",
+          "混合硬技能和软技能。",
+          "按掌握程度/相关性排序。",
+          "如实填写技能水平。"
+        ]
+      },
+      "languages": {
+        "title": "语言能力",
+        "name": "语言",
+        "level": "水平",
+        "levels": {
+          "native": "母语",
+          "fluent": "流利（C1/C2）",
+          "advanced": "高级（B2）",
+          "intermediate": "中级（B1）",
+          "beginner": "初级（A1/A2）",
+          "notions": "基础"
+        },
+        "addButton": "添加语言"
+      },
+      "certifications": {
+        "title": "证书",
+        "name": "名称",
+        "issuer": "颁发机构",
+        "year": "年份",
+        "addButton": "添加证书"
+      },
+      "projects": {
+        "title": "项目经历",
+        "name": "名称",
+        "description": "描述",
+        "technologies": "技术（逗号分隔）",
+        "link": "链接",
+        "addButton": "添加项目"
+      },
+      "interests": {
+        "title": "兴趣爱好",
+        "name": "兴趣爱好",
+        "description": "可选补充说明",
+        "addButton": "添加",
+        "suggestions": "快速建议",
+        "tips": [
+          "具体说明：'山地越野跑'而非'运动'。",
+          "独特的兴趣爱好可以在面试中引发有趣的交流。",
+          "限制在3-5个兴趣爱好以内。"
+        ]
+      },
+      "appearance": {
+        "title": "简历外观",
+        "primaryColor": "主色调",
+        "font": "字体",
+        "fonts": {
+          "inter": "Inter（现代）",
+          "roboto": "Roboto（中性）",
+          "openSans": "Open Sans（易读）",
+          "merriweather": "Merriweather（经典）",
+          "montserrat": "Montserrat（优雅）"
+        }
+      },
+      "export": {
+        "title": "导出",
+        "ready": "{type}简历已准备好生成",
+        "generate": "生成PDF",
+        "share": "分享",
+        "history": "历史记录",
+        "restart": "重新开始"
+      },
+      "buttons": {
+        "previous": "上一步",
+        "next": "下一步",
+        "locked": "已锁定",
+        "import": "导入",
+        "generate": "生成"
+      },
+      "mode": {
+        "howToProceed": "您希望如何进行？",
+        "chooseOption": "选择一个选项以开始",
+        "create": {
+          "title": "创建简历",
+          "description": "逐步填写各个部分"
+        },
+        "import": {
+          "title": "导入简历",
+          "description": "使用现有文件（PDF、DOCX）",
+          "dragOrClick": "拖拽或点击导入",
+          "maxSize": "PDF、DOC、DOCX — 最大10MB",
+          "ready": "准备导入 — 手动步骤已禁用",
+          "lockedMessage": "以下步骤已锁定，请直接点击导入。"
+        },
+        "format": {
+          "title": "简历格式",
+          "classic": "经典",
+          "classicDesc": "标准，适用于各行业",
+          "fibem": "FIBEM",
+          "fibemDesc": "平台原生格式",
+          "selectRequired": "请选择格式以继续。"
+        }
+      },
+      "navigation": {
+        "history": "历史记录"
+      },
+      "generalTips": [
+        "保持简洁 — 最多2页",
+        "针对每个职位进行调整",
+        "使用行业关键词",
+        "检查拼写",
+        "用数据量化成就",
+        "保持版面整洁"
+      ],
+      "alerts": {
+        "importSuccess": "简历导入成功",
+        "importError": "导入失败",
+        "generationError": "错误：{message}",
+        "defaultError": "发生了错误",
+        "noLink": "简历已生成，但链接不可用。"
+      },
+      "history": {
+        "title": "简历历史记录",
+        "importedCv": "已导入的简历",
+        "cv": "简历",
+        "main": "主要",
+        "modified": "已修改",
+        "searchPlaceholder": "搜索简历…",
+        "noCvFound": "未找到简历",
+        "resetFilters": "重置筛选条件",
+        "close": "关闭",
+        "page": "页",
+        "cvCount": "份简历",
+        "resultCount": "{count}条结果",
+        "types": {
+          "fibem": "FIBEM",
+          "classic": "经典",
+          "imported": "已导入"
+        },
+        "actions": {
+          "preview": "预览",
+          "download": "下载",
+          "downloadFile": "下载文件",
+          "duplicate": "复制",
+          "delete": "删除"
+        },
+        "filters": {
+          "all": "全部"
+        },
+        "pagination": {
+          "previous": "上一页",
+          "next": "下一页"
+        },
+        "deleteDialog": {
+          "title": "删除简历",
+          "message": "此操作不可逆。您确定要删除此简历吗？",
+          "confirm": "删除",
+          "cancel": "取消"
+        }
+      }
+    },
+    "contact": {
+      "hero": {
+        "title": "联系我们",
+        "subtitle": "了解我们合作企业提供的职业机会"
+      },
+      "form": {
+        "title": "给我们发送消息",
+        "subtitle": "我们将在48小时内回复您",
+        "firstName": "姓氏",
+        "firstNamePlaceholder": "您的姓氏",
+        "lastName": "名字",
+        "lastNamePlaceholder": "您的名字",
+        "email": "邮箱",
+        "emailPlaceholder": "your@email.com",
+        "address": "地址",
+        "addressPlaceholder": "例：Vernon",
+        "phone": "手机号码",
+        "phonePlaceholder": "+33 1 23 45 67 89",
+        "subject": "主题",
+        "subjectPlaceholder": "您的消息主题",
+        "message": "消息内容",
+        "messagePlaceholder": "描述您的需求或向我们提问...",
+        "locationNote": "您的当前位置将自动附加到您的消息中，以便提供更好的服务。",
+        "sending": "正在发送...",
+        "submit": "发送消息",
+        "success": {
+          "title": "消息已发送！",
+          "message": "感谢您的消息，我们的团队将尽快与您联系。",
+          "button": "再发一条消息"
+        }
+      },
+      "info": {
+        "title1": "让我们谈谈您的",
+        "title2": "项目",
+        "subtitle": "我们的专家团队随时为您提供支持。",
+        "email": {
+          "title": "邮箱",
+          "details": "24小时内回复"
+        },
+        "phone": {
+          "title": "电话",
+          "details": "周一至周五：9:00-18:00"
+        },
+        "address": {
+          "title": "地址",
+          "details": "75 001"
+        },
+        "hours": {
+          "title": "营业时间",
+          "days": "周一至周五",
+          "time": "9:00 - 18:00"
+        }
+      },
+      "offices": {
+        "title": "我们的办公室",
+        "france": {
+          "name": "FIBEM 法国",
+          "address": "51 Rue du Grévarin – 27200 Vernon"
+        },
+        "senegal": {
+          "name": "FIBEM 塞内加尔",
+          "address": "Rue 7 Corniche x 6, Médina, Dakar"
+        }
+      },
+      "location": {
+        "title": "您的位置",
+        "description": "为提供个性化服务，您的位置将自动包含在您的消息中。",
+        "detected": "已检测到当前位置",
+        "included": "（包含在您的消息中）",
+        "consent": "仅在您同意的情况下共享位置"
+      }
+    },
+    "invoice": {
+      "title": "发票生成器",
+      "subtitle": "通过几个引导步骤创建专业发票",
+      "fileName": "发票",
+      "emailMessage": "请查收附件发票 {number}",
+      "steps": {
+        "invoice": "发票",
+        "company": "开票方",
+        "client": "客户",
+        "items": "明细",
+        "payment": "付款",
+        "notes": "备注",
+        "preview": "预览"
+      },
+      "progress": {
+        "step": "步骤"
+      },
+      "help": {
+        "title": "建议"
+      },
+      "status": {
+        "draft": "草稿",
+        "sent": "已发送",
+        "paid": "已付款",
+        "overdue": "逾期",
+        "genere": "已生成",
+        "envoye": "已发送",
+        "paye": "已付款",
+        "en_retard": "逾期",
+        "brouillon": "草稿"
+      },
+      "paymentMethods": {
+        "bankTransfer": "银行转账",
+        "creditCard": "银行卡",
+        "cash": "现金",
+        "paypal": "PayPal",
+        "check": "支票",
+        "stripe": "Stripe",
+        "directDebit": "直接扣款",
+        "bitcoin": "Bitcoin",
+        "applePay": "Apple Pay",
+        "googlePay": "Google Pay",
+        "wireTransfer": "国际电汇",
+        "other": "其他"
+      },
+      "paymentTerms": {
+        "immediate": "即时付款",
+        "days7": "7天",
+        "days15": "15天",
+        "days30": "30天",
+        "days45": "45天",
+        "days60": "60天",
+        "days90": "90天"
+      },
+      "invoice": {
+        "title": "发票信息",
+        "subtitle": "填写您的发票基本信息。",
+        "quoteSelection": "选择报价单",
+        "selectQuote": "选择报价单",
+        "quoteNumber": "报价单",
+        "client": "客户",
+        "amount": "金额",
+        "purchaseOrder": "采购订单",
+        "purchaseOrderPlaceholder": "PO-2026-001",
+        "invoiceDate": "发票日期",
+        "dueDate": "到期日期",
+        "paymentTerms": "付款条件",
+        "paymentMethod": "付款方式",
+        "selectPaymentMethod": "请选择",
+        "tips": [
+          "发票编号自动生成，您可以修改。",
+          "到期日期根据付款条件自动计算。",
+          "采购订单（PO）为可选项，但建议企业填写。"
+        ]
+      },
+      "company": {
+        "title": "您的公司",
+        "subtitle": "这些信息将作为开票方显示在发票上。",
+        "name": "公司名称",
+        "namePlaceholder": "您的公司有限公司",
+        "address": "地址",
+        "addressPlaceholder": "123 Avenue de la République",
+        "city": "城市",
+        "cityPlaceholder": "杜阿拉",
+        "postalCode": "邮政编码 / 邮政信箱",
+        "postalCodePlaceholder": "BP 1234",
+        "phone": "电话",
+        "phonePlaceholder": "+237 6XX XX XX XX",
+        "email": "邮箱",
+        "emailPlaceholder": "contact@yourcompany.com",
+        "taxId": "税务识别号",
+        "taxIdPlaceholder": "CM12345678901",
+        "logo": "公司标志",
+        "logoAlt": "公司标志",
+        "tips": [
+          "公司名称为必填项。",
+          "如果您是增值税纳税人，请添加税务识别号。"
+        ]
+      },
+      "client": {
+        "title": "客户信息",
+        "subtitle": "这些信息将作为收款方显示在发票上。",
+        "name": "客户姓名",
+        "namePlaceholder": "张三",
+        "company": "客户公司",
+        "companyPlaceholder": "客户企业有限公司",
+        "email": "邮箱",
+        "emailPlaceholder": "client@email.com",
+        "phone": "电话",
+        "phonePlaceholder": "+237 6XX XX XX XX",
+        "address": "地址",
+        "addressPlaceholder": "456 Main Boulevard",
+        "city": "城市",
+        "cityPlaceholder": "雅温得",
+        "postalCode": "邮政编码 / 邮政信箱",
+        "postalCodePlaceholder": "BP 456",
+        "taxId": "税务识别号",
+        "taxIdPlaceholder": "CM98765432101",
+        "tips": [
+          "客户姓名为必填项。",
+          "填写邮箱以便直接从应用程序发送发票。"
+        ]
+      },
+      "items": {
+        "title": "开票明细",
+        "subtitle": "添加需要开票的产品或服务。",
+        "count": "项",
+        "line": "行",
+        "description": "描述",
+        "descriptionPlaceholder": "例：Web应用程序开发",
+        "quantity": "数量",
+        "unitPrice": "单价",
+        "discount": "折扣 %",
+        "taxRate": "增值税 %",
+        "total": "合计",
+        "addButton": "添加明细行",
+        "summary": "小计",
+        "subtotal": "不含税小计",
+        "totalDiscount": "总折扣",
+        "totalTax": "增值税",
+        "grandTotal": "含税总计",
+        "duplicate": "复制",
+        "delete": "删除",
+        "tips": [
+          "每行明细必须有描述且单价大于0。",
+          "折扣为百分比（例：10表示10%）。",
+          "每行合计自动计算。"
+        ]
+      },
+      "payment": {
+        "title": "银行账户信息",
+        "subtitle": "这些信息方便您的客户付款。",
+        "bankName": "银行名称",
+        "bankNamePlaceholder": "Banque Atlantique, SCB Cameroun…",
+        "bankAccount": "账号 / IBAN",
+        "bankAccountPlaceholder": "CM21 1000 1234 5678 9012 3456 789",
+        "tips": [
+          "银行账户信息为可选项，但建议填写以便转账。",
+          "对于喀麦隆，请填写您的BEAC账号或银行对账单参考。"
+        ]
+      },
+      "notes": {
+        "title": "备注及条款",
+        "subtitle": "添加个性化消息或您的一般销售条款。",
+        "message": "消息 / 备注",
+        "messagePlaceholder": "感谢您的信任，如有任何问题请随时联系我们。",
+        "terms": "一般条款",
+        "termsPlaceholder": "收到发票后付款。到期日后未付款将按每月1.5%收取滞纳金。"
+      },
+      "preview": {
+        "title": "发票预览",
+        "subtitle": "生成前请检查您的发票。",
+        "downloadPdf": "下载PDF",
+        "downloadExcel": "下载Excel",
+        "newInvoice": "新建发票"
+      },
+      "navigation": {
+        "previous": "上一步",
+        "next": "下一步",
+        "history": "历史记录",
+        "generate": "生成",
+        "generating": "正在生成…"
+      },
+      "tips": {
+        "title": "高效发票建议",
+        "list": [
+          "检查发票编号避免重复",
+          "明确说明付款期限",
+          "提供银行账户信息方便付款",
+          "在备注中添加感谢语",
+          "生成PDF前检查金额",
+          "保留每张已发送发票的副本"
+        ]
+      },
+      "quoteDialog": {
+        "title": "选择要开票的报价单",
+        "description": "选择您希望转换为发票的报价单版本"
+      },
+      "errors": {
+        "idNotFound": "找不到发票ID",
+        "generationError": "生成发票时出错",
+        "generateFirst": "请先生成发票",
+        "clientEmailRequired": "请填写客户邮箱"
+      },
+      "alerts": {
+        "sendSuccess": "发票发送成功",
+        "sendError": "发送发票时出错"
+      },
+      "history": {
+        "title": "发票历史记录",
+        "ref_quote": "参考。",
+        "modified": "已修改",
+        "due_date": "到期日",
+        "preview": "预览 / 重用",
+        "download_pdf": "下载PDF",
+        "download_excel": "下载Excel文件",
+        "duplicate": "复制",
+        "delete": "删除",
+        "delete_confirm_title": "删除发票",
+        "delete_confirm_message": "此操作不可逆。您确定要删除此发票吗？",
+        "delete_confirm_button": "删除",
+        "cancel": "取消",
+        "search_placeholder": "发票号、客户…",
+        "no_invoices": "未找到发票",
+        "reset_filters": "重置筛选条件",
+        "invoices": "张发票",
+        "page": "页",
+        "result": "条结果",
+        "close": "关闭",
+        "filters": {
+          "all": "全部",
+          "generated": "已生成",
+          "sent": "已发送",
+          "paid": "已付款",
+          "overdue": "逾期",
+          "draft": "草稿"
+        },
+        "stats": {
+          "paid": "已付款",
+          "sent": "已发送",
+          "overdue": "逾期"
+        }
+      }
+    },
+    "quote": {
+      "steps": {
+        "client": "客户",
+        "emetteur": "开票方",
+        "project": "项目",
+        "items": "明细",
+        "payment": "付款",
+        "notes": "备注",
+        "preview": "预览"
+      },
+      "help_notice": {
+        "tips_title": "建议",
+        "info_title": "注意事项"
+      },
+      "progress": {
+        "step_label": "步骤",
+        "of": "共"
+      },
+      "client_step": {
+        "title": "客户信息",
+        "subtitle": "填写接收报价单的客户联系方式。",
+        "tips": [
+          "名字、姓氏、邮箱和电话为必填项。",
+          "公司名称为可选项，但建议B2B报价填写。",
+          "报价单类型用于对工程性质进行分类。"
+        ],
+        "first_name": "名字",
+        "last_name": "姓氏",
+        "email": "邮箱",
+        "phone": "电话",
+        "company": "客户公司",
+        "quote_type": "报价单类型",
+        "address": "地址",
+        "city": "城市",
+        "postal_code": "邮政编码 / 邮政信箱",
+        "first_name_placeholder": "Samuel",
+        "last_name_placeholder": "Dupont",
+        "email_placeholder": "contact@email.com",
+        "phone_placeholder": "+237 6XX XX XX XX",
+        "company_placeholder": "客户公司名称",
+        "address_placeholder": "123 République Street",
+        "city_placeholder": "杜阿拉",
+        "postal_code_placeholder": "BP 456",
+        "select_quote_type": "请选择类型"
+      },
+      "emitter_step": {
+        "title": "您的公司（开票方）",
+        "subtitle": "这些信息将显示在报价单的服务提供方栏目中。",
+        "tips": [
+          "公司名称为必填项。",
+          "标志将显示在PDF报价单的左上角。",
+          "SIRET、APE和增值税号将显示在供应商栏目中。"
+        ],
+        "company_name": "公司名称",
+        "company_contact": "联系人",
+        "company_address": "地址",
+        "company_city": "城市（含邮政编码）",
+        "company_phone": "座机电话",
+        "company_port": "手机号码",
+        "company_email": "邮箱",
+        "company_siret": "SIRET",
+        "company_ape": "APE代码",
+        "company_tva": "欧盟内部增值税号",
+        "contact_be": "工程部联系人（内部参考）",
+        "company_logo": "公司标志",
+        "company_name_placeholder": "Sté SEN FIBEM France",
+        "company_contact_placeholder": "Mr GOMIS",
+        "company_address_placeholder": "51 Rue du Grevarin",
+        "company_city_placeholder": "27200 Vernon",
+        "company_phone_placeholder": "+33 1 XX XX XX XX",
+        "company_port_placeholder": "07.52.49.75.46",
+        "company_email_placeholder": "contact@yourcompany.com",
+        "company_siret_placeholder": "445 374 937 00032",
+        "company_ape_placeholder": "4120B Building & Industrial Works",
+        "company_tva_placeholder": "FR17378128441",
+        "contact_be_placeholder": "工程部参考编号",
+        "logo_preview": "标志预览"
+      },
+      "project_step": {
+        "title": "项目详情",
+        "subtitle": "描述此报价单对应的项目内容。",
+        "tips": [
+          "项目名称为必填项。",
+          "清晰的描述让客户确信您理解其需求。",
+          "有效期自动设置为30天，但可以修改。"
+        ],
+        "project_name": "项目名称",
+        "category": "类别",
+        "project_description": "项目描述",
+        "start_date": "预计开始日期",
+        "deadline": "项目截止日期",
+        "budget": "预计预算",
+        "valid_until": "报价单有效期至",
+        "project_name_placeholder": "例：Makepe住宅建设",
+        "project_description_placeholder": "详细描述项目内容...",
+        "select_category": "请选择类别",
+        "categories": {
+          "development": "Web开发",
+          "design": "平面设计",
+          "marketing": "数字营销",
+          "consulting": "咨询与培训",
+          "delivery": "服务交付",
+          "construction": "建筑",
+          "renovation": "装修",
+          "other": "其他"
+        }
+      },
+      "items_step": {
+        "title": "报价明细",
+        "subtitle": "列出需要报价的服务或物资。",
+        "items_count": "项",
+        "tips": [
+          "每项明细必须有描述和单价。",
+          "人工时间：劳动时长（例：1.0h）。单位：套、时、平方米等。",
+          "行折扣为百分比。",
+          "使用↑↓箭头对明细进行排序。"
+        ],
+        "article": "项目",
+        "description": "描述",
+        "description_placeholder": "例：供应和安装瓷砖",
+        "time_mo": "人工时间",
+        "time_mo_placeholder": "1.0h",
+        "unit": "单位",
+        "quantity": "数量",
+        "unit_price": "单价",
+        "discount": "折扣 %",
+        "tax": "增值税 %",
+        "total_ht": "不含税合计",
+        "add_item": "添加项目",
+        "summary": "项目汇总",
+        "subtotal_ht": "不含税小计",
+        "total_before_discount": "整体折扣前总计",
+        "duplicate": "复制",
+        "delete": "删除",
+        "units": {
+          "ens": "套",
+          "h": "时",
+          "j": "天",
+          "m2": "平方米",
+          "m3": "立方米",
+          "ml": "毫升",
+          "u": "个",
+          "kg": "千克",
+          "t": "吨",
+          "forfait": "包干价"
+        }
+      },
+      "payment_step": {
+        "title": "付款设置",
+        "subtitle": "配置整体增值税、折扣和预付款。",
+        "tips": [
+          "喀麦隆增值税率为19.25%（官方税率）。法国为20%。",
+          "整体折扣适用于所有项目的小计金额。",
+          "预付款可以是固定金额或含税总价的百分比。"
+        ],
+        "global_tax": "整体增值税（%）",
+        "global_discount": "整体折扣（%）",
+        "deposit": "预付款",
+        "percentage": "%",
+        "fixed": "固定金额",
+        "financial_summary": "财务汇总",
+        "subtotal_ht": "不含税小计",
+        "discount": "折扣",
+        "total_ht": "不含税总计",
+        "tax_amount": "增值税",
+        "total_ttc": "含税总计",
+        "deposit_amount": "预付款金额",
+        "remaining": "待付余额"
+      },
+      "notes_step": {
+        "title": "备注及条款",
+        "subtitle": "此文本将显示在报价单的「付款条件」部分。",
+        "tips": [
+          "附加备注将显示在「付款条件」下。",
+          "请注明预付款条件（例：开始时30%，结束时70%）。"
+        ],
+        "payment_conditions": "付款条件 / 备注",
+        "payment_conditions_placeholder": "- 开始后1周支付30%\n- 第1个月结束时支付70%",
+        "general_conditions": "一般条款",
+        "general_conditions_placeholder": "付款条件、有效期、滞纳金..."
+      },
+      "preview_step": {
+        "title": "报价单预览",
+        "subtitle": "生成前请检查您的报价单。",
+        "modify": "修改",
+        "print": "打印",
+        "send": "发送",
+        "download_excel": "下载Excel",
+        "download_pdf": "下载PDF",
+        "quote_preview": "报价单预览",
+        "provider": "服务提供方",
+        "client": "客户",
+        "project": "项目",
+        "valid_until": "有效期至",
+        "start_date": "开始",
+        "table": {
+          "time_mo": "人工时间",
+          "description": "描述",
+          "unit": "单位",
+          "unit_price_ht": "不含税单价",
+          "quantity": "数量",
+          "amount_ht": "不含税金额"
+        },
+        "total_ht": "不含税总金额",
+        "total_ttc": "含税总金额",
+        "payment_conditions_title": "付款条件"
+      },
+      "buttons": {
+        "previous": "上一步",
+        "next": "下一步",
+        "generate_quote": "生成报价单",
+        "generating": "正在生成…",
+        "new_quote": "新建报价单",
+        "history": "报价单历史记录"
+      },
+      "tips_section": {
+        "title": "高效报价单建议",
+        "tips": [
+          "详细列明每个项目以避免纠纷",
+          "明确说明报价单有效期（建议30天）",
+          "注明交货期和交付条件",
+          "签约时要求预付款以确保项目安全",
+          "发送给客户前检查金额",
+          "保留每份已接受报价单的签字副本"
+        ]
+      },
+      "status": {
+        "draft": "草稿",
+        "sent": "已发送",
+        "accepted": "已接受",
+        "rejected": "已拒绝",
+        "expired": "已过期"
+      },
+      "alerts": {
+        "error_generating": "生成报价单时出错",
+        "generate_first": "请先生成报价单",
+        "email_required": "请填写客户邮箱",
+        "email_sent": "报价单发送成功",
+        "email_error": "发送报价单时出错"
+      },
+      "quote_types": {
+        "0": "纯劳务施工",
+        "1": "供料及施工",
+        "2": "装修",
+        "3": "建筑",
+        "4": "室内改造",
+        "5": "安装与组装",
+        "6": "研究与图纸绘制",
+        "7": "规格计算",
+        "8": "验证计算",
+        "9": "技术协助",
+        "10": "其他"
+      },
+      "history": {
+        "title": "报价单历史记录",
+        "modified": "已修改",
+        "preview": "预览 / 重用",
+        "download_pdf": "下载PDF",
+        "download_excel": "下载Excel文件",
+        "duplicate": "复制",
+        "delete": "删除",
+        "delete_confirm_title": "删除报价单",
+        "delete_confirm_message": "此操作不可逆。您确定要删除此报价单吗？",
+        "delete_confirm_button": "删除",
+        "cancel": "取消",
+        "search_placeholder": "报价单号、客户、项目…",
+        "no_quotes": "未找到报价单",
+        "reset_filters": "重置筛选条件",
+        "quotes": "份报价单",
+        "page": "页",
+        "result": "条结果",
+        "close": "关闭",
+        "filters": {
+          "all": "全部",
+          "draft": "草稿",
+          "sent": "已发送",
+          "accepted": "已接受",
+          "rejected": "已拒绝",
+          "expired": "已过期"
+        },
+        "stats": {
+          "accepted": "已接受",
+          "sent": "已发送",
+          "rejected": "已拒绝",
+          "expired": "已过期",
+          "acceptance_rate": "接受率"
+        }
+      }
+    },
+    "credit_note": {
+      "title": "贷项通知单生成器",
+      "subtitle": "创建与现有发票关联的专业贷项通知单",
+      "steps": {
+        "identification": "贷项通知单",
+        "emetteur": "开票方",
+        "client": "客户",
+        "items": "明细",
+        "notes": "备注",
+        "preview": "预览"
+      },
+      "progress": {
+        "step": "步骤"
+      },
+      "help_notice": {
+        "tips_title": "建议",
+        "info_title": "注意事项"
+      },
+      "identification_step": {
+        "title": "贷项通知单标识",
+        "subtitle": "编号、日期、原始发票、原因和退款方式。",
+        "tips": [
+          "贷项通知单编号为必填项且必须唯一。",
+          "务必注明该贷项通知单对应的原始发票。",
+          "原因和退款方式将显示在PDF文件中。"
+        ],
+        "credit_note_date": "贷项通知单日期",
+        "original_invoice_number": "原始发票号",
+        "original_invoice_placeholder": "FA-202601-0042",
+        "original_invoice_date": "原始发票日期",
+        "credit_reason": "贷项通知单原因",
+        "refund_method": "退款方式"
+      },
+      "emitter_step": {
+        "title": "您的公司（开票方）",
+        "subtitle": "这些信息将显示在贷项通知单的服务提供方栏目中。",
+        "tips": [
+          "公司名称为必填项。",
+          "标志将显示在PDF的左上角。",
+          "SIRET、APE和增值税号将显示在开票方栏目中。"
+        ],
+        "company_name": "公司名称",
+        "company_name_placeholder": "Sté SEN FIBEM France",
+        "company_address": "地址",
+        "company_address_placeholder": "51 Rue du Grevarin",
+        "company_city": "城市（含邮政编码）",
+        "company_city_placeholder": "27200 Vernon",
+        "company_phone": "座机电话",
+        "company_phone_placeholder": "+33 1 XX XX XX XX",
+        "company_port": "手机号码",
+        "company_port_placeholder": "07.52.49.75.46",
+        "company_email": "邮箱",
+        "company_email_placeholder": "contact@yourcompany.com",
+        "company_siret": "SIRET",
+        "company_siret_placeholder": "445 374 937 00032",
+        "company_ape": "APE代码",
+        "company_ape_placeholder": "4120B Building & Industrial Works",
+        "company_tva": "欧盟内部增值税号",
+        "company_tva_placeholder": "FR17378128441",
+        "company_logo": "公司标志",
+        "logo_preview": "标志预览"
+      },
+      "client_step": {
+        "title": "客户信息",
+        "subtitle": "贷项通知单的收件方。",
+        "tips": [
+          "填写邮箱以便直接从应用程序发送贷项通知单。",
+          "客户增值税号将显示在汇总表的欧盟栏目中。"
+        ],
+        "client_name": "客户姓名",
+        "client_name_placeholder": "张三",
+        "client_company": "客户公司",
+        "client_company_placeholder": "客户有限公司",
+        "client_email": "邮箱",
+        "client_email_placeholder": "client@email.com",
+        "client_phone": "电话",
+        "client_phone_placeholder": "+237 6XX XX XX XX",
+        "client_address": "地址",
+        "client_address_placeholder": "456 Main Boulevard",
+        "client_city": "城市",
+        "client_city_placeholder": "雅温得",
+        "client_postal_code": "邮政编码 / 邮政信箱",
+        "client_postal_code_placeholder": "BP 456",
+        "client_tax_id": "增值税 / 税务识别号",
+        "client_tax_id_placeholder": "FR12345678901"
+      },
+      "items_step": {
+        "title": "贷项通知单明细行",
+        "subtitle": "添加需要抵扣的商品或服务。",
+        "lines_count": "行",
+        "line": "行",
+        "tips": [
+          "每行必须有描述且单价大于0。",
+          "金额代表抵扣额 — 在PDF中将以橙色显示。",
+          "折扣为百分比（例：10表示10%）。"
+        ],
+        "description": "描述",
+        "description_placeholder": "例：退货 / 调整",
+        "quantity": "数量",
+        "unit_price": "单价",
+        "discount": "折扣 %",
+        "tax": "增值税 %",
+        "total_ht": "不含税合计",
+        "add_item": "添加明细行",
+        "summary": "汇总",
+        "estimated_tax": "预估增值税",
+        "net_refund": "含税净退款金额",
+        "duplicate": "复制",
+        "delete": "删除"
+      },
+      "notes_step": {
+        "title": "备注及参考",
+        "subtitle": "将显示在贷项通知单上的补充信息。",
+        "notes": "参考 / 备注",
+        "notes_placeholder": "文件参考编号、详细原因、退货单号...",
+        "terms_and_conditions": "条款与条件",
+        "terms_placeholder": "退款条件、处理时限..."
+      },
+      "preview_step": {
+        "title": "贷项通知单预览",
+        "subtitle": "生成PDF前请先检查。",
+        "download_excel": "下载Excel",
+        "download_pdf": "下载PDF",
+        "credit_note_title": "贷项通知单",
+        "number": "编号",
+        "invoice_ref": "发票参考",
+        "reason": "原因",
+        "refund": "退款",
+        "emitter": "开票方",
+        "client": "客户",
+        "portable": "手机",
+        "total_ht": "不含税总计",
+        "estimated_tax": "预估增值税",
+        "net_refund": "含税净退款金额",
+        "references": "参考",
+        "table": {
+          "description": "描述",
+          "quantity": "数量",
+          "unit_price_ht": "不含税单价",
+          "discount": "折扣",
+          "tax": "增值税 %",
+          "amount_ht": "不含税金额"
+        }
+      },
+      "status": {
+        "draft": "草稿",
+        "issued": "已开具",
+        "processed": "已处理",
+        "cancelled": "已取消"
+      },
+      "credit_reasons": {
+        "product_return": "退货",
+        "defective_product": "产品缺陷",
+        "billing_error": "开票错误",
+        "discount": "商业折扣",
+        "price_adjustment": "价格调整",
+        "cancelled_order": "取消订单",
+        "goodwill": "商业优惠",
+        "other": "其他"
+      },
+      "refund_methods": {
+        "bank_transfer": "银行转账",
+        "original_payment": "原付款方式",
+        "store_credit": "店内积分",
+        "cash": "现金",
+        "check": "支票"
+      },
+      "buttons": {
+        "history": "历史记录",
+        "previous": "上一步",
+        "next": "下一步",
+        "generate": "生成",
+        "generating": "正在生成…",
+        "new_credit_note": "新建贷项通知单"
+      },
+      "tips_section": {
+        "title": "贷项通知单最佳实践",
+        "tips": [
+          "始终引用原始发票以确保可追溯性",
+          "退款确认后应立即开具贷项通知单",
+          "在客户档案中保留签字副本",
+          "核实贷项通知单金额与原始发票一致"
+        ]
+      },
+      "alerts": {
+        "error_generating": "生成贷项通知单时出错",
+        "generate_first": "请先生成贷项通知单",
+        "email_required": "请填写客户邮箱",
+        "email_sent": "贷项通知单发送成功",
+        "email_error": "发送贷项通知单时出错"
+      },
+      "history": {
+        "title": "贷项通知单历史记录",
+        "ref_invoice": "参考。",
+        "modified": "已修改",
+        "preview": "预览 / 重用",
+        "download_pdf": "下载PDF",
+        "download_excel": "下载Excel文件",
+        "duplicate": "复制",
+        "delete": "删除",
+        "delete_confirm_title": "删除贷项通知单",
+        "delete_confirm_message": "此操作不可逆。您确定要删除此贷项通知单吗？",
+        "delete_confirm_button": "删除",
+        "cancel": "取消",
+        "search_placeholder": "贷项通知单号、客户、发票…",
+        "no_credit_notes": "未找到贷项通知单",
+        "reset_filters": "重置筛选条件",
+        "credit_notes": "份贷项通知单",
+        "page": "页",
+        "result": "条结果",
+        "close": "关闭",
+        "all_reasons": "所有原因",
+        "filters": {
+          "all": "全部",
+          "draft": "草稿",
+          "issued": "已开具",
+          "processed": "已处理",
+          "cancelled": "已取消"
+        },
+        "stats": {
+          "issued": "已开具",
+          "processed": "已处理",
+          "cancelled": "已取消"
+        }
+      }
+    },
+    "mainMenu": {
+      "home": {
+        "label": "首页",
+        "about": "关于我们",
+        "us": "我们是谁？",
+        "blog": "博客"
+      },
+      "service": {
+        "label": "服务",
+        "prestation": "查找餐食",
+        "formulaireCV": "FIBEM 简历表",
+        "formulaireDevis": "报价单",
+        "formulaireFacture": "发票",
+        "formulaireAvoirs": "贷项通知单"
+      },
+      "emploi": {
+        "label": "招聘",
+        "espaceCandidat": "求职者专区",
+        "espaceRecruteur": "招聘方专区",
+        "espaceAbonnement": "订阅专区"
+      },
+      "foods": "查餐食",
+      "job": "查工作",
+      "cv": "简历",
+      "contact": "联系",
+      "facture": "发票"
+    },
+    "authMenu": {
+      "login": "登录",
+      "register": "注册"
+    },
+    "userMenu": {
+      "shoppingCart": "购物车",
+      "dashboard": "仪表盘",
+      "profile": "个人资料"
+    },
+    "search_placeholder": "搜索"
+  }

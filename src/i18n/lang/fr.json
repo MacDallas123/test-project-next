@@ -7,6 +7,7 @@
   },
   "login": {
     "title": "Connexion",
+    "subtitle": "Accédez à votre espace professionnel",
     "description": "Utilisez votre email ou numéro de téléphone",
     "identifier": {
       "required": "L'email ou le numéro de téléphone est requis",
@@ -15,7 +16,8 @@
       "tooLong": "Le mot de passe est trop long"
     },
     "password": {
-      "tooShort": "Le mot de passe doit contenir au moins 6 caractères"
+      "tooShort": "Le mot de passe doit contenir au moins 6 caractères",
+      "placeholder": "Votre mot de passe"
     },
     "forgotPassword": "Mot de passe oublié ?",
     "rememberMe": "Se souvenir de moi",
@@ -266,8 +268,13 @@
     "toolsDesc": "Gérez votre établissement efficacement avec notre suite d'outils professionnels gratuits",
     "contract": "Contrat",
     "salary": "Salaire",
-    "experience": "Expérience",
-    "posted": "Posté",
+    "experience": {
+      "years": "{years} ans",
+      "beginner": "Débutant accepté"
+    },
+    "posted": {
+      "daysAgo": "Il y a {days} jours"
+    },
     "tags": {
       "popular": "Populaire",
       "spicy": "Épicé",
@@ -319,13 +326,6 @@
       "cleaning": "Nettoyage",
       "management": "Management",
       "pastry": "Pâtisserie"
-    },
-    "experience": {
-      "years": "{years} ans",
-      "beginner": "Débutant accepté"
-    },
-    "posted": {
-      "daysAgo": "Il y a {days} jours"
     },
     "meals": {
       "yassa": {
@@ -485,14 +485,14 @@
   },
   "footer": {
     "logoAlt": "LOGO FIBEM",
-    "contacts": "Contacts",
+    "contacts": "Nos Bureaux",
     "newsletter": "Newsletter",
-    "emailPlaceholder": "Votre email",
+    "emailPlaceholder": "Votre adresse email",
     "subscribed": "Merci pour votre inscription !",
-    "newsletterDesc": "Recevez nos actualités et offres spéciales",
+    "newsletterDesc": "Recevez nos actualités et offres spéciales directement dans votre boîte mail.",
     "rights": "Tous droits réservés.",
-    "privacy": "Politique de confidentialité",
-    "terms": "Conditions d'utilisation",
+    "privacy": "Confidentialité",
+    "terms": "CGU",
     "cookies": "Cookies",
     "sitemap": "Plan du site",
     "contact": "Contact",
@@ -511,11 +511,1189 @@
       "ninea": "N.I.N.E.A.: 30 84 31 62 U2 — NAF: 7112B Engineering"
     },
     "social": {
-      "followUs": "Suivez-nous :",
+      "followUs": "Suivez-nous",
       "facebook": "Facebook",
       "twitter": "Twitter",
       "instagram": "Instagram",
       "youtube": "YouTube"
+    },
+    "tagline": "Votre partenaire RH, restauration & services professionnels en France, Sénégal et Cameroun.",
+    "send": "Envoyer",
+    "gdpr": "Données protégées — conforme RGPD",
+    "unsubscribe": "Désabonnement en un clic"
+  },
+  "cv": {
+    "title": "Générateur de CV",
+    "subtitle": "Créez votre CV professionnel en quelques étapes guidées",
+    "newCv": "Nouveau CV",
+    "help": {
+      "title": "Conseils"
+    },
+    "steps": {
+      "start": "Démarrage",
+      "personal": "Infos personnelles",
+      "experience": "Expérience",
+      "education": "Formation",
+      "skills": "Compétences",
+      "languages": "Langues",
+      "certifications": "Certifications",
+      "projects": "Projets",
+      "interests": "Centres d'intérêt",
+      "appearance": "Apparence",
+      "export": "Export"
+    },
+    "personal": {
+      "title": "Titre professionnel",
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "age": "Âge",
+      "email": "Email",
+      "phone": "Téléphone",
+      "address": "Adresse",
+      "city": "Ville",
+      "country": "Pays",
+      "driverLicense": "Permis de conduire",
+      "maritalStatus": "Situation matrimoniale",
+      "mobility": "Mobilité",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "portfolio": "Portfolio / Site web",
+      "photo": "Photo de profil",
+      "includePhoto": "Inclure au CV",
+      "summary": "Profil professionnel",
+      "placeholders": {
+        "firstName": "Marie",
+        "lastName": "Dupont",
+        "age": "30",
+        "title": "Développeur Full Stack Senior",
+        "email": "contact@email.com",
+        "phone": "+33 6 12 34 56 78",
+        "address": "12 rue de Paris",
+        "city": "Paris",
+        "country": "France",
+        "linkedin": "linkedin.com/in/marie-dupont",
+        "github": "github.com/marie-dupont",
+        "portfolio": "https://marie-dupont.dev",
+        "summary": "2-3 phrases résumant votre expérience et vos objectifs…"
+      },
+      "tips": [
+        "Prénom, nom et email sont obligatoires.",
+        "Votre titre professionnel apparaîtra juste sous votre nom.",
+        "Renseignez LinkedIn / GitHub uniquement si vos profils sont à jour.",
+        "L'âge, le permis et la mobilité sont des informations importantes pour les recruteurs."
+      ]
+    },
+    "driverLicense": {
+      "label": "Permis de conduire",
+      "options": {
+        "B": "Permis B (Voiture)",
+        "A": "Permis A (Moto)",
+        "C": "Permis C (Poids lourd)",
+        "D": "Permis D (Transport en commun)",
+        "BE": "Permis BE (Voiture avec remorque)",
+        "none": "Sans permis"
+      }
+    },
+    "maritalStatus": {
+      "label": "Situation matrimoniale",
+      "options": {
+        "single": "Célibataire",
+        "married": "Marié(e)",
+        "divorced": "Divorcé(e)",
+        "widowed": "Veuf/Veuve",
+        "pacsed": "Pacsé(e)"
+      }
+    },
+    "mobility": {
+      "label": "Mobilité",
+      "options": {
+        "negrepelisse_30": "NEGREPELISSE (82) + 30 km",
+        "montauban_100": "MONTAUBAN (82) + 100 km",
+        "caussade_40": "CAUSSADE (82) + 40 km",
+        "custom": "Autre (à préciser)"
+      },
+      "placeholder": "Précisez votre mobilité (ex: Toulouse + 50 km, Nationale...)"
+    },
+    "experience": {
+      "title": "Expérience professionnelle",
+      "position": "Poste",
+      "company": "Entreprise",
+      "location": "Lieu",
+      "currentlyWorking": "Je travaille toujours ici",
+      "startDate": "Date de début",
+      "endDate": "Date de fin",
+      "description": "Description",
+      "addButton": "Ajouter une expérience",
+      "tips": [
+        "De la plus récente à la plus ancienne.",
+        "Verbes d'action : développé, géré, optimisé…",
+        "Chiffrez vos réalisations.",
+        "Cochez « En poste » si vous êtes encore dans l'entreprise."
+      ]
+    },
+    "education": {
+      "title": "Formation",
+      "degree": "Diplôme",
+      "school": "Établissement",
+      "location": "Lieu",
+      "currentlyStudying": "Encore en formation",
+      "startDate": "Date de début",
+      "endDate": "Date de fin",
+      "description": "Description",
+      "addButton": "Ajouter une formation",
+      "tips": [
+        "Du plus récent au plus ancien.",
+        "Indiquez la mention si honorable.",
+        "Pour jeunes diplômés, la formation peut précéder l'expérience."
+      ]
+    },
+    "skills": {
+      "title": "Compétences",
+      "name": "Nom",
+      "level": "Niveau",
+      "levels": {
+        "beginner": "Débutant",
+        "intermediate": "Intermédiaire",
+        "advanced": "Avancé",
+        "expert": "Expert"
+      },
+      "addButton": "Ajouter une compétence",
+      "tips": [
+        "8 à 12 compétences bien choisies.",
+        "Mixez hard skills et soft skills.",
+        "Classez par maîtrise / pertinence.",
+        "Soyez honnête sur les niveaux."
+      ]
+    },
+    "languages": {
+      "title": "Langues",
+      "name": "Langue",
+      "level": "Niveau",
+      "levels": {
+        "native": "Langue maternelle",
+        "fluent": "Courant (C1/C2)",
+        "advanced": "Avancé (B2)",
+        "intermediate": "Intermédiaire (B1)",
+        "beginner": "Débutant (A1/A2)",
+        "notions": "Notions"
+      },
+      "addButton": "Ajouter une langue"
+    },
+    "certifications": {
+      "title": "Certifications",
+      "name": "Nom",
+      "issuer": "Organisme",
+      "year": "Année",
+      "addButton": "Ajouter une certification"
+    },
+    "projects": {
+      "title": "Projets",
+      "name": "Nom",
+      "description": "Description",
+      "technologies": "Technologies (virgule)",
+      "link": "Lien",
+      "addButton": "Ajouter un projet"
+    },
+    "interests": {
+      "title": "Centres d'intérêt",
+      "name": "Centre d'intérêt",
+      "description": "Précision optionnelle",
+      "addButton": "Ajouter",
+      "suggestions": "Suggestions rapides",
+      "tips": [
+        "Soyez précis : « Trail en montagne » plutôt que « Sport ».",
+        "Un centre d'intérêt original peut lancer une conversation en entretien.",
+        "Limitez à 3-5 centres d'intérêt."
+      ]
+    },
+    "appearance": {
+      "title": "Apparence du CV",
+      "primaryColor": "Couleur principale",
+      "font": "Police de caractères",
+      "fonts": {
+        "inter": "Inter (Moderne)",
+        "roboto": "Roboto (Neutre)",
+        "openSans": "Open Sans (Lisible)",
+        "merriweather": "Merriweather (Classique)",
+        "montserrat": "Montserrat (Élégant)"
+      }
+    },
+    "export": {
+      "title": "Export",
+      "ready": "CV {type} prêt à générer",
+      "generate": "Générer le PDF",
+      "share": "Partager",
+      "history": "Historique",
+      "restart": "Recommencer"
+    },
+    "buttons": {
+      "previous": "Précédent",
+      "next": "Suivant",
+      "locked": "Verrouillé",
+      "import": "Importer",
+      "generate": "Générer"
+    },
+    "mode": {
+      "howToProceed": "Comment souhaitez-vous procéder ?",
+      "chooseOption": "Choisissez une option pour commencer",
+      "create": {
+        "title": "Créer un CV",
+        "description": "Remplissez les sections étape par étape"
+      },
+      "import": {
+        "title": "Importer un CV",
+        "description": "Utilisez un fichier existant (PDF, DOCX)",
+        "dragOrClick": "Glisser ou cliquer pour importer",
+        "maxSize": "PDF, DOC, DOCX — max 10 Mo",
+        "ready": "Prêt à importer — les étapes manuelles sont désactivées",
+        "lockedMessage": "Les étapes suivantes sont verrouillées. Cliquez sur Importer directement."
+      },
+      "format": {
+        "title": "Format du CV",
+        "classic": "Classique",
+        "classicDesc": "Standard, tous secteurs",
+        "fibem": "FIBEM",
+        "fibemDesc": "Natif à la plateforme",
+        "selectRequired": "Sélectionnez un format pour continuer."
+      }
+    },
+    "navigation": {
+      "history": "Historique"
+    },
+    "generalTips": [
+      "Soyez concis — max 2 pages",
+      "Adaptez à chaque candidature",
+      "Utilisez des mots-clés sectoriels",
+      "Vérifiez l'orthographe",
+      "Chiffrez vos réalisations",
+      "Gardez une mise en page aérée"
+    ],
+    "alerts": {
+      "importSuccess": "CV importé avec succès",
+      "importError": "Échec de l'importation",
+      "generationError": "Erreur : {message}",
+      "defaultError": "Une erreur est survenue",
+      "noLink": "CV généré mais lien indisponible."
+    },
+    "history": {
+      "title": "Historique des CVs",
+      "importedCv": "CV importé",
+      "cv": "CV",
+      "main": "Principal",
+      "modified": "modifié",
+      "searchPlaceholder": "Rechercher un CV…",
+      "noCvFound": "Aucun CV trouvé",
+      "resetFilters": "Réinitialiser les filtres",
+      "close": "Fermer",
+      "page": "page",
+      "cvCount": "CV{count, plural, =0 {} one {} other {s}}",
+      "resultCount": "{count} résultat{count, plural, =0 {} =1 {} other {s}}",
+      "types": {
+        "fibem": "FIBEM",
+        "classic": "Classic",
+        "imported": "Importé"
+      },
+      "actions": {
+        "preview": "Aperçu",
+        "download": "Télécharger",
+        "downloadFile": "Télécharger le fichier",
+        "duplicate": "Dupliquer",
+        "delete": "Supprimer"
+      },
+      "filters": {
+        "all": "Tous"
+      },
+      "pagination": {
+        "previous": "Page précédente",
+        "next": "Page suivante"
+      },
+      "deleteDialog": {
+        "title": "Supprimer le CV",
+        "message": "Cette action est irréversible. Êtes-vous sûr de vouloir supprimer ce CV ?",
+        "confirm": "Supprimer",
+        "cancel": "Annuler"
+      }
     }
-  }
+  },
+  "contact": {
+    "hero": {
+      "title": "Contactez nous",
+      "subtitle": "Découvrez les opportunités professionnelles proposées par nos entreprises partenaires"
+    },
+    "form": {
+      "title": "Envoyez-nous un message",
+      "subtitle": "Nous vous répondrons sous 48h",
+      "firstName": "Nom",
+      "firstNamePlaceholder": "Votre nom",
+      "lastName": "Prénom",
+      "lastNamePlaceholder": "Votre prénom",
+      "email": "Email",
+      "emailPlaceholder": "votre@email.com",
+      "address": "Adresse",
+      "addressPlaceholder": "Ex: Vernon",
+      "phone": "Téléphone",
+      "phonePlaceholder": "+33 1 23 45 67 89",
+      "subject": "Sujet",
+      "subjectPlaceholder": "Objet de votre message",
+      "message": "Message",
+      "messagePlaceholder": "Décrivez votre demande ou posez-nous vos questions...",
+      "locationNote": "Votre position actuelle sera automatiquement jointe à votre message pour un meilleur service.",
+      "sending": "Envoi en cours...",
+      "submit": "Envoyer le message",
+      "success": {
+        "title": "Message envoyé !",
+        "message": "Merci pour votre message. Notre équipe vous contactera très rapidement.",
+        "button": "Envoyer un autre message"
+      }
+    },
+    "info": {
+      "title1": "Parlons de Votre",
+      "title2": "Projet",
+      "subtitle": "Notre équipe d'experts est à votre disposition pour vous accompagner.",
+      "email": {
+        "title": "Email",
+        "details": "Réponse sous 24h"
+      },
+      "phone": {
+        "title": "Téléphone",
+        "details": "Lun-Ven: 9h-18h"
+      },
+      "address": {
+        "title": "Adresse",
+        "details": "75 001"
+      },
+      "hours": {
+        "title": "Horaires",
+        "days": "Lundi - Vendredi",
+        "time": "9h00 - 18h00"
+      }
+    },
+    "offices": {
+      "title": "Nos Bureaux",
+      "france": {
+        "name": "FIBEM France",
+        "address": "51 Rue du Grévarin – 27200 Vernon"
+      },
+      "senegal": {
+        "name": "FIBEM Sénégal",
+        "address": "Rue 7 Corniche x 6, Médina, Dakar"
+      }
+    },
+    "location": {
+      "title": "Votre Position",
+      "description": "Pour un service personnalisé, votre position sera automatiquement incluse avec votre message.",
+      "detected": "Position actuelle détectée",
+      "included": "(Incluse dans votre message)",
+      "consent": "Position partagée uniquement avec votre consentement"
+    }
+  },
+  "invoice": {
+    "title": "Générateur de Facture",
+    "subtitle": "Créez une facture professionnelle en quelques étapes guidées",
+    "fileName": "Facture",
+    "emailMessage": "Veuillez trouver ci-joint la facture {number}",
+    "steps": {
+      "invoice": "Facture",
+      "company": "Émetteur",
+      "client": "Client",
+      "items": "Articles",
+      "payment": "Paiement",
+      "notes": "Notes",
+      "preview": "Aperçu"
+    },
+    "progress": {
+      "step": "Étape"
+    },
+    "help": {
+      "title": "Conseils"
+    },
+    "status": {
+      "draft": "Brouillon",
+      "sent": "Envoyée",
+      "paid": "Payée",
+      "overdue": "En retard",
+      "genere": "Générée",
+      "envoye": "Envoyée",
+      "paye": "Payée",
+      "en_retard": "En retard",
+      "brouillon": "Brouillon"
+    },
+    "paymentMethods": {
+      "bankTransfer": "Virement Bancaire",
+      "creditCard": "Carte Bancaire",
+      "cash": "Espèces",
+      "paypal": "PayPal",
+      "check": "Chèque",
+      "stripe": "Stripe",
+      "directDebit": "Prélèvement",
+      "bitcoin": "Bitcoin",
+      "applePay": "Apple Pay",
+      "googlePay": "Google Pay",
+      "wireTransfer": "Virement International",
+      "other": "Autre"
+    },
+    "paymentTerms": {
+      "immediate": "Immédiat",
+      "days7": "7 jours",
+      "days15": "15 jours",
+      "days30": "30 jours",
+      "days45": "45 jours",
+      "days60": "60 jours",
+      "days90": "90 jours"
+    },
+    "invoice": {
+      "title": "Informations de la facture",
+      "subtitle": "Renseignez les informations de base de votre facture.",
+      "quoteSelection": "Choix du devis",
+      "selectQuote": "Choisir un devis",
+      "quoteNumber": "Devis",
+      "client": "Client",
+      "amount": "Montant",
+      "purchaseOrder": "Bon de commande",
+      "purchaseOrderPlaceholder": "PO-2026-001",
+      "invoiceDate": "Date de facture",
+      "dueDate": "Date d'échéance",
+      "paymentTerms": "Conditions de paiement",
+      "paymentMethod": "Méthode de paiement",
+      "selectPaymentMethod": "Sélectionnez",
+      "tips": [
+        "Le numéro de facture est généré automatiquement, vous pouvez le modifier.",
+        "La date d'échéance se calcule automatiquement selon les conditions de paiement.",
+        "Le bon de commande (PO) est facultatif mais recommandé pour les entreprises."
+      ]
+    },
+    "company": {
+      "title": "Votre entreprise",
+      "subtitle": "Ces informations apparaîtront en tant qu'émetteur sur la facture.",
+      "name": "Nom de l'entreprise",
+      "namePlaceholder": "Votre Entreprise SARL",
+      "address": "Adresse",
+      "addressPlaceholder": "123 Avenue de la République",
+      "city": "Ville",
+      "cityPlaceholder": "Douala",
+      "postalCode": "Code postal / BP",
+      "postalCodePlaceholder": "BP 1234",
+      "phone": "Téléphone",
+      "phonePlaceholder": "+237 6XX XX XX XX",
+      "email": "Email",
+      "emailPlaceholder": "contact@votreentreprise.com",
+      "taxId": "N° Identification Fiscale",
+      "taxIdPlaceholder": "CM12345678901",
+      "logo": "Logo de l'entreprise",
+      "logoAlt": "Logo de l'entreprise",
+      "tips": [
+        "Le nom de l'entreprise est obligatoire.",
+        "Ajoutez votre N° d'identification fiscale si vous êtes assujetti à la TVA."
+      ]
+    },
+    "client": {
+      "title": "Informations du client",
+      "subtitle": "Ces informations apparaîtront en tant que destinataire sur la facture.",
+      "name": "Nom du client",
+      "namePlaceholder": "Jean Dupont",
+      "company": "Entreprise du client",
+      "companyPlaceholder": "Client Entreprise SA",
+      "email": "Email",
+      "emailPlaceholder": "client@email.com",
+      "phone": "Téléphone",
+      "phonePlaceholder": "+237 6XX XX XX XX",
+      "address": "Adresse",
+      "addressPlaceholder": "456 Boulevard Principal",
+      "city": "Ville",
+      "cityPlaceholder": "Yaoundé",
+      "postalCode": "Code postal / BP",
+      "postalCodePlaceholder": "BP 456",
+      "taxId": "N° Identification Fiscale",
+      "taxIdPlaceholder": "CM98765432101",
+      "tips": [
+        "Le nom du client est obligatoire.",
+        "Renseignez l'email pour pouvoir envoyer la facture directement depuis l'application."
+      ]
+    },
+    "items": {
+      "title": "Lignes de facturation",
+      "subtitle": "Ajoutez les produits ou services à facturer.",
+      "count": "article(s)",
+      "line": "Ligne",
+      "description": "Description",
+      "descriptionPlaceholder": "Ex: Développement application web",
+      "quantity": "Qté",
+      "unitPrice": "Prix U.",
+      "discount": "Remise %",
+      "taxRate": "TVA %",
+      "total": "Total",
+      "addButton": "Ajouter une ligne",
+      "summary": "Récapitulatif",
+      "subtotal": "Sous-total HT",
+      "totalDiscount": "Remise totale",
+      "totalTax": "TVA",
+      "grandTotal": "Total TTC",
+      "duplicate": "Dupliquer",
+      "delete": "Supprimer",
+      "tips": [
+        "Chaque ligne doit avoir une description et un prix unitaire supérieur à 0.",
+        "La remise est en pourcentage (ex : 10 pour 10%).",
+        "Le total de chaque ligne est calculé automatiquement."
+      ]
+    },
+    "payment": {
+      "title": "Coordonnées bancaires",
+      "subtitle": "Ces informations faciliteront le règlement par votre client.",
+      "bankName": "Nom de la banque",
+      "bankNamePlaceholder": "Banque Atlantique, SCB Cameroun…",
+      "bankAccount": "Numéro de compte / IBAN",
+      "bankAccountPlaceholder": "CM21 1000 1234 5678 9012 3456 789",
+      "tips": [
+        "Les coordonnées bancaires sont facultatives mais recommandées pour les virements.",
+        "Pour le Cameroun, précisez votre numéro de compte BEAC ou votre RIB."
+      ]
+    },
+    "notes": {
+      "title": "Notes et conditions",
+      "subtitle": "Ajoutez un message personnalisé ou vos conditions générales de vente.",
+      "message": "Message / Notes",
+      "messagePlaceholder": "Merci pour votre confiance. N'hésitez pas à nous contacter pour toute question.",
+      "terms": "Conditions générales",
+      "termsPlaceholder": "Paiement à réception de facture. Toute facture impayée après la date d'échéance entraînera des pénalités de retard de 1,5% par mois."
+    },
+    "preview": {
+      "title": "Aperçu de la facture",
+      "subtitle": "Vérifiez votre facture avant de la générer.",
+      "downloadPdf": "Télécharger PDF",
+      "downloadExcel": "Télécharger Excel",
+      "newInvoice": "Nouvelle facture"
+    },
+    "navigation": {
+      "previous": "Précédent",
+      "next": "Suivant",
+      "history": "Historique",
+      "generate": "Générer",
+      "generating": "Génération…"
+    },
+    "tips": {
+      "title": "Conseils pour une facture efficace",
+      "list": [
+        "Vérifiez le numéro de facture pour éviter les doublons",
+        "Précisez clairement les délais de paiement",
+        "Incluez vos coordonnées bancaires pour faciliter le règlement",
+        "Ajoutez un message de remerciement dans les notes",
+        "Relisez les montants avant de générer le PDF",
+        "Conservez une copie de chaque facture envoyée"
+      ]
+    },
+    "quoteDialog": {
+      "title": "Sélectionner un devis à facturer",
+      "description": "Choisissez la version du devis que vous souhaitez transformer en facture"
+    },
+    "errors": {
+      "idNotFound": "ID de facture introuvable",
+      "generationError": "Erreur lors de la génération de la facture",
+      "generateFirst": "Veuillez d'abord générer la facture",
+      "clientEmailRequired": "Veuillez renseigner l'email du client"
+    },
+    "alerts": {
+      "sendSuccess": "Facture envoyée avec succès",
+      "sendError": "Erreur lors de l'envoi de la facture"
+    },
+    "history": {
+      "title": "Historique des factures",
+      "ref_quote": "ref.",
+      "modified": "modifié",
+      "due_date": "échéance",
+      "preview": "Aperçu / Réutiliser",
+      "download_pdf": "Télécharger le PDF",
+      "download_excel": "Télécharger le fichier Excel",
+      "duplicate": "Dupliquer",
+      "delete": "Supprimer",
+      "delete_confirm_title": "Supprimer la facture",
+      "delete_confirm_message": "Cette action est irréversible. Êtes-vous sûr de vouloir supprimer cette facture ?",
+      "delete_confirm_button": "Supprimer",
+      "cancel": "Annuler",
+      "search_placeholder": "N° facture, client…",
+      "no_invoices": "Aucune facture trouvée",
+      "reset_filters": "Réinitialiser les filtres",
+      "invoices": "facture",
+      "page": "page",
+      "result": "résultat",
+      "close": "Fermer",
+      "filters": {
+        "all": "Tous",
+        "generated": "Générées",
+        "sent": "Envoyées",
+        "paid": "Payées",
+        "overdue": "En retard",
+        "draft": "Brouillons"
+      },
+      "stats": {
+        "paid": "payée",
+        "sent": "envoyée",
+        "overdue": "en retard"
+      }
+    }
+  },
+  "quote": {
+    "title": "Générateur de devis",
+    "subtitle": "Créez un devis professionnel en quelques étapes guidées",
+    "steps": {
+      "client": "Client",
+      "emetteur": "Émetteur",
+      "project": "Projet",
+      "items": "Articles",
+      "payment": "Paiement",
+      "notes": "Notes",
+      "preview": "Aperçu"
+    },
+    "help_notice": {
+      "tips_title": "Conseils",
+      "info_title": "À savoir"
+    },
+    "progress": {
+      "step_label": "Étape",
+      "of": "de"
+    },
+    "client_step": {
+      "title": "Informations client",
+      "subtitle": "Renseignez les coordonnées du client destinataire du devis.",
+      "tips": [
+        "Le prénom, le nom, l'email et le téléphone sont obligatoires.",
+        "L'entreprise est facultative mais recommandée pour les devis B2B.",
+        "Le type de devis permet de catégoriser la nature des travaux."
+      ],
+      "first_name": "Prénom",
+      "last_name": "Nom",
+      "email": "Email",
+      "phone": "Téléphone",
+      "company": "Entreprise cliente",
+      "quote_type": "Type de devis",
+      "address": "Adresse",
+      "city": "Ville",
+      "postal_code": "Code postal / BP",
+      "first_name_placeholder": "Samuel",
+      "last_name_placeholder": "Dupont",
+      "email_placeholder": "contact@email.com",
+      "phone_placeholder": "+237 6XX XX XX XX",
+      "company_placeholder": "Nom de l'entreprise cliente",
+      "address_placeholder": "123 Rue de la République",
+      "city_placeholder": "Douala",
+      "postal_code_placeholder": "BP 456",
+      "select_quote_type": "Sélectionnez un type"
+    },
+    "emitter_step": {
+      "title": "Votre entreprise (émetteur)",
+      "subtitle": "Ces informations apparaîtront dans le bloc prestataire du devis.",
+      "tips": [
+        "Le nom de l'entreprise est obligatoire.",
+        "Le logo sera affiché en haut à gauche du devis PDF.",
+        "SIRET, APE et N° TVA apparaissent dans le bloc prestataire."
+      ],
+      "company_name": "Nom de l'entreprise",
+      "company_contact": "Contact / Interlocuteur",
+      "company_address": "Adresse",
+      "company_city": "Ville (avec code postal)",
+      "company_phone": "Téléphone fixe",
+      "company_port": "Portable",
+      "company_email": "Email",
+      "company_siret": "SIRET",
+      "company_ape": "Code APE",
+      "company_tva": "N° TVA intracommunautaire",
+      "contact_be": "Contact B.E. (référence interne)",
+      "company_logo": "Logo de l'entreprise",
+      "company_name_placeholder": "Sté SEN FIBEM France",
+      "company_contact_placeholder": "Mr GOMIS",
+      "company_address_placeholder": "51 Rue du Grevarin",
+      "company_city_placeholder": "27200 Vernon",
+      "company_phone_placeholder": "+33 1 XX XX XX XX",
+      "company_port_placeholder": "07.52.49.75.46",
+      "company_email_placeholder": "contact@votreentreprise.com",
+      "company_siret_placeholder": "445 374 937 00032",
+      "company_ape_placeholder": "4120B Travaux Bâtiment & Industrie",
+      "company_tva_placeholder": "FR17378128441",
+      "contact_be_placeholder": "Réf. bureau d'études",
+      "logo_preview": "Aperçu logo"
+    },
+    "project_step": {
+      "title": "Détails du projet",
+      "subtitle": "Décrivez le projet à réaliser pour ce devis.",
+      "tips": [
+        "Le nom du projet est obligatoire.",
+        "Une description claire rassure le client sur votre compréhension du besoin.",
+        "La date de validité est automatiquement fixée à 30 jours mais peut être modifiée."
+      ],
+      "project_name": "Nom du projet",
+      "category": "Catégorie",
+      "project_description": "Description du projet",
+      "start_date": "Date de début prévue",
+      "deadline": "Date limite du projet",
+      "budget": "Budget estimé",
+      "valid_until": "Devis valable jusqu'au",
+      "project_name_placeholder": "Ex : Construction Résidence Makepe",
+      "project_description_placeholder": "Décrivez le projet en détail...",
+      "select_category": "Sélectionnez une catégorie",
+      "categories": {
+        "development": "Développement Web",
+        "design": "Design Graphique",
+        "marketing": "Marketing Digital",
+        "consulting": "Conseil & Formation",
+        "delivery": "Livraison de Services",
+        "construction": "Construction",
+        "renovation": "Rénovation",
+        "other": "Autre"
+      }
+    },
+    "items_step": {
+      "title": "Articles du devis",
+      "subtitle": "Listez les prestations ou fournitures à chiffrer.",
+      "items_count": "article(s)",
+      "tips": [
+        "Chaque article doit avoir une description et un prix unitaire.",
+        "Temps M.O. : durée main d'œuvre (ex: 1,0h). Unité : Ens, h, m², etc.",
+        "La remise par ligne est en pourcentage.",
+        "Utilisez les flèches ↑↓ pour réordonner les articles."
+      ],
+      "article": "Article",
+      "description": "Description",
+      "description_placeholder": "Ex : Fourniture et pose de carrelage",
+      "time_mo": "Temps M.O.",
+      "time_mo_placeholder": "1,0h",
+      "unit": "Unité",
+      "quantity": "Quantité",
+      "unit_price": "Prix U.",
+      "discount": "Remise %",
+      "tax": "TVA %",
+      "total_ht": "Total HT",
+      "add_item": "Ajouter un article",
+      "summary": "Récapitulatif articles",
+      "subtotal_ht": "Sous-total HT",
+      "total_before_discount": "Total avant remise globale",
+      "duplicate": "Dupliquer",
+      "delete": "Supprimer",
+      "units": {
+        "ens": "Ens",
+        "h": "h",
+        "j": "j",
+        "m2": "m²",
+        "m3": "m³",
+        "ml": "ml",
+        "u": "u",
+        "kg": "kg",
+        "t": "t",
+        "forfait": "forfait"
+      }
+    },
+    "payment_step": {
+      "title": "Paramètres de paiement",
+      "subtitle": "Configurez la TVA globale, la remise et l'acompte.",
+      "tips": [
+        "La TVA au Cameroun est de 19,25% (taux officiel). En France : 20%.",
+        "La remise globale s'applique sur le sous-total de tous les articles.",
+        "L'acompte peut être un montant fixe ou un pourcentage du total TTC."
+      ],
+      "global_tax": "TVA globale (%)",
+      "global_discount": "Remise globale (%)",
+      "deposit": "Acompte",
+      "percentage": "%",
+      "fixed": "Montant fixe",
+      "financial_summary": "Récapitulatif financier",
+      "subtotal_ht": "Sous-total HT",
+      "discount": "Remise",
+      "total_ht": "Total HT",
+      "tax_amount": "TVA",
+      "total_ttc": "Total TTC",
+      "deposit_amount": "Acompte",
+      "remaining": "Reste à payer"
+    },
+    "notes_step": {
+      "title": "Notes et conditions",
+      "subtitle": "Ces textes apparaîtront dans la section \"Conditions de règlement\" du devis.",
+      "tips": [
+        "Les notes additionnelles sont affichées dans 'Conditions de règlement'.",
+        "Indiquez les conditions d'acompte (ex : 30% au démarrage, 70% à la fin)."
+      ],
+      "payment_conditions": "Conditions de règlement / Notes",
+      "payment_conditions_placeholder": "- 30 % à verser 1 semaine après le démarrage\n- 70 % à la fin du 1er mois",
+      "general_conditions": "Conditions générales",
+      "general_conditions_placeholder": "Conditions de paiement, validité, pénalités de retard..."
+    },
+    "preview_step": {
+      "title": "Aperçu du devis",
+      "subtitle": "Vérifiez votre devis avant de le générer.",
+      "modify": "Modifier",
+      "print": "Imprimer",
+      "send": "Envoyer",
+      "download_excel": "Télécharger Excel",
+      "download_pdf": "Télécharger PDF",
+      "quote_preview": "Aperçu du devis",
+      "provider": "Prestataire",
+      "client": "Client",
+      "project": "Projet",
+      "valid_until": "Valable jusqu'au",
+      "start_date": "Début",
+      "table": {
+        "time_mo": "Tps M.O.",
+        "description": "Description",
+        "unit": "U",
+        "unit_price_ht": "Prix U. HT",
+        "quantity": "Qté",
+        "amount_ht": "Montant HT"
+      },
+      "total_ht": "Montant Total H.T.",
+      "total_ttc": "Montant Total T.T.C.",
+      "payment_conditions_title": "Conditions de règlement"
+    },
+    "buttons": {
+      "previous": "Précédent",
+      "next": "Suivant",
+      "generate_quote": "Générer le devis",
+      "generating": "Génération…",
+      "new_quote": "Nouveau devis",
+      "history": "Historique des devis"
+    },
+    "tips_section": {
+      "title": "Conseils pour un devis efficace",
+      "tips": [
+        "Détaillez précisément chaque poste pour éviter les litiges",
+        "Indiquez clairement la validité du devis (30 jours recommandé)",
+        "Mentionnez les délais de réalisation et conditions de livraison",
+        "Demandez un acompte à la signature pour sécuriser le projet",
+        "Relisez les montants avant d'envoyer au client",
+        "Conservez une copie signée de chaque devis accepté"
+      ]
+    },
+    "status": {
+      "draft": "Brouillon",
+      "sent": "Envoyé",
+      "accepted": "Accepté",
+      "rejected": "Refusé",
+      "expired": "Expiré"
+    },
+    "alerts": {
+      "error_generating": "Erreur lors de la génération du devis",
+      "generate_first": "Veuillez d'abord générer le devis",
+      "email_required": "Veuillez renseigner l'email du client",
+      "email_sent": "Devis envoyé avec succès",
+      "email_error": "Erreur lors de l'envoi du devis"
+    },
+    "quote_types": {
+      "0": "Travaux Pose seule",
+      "1": "Travaux Fourniture et Pose",
+      "2": "Rénovation",
+      "3": "Construction",
+      "4": "Aménagement",
+      "5": "Poseur & Monteur",
+      "6": "Études et Réalisation Plans",
+      "7": "Calcul Dimensionnement",
+      "8": "Calcul de Vérification",
+      "9": "Assistance Technique",
+      "10": "Autre"
+    },
+    "history": {
+      "title": "Historique des devis",
+      "modified": "modifié",
+      "preview": "Aperçu / Réutiliser",
+      "download_pdf": "Télécharger le PDF",
+      "download_excel": "Télécharger le fichier Excel",
+      "duplicate": "Dupliquer",
+      "delete": "Supprimer",
+      "delete_confirm_title": "Supprimer le devis",
+      "delete_confirm_message": "Cette action est irréversible. Êtes-vous sûr de vouloir supprimer ce devis ?",
+      "delete_confirm_button": "Supprimer",
+      "cancel": "Annuler",
+      "search_placeholder": "N° devis, client, projet…",
+      "no_quotes": "Aucun devis trouvé",
+      "reset_filters": "Réinitialiser les filtres",
+      "quotes": "devis",
+      "page": "page",
+      "result": "résultat",
+      "close": "Fermer",
+      "filters": {
+        "all": "Tous",
+        "draft": "Brouillons",
+        "sent": "Envoyés",
+        "accepted": "Acceptés",
+        "rejected": "Refusés",
+        "expired": "Expirés"
+      },
+      "stats": {
+        "accepted": "accepté",
+        "sent": "envoyé",
+        "rejected": "refusé",
+        "expired": "expiré",
+        "acceptance_rate": "acceptation"
+      }
+    },
+    "selection": {
+      "title": "Sélectionner un devis",
+      "search_placeholder": "Numéro, client…",
+      "no_results": "Aucun résultat",
+      "no_quotes": "Aucun devis disponible",
+      "reset": "Réinitialiser",
+      "quotes": "devis",
+      "page": "page",
+      "cancel": "Annuler",
+      "select": "Sélectionner"
+    }
+  },
+  "credit_note": {
+    "title": "Générateur d'Avoirs",
+    "subtitle": "Créez un avoir professionnel lié à une facture existante",
+    "steps": {
+      "identification": "Avoir",
+      "emetteur": "Émetteur",
+      "client": "Client",
+      "items": "Articles",
+      "notes": "Notes",
+      "preview": "Aperçu"
+    },
+    "progress": {
+      "step": "Étape"
+    },
+    "help_notice": {
+      "tips_title": "Conseils",
+      "info_title": "À savoir"
+    },
+    "identification_step": {
+      "title": "Identification de l'avoir",
+      "subtitle": "Numéro, date, facture d'origine, raison et méthode de remboursement.",
+      "tips": [
+        "Le numéro d'avoir est obligatoire et doit être unique.",
+        "Indiquez toujours la facture d'origine à laquelle se rapporte l'avoir.",
+        "La raison et la méthode de remboursement apparaîtront sur le document PDF."
+      ],
+      "credit_note_date": "Date de l'avoir",
+      "original_invoice_number": "N° Facture d'origine",
+      "original_invoice_placeholder": "FA-202601-0042",
+      "original_invoice_date": "Date de la facture d'origine",
+      "credit_reason": "Raison de l'avoir",
+      "refund_method": "Méthode de remboursement"
+    },
+    "emitter_step": {
+      "title": "Votre entreprise (émetteur)",
+      "subtitle": "Ces informations apparaîtront dans le bloc prestataire de l'avoir.",
+      "tips": [
+        "Le nom de l'entreprise est obligatoire.",
+        "Le logo sera affiché en haut à gauche du PDF.",
+        "SIRET, APE et N° TVA apparaissent dans le bloc émetteur."
+      ],
+      "company_name": "Nom de l'entreprise",
+      "company_name_placeholder": "Sté SEN FIBEM France",
+      "company_address": "Adresse",
+      "company_address_placeholder": "51 Rue du Grevarin",
+      "company_city": "Ville (avec code postal)",
+      "company_city_placeholder": "27200 Vernon",
+      "company_phone": "Téléphone fixe",
+      "company_phone_placeholder": "+33 1 XX XX XX XX",
+      "company_port": "Portable",
+      "company_port_placeholder": "07.52.49.75.46",
+      "company_email": "Email",
+      "company_email_placeholder": "contact@votreentreprise.com",
+      "company_siret": "SIRET",
+      "company_siret_placeholder": "445 374 937 00032",
+      "company_ape": "Code APE",
+      "company_ape_placeholder": "4120B Travaux Bâtiment & Industrie",
+      "company_tva": "N° TVA intracommunautaire",
+      "company_tva_placeholder": "FR17378128441",
+      "company_logo": "Logo de l'entreprise",
+      "logo_preview": "Aperçu logo"
+    },
+    "client_step": {
+      "title": "Informations du client",
+      "subtitle": "Destinataire de l'avoir.",
+      "tips": [
+        "Renseignez l'email pour envoyer l'avoir directement depuis l'application.",
+        "Le N° TVA client apparaît dans la colonne CEE du tableau de synthèse."
+      ],
+      "client_name": "Nom du client",
+      "client_name_placeholder": "Jean Dupont",
+      "client_company": "Entreprise du client",
+      "client_company_placeholder": "Client SA",
+      "client_email": "Email",
+      "client_email_placeholder": "client@email.com",
+      "client_phone": "Téléphone",
+      "client_phone_placeholder": "+237 6XX XX XX XX",
+      "client_address": "Adresse",
+      "client_address_placeholder": "456 Boulevard Principal",
+      "client_city": "Ville",
+      "client_city_placeholder": "Yaoundé",
+      "client_postal_code": "Code postal / BP",
+      "client_postal_code_placeholder": "BP 456",
+      "client_tax_id": "N° TVA / Identification fiscale",
+      "client_tax_id_placeholder": "FR12345678901"
+    },
+    "items_step": {
+      "title": "Lignes de l'avoir",
+      "subtitle": "Ajoutez les articles ou prestations à créditer.",
+      "lines_count": "ligne(s)",
+      "line": "Ligne",
+      "tips": [
+        "Chaque ligne doit avoir une description et un prix unitaire > 0.",
+        "Les montants représentent des crédits — ils s'afficheront en orange sur le PDF.",
+        "La remise est en pourcentage (ex : 10 pour 10%)."
+      ],
+      "description": "Description",
+      "description_placeholder": "Ex : Retour article / Régularisation",
+      "quantity": "Quantité",
+      "unit_price": "Prix U.",
+      "discount": "Remise %",
+      "tax": "TVA %",
+      "total_ht": "Total HT",
+      "add_item": "Ajouter une ligne",
+      "summary": "Récapitulatif",
+      "estimated_tax": "TVA estimée",
+      "net_refund": "Net à rembourser TTC",
+      "duplicate": "Dupliquer",
+      "delete": "Supprimer"
+    },
+    "notes_step": {
+      "title": "Notes et références",
+      "subtitle": "Informations complémentaires qui apparaîtront sur l'avoir.",
+      "notes": "Références / Notes",
+      "notes_placeholder": "Référence du dossier, motif détaillé, numéro de retour...",
+      "terms_and_conditions": "Conditions générales",
+      "terms_placeholder": "Conditions de remboursement, délais de traitement..."
+    },
+    "preview_step": {
+      "title": "Aperçu de l'avoir",
+      "subtitle": "Vérifiez avant de générer le PDF.",
+      "download_excel": "Télécharger Excel",
+      "download_pdf": "Télécharger PDF",
+      "credit_note_title": "AVOIR",
+      "number": "N°",
+      "invoice_ref": "Réf. facture",
+      "reason": "Raison",
+      "refund": "Remboursement",
+      "emitter": "Émetteur",
+      "client": "Client",
+      "portable": "Port",
+      "total_ht": "Total H.T.",
+      "estimated_tax": "TVA estimée",
+      "net_refund": "Net à rembourser T.T.C.",
+      "references": "Références",
+      "table": {
+        "description": "Description",
+        "quantity": "Qté",
+        "unit_price_ht": "Prix U. HT",
+        "discount": "Remise",
+        "tax": "TVA %",
+        "amount_ht": "Montant HT"
+      }
+    },
+    "status": {
+      "draft": "Brouillon",
+      "issued": "Émis",
+      "processed": "Traité",
+      "cancelled": "Annulé"
+    },
+    "credit_reasons": {
+      "product_return": "Retour de marchandise",
+      "defective_product": "Produit défectueux",
+      "billing_error": "Erreur de facturation",
+      "discount": "Remise commerciale",
+      "price_adjustment": "Ajustement de prix",
+      "cancelled_order": "Annulation de commande",
+      "goodwill": "Geste commercial",
+      "other": "Autre"
+    },
+    "refund_methods": {
+      "bank_transfer": "Virement Bancaire",
+      "original_payment": "Méthode de paiement d'origine",
+      "store_credit": "Avoir en magasin",
+      "cash": "Espèces",
+      "check": "Chèque"
+    },
+    "buttons": {
+      "history": "Historique",
+      "previous": "Précédent",
+      "next": "Suivant",
+      "generate": "Générer",
+      "generating": "Génération…",
+      "new_credit_note": "Nouvel avoir"
+    },
+    "tips_section": {
+      "title": "Bonnes pratiques pour les avoirs",
+      "tips": [
+        "Référencez toujours la facture d'origine pour assurer la traçabilité",
+        "Un avoir doit être émis dès que le remboursement est acté",
+        "Conservez une copie signée dans votre dossier client",
+        "Vérifiez que le montant de l'avoir correspond à la facture originale"
+      ]
+    },
+    "alerts": {
+      "error_generating": "Erreur lors de la génération de l'avoir",
+      "generate_first": "Veuillez d'abord générer l'avoir",
+      "email_required": "Veuillez renseigner l'email du client",
+      "email_sent": "Avoir envoyé avec succès",
+      "email_error": "Erreur lors de l'envoi de l'avoir"
+    },
+    "history": {
+      "title": "Historique des avoirs",
+      "ref_invoice": "Réf.",
+      "modified": "modifié",
+      "preview": "Aperçu / Réutiliser",
+      "download_pdf": "Télécharger le PDF",
+      "download_excel": "Télécharger le fichier Excel",
+      "duplicate": "Dupliquer",
+      "delete": "Supprimer",
+      "delete_confirm_title": "Supprimer l'avoir",
+      "delete_confirm_message": "Cette action est irréversible. Êtes-vous sûr de vouloir supprimer cet avoir ?",
+      "delete_confirm_button": "Supprimer",
+      "cancel": "Annuler",
+      "search_placeholder": "N° avoir, client, facture…",
+      "no_credit_notes": "Aucun avoir trouvé",
+      "reset_filters": "Réinitialiser les filtres",
+      "credit_notes": "avoir",
+      "page": "page",
+      "result": "résultat",
+      "close": "Fermer",
+      "all_reasons": "Toutes raisons",
+      "filters": {
+        "all": "Tous",
+        "draft": "Brouillons",
+        "issued": "Émis",
+        "processed": "Traités",
+        "cancelled": "Annulés"
+      },
+      "stats": {
+        "issued": "émis",
+        "processed": "traité",
+        "cancelled": "annulé"
+      }
+    }
+  },
+  "mainMenu": {
+    "home": {
+      "label": "Accueil",
+      "about": "À propos",
+      "us": "Qui sommes-nous ?",
+      "blog": "Blog"
+    },
+    "service": {
+      "label": "Services",
+      "prestation": "Rechercher un repas",
+      "formulaireCV": "Formulaire CV FIBEM",
+      "formulaireDevis": "Devis",
+      "formulaireFacture": "Facture",
+      "formulaireAvoirs": "Avoirs"
+    },
+    "emploi": {
+      "label": "Emploi",
+      "espaceCandidat": "Espace candidat",
+      "espaceRecruteur": "Espace recruteur",
+      "espaceAbonnement": "Espace abonnement"
+    },
+    "foods": "Rech. Repas",
+    "job": "Rech. Emploi",
+    "cv": "CV",
+    "contact": "Contact",
+    "facture": "Facture"
+  },
+  "authMenu": {
+    "login": "Connexion",
+    "register": "Inscription"
+  },
+  "userMenu": {
+    "shoppingCart": "Panier",
+    "dashboard": "Tableau de bord",
+    "profile": "Profil"
+  },
+  "search_placeholder": "Rechercher"
 }

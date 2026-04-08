@@ -36,13 +36,14 @@ import {
 import { UPLOADED_FILES_URL } from "@/api/axios";
 import { thunkSucceed } from "@/lib/tools";
 import { useDialog } from "@/hooks/useDialog";
+import { useLanguage } from "@/context/LanguageContext";
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
-/** Formate une date ISO en "12 mars 2026" */
-function formatDate(isoString) {
+/** Formate une date ISO en date localisée */
+function formatDate(isoString, locale = "fr-FR") {
   if (!isoString) return null;
-  return new Date(isoString).toLocaleDateString("fr-FR", {
+  return new Date(isoString).toLocaleDateString(locale, {
     day: "2-digit",
     month: "short",
     year: "numeric",
@@ -50,40 +51,40 @@ function formatDate(isoString) {
 }
 
 /** Construit un titre lisible depuis les champs du CV */
-function cvDisplayName(cv) {
+function cvDisplayName(cv, t) {
   if (cv.firstName || cv.lastName) {
     return `${cv.firstName ?? ""} ${cv.lastName ?? ""}`.trim();
   }
   if (cv.title) return cv.title;
-  if (cv.type === "IMPORTED") return "CV importé";
-  return `CV #${cv.id}`;
+  if (cv.type === "IMPORTED") return t("cv.history.importedCv");
+  return `${t("cv.history.cv")} #${cv.id}`;
 }
 
 // ── Méta par type ─────────────────────────────────────────────────────────────
 
-const TYPE_META = {
+const getTypeMeta = (t) => ({
   FIBEM: {
-    label: "FIBEM",
+    label: t("cv.history.types.fibem"),
     Icon: Sparkles,
     pill: "bg-violet-50 text-violet-700 border border-violet-200",
     dot: "bg-violet-500",
   },
   CLASSIC: {
-    label: "Classic",
+    label: t("cv.history.types.classic"),
     Icon: LayoutTemplate,
     pill: "bg-sky-50 text-sky-700 border border-sky-200",
     dot: "bg-sky-500",
   },
   IMPORTED: {
-    label: "Importé",
+    label: t("cv.history.types.imported"),
     Icon: Upload,
     pill: "bg-amber-50 text-amber-700 border border-amber-200",
     dot: "bg-amber-500",
   },
-};
+});
 
-function TypeBadge({ type }) {
-  const meta = TYPE_META[type] ?? TYPE_META.CLASSIC;
+function TypeBadge({ type, t }) {
+  const meta = getTypeMeta(t)[type] ?? getTypeMeta(t).CLASSIC;
   const { Icon, label, pill } = meta;
   return (
     <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[11px] font-semibold tracking-wide ${pill}`}>
@@ -95,10 +96,10 @@ function TypeBadge({ type }) {
 
 // ── Ligne CV ──────────────────────────────────────────────────────────────────
 
-function CvRow({ cv, onPreview, onDownload, onDelete, onDuplicate, index }) {
-  const name     = cvDisplayName(cv);
-  const created  = formatDate(cv.createdAt);
-  const updated  = formatDate(cv.updatedAt !== cv.createdAt ? cv.updatedAt : null);
+function CvRow({ cv, onPreview, onDownload, onDelete, onDuplicate, index, t, locale }) {
+  const name = cvDisplayName(cv, t);
+  const created = formatDate(cv.createdAt, locale);
+  const updated = formatDate(cv.updatedAt !== cv.createdAt ? cv.updatedAt : null, locale);
   const template = cv.settings?.template;
   const isImported = cv.type === "IMPORTED";
 
@@ -116,10 +117,10 @@ function CvRow({ cv, onPreview, onDownload, onDelete, onDuplicate, index }) {
       <div className="flex-1 min-w-0">
         <div className="flex flex-wrap items-center gap-1.5">
           <span className="text-sm font-semibold text-gray-800 truncate">{name}</span>
-          <TypeBadge type={cv.type} />
+          <TypeBadge type={cv.type} t={t} />
           {cv.isMain && (
             <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200 uppercase tracking-wide">
-              Principal
+              {t("cv.history.main")}
             </span>
           )}
         </div>
@@ -131,7 +132,7 @@ function CvRow({ cv, onPreview, onDownload, onDelete, onDuplicate, index }) {
           )}
           {updated && (
             <span className="flex items-center gap-1">
-              <Clock className="w-3 h-3" /> modifié {updated}
+              <Clock className="w-3 h-3" /> {t("cv.history.modified")} {updated}
             </span>
           )}
           {template && !isImported && (
@@ -152,7 +153,7 @@ function CvRow({ cv, onPreview, onDownload, onDelete, onDuplicate, index }) {
               size="icon"
               className="w-8 h-8 text-gray-400 hover:text-primary hover:bg-primary/10"
               onClick={() => onPreview(cv)}
-              title="Aperçu"
+              title={t("cv.history.actions.preview")}
             >
               <Eye className="w-4 h-4" />
             </Button>
@@ -161,7 +162,7 @@ function CvRow({ cv, onPreview, onDownload, onDelete, onDuplicate, index }) {
               size="icon"
               className="w-8 h-8 text-gray-400 hover:text-emerald-600 hover:bg-emerald-50"
               onClick={() => onDownload(cv)}
-              title="Télécharger"
+              title={t("cv.history.actions.download")}
             >
               <Download className="w-4 h-4" />
             </Button>
@@ -173,7 +174,7 @@ function CvRow({ cv, onPreview, onDownload, onDelete, onDuplicate, index }) {
             size="icon"
             className="w-8 h-8 text-gray-400 hover:text-emerald-600 hover:bg-emerald-50"
             onClick={() => onDownload(cv)}
-            title="Télécharger le fichier"
+            title={t("cv.history.actions.downloadFile")}
           >
             <Download className="w-4 h-4" />
           </Button>
@@ -188,21 +189,21 @@ function CvRow({ cv, onPreview, onDownload, onDelete, onDuplicate, index }) {
             {!isImported && (
               <>
                 <DropdownMenuItem onClick={() => onPreview(cv)} className="gap-2 text-sm">
-                  <Eye className="w-4 h-4" /> Aperçu
+                  <Eye className="w-4 h-4" /> {t("cv.history.actions.preview")}
                 </DropdownMenuItem>
                 <DropdownMenuItem onClick={() => onDownload(cv)} className="gap-2 text-sm">
-                  <Download className="w-4 h-4" /> Télécharger
+                  <Download className="w-4 h-4" /> {t("cv.history.actions.download")}
                 </DropdownMenuItem>
               </>
             )}
             {isImported && (
               <DropdownMenuItem onClick={() => onDownload(cv)} className="gap-2 text-sm">
-                <Download className="w-4 h-4" /> Télécharger le fichier
+                <Download className="w-4 h-4" /> {t("cv.history.actions.downloadFile")}
               </DropdownMenuItem>
             )}
             {!isImported && (
               <DropdownMenuItem onClick={() => onDuplicate(cv)} className="gap-2 text-sm">
-                <RefreshCw className="w-4 h-4" /> Dupliquer
+                <RefreshCw className="w-4 h-4" /> {t("cv.history.actions.duplicate")}
               </DropdownMenuItem>
             )}
             <DropdownMenuSeparator />
@@ -210,7 +211,7 @@ function CvRow({ cv, onPreview, onDownload, onDelete, onDuplicate, index }) {
               onClick={() => onDelete(cv)}
               className="gap-2 text-sm text-red-500 focus:text-red-600 focus:bg-red-50"
             >
-              <Trash2 className="w-4 h-4" /> Supprimer
+              <Trash2 className="w-4 h-4" /> {t("cv.history.actions.delete")}
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
@@ -241,12 +242,11 @@ function CvRow({ cv, onPreview, onDownload, onDelete, onDuplicate, index }) {
 
 // ── Pagination ────────────────────────────────────────────────────────────────
 
-function Pagination({ pagination, onPageChange }) {
+function Pagination({ pagination, onPageChange, t }) {
   if (!pagination || pagination.totalPages <= 1) return null;
 
   const { page, totalPages, hasNext, hasPrev } = pagination;
 
-  // Génère les numéros de pages à afficher (window de 5)
   const getPages = () => {
     const delta = 2;
     const range = [];
@@ -274,6 +274,7 @@ function Pagination({ pagination, onPageChange }) {
         <button
           onClick={() => onPageChange(page - 1)}
           className="flex items-center justify-center text-gray-500 transition-colors rounded-lg w-7 h-7 hover:bg-gray-100"
+          aria-label={t("cv.history.pagination.previous")}
         >
           <ChevronLeft className="w-4 h-4" />
         </button>
@@ -303,6 +304,7 @@ function Pagination({ pagination, onPageChange }) {
         <button
           onClick={() => onPageChange(page + 1)}
           className="flex items-center justify-center text-gray-500 transition-colors rounded-lg w-7 h-7 hover:bg-gray-100"
+          aria-label={t("cv.history.pagination.next")}
         >
           <ChevronRight className="w-4 h-4" />
         </button>
@@ -313,11 +315,11 @@ function Pagination({ pagination, onPageChange }) {
 
 // ── Composant principal ───────────────────────────────────────────────────────
 
-const TYPE_FILTERS = [
-  { val: "ALL",      label: "Tous" },
-  { val: "FIBEM",    label: "FIBEM" },
-  { val: "CLASSIC",  label: "Classic" },
-  { val: "IMPORTED", label: "Importé" },
+const getTypeFilters = (t) => [
+  { val: "ALL",      label: t("cv.history.filters.all") },
+  { val: "FIBEM",    label: t("cv.history.types.fibem") },
+  { val: "CLASSIC",  label: t("cv.history.types.classic") },
+  { val: "IMPORTED", label: t("cv.history.types.imported") },
 ];
 
 const CVHistoryDialog = ({
@@ -327,14 +329,15 @@ const CVHistoryDialog = ({
   onDuplicateCV,
   isLoading = false,
 }) => {
-  const dispatch              = useDispatch();
-  const selectCVsFS           = useSelector(selectCVs);
-  const selectCVsFiltersFS    = useSelector(selectCVsFilter);
+  const { t, locale } = useLanguage();
+  const dispatch = useDispatch();
+  const selectCVsFS = useSelector(selectCVs);
+  const selectCVsFiltersFS = useSelector(selectCVsFilter);
   const selectCVsPaginationFS = useSelector(selectCVsPagination);
 
-  const [search,         setSearch]         = useState("");
+  const [search, setSearch] = useState("");
   const [debounceSearch, setDebounceSearch] = useState("");
-  const [filterType,     setFilterType]     = useState("ALL");
+  const [filterType, setFilterType] = useState("ALL");
 
   const { showConfirm, showMessage, DialogComponent } = useDialog();
 
@@ -351,7 +354,7 @@ const CVHistoryDialog = ({
         ...selectCVsFiltersFS,
         search: debounceSearch,
         type: filterType === "ALL" ? undefined : filterType,
-        page: 1, // reset page lors d'un changement de filtre
+        page: 1,
       })
     );
   }, [debounceSearch, filterType]);
@@ -371,43 +374,30 @@ const CVHistoryDialog = ({
   const onPreviewCV = (cv) => {
     const response = dispatch(setCurrentCV(cv));
 
-    onClose();
+    setTimeout(() => {
+      onClose();
+    }, 100);
   }
 
   const onDownloadCV = (cv) => {
-    // Ici UPLOADED_FILES_URL doit être défini dans l'env ou quelque part de façon accessible globalement
     if (!cv?.file) {
       console.error("Aucun fichier à télécharger pour ce CV");
       return;
     }
-    // S'assurer que UPLOADED_FILES_URL finit par un /, sinon ajoutez-le
     let base = UPLOADED_FILES_URL;
     if (base && !base.endsWith("/")) base += "/";
-    // Supprime le premier / du path si présent (pour éviter double //)
     const filePath = cv.file.startsWith("/") ? cv.file.substring(1) : cv.file;
     const url = `${base}${filePath}`;
-
-    /*
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "cv.pdf";
-    document.body.appendChild(a);
-    a.click();
-    setTimeout(() => {
-      document.body.removeChild(a);
-    }, 100);
-    */
-    // Ouvre le PDF dans un nouvel onglet du navigateur
     window.open(url, '_blank', 'noopener,noreferrer');
   }
 
   const handleDeleteCV = (cv) => {
     showConfirm({
-      title: "Supprimer le CV",
-      message: "Cette action est irréversible. Êtes-vous sûr de vouloir supprimer ce cv ?",
+      title: t("cv.history.deleteDialog.title"),
+      message: t("cv.history.deleteDialog.message"),
       variant: "danger",
-      confirmText: "Supprimer",
-      cancelText: "Annuler",
+      confirmText: t("cv.history.deleteDialog.confirm"),
+      cancelText: t("cv.history.deleteDialog.cancel"),
       icon: Trash2,
       onConfirm: () => deleteAction(cv.id),
       isLoading: false
@@ -422,11 +412,11 @@ const CVHistoryDialog = ({
 
     try {
       const deletionResponse = await dispatch(deleteCV(id));
-      if(thunkSucceed(deletionResponse)) {
-          await loadCV();
+      if (thunkSucceed(deletionResponse)) {
+        await loadCV();
       }
     } catch (err) {
-        console.log("ERREUR LORS DE LA SUPPRESSION :", err);
+      console.log("ERREUR LORS DE LA SUPPRESSION :", err);
     }
   }
 
@@ -453,7 +443,7 @@ const CVHistoryDialog = ({
               <div className="flex items-center justify-center w-8 h-8 bg-gray-100 rounded-lg">
                 <FileText className="w-4 h-4 text-gray-600" />
               </div>
-              Historique des CVs
+              {t("cv.history.title")}
             </DialogTitle>
             {selectedUser && (
               <DialogDescription className="flex items-center gap-2 mt-1.5">
@@ -479,7 +469,7 @@ const CVHistoryDialog = ({
             <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-gray-400" />
             <Input
               className="h-8 pl-8 pr-3 text-xs bg-white border-gray-200 rounded-lg focus-visible:ring-1 focus-visible:ring-primary/30"
-              placeholder="Rechercher un CV…"
+              placeholder={t("cv.history.searchPlaceholder")}
               value={search}
               onChange={(e) => setSearch(e.target.value)}
             />
@@ -487,7 +477,7 @@ const CVHistoryDialog = ({
 
           {/* Filtre type */}
           <div className="flex items-center gap-0.5 bg-white border border-gray-200 rounded-lg p-0.5">
-            {TYPE_FILTERS.map((opt) => (
+            {getTypeFilters(t).map((opt) => (
               <button
                 key={opt.val}
                 type="button"
@@ -518,7 +508,7 @@ const CVHistoryDialog = ({
                 <AlertCircle className="w-5 h-5 text-gray-300" />
               </div>
               <p className="text-sm font-medium text-gray-500">
-                Aucun CV trouvé
+                {t("cv.history.noCvFound")}
               </p>
               {(search || filterType !== "ALL") && (
                 <button
@@ -526,7 +516,7 @@ const CVHistoryDialog = ({
                   onClick={() => { setSearch(""); setFilterType("ALL"); }}
                   className="mt-2 text-xs text-primary hover:underline"
                 >
-                  Réinitialiser les filtres
+                  {t("cv.history.resetFilters")}
                 </button>
               )}
             </div>
@@ -540,6 +530,8 @@ const CVHistoryDialog = ({
                 onDownload={() => onDownloadCV(cv)}
                 onDelete={handleDeleteCV}
                 onDuplicate={onDuplicateCV}
+                t={t}
+                locale={locale}
               />
             ))
           )}
@@ -551,11 +543,11 @@ const CVHistoryDialog = ({
           <p className="text-xs text-gray-400 shrink-0">
             {total != null ? (
               <>
-                <span className="font-semibold text-gray-700">{total}</span> CV{total !== 1 ? "s" : ""}
-                {totalPages > 1 && ` · page ${page} / ${totalPages}`}
+                <span className="font-semibold text-gray-700">{total}</span> {t("cv.history.cvCount", { count: total })}
+                {totalPages > 1 && ` · ${t("cv.history.page")} ${page} / ${totalPages}`}
               </>
             ) : (
-              `${cvList.length} résultat${cvList.length !== 1 ? "s" : ""}`
+              t("cv.history.resultCount", { count: cvList.length })
             )}
           </p>
 
@@ -563,10 +555,11 @@ const CVHistoryDialog = ({
           <Pagination
             pagination={selectCVsPaginationFS}
             onPageChange={handlePageChange}
+            t={t}
           />
 
           <Button variant="outline" size="sm" className="text-xs rounded-lg shrink-0" onClick={onClose}>
-            Fermer
+            {t("cv.history.close")}
           </Button>
         </div>
         

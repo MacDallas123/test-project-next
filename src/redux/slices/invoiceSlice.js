@@ -7,7 +7,7 @@ const initialState = {
     invoices: [],
     loading: false,
     error: null,
-    generatedPDF: null,
+    generatedFiles: null, // changed from generatedPDF
     stats: null,
 
     invoicesFilter: {
@@ -80,12 +80,10 @@ export const createInvoice = createAsyncThunk(
       let sendData = data;
       let config = {};
 
-      // If already a FormData instance, use directly
       if (typeof FormData !== "undefined" && data instanceof FormData) {
         sendData = data;
         config.headers = { "Content-Type": "multipart/form-data" };
       } else {
-        // If data is a plain object, convert to FormData
         const formData = new FormData();
         Object.entries(data || {}).forEach(([key, value]) => {
           if (
@@ -98,7 +96,6 @@ export const createInvoice = createAsyncThunk(
             typeof value === "object" &&
             value !== null
           ) {
-            // For objects (except File/Blob), serialize as JSON
             formData.append(key, JSON.stringify(value));
           } else if (value !== undefined) {
             formData.append(key, value);
@@ -122,19 +119,15 @@ export const updateInvoiceById = createAsyncThunk(
   "invoice/updateInvoiceById",
   async ({ id, data }, { rejectWithValue }) => {
     try {
-      // Send data via FormData, including handling of file fields if present
       let sendData = data;
       let config = {};
 
-      // If already a FormData instance, use directly
       if (typeof FormData !== "undefined" && data instanceof FormData) {
         sendData = data;
         config.headers = { "Content-Type": "multipart/form-data" };
       } else {
-        // If data is a plain object, convert to FormData
         const formData = new FormData();
         Object.entries(data || {}).forEach(([key, value]) => {
-          // If value is an object and is a File, append as is
           if (
             typeof value === "object" &&
             value &&
@@ -145,7 +138,6 @@ export const updateInvoiceById = createAsyncThunk(
             typeof value === "object" &&
             value !== null
           ) {
-            // For objects (except File/Blob), serialize as JSON
             formData.append(key, JSON.stringify(value));
           } else if (value !== undefined) {
             formData.append(key, value);
@@ -206,16 +198,16 @@ export const duplicateInvoice = createAsyncThunk(
   }
 );
 
-// POST generate invoice PDF
-export const generateInvoicePDF = createAsyncThunk(
-  "invoice/generateInvoicePDF",
-  async ({ id, format = 'pdf' }, { rejectWithValue }) => {
+// POST generate invoice files (was generatePDF)
+export const generateInvoiceFiles = createAsyncThunk(
+  "invoice/generateInvoiceFiles",
+  async ({ id, format = "all" }, { rejectWithValue }) => {
     try {
       const response = await axios.post(`/invoices/${id}/generate?format=${format}`);
       return response.data;
     } catch (error) {
-      console.log("GENERATE INVOICE PDF ERROR", error);
-      return rejectWithValue(error.response?.data?.message || "Erreur lors de la génération de la facture");
+      console.log("GENERATE INVOICE FILES ERROR", error);
+      return rejectWithValue(error.response?.data?.message || "Erreur lors de la génération du fichier de la facture");
     }
   }
 );
@@ -264,265 +256,263 @@ export const exportInvoice = createAsyncThunk(
 
 // Slice
 const invoiceSlice = createSlice({
-    name: 'invoice',
-    initialState,
-    reducers: {
-        clearError: (state) => {
-            state.error = null;
-        },
-        setPersoError: (state, action) => {
-            state.error = action.payload;
-        },
-        setCurrentInvoice: (state, action) => {
-            state.currentInvoice = action.payload.invoice;
-        },
-        clearInvoice: (state) => {
-            state.currentInvoice = null;
-            state.generatedPDF = null;
-        },
-        clearInvoices: (state) => {
-            state.invoices = [];
-        },
-        clearStats: (state) => {
-            state.stats = null;
-        },
-
-        setInvoicesFilter: (state, action) => {
-          state.quotesFilter = action.payload;
-        },
-
-        resetInvoicesFilter: (state) => {
-            state.quotesFilter = initialState.quotesFilter;
-        },
-
-        setInvoicesPagination: (state, action) => {
-            state.quotesPagination = action.payload;
-        },
-
-        resetInvoicesPagination: (state) => {
-            state.quotesPagination = initialState.quotesPagination;
-        },
+  name: 'invoice',
+  initialState,
+  reducers: {
+    clearError: (state) => {
+      state.error = null;
     },
-    extraReducers: (builder) => {
-        // fetchInvoices
-        builder
-        .addCase(fetchInvoices.pending, (state) => {
-            state.loading = true;
-            state.error = null;
-        })
-        .addCase(fetchInvoices.fulfilled, (state, action) => {
-            state.loading = false;
-            state.invoices = action.payload.content?.data || action.payload.content || [];
-            state.error = null;
-        })
-        .addCase(fetchInvoices.rejected, (state, action) => {
-            state.loading = false;
-            state.error = action.payload || "Erreur lors de la récupération des factures";
-        });
+    setPersoError: (state, action) => {
+      state.error = action.payload;
+    },
+    setCurrentInvoice: (state, action) => {
+      state.currentInvoice = action.payload;
+    },
+    clearInvoice: (state) => {
+      state.currentInvoice = null;
+      state.generatedFiles = null; // changed from generatedPDF
+    },
+    clearInvoices: (state) => {
+      state.invoices = [];
+    },
+    clearStats: (state) => {
+      state.stats = null;
+    },
 
-        // fetchInvoiceById
-        builder
-        .addCase(fetchInvoiceById.pending, (state) => {
-            state.loading = true;
-            state.error = null;
-        })
-        .addCase(fetchInvoiceById.fulfilled, (state, action) => {
-            state.loading = false;
-            state.currentInvoice = action.payload.content;
-            state.error = null;
-        })
-        .addCase(fetchInvoiceById.rejected, (state, action) => {
-            state.loading = false;
-            state.error = action.payload || "Erreur lors de la récupération de la facture";
-        });
+    setInvoicesFilter: (state, action) => {
+      state.invoicesFilter = action.payload;
+    },
 
-        // fetchUserInvoices
-        builder
-        .addCase(fetchUserInvoices.pending, (state) => {
-            state.loading = true;
-            state.error = null;
-        })
-        .addCase(fetchUserInvoices.fulfilled, (state, action) => {
-            state.loading = false;
-            state.invoices = action.payload.content?.data || action.payload.content || [];
-            state.error = null;
-        })
-        .addCase(fetchUserInvoices.rejected, (state, action) => {
-            state.loading = false;
-            state.error = action.payload || "Erreur lors de la récupération de vos factures";
-        });
+    resetInvoicesFilter: (state) => {
+      state.invoicesFilter = initialState.invoicesFilter;
+    },
 
-        // createInvoice
-        builder
-        .addCase(createInvoice.pending, (state) => {
-            state.loading = true;
-            state.error = null;
-        })
-        .addCase(createInvoice.fulfilled, (state, action) => {
-            state.loading = false;
-            state.currentInvoice = action.payload.content;
-            if (state.invoices.length > 0) {
-                state.invoices.unshift(action.payload.content);
-            }
-            state.error = null;
-        })
-        .addCase(createInvoice.rejected, (state, action) => {
-            state.loading = false;
-            state.error = action.payload || "Erreur lors de la création de la facture";
-        });
+    setInvoicesPagination: (state, action) => {
+      state.invoicesPagination = action.payload;
+    },
 
-        // updateInvoiceById
-        builder
-        .addCase(updateInvoiceById.pending, (state) => {
-            state.loading = true;
-            state.error = null;
-        })
-        .addCase(updateInvoiceById.fulfilled, (state, action) => {
-            state.loading = false;
-            state.currentInvoice = action.payload.content;
-            // Mettre à jour dans la liste si présente
-            if (state.invoices.length > 0) {
-                const index = state.invoices.findIndex(inv => inv.id === action.payload.content.id);
-                if (index !== -1) {
-                    state.invoices[index] = action.payload.content;
-                }
-            }
-            state.error = null;
-        })
-        .addCase(updateInvoiceById.rejected, (state, action) => {
-            state.loading = false;
-            state.error = action.payload || "Erreur lors de la mise à jour de la facture";
-        });
+    resetInvoicesPagination: (state) => {
+      state.invoicesPagination = initialState.invoicesPagination;
+    },
+  },
+  extraReducers: (builder) => {
+    // fetchInvoices
+    builder
+      .addCase(fetchInvoices.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(fetchInvoices.fulfilled, (state, action) => {
+        state.loading = false;
+        state.invoices = action.payload.content?.data || action.payload.content || [];
+        state.error = null;
+      })
+      .addCase(fetchInvoices.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload || "Erreur lors de la récupération des factures";
+      });
 
-        // updateInvoiceStatus
-        builder
-        .addCase(updateInvoiceStatus.pending, (state) => {
-            state.loading = true;
-            state.error = null;
-        })
-        .addCase(updateInvoiceStatus.fulfilled, (state, action) => {
-            state.loading = false;
-            if (state.currentInvoice?.id === action.payload.content.id) {
-                state.currentInvoice = action.payload.content;
-            }
-            // Mettre à jour dans la liste
-            if (state.invoices.length > 0) {
-                const index = state.invoices.findIndex(inv => inv.id === action.payload.content.id);
-                if (index !== -1) {
-                    state.invoices[index] = action.payload.content;
-                }
-            }
-            state.error = null;
-        })
-        .addCase(updateInvoiceStatus.rejected, (state, action) => {
-            state.loading = false;
-            state.error = action.payload || "Erreur lors de la mise à jour du statut";
-        });
+    // fetchInvoiceById
+    builder
+      .addCase(fetchInvoiceById.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(fetchInvoiceById.fulfilled, (state, action) => {
+        state.loading = false;
+        state.currentInvoice = action.payload.content;
+        state.error = null;
+      })
+      .addCase(fetchInvoiceById.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload || "Erreur lors de la récupération de la facture";
+      });
 
-        // deleteInvoice
-        builder
-        .addCase(deleteInvoice.pending, (state) => {
-            state.loading = true;
-            state.error = null;
-        })
-        .addCase(deleteInvoice.fulfilled, (state, action) => {
-            state.loading = false;
-            if (state.currentInvoice?.id === action.payload.id) {
-                state.currentInvoice = null;
-            }
-            state.invoices = state.invoices.filter(inv => inv.id !== action.payload.id);
-            state.error = null;
-        })
-        .addCase(deleteInvoice.rejected, (state, action) => {
-            state.loading = false;
-            state.error = action.payload || "Erreur lors de la suppression de la facture";
-        });
+    // fetchUserInvoices
+    builder
+      .addCase(fetchUserInvoices.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(fetchUserInvoices.fulfilled, (state, action) => {
+        state.loading = false;
+        state.invoices = action.payload.content?.data || action.payload.content || [];
+        state.error = null;
+      })
+      .addCase(fetchUserInvoices.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload || "Erreur lors de la récupération de vos factures";
+      });
 
-        // duplicateInvoice
-        builder
-        .addCase(duplicateInvoice.pending, (state) => {
-            state.loading = true;
-            state.error = null;
-        })
-        .addCase(duplicateInvoice.fulfilled, (state, action) => {
-            state.loading = false;
-            state.currentInvoice = action.payload.content;
-            if (state.invoices.length > 0) {
-                state.invoices.unshift(action.payload.content);
-            }
-            state.error = null;
-        })
-        .addCase(duplicateInvoice.rejected, (state, action) => {
-            state.loading = false;
-            state.error = action.payload || "Erreur lors de la duplication de la facture";
-        });
+    // createInvoice
+    builder
+      .addCase(createInvoice.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(createInvoice.fulfilled, (state, action) => {
+        state.loading = false;
+        state.currentInvoice = action.payload.content;
+        if (state.invoices.length > 0) {
+          state.invoices.unshift(action.payload.content);
+        }
+        state.error = null;
+      })
+      .addCase(createInvoice.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload || "Erreur lors de la création de la facture";
+      });
 
-        // generateInvoicePDF
-        builder
-        .addCase(generateInvoicePDF.pending, (state) => {
-            state.loading = true;
-            state.error = null;
-        })
-        .addCase(generateInvoicePDF.fulfilled, (state, action) => {
-            state.loading = false;
-            state.generatedPDF = action.payload.content;
-            // Mettre à jour le currentInvoice avec le chemin du fichier si présent
-            if (state.currentInvoice && action.payload.content?.filePath) {
-                state.currentInvoice.file = action.payload.content.filePath;
-            }
-            state.error = null;
-        })
-        .addCase(generateInvoicePDF.rejected, (state, action) => {
-            state.loading = false;
-            state.error = action.payload || "Erreur lors de la génération de la facture";
-        });
+    // updateInvoiceById
+    builder
+      .addCase(updateInvoiceById.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(updateInvoiceById.fulfilled, (state, action) => {
+        state.loading = false;
+        state.currentInvoice = action.payload.content;
+        if (state.invoices.length > 0) {
+          const index = state.invoices.findIndex(inv => inv.id === action.payload.content.id);
+          if (index !== -1) {
+            state.invoices[index] = action.payload.content;
+          }
+        }
+        state.error = null;
+      })
+      .addCase(updateInvoiceById.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload || "Erreur lors de la mise à jour de la facture";
+      });
 
-        // sendInvoiceByEmail
-        builder
-        .addCase(sendInvoiceByEmail.pending, (state) => {
-            state.loading = true;
-            state.error = null;
-        })
-        .addCase(sendInvoiceByEmail.fulfilled, (state, action) => {
-            state.loading = false;
-            state.error = null;
-        })
-        .addCase(sendInvoiceByEmail.rejected, (state, action) => {
-            state.loading = false;
-            state.error = action.payload || "Erreur lors de l'envoi de la facture";
-        });
+    // updateInvoiceStatus
+    builder
+      .addCase(updateInvoiceStatus.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(updateInvoiceStatus.fulfilled, (state, action) => {
+        state.loading = false;
+        if (state.currentInvoice?.id === action.payload.content.id) {
+          state.currentInvoice = action.payload.content;
+        }
+        if (state.invoices.length > 0) {
+          const index = state.invoices.findIndex(inv => inv.id === action.payload.content.id);
+          if (index !== -1) {
+            state.invoices[index] = action.payload.content;
+          }
+        }
+        state.error = null;
+      })
+      .addCase(updateInvoiceStatus.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload || "Erreur lors de la mise à jour du statut";
+      });
 
-        // fetchInvoiceStats
-        builder
-        .addCase(fetchInvoiceStats.pending, (state) => {
-            state.loading = true;
-            state.error = null;
-        })
-        .addCase(fetchInvoiceStats.fulfilled, (state, action) => {
-            state.loading = false;
-            state.stats = action.payload.content;
-            state.error = null;
-        })
-        .addCase(fetchInvoiceStats.rejected, (state, action) => {
-            state.loading = false;
-            state.error = action.payload || "Erreur lors de la récupération des statistiques";
-        });
+    // deleteInvoice
+    builder
+      .addCase(deleteInvoice.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(deleteInvoice.fulfilled, (state, action) => {
+        state.loading = false;
+        if (state.currentInvoice?.id === action.payload.id) {
+          state.currentInvoice = null;
+        }
+        state.invoices = state.invoices.filter(inv => inv.id !== action.payload.id);
+        state.error = null;
+      })
+      .addCase(deleteInvoice.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload || "Erreur lors de la suppression de la facture";
+      });
 
-        // exportInvoice
-        builder
-        .addCase(exportInvoice.pending, (state) => {
-            state.loading = true;
-            state.error = null;
-        })
-        .addCase(exportInvoice.fulfilled, (state) => {
-            state.loading = false;
-            state.error = null;
-        })
-        .addCase(exportInvoice.rejected, (state, action) => {
-            state.loading = false;
-            state.error = action.payload || "Erreur lors de l'export de la facture";
-        });
-    }
+    // duplicateInvoice
+    builder
+      .addCase(duplicateInvoice.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(duplicateInvoice.fulfilled, (state, action) => {
+        state.loading = false;
+        state.currentInvoice = action.payload.content;
+        if (state.invoices.length > 0) {
+          state.invoices.unshift(action.payload.content);
+        }
+        state.error = null;
+      })
+      .addCase(duplicateInvoice.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload || "Erreur lors de la duplication de la facture";
+      });
+
+    // generateInvoiceFiles (was generateInvoicePDF)
+    builder
+      .addCase(generateInvoiceFiles.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(generateInvoiceFiles.fulfilled, (state, action) => {
+        state.loading = false;
+        state.generatedFiles = action.payload.content;
+        // Optionally: update currentInvoice file(s) with URLs if present for "pdf"
+        if (state.currentInvoice && action.payload.content?.pdf?.url) {
+          state.currentInvoice.file = action.payload.content.pdf.url;
+        }
+        state.error = null;
+      })
+      .addCase(generateInvoiceFiles.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload || "Erreur lors de la génération du fichier de la facture";
+      });
+
+    // sendInvoiceByEmail
+    builder
+      .addCase(sendInvoiceByEmail.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(sendInvoiceByEmail.fulfilled, (state, action) => {
+        state.loading = false;
+        state.error = null;
+      })
+      .addCase(sendInvoiceByEmail.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload || "Erreur lors de l'envoi de la facture";
+      });
+
+    // fetchInvoiceStats
+    builder
+      .addCase(fetchInvoiceStats.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(fetchInvoiceStats.fulfilled, (state, action) => {
+        state.loading = false;
+        state.stats = action.payload.content;
+        state.error = null;
+      })
+      .addCase(fetchInvoiceStats.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload || "Erreur lors de la récupération des statistiques";
+      });
+
+    // exportInvoice
+    builder
+      .addCase(exportInvoice.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(exportInvoice.fulfilled, (state) => {
+        state.loading = false;
+        state.error = null;
+      })
+      .addCase(exportInvoice.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload || "Erreur lors de l'export de la facture";
+      });
+  }
 });
 
 export const { 
@@ -545,7 +535,7 @@ export const selectCurrentInvoice = (state) => state.invoice.currentInvoice;
 export const selectInvoices = (state) => state.invoice.invoices;
 export const selectInvoiceLoading = (state) => state.invoice.loading;
 export const selectInvoiceError = (state) => state.invoice.error;
-export const selectGeneratedPDF = (state) => state.invoice.generatedPDF;
+export const selectGeneratedFiles = (state) => state.invoice.generatedFiles;
 export const selectInvoiceStats = (state) => state.invoice.stats;
-export const selectInvoicesFilter = (state) => state.cv.invoicesFilter;
-export const selectInvoicesPagination = (state) => state.cv.invoicesPagination;
+export const selectInvoicesFilter = (state) => state.invoice.invoicesFilter;
+export const selectInvoicesPagination = (state) => state.invoice.invoicesPagination;

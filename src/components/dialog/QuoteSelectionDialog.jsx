@@ -1,344 +1,276 @@
-import { useState } from "react";
-import {
-  FileText, Copy, Check, Calendar, Hash, RefreshCw,
-  Search, AlertCircle, ChevronRight, FilePlus,
-} from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import { useState, useMemo, useEffect } from "react";
+import { FileText, Search, Check, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { useDispatch, useSelector } from "react-redux";
 import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
+  fetchUserQuotes,
+  selectQuotes,
+  selectQuotesFilter,
+  selectQuotesPagination,
+  setQuotesFilter,
+} from "@/redux/slices/quoteSlice";
 
-// ─────────────────────────────────────────────
-// BADGE VERSION (BIS)
-// ─────────────────────────────────────────────
-function VersionBadge({ version, isSelected }) {
-  if (!version || version === 1) return null;
-  
-  return (
-    <Badge 
-      variant="outline" 
-      className={`
-        ml-2 text-xs font-mono
-        ${isSelected 
-          ? 'border-primary/30 bg-primary/5 text-primary' 
-          : 'border-amber-200 bg-amber-50 text-amber-700'}
-      `}
-    >
-      <Copy className="w-3 h-3 mr-1" />
-      v{version}
-    </Badge>
-  );
+// ── Helpers (identiques à QuoteHistoryDialog) ─────────────────────────────────
+
+function formatDate(isoString) {
+  if (!isoString) return null;
+  return new Date(isoString).toLocaleDateString("fr-FR", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+  });
 }
 
-// ─────────────────────────────────────────────
-// LIGNE DEVIS
-// ─────────────────────────────────────────────
-function QuoteRow({ 
-  quote, 
-  isSelected, 
-  onSelect, 
-  onViewVersions,
-  showVersions = false,
-  index 
-}) {
+function quoteClientName(quote) {
+  const ci = quote.clientInfo ?? quote;
+  const full = `${ci.firstName ?? ""} ${ci.lastName ?? ""}`.trim();
+  return full || ci.company || `Devis #${quote.quoteNumber}`;
+}
+
+function quoteClientCompany(quote) {
+  return (quote.clientInfo ?? quote).company ?? null;
+}
+
+// ── Status ────────────────────────────────────────────────────────────────────
+
+const STATUS_DOT = {
+  draft:    "bg-gray-300",
+  sent:     "bg-sky-400",
+  accepted: "bg-emerald-400",
+  rejected: "bg-red-400",
+  expired:  "bg-orange-400",
+};
+
+const STATUS_LABEL = {
+  draft:    "Brouillon",
+  sent:     "Envoyé",
+  accepted: "Accepté",
+  rejected: "Refusé",
+  expired:  "Expiré",
+};
+
+// ── Ligne devis ───────────────────────────────────────────────────────────────
+
+function QuoteRow({ quote, isSelected, onToggle, symbol = "FCFA" }) {
+  const clientName    = quoteClientName(quote);
+  const clientCompany = quoteClientCompany(quote);
+  const status        = quote.quoteStatus ?? "draft";
+  const date          = formatDate(quote.createdAt);
+  const label         = clientCompany ? `${clientName} — ${clientCompany}` : clientName;
+
   return (
-    <div
+    <button
+      type="button"
+      onClick={() => onToggle(quote.id)}
       className={`
-        group relative flex items-center gap-4 p-4 rounded-xl border-2 transition-all duration-200
-        ${isSelected 
-          ? 'border-primary bg-primary/[0.02] shadow-sm' 
-          : 'border-transparent bg-white hover:border-gray-200 hover:shadow-sm'}
+        w-full flex items-center gap-3 px-4 py-3 rounded-lg border text-left transition-all duration-150
+        ${isSelected
+          ? "border-gray-900 bg-gray-50"
+          : "border-gray-100 bg-white hover:border-gray-200 hover:bg-gray-50/60"
+        }
       `}
-      style={{ animationDelay: `${index * 40}ms` }}
     >
-      {/* Indicateur de sélection */}
-      <div className={`
-        flex items-center justify-center w-5 h-5 rounded-full border-2 transition-all
-        ${isSelected 
-          ? 'border-primary bg-primary text-white' 
-          : 'border-gray-300 group-hover:border-gray-400'}
-      `}>
-        {isSelected && <Check className="w-3 h-3" />}
+      {/* Checkbox */}
+      <div
+        className={`flex-shrink-0 flex items-center justify-center rounded border transition-all
+          ${isSelected ? "bg-gray-900 border-gray-900" : "border-gray-300"}`}
+        style={{ width: 18, height: 18 }}
+      >
+        {isSelected && <Check className="w-2.5 h-2.5 text-white" strokeWidth={3} />}
       </div>
 
-      {/* Icône document */}
-      <div className={`
-        flex items-center justify-center flex-shrink-0 w-10 h-12 rounded-lg border
-        ${isSelected 
-          ? 'bg-primary/10 border-primary/20' 
-          : 'bg-amber-50/50 border-amber-200/30'}
-      `}>
-        <FileText className={`
-          w-5 h-5 
-          ${isSelected ? 'text-primary' : 'text-amber-600/60'}
-        `} />
+      {/* Numéro */}
+      <div className="flex items-center gap-2 flex-shrink-0 w-28">
+        <span className="font-mono text-sm font-semibold text-gray-800 truncate">
+          {quote.quoteNumber ?? `#${quote.id}`}
+        </span>
+        {quote.bisNumber && (
+          <span className="text-[10px] text-gray-400 font-mono shrink-0">·{quote.bisNumber}</span>
+        )}
       </div>
 
-      {/* Infos principales */}
-      <div className="flex-1 min-w-0" onClick={() => onSelect(quote)}>
-        <div className="flex flex-wrap items-center gap-2">
-          <span className={`
-            font-mono font-semibold truncate
-            ${isSelected ? 'text-primary' : 'text-gray-800'}
-          `}>
-            {quote.numero}
-          </span>
-          <VersionBadge version={quote.bis} isSelected={isSelected} />
-          {quote.estTransforme && (
-            <Badge variant="secondary" className="text-[10px] h-5 bg-emerald-50 text-emerald-700 border-emerald-200">
-              <FilePlus className="w-3 h-3 mr-1" />
-              Transformé
-            </Badge>
-          )}
-        </div>
-        
-        <div className="flex flex-wrap items-center gap-3 mt-1 text-xs text-muted-foreground">
-          <span className="flex items-center gap-1">
-            <Calendar className="w-3 h-3" />
-            {quote.date}
-          </span>
-          {quote.clientName && (
-            <span className="font-medium text-gray-600 truncate max-w-[200px]">
-              {quote.clientName}
-            </span>
-          )}
-          {quote.montant && (
-            <span className="flex items-center gap-1 font-semibold text-gray-700">
-              {quote.montant.toLocaleString()} FCFA
-            </span>
-          )}
-        </div>
-      </div>
+      {/* Client */}
+      <span className="flex-1 text-xs text-gray-500 truncate min-w-0">
+        {label}
+      </span>
 
-      {/* Bouton voir versions si plusieurs existent */}
-      {showVersions && quote.versions && quote.versions.length > 1 && (
-        <TooltipProvider>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="w-8 h-8 text-gray-400 hover:text-amber-600 hover:bg-amber-50"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  onViewVersions(quote);
-                }}
-              >
-                <RefreshCw className="w-4 h-4" />
-              </Button>
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>Voir les {quote.versions.length} versions</p>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
+      {/* Montant */}
+      {quote.total !== undefined && (
+        <span className="text-xs font-semibold text-gray-700 shrink-0 tabular-nums">
+          {Number(quote.total).toLocaleString("fr-FR")} {symbol}
+        </span>
       )}
 
-      {/* Flèche de sélection (indicative) */}
-      <ChevronRight className={`
-        w-4 h-4 transition-all
-        ${isSelected 
-          ? 'text-primary opacity-100' 
-          : 'text-gray-300 opacity-0 group-hover:opacity-50'}
-      `} />
-    </div>
+      {/* Date */}
+      {date && (
+        <span className="text-[11px] text-gray-400 shrink-0 hidden sm:block">
+          {date}
+        </span>
+      )}
+
+      {/* Status dot */}
+      <div
+        className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${STATUS_DOT[status] ?? STATUS_DOT.draft}`}
+        title={STATUS_LABEL[status]}
+      />
+    </button>
   );
 }
 
-// ─────────────────────────────────────────────
-// COMPOSANT PRINCIPAL
-// ─────────────────────────────────────────────
+// ── Composant principal ───────────────────────────────────────────────────────
+
 const QuoteSelectionDialog = ({
   isOpen,
   onClose,
   onConfirm,
-  quotes = [],
   title = "Sélectionner un devis",
-  description = "Choisissez le devis à transformer en facture",
-  allowVersionSelection = true,
-  selectedQuoteId: externalSelectedId,
-  onQuoteSelect,
-  isLoading = false,
+  symbol = "FCFA",
 }) => {
-  const [search, setSearch] = useState("");
-  const [internalSelectedId, setInternalSelectedId] = useState(null);
-  const [expandedVersions, setExpandedVersions] = useState({});
+  const dispatch           = useDispatch();
+  const quotesFS           = useSelector(selectQuotes);
+  const quotesFilterFS     = useSelector(selectQuotesFilter);
+  const quotesPaginationFS = useSelector(selectQuotesPagination);
 
-  // Gestion du mode contrôlé/non-contrôlé
-  const selectedId = externalSelectedId !== undefined ? externalSelectedId : internalSelectedId;
-  const setSelectedId = onQuoteSelect || setInternalSelectedId;
+  const [search,         setSearch]         = useState("");
+  const [debounceSearch, setDebounceSearch] = useState("");
+  const [selectedId,     setSelectedId]     = useState(null);
 
-  // Filtrage
-  const filteredQuotes = quotes.filter(quote => {
-    const term = search.toLowerCase();
-    return (
-      quote.numero?.toLowerCase().includes(term) ||
-      quote.clientName?.toLowerCase().includes(term) ||
-      (quote.bis && `v${quote.bis}`.includes(term))
+  // Debounce recherche (identique à QuoteHistoryDialog)
+  useEffect(() => {
+    const handler = setTimeout(() => setDebounceSearch(search), 300);
+    return () => clearTimeout(handler);
+  }, [search]);
+
+  // Synchronisation filtre → Redux → refetch
+  useEffect(() => {
+    dispatch(
+      setQuotesFilter({
+        ...quotesFilterFS,
+        search: debounceSearch,
+        page: 1,
+      })
     );
-  });
+  }, [debounceSearch]);
 
-  // Grouper les devis par numéro pour afficher les versions
-  const groupedQuotes = filteredQuotes.reduce((acc, quote) => {
-    const key = quote.numero.split('-v')[0]; // Supposons un format "NUM-vX"
-    if (!acc[key]) acc[key] = [];
-    acc[key].push(quote);
-    return acc;
-  }, {});
+  // Fetch à l'ouverture et à chaque changement de filtre
+  useEffect(() => {
+    if (isOpen) dispatch(fetchUserQuotes(quotesFilterFS));
+  }, [quotesFilterFS, isOpen]);
 
-  // Trier les groupes par date (plus récent d'abord)
-  const sortedGroups = Object.entries(groupedQuotes)
-    .map(([numero, versions]) => ({
-      numero,
-      versions: versions.sort((a, b) => (b.bis || 1) - (a.bis || 1)),
-      latestVersion: versions[0],
-    }))
-    .sort((a, b) => new Date(b.latestVersion.date) - new Date(a.latestVersion.date));
+  const { total, page, totalPages } = quotesPaginationFS ?? {};
+  const quoteList = Array.isArray(quotesFS) ? quotesFS : [];
+  const isLoading = isOpen && !quotesFS;
+
+  const handleToggle = (id) => {
+    setSelectedId(prev => (prev === id ? null : id));
+  };
 
   const handleConfirm = () => {
-    if (selectedId) {
-      const selectedQuote = quotes.find(q => q.id === selectedId);
-      onConfirm?.(selectedQuote);
-      onClose();
-    }
+    if (!selectedId) return;
+    const quote = quoteList.find(q => q.id === selectedId);
+    onConfirm?.(quote);
+    onClose();
   };
 
-  const handleSelectQuote = (quote) => {
-    setSelectedId(quote.id);
-  };
-
-  const toggleVersions = (quote) => {
-    setExpandedVersions(prev => ({
-      ...prev,
-      [quote.numero]: !prev[quote.numero]
-    }));
+  const handleClose = () => {
+    setSelectedId(null);
+    setSearch("");
+    onClose();
   };
 
   return (
-    <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[700px] max-h-[90vh] flex flex-col gap-0 p-0 overflow-hidden">
-        
-        {/* En-tête */}
-        <div className="px-6 pt-6 pb-4 border-b bg-gradient-to-br from-amber-50/50 to-transparent">
-          <DialogHeader>
-            <DialogTitle className="flex items-center gap-2 text-amber-800">
-              <FileText className="w-5 h-5 text-amber-600" />
+    <Dialog open={isOpen} onOpenChange={handleClose}>
+      <DialogContent className="sm:max-w-[560px] max-h-[80vh] flex flex-col gap-0 p-0 overflow-hidden rounded-xl">
+
+        {/* Header */}
+        <div className="flex items-center justify-between px-5 pt-5 pb-4 border-b">
+          <DialogHeader className="space-y-0">
+            <DialogTitle className="text-sm font-semibold text-gray-900 flex items-center gap-2">
+              <FileText className="w-4 h-4 text-gray-400" />
               {title}
             </DialogTitle>
-            <DialogDescription>
-              {description}
-            </DialogDescription>
           </DialogHeader>
+          <button
+            type="button"
+            onClick={handleClose}
+            className="text-gray-300 hover:text-gray-500 transition-colors"
+          >
+            <X className="w-4 h-4" />
+          </button>
+        </div>
 
-          {/* Barre de recherche */}
-          <div className="relative mt-4">
-            <Search className="absolute w-4 h-4 -translate-y-1/2 left-3 top-1/2 text-muted-foreground" />
+        {/* Search */}
+        <div className="px-5 py-3 border-b bg-white">
+          <div className="relative">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-gray-300" />
             <Input
-              className="pl-9"
-              placeholder="Rechercher par numéro, client, version..."
+              className="h-8 pl-8 text-xs border-gray-200 rounded-md focus-visible:ring-1 focus-visible:ring-gray-300 focus-visible:border-gray-300"
+              placeholder="Numéro, client…"
               value={search}
               onChange={e => setSearch(e.target.value)}
             />
           </div>
         </div>
 
-        {/* Liste des devis */}
-        <div className="flex-1 px-6 py-4 space-y-3 overflow-y-auto bg-gray-50/30">
+        {/* List */}
+        <div className="flex-1 overflow-y-auto px-5 py-3 space-y-1.5 bg-gray-50/40">
           {isLoading ? (
-            <div className="space-y-2">
-              {[1, 2, 3].map(i => (
-                <div key={i} className="h-[72px] rounded-xl bg-gray-100 animate-pulse" />
-              ))}
-            </div>
-          ) : filteredQuotes.length === 0 ? (
-            <div className="flex flex-col items-center justify-center py-16 text-center">
-              <div className="flex items-center justify-center mb-3 bg-gray-100 rounded-full w-14 h-14">
-                <AlertCircle className="w-6 h-6 text-gray-300" />
-              </div>
-              <p className="text-sm font-medium text-gray-500">
-                {quotes.length === 0
-                  ? "Aucun devis disponible"
-                  : "Aucun résultat pour cette recherche"}
+            Array.from({ length: 4 }).map((_, i) => (
+              <div key={i} className="h-11 rounded-lg bg-gray-100 animate-pulse" />
+            ))
+          ) : quoteList.length === 0 ? (
+            <div className="flex flex-col items-center justify-center py-14 text-center">
+              <p className="text-xs text-gray-400">
+                {search ? "Aucun résultat" : "Aucun devis disponible"}
               </p>
-              {quotes.length > 0 && (
+              {search && (
                 <button
                   type="button"
                   onClick={() => setSearch("")}
-                  className="mt-2 text-xs text-amber-600 hover:underline"
+                  className="mt-1.5 text-xs text-gray-500 hover:underline"
                 >
-                  Réinitialiser la recherche
+                  Réinitialiser
                 </button>
               )}
             </div>
-          ) : allowVersionSelection ? (
-            // Affichage groupé avec versions
-            sortedGroups.map((group) => (
-              <div key={group.numero} className="space-y-1">
-                {/* Version principale (la plus récente) */}
-                <QuoteRow
-                  quote={group.latestVersion}
-                  isSelected={selectedId === group.latestVersion.id}
-                  onSelect={handleSelectQuote}
-                  onViewVersions={toggleVersions}
-                  showVersions={group.versions.length > 1}
-                  index={0}
-                />
-                
-                {/* Versions antérieures (expandées) */}
-                {expandedVersions[group.numero] && group.versions.slice(1).map((version, idx) => (
-                  <div key={version.id} className="pl-4 ml-8 border-l-2 border-amber-200">
-                    <QuoteRow
-                      quote={version}
-                      isSelected={selectedId === version.id}
-                      onSelect={handleSelectQuote}
-                      index={idx + 1}
-                    />
-                  </div>
-                ))}
-              </div>
-            ))
           ) : (
-            // Affichage simple (sans grouping)
-            filteredQuotes.map((quote, i) => (
+            quoteList.map(quote => (
               <QuoteRow
                 key={quote.id}
                 quote={quote}
                 isSelected={selectedId === quote.id}
-                onSelect={handleSelectQuote}
-                index={i}
+                onToggle={handleToggle}
+                symbol={symbol}
               />
             ))
           )}
         </div>
 
-        {/* Pied avec actions */}
-        <div className="flex items-center justify-between gap-2 px-6 py-4 bg-white border-t">
-          <p className="text-xs text-muted-foreground">
-            {filteredQuotes.length} devis trouvé{filteredQuotes.length !== 1 ? "s" : ""}
-          </p>
+        {/* Footer */}
+        <div className="flex items-center justify-between px-5 py-3 border-t bg-white">
+          <span className="text-[11px] text-gray-400">
+            {total != null ? (
+              <>
+                <span className="font-semibold text-gray-600">{total}</span> devis
+                {totalPages > 1 && ` · page ${page}/${totalPages}`}
+              </>
+            ) : (
+              `${quoteList.length} devis`
+            )}
+          </span>
           <div className="flex items-center gap-2">
-            <Button variant="outline" size="sm" onClick={onClose}>
+            <Button variant="ghost" size="sm" className="text-xs h-8 text-gray-500" onClick={handleClose}>
               Annuler
             </Button>
-            <Button 
-              size="sm" 
-              onClick={handleConfirm}
+            <Button
+              size="sm"
+              className="text-xs h-8 bg-primary/90 hover:bg-primary text-white rounded-md px-4"
               disabled={!selectedId}
-              className="bg-amber-600 hover:bg-amber-700"
+              onClick={handleConfirm}
             >
-              Confirmer la sélection
+              Sélectionner
             </Button>
           </div>
         </div>

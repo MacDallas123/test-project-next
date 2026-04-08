@@ -42,3 +42,11 @@ next-env.d.ts
 
 # old
 *.old*
+
+# merging tools
+*json_merge.py
+*file2.json
+*file1.json
+
+# logs
+*logs

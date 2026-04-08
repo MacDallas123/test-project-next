@@ -2,51 +2,54 @@
   "common": {
     "logoAlt": "FIBEM Logo",
     "showPassword": "Show password",
-    "hidePassword": "Hide password"
+    "hidePassword": "Hide password",
+    "emailOrPhone": "Email or phone number"
   },
   "login": {
-    "title": "Login",
+    "title": "Sign In",
+    "subtitle": "Access your professional space",
     "description": "Use your email or phone number",
     "identifier": {
       "required": "Email or phone number is required",
       "incorrect": "Please enter a valid email or phone number (international format)",
       "placeholder": "Email or phone number",
-      "tooLong": "Password is too long"
+      "tooLong": "The identifier is too long"
     },
     "password": {
-      "tooShort": "Password must contain at least 6 characters"
+      "tooShort": "Password must be at least 6 characters",
+      "placeholder": "Your password"
     },
     "forgotPassword": "Forgot password?",
     "rememberMe": "Remember me",
     "secureConnection": "Secure connection",
-    "loginButton": "Login",
-    "loggingIn": "Logging in...",
+    "loginButton": "Sign in",
+    "loggingIn": "Signing in...",
     "noAccount": "Don't have an account yet?",
     "signUp": "Sign up for free",
-    "termsAndPrivacy": "By logging in, you accept our terms of use and privacy policy",
+    "termsAndPrivacy": "By signing in, you agree to our terms of use and privacy policy",
     "terms": "terms of use",
     "privacy": "privacy policy"
   },
   "register": {
     "title": "Create an account",
-    "subtitle": "Join our meal delivery platform",
+    "subtitle": "Join our food delivery platform",
     "description": "Fill in the information to create your account",
-    "redirectMessage": "Thank you for contacting us. Please finish creating your account to be able to send us a message",
+    "redirectMessage": "Thank you for contacting us. Please complete your account creation to send us a message",
     "createButton": "Create my account",
     "creatingAccount": "Creating account...",
     "alreadyHaveAccount": "Already have an account?",
-    "loginLink": "Login",
+    "loginLink": "Sign in",
     "firstName": {
       "label": "First name",
       "placeholder": "Your first name",
-      "tooShort": "First name must contain at least 2 characters",
+      "tooShort": "First name must be at least 2 characters",
       "tooLong": "First name is too long",
       "invalid": "Special characters not allowed (except space)"
     },
     "lastName": {
       "label": "Last name",
       "placeholder": "Your last name",
-      "tooShort": "Last name must contain at least 2 characters",
+      "tooShort": "Last name must be at least 2 characters",
       "tooLong": "Last name is too long",
       "invalid": "Special characters not allowed (except space)"
     },
@@ -55,7 +58,7 @@
       "placeholder": "+33 1 23 45 67 89",
       "tooShort": "Phone number is too short",
       "tooLong": "Phone number is too long",
-      "invalid": "Invalid format (e.g.: +012 34 56 78)"
+      "invalid": "Invalid format (e.g. +012 34 56 78)"
     },
     "email": {
       "label": "Email address",
@@ -74,7 +77,7 @@
       },
       "candidate": {
         "label": "Candidate",
-        "description": "Job or assignment seekers (candidates, interns, apprentices)"
+        "description": "Job or mission seekers (candidates, interns, apprentices)"
       },
       "professional": {
         "label": "Professional",
@@ -82,11 +85,11 @@
       },
       "partner": {
         "label": "Partner",
-        "description": "Large account and temp agencies"
+        "description": "Key accounts and staffing agencies"
       },
       "admin": {
         "label": "Administrator",
-        "description": "Deeper access to the platform (Sales, ...)"
+        "description": "Deeper platform access (Sales staff, ...)"
       }
     },
     "language": {
@@ -97,7 +100,7 @@
     "password": {
       "label": "Password",
       "placeholder": "Your password",
-      "tooShort": "Password must contain at least 8 characters",
+      "tooShort": "Password must be at least 8 characters",
       "tooLong": "Password is too long",
       "uppercase": "At least one uppercase letter",
       "lowercase": "At least one lowercase letter",
@@ -115,7 +118,7 @@
       "excellent": "Excellent"
     },
     "passwordCriteria": {
-      "minChars": "8 min characters",
+      "minChars": "8 chars min",
       "uppercase": "1 uppercase",
       "lowercase": "1 lowercase",
       "number": "1 number",
@@ -136,17 +139,1561 @@
     "description": "A verification code has been sent to",
     "instruction": "Enter the 6-digit code sent to your email address to confirm your registration.",
     "codeLabel": "Verification code",
-    "codeError": "Please enter the 6 digits of the code.",
+    "codeError": "Please enter all 6 digits of the code.",
     "codeIncorrect": "Incorrect or expired code.",
-    "verifyButton": "Validate and create my account",
+    "verifyButton": "Confirm and create my account",
     "verifying": "Verifying...",
     "codeNotReceived": "Didn't receive a code?",
     "resendIn": "Resend in",
     "resend": "Resend code",
     "backToForm": "Edit my information",
-    "errorOccurred": "An error has occurred. Please try again."
+    "errorOccurred": "An error occurred. Please try again."
   },
   "errors": {
     "loginFailed": "Login error"
-  }
+  },
+  "hero": {
+    "slide1": {
+      "badge": "Welcome",
+      "title": {
+        "part1": "Welcome to",
+        "part2": "ivrer",
+        "part3": "ourriture"
+      },
+      "subtitle": "Your favourite dishes, delivered in the blink of an eye",
+      "tagline": "Order in 3 clicks. Receive in 30 min.",
+      "cta": "Order now",
+      "stats": {
+        "restaurants": "Restaurants",
+        "deliveryTime": "Avg. delivery",
+        "satisfiedClients": "Satisfied customers",
+        "deliveryRadius": "Delivery radius"
+      },
+      "visual": {
+        "label": "Order in progress…",
+        "sub": "Delivery in 18 min"
+      }
+    },
+    "slide2": {
+      "badge": "Express",
+      "title": "Fast. Simple. Hassle-free.",
+      "subtitle": "A few clicks and your meal is on its way.",
+      "tagline": "Intuitive interface • 100% secure payment • GPS tracking",
+      "cta": "Open the app",
+      "stats": {
+        "securePayment": "Secure payment",
+        "liveTracking": "Live tracking",
+        "clicks": "To order",
+        "availability": "Availability"
+      },
+      "visual": {
+        "label": "GPS tracking active",
+        "sub": "Driver 2 km from you"
+      }
+    },
+    "slide3": {
+      "badge": "Popular",
+      "title": "Something for every craving",
+      "subtitle": "Burgers, pizzas, local dishes, healthy options…",
+      "tagline": "100+ restaurants • Varied cuisines • Vegetarian options",
+      "cta": "Explore restaurants",
+      "stats": {
+        "cuisineTypes": "Cuisine types",
+        "dishes": "Menu dishes",
+        "rating": "Average rating",
+        "new": "New",
+        "perWeek": "Every week"
+      },
+      "visual": {
+        "label": "Daily suggestion",
+        "sub": "Healthy bowl • 1,200 FCFA"
+      }
+    },
+    "slide4": {
+      "badge": "Local",
+      "title": "Local restaurants, delivered with care",
+      "subtitle": "Local partners • Fresh produce • Quality commitment",
+      "tagline": "We support the restaurateurs in your city.",
+      "cta": "Become a partner",
+      "stats": {
+        "fresh": "Fresh",
+        "localProducts": "Local products",
+        "certified": "Certified",
+        "quality": "Guaranteed quality",
+        "partners": "Partners",
+        "sales": "Restaurant sales"
+      },
+      "visual": {
+        "label": "Certified partner",
+        "sub": "Neighbourhood restaurant"
+      }
+    }
+  },
+  "characteristics": {
+    "title": "Why choose us?",
+    "subtitle": "Concrete guarantees for your business",
+    "security": {
+      "title": "Guaranteed Security",
+      "description": "Reliable systems to protect your data and transactions."
+    },
+    "transparent_prices": {
+      "title": "Transparent Pricing",
+      "description": "No hidden fees, a clear quote upfront for every service."
+    },
+    "fast_delivery": {
+      "title": "Speed",
+      "description": "Deadlines met and fast responses to your needs."
+    }
+  },
+  "services": {
+    "discoverBadge": "Discover our services",
+    "title": "What would you like?",
+    "subtitle": "Delicious dishes and professional opportunities for a complete culinary experience",
+    "popularMeals": "Popular dishes",
+    "popularMealsDesc": "Discover our community's favourites",
+    "previous": "Previous",
+    "next": "Next",
+    "addToCart": "Add to cart",
+    "seeMoreMeals": "See more dishes",
+    "seeMoreMealsDesc": "Discover all our restaurants and their menus",
+    "explore": "Explore",
+    "jobOffers": "Restaurant job offers",
+    "jobOffersDesc": "Join the best restaurants near you",
+    "viewOffer": "View offer",
+    "moreJobs": "More job offers",
+    "moreJobsDesc": "Discover all opportunities in the restaurant industry",
+    "exploreJobs": "Explore offers",
+    "forProfessionals": "For professionals",
+    "toolsTitle": "Professional tools for restaurateurs",
+    "toolsDesc": "Manage your establishment efficiently with our suite of free professional tools",
+    "contract": "Contract",
+    "salary": "Salary",
+    "experience": {
+      "years": "{years} yrs",
+      "beginner": "Beginners welcome"
+    },
+    "posted": {
+      "daysAgo": "{days} days ago"
+    },
+    "tags": {
+      "popular": "Popular",
+      "spicy": "Spicy",
+      "new": "New",
+      "vegetarian": "Vegetarian",
+      "healthy": "Healthy",
+      "premium": "Premium",
+      "family": "Family",
+      "experienced": "Experienced",
+      "fullTime": "Full time",
+      "beginner": "Beginner",
+      "training": "Training",
+      "management": "Management",
+      "specialized": "Specialized",
+      "seasonal": "Seasonal",
+      "creative": "Creative",
+      "evening": "Evening",
+      "flexible": "Flexible",
+      "senior": "Senior"
+    },
+    "badges": {
+      "favorite": "Staff pick",
+      "new": "New",
+      "topChef": "Top Chef",
+      "light": "Light",
+      "chefSpecial": "Chef's special",
+      "authentic": "Authentic",
+      "mustHave": "Must-have",
+      "familyMeal": "Family meal",
+      "premium": "Premium",
+      "urgent": "Urgent",
+      "training": "Training",
+      "topSalary": "Top salary",
+      "seasonal": "Seasonal",
+      "creative": "Creative",
+      "housingPossible": "Housing possible",
+      "executive": "Executive",
+      "artisan": "Artisan"
+    },
+    "contracts": {
+      "permanent": "Permanent",
+      "fixedTerm": "Fixed-term",
+      "seasonal": "Seasonal"
+    },
+    "jobTypes": {
+      "kitchen": "Kitchen",
+      "dining": "Front of house",
+      "bar": "Bar",
+      "cleaning": "Cleaning",
+      "management": "Management",
+      "pastry": "Pastry"
+    },
+    "meals": {
+      "yassa": {
+        "title": "Chicken Yassa",
+        "restaurant": "Le Dakarois",
+        "category": "African",
+        "description": "Lemon-marinated chicken with caramelised onions, served with white rice"
+      },
+      "burger": {
+        "title": "Gourmet Burger",
+        "restaurant": "Burger House",
+        "category": "Fast food",
+        "description": "180g beef patty, melted cheddar, crispy bacon and house sauce"
+      },
+      "pizza": {
+        "title": "Pizza Margherita",
+        "restaurant": "Pizzeria Roma",
+        "category": "Italian",
+        "description": "Tomato base, fresh mozzarella, basil and olive oil"
+      },
+      "salad": {
+        "title": "Caesar Salad",
+        "restaurant": "Green Life",
+        "category": "Healthy",
+        "description": "Grilled chicken, parmesan, croutons and house caesar dressing"
+      },
+      "padthai": {
+        "title": "Pad Thai",
+        "restaurant": "Thai Orchidée",
+        "category": "Asian",
+        "description": "Stir-fried rice noodles with prawns, peanuts and bean sprouts"
+      },
+      "poke": {
+        "title": "Poke Bowl",
+        "restaurant": "Hawaii Bowl",
+        "category": "Healthy",
+        "description": "Fresh salmon, seasoned rice, avocado, seaweed and soy sauce"
+      },
+      "tacos": {
+        "title": "Tacos Al Pastor",
+        "restaurant": "El Camino",
+        "category": "Mexican",
+        "description": "Corn tortillas, marinated pork, pineapple, onions and coriander"
+      },
+      "ramen": {
+        "title": "Tonkotsu Ramen",
+        "restaurant": "Izakaya San",
+        "category": "Japanese",
+        "description": "Pork broth, noodles, marinated egg, nori and pork belly"
+      },
+      "couscous": {
+        "title": "Royal Couscous",
+        "restaurant": "Le Marocain",
+        "category": "African",
+        "description": "Fine semolina, vegetables, merguez, chicken and lamb"
+      },
+      "sushi": {
+        "title": "Sushi Deluxe",
+        "restaurant": "Sushi Master",
+        "category": "Japanese",
+        "description": "Assorted 20 pieces: salmon, tuna, sea bream, maki rolls and California rolls"
+      }
+    },
+    "jobs": {
+      "chef": {
+        "title": "Chef de partie",
+        "restaurant": "Le Grand Restaurant",
+        "location": "Paris 8th",
+        "description": "We are looking for a passionate chef de partie to join our kitchen brigade."
+      },
+      "waiter": {
+        "title": "Waiter / Waitress",
+        "restaurant": "Brasserie Moderne",
+        "location": "Lyon 2nd",
+        "description": "Dynamic table service, teamwork, English a plus."
+      },
+      "sousChef": {
+        "title": "Sous Chef",
+        "restaurant": "Auberge du Soleil",
+        "location": "Nice",
+        "description": "Brigade management, menu creation, compliance with HACCP standards."
+      },
+      "pizzaiolo": {
+        "title": "Pizza Chef",
+        "restaurant": "Pizza Di Napoli",
+        "location": "Marseille",
+        "description": "Mastery of pizza dough, wood-fired oven cooking, creativity required."
+      },
+      "bartender": {
+        "title": "Bartender",
+        "restaurant": "Skybar Lounge",
+        "location": "Bordeaux",
+        "description": "Cocktail creation, bar service, stock management."
+      },
+      "dishwasher": {
+        "title": "Dishwasher",
+        "restaurant": "Hôtel Palace",
+        "location": "Cannes",
+        "description": "Dishwashing and premises cleaning, kitchen assistance."
+      },
+      "manager": {
+        "title": "Restaurant Manager",
+        "restaurant": "Fast Food Chain",
+        "location": "Toulouse",
+        "description": "Full restaurant management, team leadership, commercial targets."
+      },
+      "pastryChef": {
+        "title": "Pastry Chef",
+        "restaurant": "Boulangerie Fine",
+        "location": "Strasbourg",
+        "description": "Creating pastries, entremets, viennoiseries. Creativity required."
+      }
+    },
+    "tools": {
+      "cv": {
+        "title": "CV Generator",
+        "description": "Create a professional CV for the restaurant industry in minutes",
+        "button": "Create my CV",
+        "bottom": "Exclusive templates for the restaurant industry"
+      },
+      "quote": {
+        "title": "Quote Generator",
+        "description": "Professional quotes for your services and events",
+        "button": "Create a quote",
+        "bottom": "Customisable, convertible to invoice"
+      },
+      "invoice": {
+        "title": "Invoice Generator",
+        "description": "Custom invoices compliant with legislation",
+        "button": "Create an invoice",
+        "bottom": "VAT included, automatic numbering"
+      },
+      "creditNote": {
+        "title": "Credit Note Generator",
+        "description": "Create credit notes in a few clicks",
+        "button": "Create a credit note",
+        "bottom": "Refunds, cancellations, corrections"
+      },
+      "employeeManagement": {
+        "title": "Employee Management",
+        "description": "Scheduling, payroll, employment contracts"
+      },
+      "inventoryManagement": {
+        "title": "Stock Management",
+        "description": "Inventory, alerts, supplier orders"
+      },
+      "dashboard": {
+        "title": "Dashboards",
+        "description": "Analytics, revenue, performance"
+      }
+    },
+    "stats": {
+      "documents": "Documents generated per month",
+      "satisfaction": "User satisfaction",
+      "free": "Free tools"
+    }
+  },
+  "footer": {
+    "logoAlt": "FIBEM LOGO",
+    "contacts": "Our Offices",
+    "newsletter": "Newsletter",
+    "emailPlaceholder": "Your email address",
+    "subscribed": "Thank you for subscribing!",
+    "newsletterDesc": "Receive our news and special offers directly in your inbox.",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy",
+    "terms": "Terms of Service",
+    "cookies": "Cookies",
+    "sitemap": "Sitemap",
+    "contact": "Contact",
+    "viewGoogleMap": "View Google Map",
+    "whatsapp": "Whatsapp",
+    "france": {
+      "name": "FIBEM France",
+      "address": "51 Rue du Grévarin – 27200 Vernon",
+      "phone": "Tel: +33 6 05 51 14 32",
+      "siret": "SIRET 445 374 937 00032"
+    },
+    "senegal": {
+      "name": "FIBEM Senegal",
+      "address": "Rue 7 Corniche x 6, Médina, Dakar",
+      "phone": "Tel: +221 78 370 06 02",
+      "ninea": "N.I.N.E.A.: 30 84 31 62 U2 — NAF: 7112B Engineering"
+    },
+    "social": {
+      "followUs": "Follow us",
+      "facebook": "Facebook",
+      "twitter": "Twitter",
+      "instagram": "Instagram",
+      "youtube": "YouTube"
+    },
+    "tagline": "Your partner in HR, catering & professional services in France, Senegal, and Cameroon.",
+    "send": "Send",
+    "gdpr": "Data protected — RGPD compliant",
+    "unsubscribe": "One-click unsubscribe"
+  },
+  "cv": {
+    "title": "CV Generator",
+    "subtitle": "Create your professional CV in a few guided steps",
+    "newCv": "New CV",
+    "help": {
+      "title": "Tips"
+    },
+    "steps": {
+      "start": "Start",
+      "personal": "Personal info",
+      "experience": "Experience",
+      "education": "Education",
+      "skills": "Skills",
+      "languages": "Languages",
+      "certifications": "Certifications",
+      "projects": "Projects",
+      "interests": "Interests",
+      "appearance": "Appearance",
+      "export": "Export"
+    },
+    "personal": {
+      "title": "Professional title",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "age": "Age",
+      "email": "Email",
+      "phone": "Phone",
+      "address": "Address",
+      "city": "City",
+      "country": "Country",
+      "driverLicense": "Driving licence",
+      "maritalStatus": "Marital status",
+      "mobility": "Mobility",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "portfolio": "Portfolio / Website",
+      "photo": "Profile photo",
+      "includePhoto": "Include in CV",
+      "summary": "Professional profile",
+      "placeholders": {
+        "firstName": "Marie",
+        "lastName": "Dupont",
+        "age": "30",
+        "title": "Senior Full Stack Developer",
+        "email": "contact@email.com",
+        "phone": "+33 6 12 34 56 78",
+        "address": "12 rue de Paris",
+        "city": "Paris",
+        "country": "France",
+        "linkedin": "linkedin.com/in/marie-dupont",
+        "github": "github.com/marie-dupont",
+        "portfolio": "https://marie-dupont.dev",
+        "summary": "2-3 sentences summarising your experience and objectives…"
+      },
+      "tips": [
+        "First name, last name and email are required.",
+        "Your professional title will appear just below your name.",
+        "Fill in LinkedIn / GitHub only if your profiles are up to date.",
+        "Age, driving licence and mobility are important information for recruiters."
+      ]
+    },
+    "driverLicense": {
+      "label": "Driving licence",
+      "options": {
+        "B": "Category B (Car)",
+        "A": "Category A (Motorcycle)",
+        "C": "Category C (Heavy goods vehicle)",
+        "D": "Category D (Public transport)",
+        "BE": "Category BE (Car with trailer)",
+        "none": "No licence"
+      }
+    },
+    "maritalStatus": {
+      "label": "Marital status",
+      "options": {
+        "single": "Single",
+        "married": "Married",
+        "divorced": "Divorced",
+        "widowed": "Widowed",
+        "pacsed": "Civil partnership"
+      }
+    },
+    "mobility": {
+      "label": "Mobility",
+      "options": {
+        "negrepelisse_30": "NEGREPELISSE (82) + 30 km",
+        "montauban_100": "MONTAUBAN (82) + 100 km",
+        "caussade_40": "CAUSSADE (82) + 40 km",
+        "custom": "Other (please specify)"
+      },
+      "placeholder": "Specify your mobility (e.g. Toulouse + 50 km, National...)"
+    },
+    "experience": {
+      "title": "Professional experience",
+      "position": "Position",
+      "company": "Company",
+      "location": "Location",
+      "currentlyWorking": "I currently work here",
+      "startDate": "Start date",
+      "endDate": "End date",
+      "description": "Description",
+      "addButton": "Add experience",
+      "tips": [
+        "Most recent to oldest.",
+        "Action verbs: developed, managed, optimised…",
+        "Quantify your achievements.",
+        "Tick 'Currently employed' if you still work there."
+      ]
+    },
+    "education": {
+      "title": "Education",
+      "degree": "Degree",
+      "school": "Institution",
+      "location": "Location",
+      "currentlyStudying": "Currently studying",
+      "startDate": "Start date",
+      "endDate": "End date",
+      "description": "Description",
+      "addButton": "Add education",
+      "tips": [
+        "Most recent to oldest.",
+        "Mention honours if applicable.",
+        "For recent graduates, education may come before experience."
+      ]
+    },
+    "skills": {
+      "title": "Skills",
+      "name": "Name",
+      "level": "Level",
+      "levels": {
+        "beginner": "Beginner",
+        "intermediate": "Intermediate",
+        "advanced": "Advanced",
+        "expert": "Expert"
+      },
+      "addButton": "Add a skill",
+      "tips": [
+        "8 to 12 well-chosen skills.",
+        "Mix hard skills and soft skills.",
+        "Sort by proficiency / relevance.",
+        "Be honest about your levels."
+      ]
+    },
+    "languages": {
+      "title": "Languages",
+      "name": "Language",
+      "level": "Level",
+      "levels": {
+        "native": "Native",
+        "fluent": "Fluent (C1/C2)",
+        "advanced": "Advanced (B2)",
+        "intermediate": "Intermediate (B1)",
+        "beginner": "Beginner (A1/A2)",
+        "notions": "Basic knowledge"
+      },
+      "addButton": "Add a language"
+    },
+    "certifications": {
+      "title": "Certifications",
+      "name": "Name",
+      "issuer": "Issuing body",
+      "year": "Year",
+      "addButton": "Add a certification"
+    },
+    "projects": {
+      "title": "Projects",
+      "name": "Name",
+      "description": "Description",
+      "technologies": "Technologies (comma-separated)",
+      "link": "Link",
+      "addButton": "Add a project"
+    },
+    "interests": {
+      "title": "Interests",
+      "name": "Interest",
+      "description": "Optional detail",
+      "addButton": "Add",
+      "suggestions": "Quick suggestions",
+      "tips": [
+        "Be specific: 'Mountain trail running' rather than 'Sport'.",
+        "An original interest can spark a conversation in an interview.",
+        "Limit to 3-5 interests."
+      ]
+    },
+    "appearance": {
+      "title": "CV Appearance",
+      "primaryColor": "Primary colour",
+      "font": "Font",
+      "fonts": {
+        "inter": "Inter (Modern)",
+        "roboto": "Roboto (Neutral)",
+        "openSans": "Open Sans (Readable)",
+        "merriweather": "Merriweather (Classic)",
+        "montserrat": "Montserrat (Elegant)"
+      }
+    },
+    "export": {
+      "title": "Export",
+      "ready": "{type} CV ready to generate",
+      "generate": "Generate PDF",
+      "share": "Share",
+      "history": "History",
+      "restart": "Start over"
+    },
+    "buttons": {
+      "previous": "Previous",
+      "next": "Next",
+      "locked": "Locked",
+      "import": "Import",
+      "generate": "Generate"
+    },
+    "mode": {
+      "howToProceed": "How would you like to proceed?",
+      "chooseOption": "Choose an option to get started",
+      "create": {
+        "title": "Create a CV",
+        "description": "Fill in the sections step by step"
+      },
+      "import": {
+        "title": "Import a CV",
+        "description": "Use an existing file (PDF, DOCX)",
+        "dragOrClick": "Drag or click to import",
+        "maxSize": "PDF, DOC, DOCX — max 10 MB",
+        "ready": "Ready to import — manual steps are disabled",
+        "lockedMessage": "The following steps are locked. Click Import directly."
+      },
+      "format": {
+        "title": "CV Format",
+        "classic": "Classic",
+        "classicDesc": "Standard, all sectors",
+        "fibem": "FIBEM",
+        "fibemDesc": "Native to the platform",
+        "selectRequired": "Select a format to continue."
+      }
+    },
+    "navigation": {
+      "history": "History"
+    },
+    "generalTips": [
+      "Be concise — max 2 pages",
+      "Tailor to each application",
+      "Use industry keywords",
+      "Check spelling",
+      "Quantify your achievements",
+      "Keep the layout clean and airy"
+    ],
+    "alerts": {
+      "importSuccess": "CV imported successfully",
+      "importError": "Import failed",
+      "generationError": "Error: {message}",
+      "defaultError": "An error occurred",
+      "noLink": "CV generated but link unavailable."
+    },
+    "history": {
+      "title": "CV History",
+      "importedCv": "Imported CV",
+      "cv": "CV",
+      "main": "Main",
+      "modified": "modified",
+      "searchPlaceholder": "Search for a CV…",
+      "noCvFound": "No CV found",
+      "resetFilters": "Reset filters",
+      "close": "Close",
+      "page": "page",
+      "cvCount": "CV{count, plural, =0 {} one {} other {s}}",
+      "resultCount": "{count} result{count, plural, =0 {} =1 {} other {s}}",
+      "types": {
+        "fibem": "FIBEM",
+        "classic": "Classic",
+        "imported": "Imported"
+      },
+      "actions": {
+        "preview": "Preview",
+        "download": "Download",
+        "downloadFile": "Download file",
+        "duplicate": "Duplicate",
+        "delete": "Delete"
+      },
+      "filters": {
+        "all": "All"
+      },
+      "pagination": {
+        "previous": "Previous page",
+        "next": "Next page"
+      },
+      "deleteDialog": {
+        "title": "Delete CV",
+        "message": "This action is irreversible. Are you sure you want to delete this CV?",
+        "confirm": "Delete",
+        "cancel": "Cancel"
+      }
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Contact us",
+      "subtitle": "Discover the professional opportunities offered by our partner companies"
+    },
+    "form": {
+      "title": "Send us a message",
+      "subtitle": "We will reply within 48 hours",
+      "firstName": "Last name",
+      "firstNamePlaceholder": "Your last name",
+      "lastName": "First name",
+      "lastNamePlaceholder": "Your first name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "address": "Address",
+      "addressPlaceholder": "E.g. Vernon",
+      "phone": "Phone",
+      "phonePlaceholder": "+33 1 23 45 67 89",
+      "subject": "Subject",
+      "subjectPlaceholder": "Subject of your message",
+      "message": "Message",
+      "messagePlaceholder": "Describe your request or ask us your questions...",
+      "locationNote": "Your current location will automatically be attached to your message for better service.",
+      "sending": "Sending...",
+      "submit": "Send message",
+      "success": {
+        "title": "Message sent!",
+        "message": "Thank you for your message. Our team will contact you very soon.",
+        "button": "Send another message"
+      }
+    },
+    "info": {
+      "title1": "Let's Talk About Your",
+      "title2": "Project",
+      "subtitle": "Our team of experts is available to assist you.",
+      "email": {
+        "title": "Email",
+        "details": "Reply within 24h"
+      },
+      "phone": {
+        "title": "Phone",
+        "details": "Mon-Fri: 9am-6pm"
+      },
+      "address": {
+        "title": "Address",
+        "details": "75 001"
+      },
+      "hours": {
+        "title": "Opening hours",
+        "days": "Monday - Friday",
+        "time": "9:00 am - 6:00 pm"
+      }
+    },
+    "offices": {
+      "title": "Our Offices",
+      "france": {
+        "name": "FIBEM France",
+        "address": "51 Rue du Grévarin – 27200 Vernon"
+      },
+      "senegal": {
+        "name": "FIBEM Senegal",
+        "address": "Rue 7 Corniche x 6, Médina, Dakar"
+      }
+    },
+    "location": {
+      "title": "Your Location",
+      "description": "For personalised service, your location will automatically be included with your message.",
+      "detected": "Current location detected",
+      "included": "(Included in your message)",
+      "consent": "Location shared only with your consent"
+    }
+  },
+  "invoice": {
+    "title": "Invoice Generator",
+    "subtitle": "Create a professional invoice in a few guided steps",
+    "fileName": "Invoice",
+    "emailMessage": "Please find attached invoice {number}",
+    "steps": {
+      "invoice": "Invoice",
+      "company": "Issuer",
+      "client": "Client",
+      "items": "Items",
+      "payment": "Payment",
+      "notes": "Notes",
+      "preview": "Preview"
+    },
+    "progress": {
+      "step": "Step"
+    },
+    "help": {
+      "title": "Tips"
+    },
+    "status": {
+      "draft": "Draft",
+      "sent": "Sent",
+      "paid": "Paid",
+      "overdue": "Overdue",
+      "genere": "Generated",
+      "envoye": "Sent",
+      "paye": "Paid",
+      "en_retard": "Overdue",
+      "brouillon": "Draft"
+    },
+    "paymentMethods": {
+      "bankTransfer": "Bank Transfer",
+      "creditCard": "Credit Card",
+      "cash": "Cash",
+      "paypal": "PayPal",
+      "check": "Cheque",
+      "stripe": "Stripe",
+      "directDebit": "Direct Debit",
+      "bitcoin": "Bitcoin",
+      "applePay": "Apple Pay",
+      "googlePay": "Google Pay",
+      "wireTransfer": "International Wire Transfer",
+      "other": "Other"
+    },
+    "paymentTerms": {
+      "immediate": "Immediate",
+      "days7": "7 days",
+      "days15": "15 days",
+      "days30": "30 days",
+      "days45": "45 days",
+      "days60": "60 days",
+      "days90": "90 days"
+    },
+    "invoice": {
+      "title": "Invoice information",
+      "subtitle": "Fill in the basic details of your invoice.",
+      "quoteSelection": "Quote selection",
+      "selectQuote": "Select a quote",
+      "quoteNumber": "Quote",
+      "client": "Client",
+      "amount": "Amount",
+      "purchaseOrder": "Purchase order",
+      "purchaseOrderPlaceholder": "PO-2026-001",
+      "invoiceDate": "Invoice date",
+      "dueDate": "Due date",
+      "paymentTerms": "Payment terms",
+      "paymentMethod": "Payment method",
+      "selectPaymentMethod": "Select",
+      "tips": [
+        "The invoice number is generated automatically; you can edit it.",
+        "The due date is calculated automatically based on the payment terms.",
+        "The purchase order (PO) is optional but recommended for companies."
+      ]
+    },
+    "company": {
+      "title": "Your company",
+      "subtitle": "This information will appear as the issuer on the invoice.",
+      "name": "Company name",
+      "namePlaceholder": "Your Company Ltd",
+      "address": "Address",
+      "addressPlaceholder": "123 Avenue de la République",
+      "city": "City",
+      "cityPlaceholder": "Douala",
+      "postalCode": "Postcode / PO Box",
+      "postalCodePlaceholder": "PO Box 1234",
+      "phone": "Phone",
+      "phonePlaceholder": "+237 6XX XX XX XX",
+      "email": "Email",
+      "emailPlaceholder": "contact@yourcompany.com",
+      "taxId": "Tax ID Number",
+      "taxIdPlaceholder": "CM12345678901",
+      "logo": "Company logo",
+      "logoAlt": "Company logo",
+      "tips": [
+        "Company name is required.",
+        "Add your tax ID number if you are VAT-registered."
+      ]
+    },
+    "client": {
+      "title": "Client information",
+      "subtitle": "This information will appear as the recipient on the invoice.",
+      "name": "Client name",
+      "namePlaceholder": "John Doe",
+      "company": "Client company",
+      "companyPlaceholder": "Client Company Ltd",
+      "email": "Email",
+      "emailPlaceholder": "client@email.com",
+      "phone": "Phone",
+      "phonePlaceholder": "+237 6XX XX XX XX",
+      "address": "Address",
+      "addressPlaceholder": "456 Main Boulevard",
+      "city": "City",
+      "cityPlaceholder": "Yaoundé",
+      "postalCode": "Postcode / PO Box",
+      "postalCodePlaceholder": "PO Box 456",
+      "taxId": "Tax ID Number",
+      "taxIdPlaceholder": "CM98765432101",
+      "tips": [
+        "Client name is required.",
+        "Enter the email to send the invoice directly from the application."
+      ]
+    },
+    "items": {
+      "title": "Line items",
+      "subtitle": "Add the products or services to invoice.",
+      "count": "item(s)",
+      "line": "Line",
+      "description": "Description",
+      "descriptionPlaceholder": "E.g. Web application development",
+      "quantity": "Qty",
+      "unitPrice": "Unit price",
+      "discount": "Discount %",
+      "taxRate": "VAT %",
+      "total": "Total",
+      "addButton": "Add a line",
+      "summary": "Summary",
+      "subtotal": "Subtotal (excl. VAT)",
+      "totalDiscount": "Total discount",
+      "totalTax": "VAT",
+      "grandTotal": "Total (incl. VAT)",
+      "duplicate": "Duplicate",
+      "delete": "Delete",
+      "tips": [
+        "Each line must have a description and a unit price greater than 0.",
+        "Discount is a percentage (e.g. 10 for 10%).",
+        "The total for each line is calculated automatically."
+      ]
+    },
+    "payment": {
+      "title": "Bank details",
+      "subtitle": "This information will make it easier for your client to pay.",
+      "bankName": "Bank name",
+      "bankNamePlaceholder": "Banque Atlantique, SCB Cameroun…",
+      "bankAccount": "Account number / IBAN",
+      "bankAccountPlaceholder": "CM21 1000 1234 5678 9012 3456 789",
+      "tips": [
+        "Bank details are optional but recommended for wire transfers.",
+        "For Cameroon, specify your BEAC account number or your bank statement reference."
+      ]
+    },
+    "notes": {
+      "title": "Notes and conditions",
+      "subtitle": "Add a personalised message or your general terms and conditions.",
+      "message": "Message / Notes",
+      "messagePlaceholder": "Thank you for your trust. Do not hesitate to contact us for any questions.",
+      "terms": "General terms and conditions",
+      "termsPlaceholder": "Payment upon receipt of invoice. Any unpaid invoice after the due date will incur late payment penalties of 1.5% per month."
+    },
+    "preview": {
+      "title": "Invoice preview",
+      "subtitle": "Review your invoice before generating it.",
+      "downloadPdf": "Download PDF",
+      "downloadExcel": "Download Excel",
+      "newInvoice": "New invoice"
+    },
+    "navigation": {
+      "previous": "Previous",
+      "next": "Next",
+      "history": "History",
+      "generate": "Generate",
+      "generating": "Generating…"
+    },
+    "tips": {
+      "title": "Tips for an effective invoice",
+      "list": [
+        "Check the invoice number to avoid duplicates",
+        "Clearly specify payment deadlines",
+        "Include your bank details to facilitate payment",
+        "Add a thank-you message in the notes",
+        "Review the amounts before generating the PDF",
+        "Keep a copy of every invoice sent"
+      ]
+    },
+    "quoteDialog": {
+      "title": "Select a quote to invoice",
+      "description": "Choose the version of the quote you wish to convert into an invoice"
+    },
+    "errors": {
+      "idNotFound": "Invoice ID not found",
+      "generationError": "Error generating the invoice",
+      "generateFirst": "Please generate the invoice first",
+      "clientEmailRequired": "Please enter the client's email"
+    },
+    "alerts": {
+      "sendSuccess": "Invoice sent successfully",
+      "sendError": "Error sending the invoice"
+    },
+    "history": {
+      "title": "Invoice History",
+      "ref_quote": "ref.",
+      "modified": "modified",
+      "due_date": "due",
+      "preview": "Preview / Reuse",
+      "download_pdf": "Download PDF",
+      "download_excel": "Download Excel file",
+      "duplicate": "Duplicate",
+      "delete": "Delete",
+      "delete_confirm_title": "Delete invoice",
+      "delete_confirm_message": "This action is irreversible. Are you sure you want to delete this invoice?",
+      "delete_confirm_button": "Delete",
+      "cancel": "Cancel",
+      "search_placeholder": "Invoice no., client…",
+      "no_invoices": "No invoice found",
+      "reset_filters": "Reset filters",
+      "invoices": "invoice",
+      "page": "page",
+      "result": "result",
+      "close": "Close",
+      "filters": {
+        "all": "All",
+        "generated": "Generated",
+        "sent": "Sent",
+        "paid": "Paid",
+        "overdue": "Overdue",
+        "draft": "Drafts"
+      },
+      "stats": {
+        "paid": "paid",
+        "sent": "sent",
+        "overdue": "overdue"
+      }
+    }
+  },
+  "quote": {
+    "title": "Quote Generator",
+    "subtitle": "Create a professional quote in a few guided steps",
+    "steps": {
+      "client": "Client",
+      "emetteur": "Issuer",
+      "project": "Project",
+      "items": "Items",
+      "payment": "Payment",
+      "notes": "Notes",
+      "preview": "Preview"
+    },
+    "help_notice": {
+      "tips_title": "Tips",
+      "info_title": "Good to know"
+    },
+    "progress": {
+      "step_label": "Step",
+      "of": "of"
+    },
+    "client_step": {
+      "title": "Client information",
+      "subtitle": "Enter the details of the client receiving the quote.",
+      "tips": [
+        "First name, last name, email and phone are required.",
+        "Company is optional but recommended for B2B quotes.",
+        "The quote type allows you to categorise the nature of the work."
+      ],
+      "first_name": "First name",
+      "last_name": "Last name",
+      "email": "Email",
+      "phone": "Phone",
+      "company": "Client company",
+      "quote_type": "Quote type",
+      "address": "Address",
+      "city": "City",
+      "postal_code": "Postcode / PO Box",
+      "first_name_placeholder": "Samuel",
+      "last_name_placeholder": "Dupont",
+      "email_placeholder": "contact@email.com",
+      "phone_placeholder": "+237 6XX XX XX XX",
+      "company_placeholder": "Client company name",
+      "address_placeholder": "123 République Street",
+      "city_placeholder": "Douala",
+      "postal_code_placeholder": "PO Box 456",
+      "select_quote_type": "Select a type"
+    },
+    "emitter_step": {
+      "title": "Your company (issuer)",
+      "subtitle": "This information will appear in the service provider block of the quote.",
+      "tips": [
+        "Company name is required.",
+        "The logo will be displayed in the top left of the PDF quote.",
+        "SIRET, APE and VAT number appear in the provider block."
+      ],
+      "company_name": "Company name",
+      "company_contact": "Contact / Point of contact",
+      "company_address": "Address",
+      "company_city": "City (with postcode)",
+      "company_phone": "Landline phone",
+      "company_port": "Mobile phone",
+      "company_email": "Email",
+      "company_siret": "SIRET",
+      "company_ape": "APE Code",
+      "company_tva": "Intra-community VAT number",
+      "contact_be": "Engineering dept. contact (internal ref.)",
+      "company_logo": "Company logo",
+      "company_name_placeholder": "Sté SEN FIBEM France",
+      "company_contact_placeholder": "Mr GOMIS",
+      "company_address_placeholder": "51 Rue du Grevarin",
+      "company_city_placeholder": "27200 Vernon",
+      "company_phone_placeholder": "+33 1 XX XX XX XX",
+      "company_port_placeholder": "07.52.49.75.46",
+      "company_email_placeholder": "contact@yourcompany.com",
+      "company_siret_placeholder": "445 374 937 00032",
+      "company_ape_placeholder": "4120B Building & Industrial Works",
+      "company_tva_placeholder": "FR17378128441",
+      "contact_be_placeholder": "Engineering dept. ref.",
+      "logo_preview": "Logo preview"
+    },
+    "project_step": {
+      "title": "Project details",
+      "subtitle": "Describe the project to be carried out for this quote.",
+      "tips": [
+        "Project name is required.",
+        "A clear description reassures the client that you understand their needs.",
+        "The validity date is automatically set to 30 days but can be changed."
+      ],
+      "project_name": "Project name",
+      "category": "Category",
+      "project_description": "Project description",
+      "start_date": "Planned start date",
+      "deadline": "Project deadline",
+      "budget": "Estimated budget",
+      "valid_until": "Quote valid until",
+      "project_name_placeholder": "E.g. Makepe Residential Construction",
+      "project_description_placeholder": "Describe the project in detail...",
+      "select_category": "Select a category",
+      "categories": {
+        "development": "Web Development",
+        "design": "Graphic Design",
+        "marketing": "Digital Marketing",
+        "consulting": "Consulting & Training",
+        "delivery": "Service Delivery",
+        "construction": "Construction",
+        "renovation": "Renovation",
+        "other": "Other"
+      }
+    },
+    "items_step": {
+      "title": "Quote items",
+      "subtitle": "List the services or supplies to be quoted.",
+      "items_count": "item(s)",
+      "tips": [
+        "Each item must have a description and a unit price.",
+        "Labour time: labour duration (e.g. 1.0h). Unit: Set, h, m², etc.",
+        "Line discount is a percentage.",
+        "Use the ↑↓ arrows to reorder items."
+      ],
+      "article": "Item",
+      "description": "Description",
+      "description_placeholder": "E.g. Supply and installation of tiling",
+      "time_mo": "Labour time",
+      "time_mo_placeholder": "1.0h",
+      "unit": "Unit",
+      "quantity": "Quantity",
+      "unit_price": "Unit price",
+      "discount": "Discount %",
+      "tax": "VAT %",
+      "total_ht": "Total (excl. VAT)",
+      "add_item": "Add an item",
+      "summary": "Items summary",
+      "subtotal_ht": "Subtotal (excl. VAT)",
+      "total_before_discount": "Total before global discount",
+      "duplicate": "Duplicate",
+      "delete": "Delete",
+      "units": {
+        "ens": "Set",
+        "h": "h",
+        "j": "d",
+        "m2": "m²",
+        "m3": "m³",
+        "ml": "ml",
+        "u": "u",
+        "kg": "kg",
+        "t": "t",
+        "forfait": "lump sum"
+      }
+    },
+    "payment_step": {
+      "title": "Payment settings",
+      "subtitle": "Configure global VAT, discount and deposit.",
+      "tips": [
+        "VAT in Cameroon is 19.25% (official rate). In France: 20%.",
+        "The global discount applies to the subtotal of all items.",
+        "The deposit can be a fixed amount or a percentage of the total (incl. VAT)."
+      ],
+      "global_tax": "Global VAT (%)",
+      "global_discount": "Global discount (%)",
+      "deposit": "Deposit",
+      "percentage": "%",
+      "fixed": "Fixed amount",
+      "financial_summary": "Financial summary",
+      "subtotal_ht": "Subtotal (excl. VAT)",
+      "discount": "Discount",
+      "total_ht": "Total (excl. VAT)",
+      "tax_amount": "VAT",
+      "total_ttc": "Total (incl. VAT)",
+      "deposit_amount": "Deposit",
+      "remaining": "Balance due"
+    },
+    "notes_step": {
+      "title": "Notes and conditions",
+      "subtitle": "This text will appear in the \"Payment conditions\" section of the quote.",
+      "tips": [
+        "Additional notes are displayed under 'Payment conditions'.",
+        "State the deposit conditions (e.g. 30% at start, 70% at end)."
+      ],
+      "payment_conditions": "Payment conditions / Notes",
+      "payment_conditions_placeholder": "- 30% due 1 week after start\n- 70% at the end of the 1st month",
+      "general_conditions": "General terms and conditions",
+      "general_conditions_placeholder": "Payment terms, validity, late payment penalties..."
+    },
+    "preview_step": {
+      "title": "Quote preview",
+      "subtitle": "Review your quote before generating it.",
+      "modify": "Edit",
+      "print": "Print",
+      "send": "Send",
+      "download_excel": "Download Excel",
+      "download_pdf": "Download PDF",
+      "quote_preview": "Quote preview",
+      "provider": "Provider",
+      "client": "Client",
+      "project": "Project",
+      "valid_until": "Valid until",
+      "start_date": "Start",
+      "table": {
+        "time_mo": "Labour",
+        "description": "Description",
+        "unit": "U",
+        "unit_price_ht": "Unit price (excl. VAT)",
+        "quantity": "Qty",
+        "amount_ht": "Amount (excl. VAT)"
+      },
+      "total_ht": "Total Amount (excl. VAT)",
+      "total_ttc": "Total Amount (incl. VAT)",
+      "payment_conditions_title": "Payment conditions"
+    },
+    "buttons": {
+      "previous": "Previous",
+      "next": "Next",
+      "generate_quote": "Generate quote",
+      "generating": "Generating…",
+      "new_quote": "New quote",
+      "history": "Quote history"
+    },
+    "tips_section": {
+      "title": "Tips for an effective quote",
+      "tips": [
+        "Detail each item precisely to avoid disputes",
+        "Clearly state the quote validity (30 days recommended)",
+        "Mention lead times and delivery conditions",
+        "Request a deposit upon signing to secure the project",
+        "Review the amounts before sending to the client",
+        "Keep a signed copy of every accepted quote"
+      ]
+    },
+    "status": {
+      "draft": "Draft",
+      "sent": "Sent",
+      "accepted": "Accepted",
+      "rejected": "Rejected",
+      "expired": "Expired"
+    },
+    "alerts": {
+      "error_generating": "Error generating the quote",
+      "generate_first": "Please generate the quote first",
+      "email_required": "Please enter the client's email",
+      "email_sent": "Quote sent successfully",
+      "email_error": "Error sending the quote"
+    },
+    "quote_types": {
+      "0": "Labour only works",
+      "1": "Supply and installation works",
+      "2": "Renovation",
+      "3": "Construction",
+      "4": "Fit-out",
+      "5": "Fitter & Assembler",
+      "6": "Studies and Plan Drawing",
+      "7": "Sizing Calculation",
+      "8": "Verification Calculation",
+      "9": "Technical Assistance",
+      "10": "Other"
+    },
+    "history": {
+      "title": "Quote History",
+      "modified": "modified",
+      "preview": "Preview / Reuse",
+      "download_pdf": "Download PDF",
+      "download_excel": "Download Excel file",
+      "duplicate": "Duplicate",
+      "delete": "Delete",
+      "delete_confirm_title": "Delete quote",
+      "delete_confirm_message": "This action is irreversible. Are you sure you want to delete this quote?",
+      "delete_confirm_button": "Delete",
+      "cancel": "Cancel",
+      "search_placeholder": "Quote no., client, project…",
+      "no_quotes": "No quote found",
+      "reset_filters": "Reset filters",
+      "quotes": "quote",
+      "page": "page",
+      "result": "result",
+      "close": "Close",
+      "filters": {
+        "all": "All",
+        "draft": "Drafts",
+        "sent": "Sent",
+        "accepted": "Accepted",
+        "rejected": "Rejected",
+        "expired": "Expired"
+      },
+      "stats": {
+        "accepted": "accepted",
+        "sent": "sent",
+        "rejected": "rejected",
+        "expired": "expired",
+        "acceptance_rate": "acceptance"
+      }
+    },
+    "selection": {
+      "title": "Select a quote",
+      "search_placeholder": "Number, client…",
+      "no_results": "No results",
+      "no_quotes": "No quotes available",
+      "reset": "Reset",
+      "quotes": "quotes",
+      "page": "page",
+      "cancel": "Cancel",
+      "select": "Select"
+    }
+  },
+  "credit_note": {
+    "title": "Credit Note Generator",
+    "subtitle": "Create a professional credit note linked to an existing invoice",
+    "steps": {
+      "identification": "Credit note",
+      "emetteur": "Issuer",
+      "client": "Client",
+      "items": "Items",
+      "notes": "Notes",
+      "preview": "Preview"
+    },
+    "progress": {
+      "step": "Step"
+    },
+    "help_notice": {
+      "tips_title": "Tips",
+      "info_title": "Good to know"
+    },
+    "identification_step": {
+      "title": "Credit note identification",
+      "subtitle": "Number, date, original invoice, reason and refund method.",
+      "tips": [
+        "The credit note number is required and must be unique.",
+        "Always indicate the original invoice to which the credit note relates.",
+        "The reason and refund method will appear on the PDF document."
+      ],
+      "credit_note_date": "Credit note date",
+      "original_invoice_number": "Original Invoice No.",
+      "original_invoice_placeholder": "FA-202601-0042",
+      "original_invoice_date": "Original invoice date",
+      "credit_reason": "Reason for credit note",
+      "refund_method": "Refund method"
+    },
+    "emitter_step": {
+      "title": "Your company (issuer)",
+      "subtitle": "This information will appear in the provider block of the credit note.",
+      "tips": [
+        "Company name is required.",
+        "The logo will be displayed in the top left of the PDF.",
+        "SIRET, APE and VAT number appear in the issuer block."
+      ],
+      "company_name": "Company name",
+      "company_name_placeholder": "Sté SEN FIBEM France",
+      "company_address": "Address",
+      "company_address_placeholder": "51 Rue du Grevarin",
+      "company_city": "City (with postcode)",
+      "company_city_placeholder": "27200 Vernon",
+      "company_phone": "Landline phone",
+      "company_phone_placeholder": "+33 1 XX XX XX XX",
+      "company_port": "Mobile phone",
+      "company_port_placeholder": "07.52.49.75.46",
+      "company_email": "Email",
+      "company_email_placeholder": "contact@yourcompany.com",
+      "company_siret": "SIRET",
+      "company_siret_placeholder": "445 374 937 00032",
+      "company_ape": "APE Code",
+      "company_ape_placeholder": "4120B Building & Industrial Works",
+      "company_tva": "Intra-community VAT number",
+      "company_tva_placeholder": "FR17378128441",
+      "company_logo": "Company logo",
+      "logo_preview": "Logo preview"
+    },
+    "client_step": {
+      "title": "Client information",
+      "subtitle": "Recipient of the credit note.",
+      "tips": [
+        "Enter the email to send the credit note directly from the application.",
+        "The client VAT number appears in the EEC column of the summary table."
+      ],
+      "client_name": "Client name",
+      "client_name_placeholder": "John Doe",
+      "client_company": "Client company",
+      "client_company_placeholder": "Client Ltd",
+      "client_email": "Email",
+      "client_email_placeholder": "client@email.com",
+      "client_phone": "Phone",
+      "client_phone_placeholder": "+237 6XX XX XX XX",
+      "client_address": "Address",
+      "client_address_placeholder": "456 Main Boulevard",
+      "client_city": "City",
+      "client_city_placeholder": "Yaoundé",
+      "client_postal_code": "Postcode / PO Box",
+      "client_postal_code_placeholder": "PO Box 456",
+      "client_tax_id": "VAT / Tax ID number",
+      "client_tax_id_placeholder": "FR12345678901"
+    },
+    "items_step": {
+      "title": "Credit note lines",
+      "subtitle": "Add the items or services to be credited.",
+      "lines_count": "line(s)",
+      "line": "Line",
+      "tips": [
+        "Each line must have a description and a unit price > 0.",
+        "Amounts represent credits — they will appear in orange on the PDF.",
+        "Discount is a percentage (e.g. 10 for 10%)."
+      ],
+      "description": "Description",
+      "description_placeholder": "E.g. Item return / Adjustment",
+      "quantity": "Quantity",
+      "unit_price": "Unit price",
+      "discount": "Discount %",
+      "tax": "VAT %",
+      "total_ht": "Total (excl. VAT)",
+      "add_item": "Add a line",
+      "summary": "Summary",
+      "estimated_tax": "Estimated VAT",
+      "net_refund": "Net refund (incl. VAT)",
+      "duplicate": "Duplicate",
+      "delete": "Delete"
+    },
+    "notes_step": {
+      "title": "Notes and references",
+      "subtitle": "Additional information that will appear on the credit note.",
+      "notes": "References / Notes",
+      "notes_placeholder": "File reference, detailed reason, return number...",
+      "terms_and_conditions": "Terms and conditions",
+      "terms_placeholder": "Refund conditions, processing times..."
+    },
+    "preview_step": {
+      "title": "Credit note preview",
+      "subtitle": "Review before generating the PDF.",
+      "download_excel": "Download Excel",
+      "download_pdf": "Download PDF",
+      "credit_note_title": "CREDIT NOTE",
+      "number": "No.",
+      "invoice_ref": "Invoice ref.",
+      "reason": "Reason",
+      "refund": "Refund",
+      "emitter": "Issuer",
+      "client": "Client",
+      "portable": "Mobile",
+      "total_ht": "Total (excl. VAT)",
+      "estimated_tax": "Estimated VAT",
+      "net_refund": "Net refund (incl. VAT)",
+      "references": "References",
+      "table": {
+        "description": "Description",
+        "quantity": "Qty",
+        "unit_price_ht": "Unit price (excl. VAT)",
+        "discount": "Discount",
+        "tax": "VAT %",
+        "amount_ht": "Amount (excl. VAT)"
+      }
+    },
+    "status": {
+      "draft": "Draft",
+      "issued": "Issued",
+      "processed": "Processed",
+      "cancelled": "Cancelled"
+    },
+    "credit_reasons": {
+      "product_return": "Product return",
+      "defective_product": "Defective product",
+      "billing_error": "Billing error",
+      "discount": "Commercial discount",
+      "price_adjustment": "Price adjustment",
+      "cancelled_order": "Cancelled order",
+      "goodwill": "Goodwill gesture",
+      "other": "Other"
+    },
+    "refund_methods": {
+      "bank_transfer": "Bank Transfer",
+      "original_payment": "Original payment method",
+      "store_credit": "Store credit",
+      "cash": "Cash",
+      "check": "Cheque"
+    },
+    "buttons": {
+      "history": "History",
+      "previous": "Previous",
+      "next": "Next",
+      "generate": "Generate",
+      "generating": "Generating…",
+      "new_credit_note": "New credit note"
+    },
+    "tips_section": {
+      "title": "Best practices for credit notes",
+      "tips": [
+        "Always reference the original invoice to ensure traceability",
+        "A credit note should be issued as soon as the refund is confirmed",
+        "Keep a signed copy in your client file",
+        "Check that the credit note amount matches the original invoice"
+      ]
+    },
+    "alerts": {
+      "error_generating": "Error generating the credit note",
+      "generate_first": "Please generate the credit note first",
+      "email_required": "Please enter the client's email",
+      "email_sent": "Credit note sent successfully",
+      "email_error": "Error sending the credit note"
+    },
+    "history": {
+      "title": "Credit Note History",
+      "ref_invoice": "Ref.",
+      "modified": "modified",
+      "preview": "Preview / Reuse",
+      "download_pdf": "Download PDF",
+      "download_excel": "Download Excel file",
+      "duplicate": "Duplicate",
+      "delete": "Delete",
+      "delete_confirm_title": "Delete credit note",
+      "delete_confirm_message": "This action is irreversible. Are you sure you want to delete this credit note?",
+      "delete_confirm_button": "Delete",
+      "cancel": "Cancel",
+      "search_placeholder": "Credit note no., client, invoice…",
+      "no_credit_notes": "No credit note found",
+      "reset_filters": "Reset filters",
+      "credit_notes": "credit note",
+      "page": "page",
+      "result": "result",
+      "close": "Close",
+      "all_reasons": "All reasons",
+      "filters": {
+        "all": "All",
+        "draft": "Drafts",
+        "issued": "Issued",
+        "processed": "Processed",
+        "cancelled": "Cancelled"
+      },
+      "stats": {
+        "issued": "issued",
+        "processed": "processed",
+        "cancelled": "cancelled"
+      }
+    }
+  },
+  "mainMenu": {
+    "home": {
+      "label": "Home",
+      "about": "About",
+      "us": "Who are we?",
+      "blog": "Blog"
+    },
+    "service": {
+      "label": "Services",
+      "prestation": "Find a meal",
+      "formulaireCV": "FIBEM CV Form",
+      "formulaireDevis": "Quote",
+      "formulaireFacture": "Invoice",
+      "formulaireAvoirs": "Credits"
+    },
+    "emploi": {
+      "label": "Jobs",
+      "espaceCandidat": "Candidate area",
+      "espaceRecruteur": "Recruiter area",
+      "espaceAbonnement": "Subscription area"
+    },
+    "foods": "Meal search",
+    "job": "Job search",
+    "cv": "CV",
+    "contact": "Contact",
+    "facture": "Invoice"
+  },
+  "authMenu": {
+    "login": "Login",
+    "register": "Register"
+  },
+  "userMenu": {
+    "shoppingCart": "Cart",
+    "dashboard": "Dashboard",
+    "profile": "Profile"
+  },
+  "search_placeholder": "Search"
 }

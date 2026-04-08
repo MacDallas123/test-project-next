@@ -1,10 +1,10 @@
 import { logoutUser, selectAuthUser } from "@/redux/slices/authSlice";
+import { useRouter } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
 
 const useAuth = () => {
     const dispatch = useDispatch();
-    const navigate = useNavigate();
+    const router = useRouter();
 
     const authUserFS = useSelector(selectAuthUser);
 
@@ -15,7 +15,7 @@ const useAuth = () => {
             await dispatch(logoutUser(refreshToken));
             localStorage.clear();
 
-            navigate("/auth/login");
+            router.push("/auth/login");
         } else console.log("REFRESH TOKEN IS ABSENT")
     }
 
