@@ -30,6 +30,6 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}        # ex: ftp.mywebsite.com or IP address of server
           username: ${{ secrets.FTP_USERNAME }}    # ex: u123456789
           password: ${{ secrets.FTP_PASSWORD }}    # ex: MaSuperSecret123!
-          protocol: ftp
+          protocol: ftps
           local-dir: ./out/
           server-dir: public_html/
