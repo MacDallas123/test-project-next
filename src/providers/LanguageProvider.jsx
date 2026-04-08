@@ -9,6 +9,18 @@ export const LanguageProvider = ({ children }) => {
   const [language, setLanguage] = useState("fr");
   const [flag, setFlag] = useState("FR");
 
+  useEffect(() => {
+    const html = document.documentElement;
+  
+    if (language === "ar") {
+      html.setAttribute("dir", "rtl");
+      html.setAttribute("lang", "ar");
+    } else {
+      html.setAttribute("dir", "ltr");
+      html.setAttribute("lang", "fr");
+    }
+  }, [language]);
+  
   // On mount, check localStorage for saved language/flag
   useEffect(() => {
     const savedLanguage = localStorage.getItem("preferredLanguage");
@@ -36,7 +48,7 @@ export const LanguageProvider = ({ children }) => {
     }
   };
 
-  const t = (key, default_value = "") => {
+  const t = (key, default_value = "", params = {}) => {
     // Check for array default_value
     let value;
     if (Array.isArray(default_value)) {

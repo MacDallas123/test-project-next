@@ -7,6 +7,9 @@ import it from "@/i18n/lang/it.json";
 import pt from "@/i18n/lang/pt.json";
 import nl from "@/i18n/lang/nl.json";
 import ru from "@/i18n/lang/ru.json";
+import ar from "@/i18n/lang/ar.json";
+import ja from "@/i18n/lang/ja.json";
+import tr from "@/i18n/lang/tr.json";
 
 export const translations = {
   fr,
@@ -17,7 +20,10 @@ export const translations = {
   it,
   pt,
   nl,
-  ru
+  ru,
+  ar,
+  ja,
+  tr
 };
 
 export const availableLanguages = [

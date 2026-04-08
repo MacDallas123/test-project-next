@@ -96,7 +96,7 @@ const Footer = () => {
   ];
 
   const mainMenus = [
-    { label: t("mainMenu.home",    "Accueil"),      href: "/" },
+    { label: t("mainMenu.home.label",    "Accueil"),      href: "/" },
     { label: t("mainMenu.foods",   "Rech. Repas"),  href: "/services" },
     { label: t("mainMenu.job",     "Rech. Emploi"), href: "/emploi" },
     { label: t("mainMenu.cv",      "CV"),            href: "/cv" },
@@ -153,7 +153,7 @@ const Footer = () => {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="block px-1 py-2 text-xs font-bold text-center rounded-md transition-all duration-200 border"
+                    className="block px-1 py-2 text-xs font-bold text-center transition-all duration-200 border rounded-md"
                     style={{
                       color: C.primary,
                       background: C.white,
@@ -181,26 +181,26 @@ const Footer = () => {
               <MapPin size={13} />
               {t("footer.contacts", "Nos Bureaux")}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col gap-4 sm:flex-row">
               
               {/* France */}
               <div className="flex-1 bg-white/6 border border-white/12 rounded-[10px] p-4">
-                <div className="flex items-center gap-2 mb-3 pb-2 border-b border-white/10">
+                <div className="flex items-center gap-2 pb-2 mb-3 border-b border-white/10">
                   <ReactCountryFlag svg countryCode="FR" className="text-[1.15rem]" />
                   <span className="text-sm font-bold" style={{ color: C.secondaryLight }}>{t("footer.france.name", "FIBEM France")}</span>
                 </div>
                 <ul className="space-y-3">
-                  <li className="flex items-start gap-2 text-white/70 text-sm">
+                  <li className="flex items-start gap-2 text-sm text-white/70">
                     <MapPin size={13} className="flex-shrink-0 mt-0.5" style={{ color: C.secondary }} />
                     <span>{t("footer.france.address", "51 Rue du Grévarin – 27200 Vernon")}</span>
                   </li>
-                  <li className="flex items-start gap-2 text-white/70 text-sm">
+                  <li className="flex items-start gap-2 text-sm text-white/70">
                     <Phone size={13} className="flex-shrink-0 mt-0.5" style={{ color: C.secondary }} />
-                    <a href="tel:+33744691748" className="text-white/70 no-underline hover:text-white/90">+33 7 44 69 17 48</a>
+                    <a href="tel:+33744691748" className="no-underline text-white/70 hover:text-white/90">+33 7 44 69 17 48</a>
                   </li>
-                  <li className="flex items-start gap-2 text-white/70 text-sm">
+                  <li className="flex items-start gap-2 text-sm text-white/70">
                     <Mail size={13} className="flex-shrink-0 mt-0.5" style={{ color: C.secondary }} />
-                    <a href="mailto:gg.livrernourriture-fibem75@gmail.com" className="text-white/70 no-underline hover:text-white/90">gg.livrernourriture-fibem75@gmail.com</a>
+                    <a href="mailto:gg.livrernourriture-fibem75@gmail.com" className="no-underline text-white/70 hover:text-white/90">gg.livrernourriture-fibem75@gmail.com</a>
                   </li>
                   <li>
                     <div className="flex gap-2 mt-1">
@@ -229,24 +229,24 @@ const Footer = () => {
 
               {/* Senegal */}
               <div className="flex-1 bg-white/6 border border-white/12 rounded-[10px] p-4">
-                <div className="flex items-center gap-2 mb-3 pb-2 border-b border-white/10">
+                <div className="flex items-center gap-2 pb-2 mb-3 border-b border-white/10">
                   <ReactCountryFlag svg countryCode="SN" className="text-[1.15rem]" />
                   <span className="text-sm font-bold" style={{ color: C.secondaryLight }}>{t("footer.senegal.name", "FIBEM Sénégal")}</span>
                 </div>
                 <ul className="space-y-3">
-                  <li className="flex items-start gap-2 text-white/70 text-sm">
+                  <li className="flex items-start gap-2 text-sm text-white/70">
                     <MapPin size={13} className="flex-shrink-0 mt-0.5" style={{ color: C.secondary }} />
                     <span>{t("footer.senegal.address", "Rue 7 Corniche x 6, Médina, Dakar")}</span>
                   </li>
-                  <li className="flex items-start gap-2 text-white/70 text-sm">
+                  <li className="flex items-start gap-2 text-sm text-white/70">
                     <Phone size={13} className="flex-shrink-0 mt-0.5" style={{ color: C.secondary }} />
-                    <a href="tel:+221783700602" className="text-white/70 no-underline hover:text-white/90">+221 78 370 06 02</a>
+                    <a href="tel:+221783700602" className="no-underline text-white/70 hover:text-white/90">+221 78 370 06 02</a>
                   </li>
-                  <li className="flex items-start gap-2 text-white/70 text-sm">
+                  <li className="flex items-start gap-2 text-sm text-white/70">
                     <Mail size={13} className="flex-shrink-0 mt-0.5" style={{ color: C.secondary }} />
-                    <a href="mailto:gg.livrernourriture-fibem99@gmail.com" className="text-white/70 no-underline hover:text-white/90">gg.livrernourriture-fibem99@gmail.com</a>
+                    <a href="mailto:gg.livrernourriture-fibem99@gmail.com" className="no-underline text-white/70 hover:text-white/90">gg.livrernourriture-fibem99@gmail.com</a>
                   </li>
-                  <li className="text-white/40 text-xs italic">
+                  <li className="text-xs italic text-white/40">
                     N.I.N.E.A.: 30 84 31 62 U2 — NAF: 7112B Engineering
                   </li>
                   <li>
@@ -283,7 +283,7 @@ const Footer = () => {
               <Mail size={13} />
               {t("footer.newsletter", "Newsletter")}
             </p>
-            <p className="text-white/60 text-sm leading-relaxed">
+            <p className="text-sm leading-relaxed text-white/60">
               {t("footer.newsletterDesc", "Recevez nos actualités et offres spéciales directement dans votre boîte mail.")}
             </p>
             <form onSubmit={handleSubscribe} className="flex flex-col gap-2">
@@ -294,7 +294,7 @@ const Footer = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="flex-1 min-w-0 px-3 py-2 rounded-lg text-sm outline-none transition-all font-inherit"
+                  className="flex-1 min-w-0 px-3 py-2 text-sm transition-all rounded-lg outline-none font-inherit"
                   style={{
                     border: `1.5px solid ${inputFocused ? C.secondary : "rgba(219,142,42,0.4)"}`,
                     background: inputFocused ? "rgba(255,255,255,0.13)" : "rgba(255,255,255,0.08)",
@@ -320,7 +320,7 @@ const Footer = () => {
                 </p>
               )}
             </form>
-            <div className="mt-2 pt-4 border-t border-white/8 text-white/30 text-xs leading-relaxed">
+            <div className="pt-4 mt-2 text-xs leading-relaxed border-t border-white/8 text-white/30">
               <p>🔒 {t("footer.gdpr", "Données protégées — conforme RGPD")}</p>
               <p>📧 {t("footer.unsubscribe", "Désabonnement en un clic")}</p>
             </div>
@@ -329,8 +329,8 @@ const Footer = () => {
         </div>
 
         {/* Social section */}
-        <hr className="border-0 border-t border-white/10 my-6" />
-        <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 mb-8">
+        <hr className="my-6 border-0 border-t border-white/10" />
+        <div className="flex flex-col gap-4 mb-8 sm:flex-row sm:items-center sm:gap-6">
           <span className="text-white/45 text-[0.72rem] font-extrabold tracking-[0.12em] uppercase flex-shrink-0">
             {t("footer.social.followUs", "Suivez-nous")}
           </span>
@@ -342,7 +342,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200 flex-shrink-0"
+                className="flex items-center justify-center flex-shrink-0 transition-all duration-200 rounded-lg w-9 h-9"
                 style={{
                   background: bg,
                   transform: hoveredSocial === label ? "translateY(-4px) scale(1.12)" : "scale(1)",
@@ -360,10 +360,10 @@ const Footer = () => {
 
       {/* Bottom bar */}
       <div className="border-t border-white/8 py-5 px-4 sm:px-6 max-w-[1200px] mx-auto flex flex-col sm:flex-row justify-between items-center gap-3 relative z-10">
-        <p className="text-white/40 text-sm">
+        <p className="text-sm text-white/40">
           &copy; {new Date().getFullYear()}{" "}
-          <span className="font-extrabold text-lg" style={{ color: C.secondary }}>L</span>ivrer
-          <span className="font-extrabold text-lg" style={{ color: C.secondary }}>N</span>ourriture.{" "}
+          <span className="text-lg font-extrabold" style={{ color: C.secondary }}>L</span>ivrer
+          <span className="text-lg font-extrabold" style={{ color: C.secondary }}>N</span>ourriture.{" "}
           {t("footer.rights", "Tous droits réservés.")}
         </p>
         <nav className="flex flex-wrap gap-3">
