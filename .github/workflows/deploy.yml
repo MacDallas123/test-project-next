@@ -24,11 +24,29 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Deploy to Hostinger
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      # ----------------------------------------------------------------
+      # 🚀 Thanks for using ftp-deploy. Let's deploy some stuff!
+      # ----------------------------------------------------------------
+      # If you found this project helpful, please support it
+      # by giving it a ⭐ on Github --> https://github.com/SamKirkland/FTP-Deploy-Action
+      # or add a badge 🏷️ to your projects readme --> https://github.com/SamKirkland/FTP-Deploy-Action#badge
+      # ----------------------------------------------------------------
+      # Failed to connect, are you sure your server works via FTP or FTPS?
+      # Users sometimes get this error when the server only supports SFTP.
+      # ----------------------------------------------------------------
+      # FULL ERROR EXCERPT:
+      # --------------  🔥🔥🔥 an error occurred  🔥🔥🔥  --------------
+      # Error: Timeout (control socket)
+      # For troubleshooting and documentation:
+      # - https://github.com/SamKirkland/FTP-Deploy-Action#troubleshooting
+      # - Make sure your Hostinger server supports FTP, not just SFTP.
+      # - Consider using FTPS if FTP is not allowed by your host.
+      - name: 🚀 Deploy to Hostinger with FTP-Deploy
+        uses: SamKirkland/FTP-Deploy-Action@v4
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
+          server: ${{ secrets.FTP_SERVER }}        # ex: ftp.mywebsite.com or IP address of server
+          username: ${{ secrets.FTP_USERNAME }}    # ex: u123456789
+          password: ${{ secrets.FTP_PASSWORD }}    # ex: MaSuperSecret123!
+          protocol: ftp
           local-dir: out/
           server-dir: public_html/
