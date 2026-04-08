@@ -42,7 +42,7 @@ jobs:
       # - Make sure your Hostinger server supports FTP, not just SFTP.
       # - Consider using FTPS if FTP is not allowed by your host.
       - name: 🚀 Deploy to Hostinger with FTP-Deploy
-        uses: SamKirkland/FTP-Deploy-Action@v4
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_SERVER }}        # ex: ftp.mywebsite.com or IP address of server
           username: ${{ secrets.FTP_USERNAME }}    # ex: u123456789
